@@ -31,7 +31,7 @@
     <string>Fecha:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_7">
+  <widget class="QPushButton" name="btn_info">
    <property name="geometry">
     <rect>
      <x>560</x>
@@ -73,7 +73,7 @@ QPushButton:pressed {
     <string/>
    </property>
   </widget>
-  <widget class="QPlainTextEdit" name="plainTextEdit">
+  <widget class="QPlainTextEdit" name="plaTE_recor">
    <property name="geometry">
     <rect>
      <x>350</x>
@@ -83,11 +83,11 @@ QPushButton:pressed {
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_11">
+  <widget class="QPushButton" name="btn_configAlarma">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>320</y>
+     <x>170</x>
+     <y>310</y>
      <width>51</width>
      <height>41</height>
     </rect>
@@ -102,41 +102,6 @@ QPushButton:hover {
 QPushButton:pressed {
 	border-image: url(:/ICON/IMAGENES/config_off.png);
 }
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_5">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>330</y>
-     <width>121</width>
-     <height>111</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/ICON/IMAGENES/foco_off.png);
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_8">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>340</y>
-     <width>121</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/ICON/IMAGENES/ventilador_off.png);
-
 </string>
    </property>
    <property name="text">
@@ -182,7 +147,7 @@ QPushButton:pressed {
     <string>Hora:</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_9">
+  <widget class="QPushButton" name="btn_configVenti">
    <property name="geometry">
     <rect>
      <x>410</x>
@@ -228,7 +193,7 @@ QPushButton:pressed {
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="bel_temp">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -249,32 +214,7 @@ QPushButton:pressed {
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>330</y>
-     <width>161</width>
-     <height>141</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-border-image: url(:/ICON/IMAGENES/alarm_off.png);
- }
-QPushButton:hover {
-border-image: url(:/ICON/IMAGENES/alarm_on.png);
-}
-QPushButton:pressed {
-border-image: url(:/ICON/IMAGENES/alarm_off.png);
-}
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_10">
+  <widget class="QPushButton" name="btn_configFoco">
    <property name="geometry">
     <rect>
      <x>640</x>
@@ -299,7 +239,7 @@ QPushButton:pressed {
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_6">
+  <widget class="QPushButton" name="btn_configIdioma">
    <property name="geometry">
     <rect>
      <x>630</x>
@@ -324,7 +264,7 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
     <string/>
    </property>
   </widget>
-  <widget class="QDateEdit" name="dateEdit">
+  <widget class="QDateEdit" name="dateEdit_fecha">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -345,7 +285,7 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
     <enum>QAbstractSpinBox::NoButtons</enum>
    </property>
   </widget>
-  <widget class="QTimeEdit" name="timeEdit">
+  <widget class="QTimeEdit" name="timeEdit_tiempo">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -372,11 +312,11 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
     <enum>QAbstractSpinBox::NoButtons</enum>
    </property>
   </widget>
-  <widget class="QSlider" name="horizontalSlider">
+  <widget class="QSlider" name="hoSli_venti">
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>450</y>
+     <y>440</y>
      <width>101</width>
      <height>16</height>
     </rect>
@@ -398,7 +338,7 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>470</y>
+     <y>460</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -419,7 +359,7 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
    <property name="geometry">
     <rect>
      <x>380</x>
-     <y>470</y>
+     <y>460</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -478,7 +418,7 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QSlider" name="horizontalSlider_2">
+  <widget class="QSlider" name="hoSli_foco">
    <property name="geometry">
     <rect>
      <x>540</x>
@@ -498,6 +438,92 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
    </property>
    <property name="tickPosition">
     <enum>QSlider::TicksBothSides</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bel_colorFoco">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>410</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border :3px solid black;
+border-radius: 15px;
+background-color: rgb(255, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>320</y>
+     <width>141</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/ICON/IMAGENES/alarm_on.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bel_estadoVenti">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>340</y>
+     <width>111</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/ICON/IMAGENES/ventilador_off.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bel_estadoFoco">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>340</y>
+     <width>111</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/ICON/IMAGENES/foco_off.png);</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

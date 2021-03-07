@@ -21,9 +21,9 @@ class Ui_Form(object):
         font.setPointSize(20)
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
-        self.pushButton_7 = QtWidgets.QPushButton(Form)
-        self.pushButton_7.setGeometry(QtCore.QRect(560, 10, 51, 41))
-        self.pushButton_7.setStyleSheet("QPushButton {\n"
+        self.btn_info = QtWidgets.QPushButton(Form)
+        self.btn_info.setGeometry(QtCore.QRect(560, 10, 51, 41))
+        self.btn_info.setStyleSheet("QPushButton {\n"
 "border-image: url(:/ICON/IMAGENES/info_on.png);\n"
 " }\n"
 "QPushButton:hover {\n"
@@ -33,20 +33,20 @@ class Ui_Form(object):
 "    border-image: url(:/ICON/IMAGENES/info_on.png);\n"
 "}\n"
 "")
-        self.pushButton_7.setText("")
-        self.pushButton_7.setObjectName("pushButton_7")
+        self.btn_info.setText("")
+        self.btn_info.setObjectName("btn_info")
         self.pushButton_3 = QtWidgets.QPushButton(Form)
         self.pushButton_3.setGeometry(QtCore.QRect(30, 200, 81, 51))
         self.pushButton_3.setStyleSheet("border-image: url(:/ICON/IMAGENES/termo.png);\n"
 "")
         self.pushButton_3.setText("")
         self.pushButton_3.setObjectName("pushButton_3")
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(Form)
-        self.plainTextEdit.setGeometry(QtCore.QRect(350, 90, 301, 191))
-        self.plainTextEdit.setObjectName("plainTextEdit")
-        self.pushButton_11 = QtWidgets.QPushButton(Form)
-        self.pushButton_11.setGeometry(QtCore.QRect(160, 320, 51, 41))
-        self.pushButton_11.setStyleSheet("QPushButton {\n"
+        self.plaTE_recor = QtWidgets.QPlainTextEdit(Form)
+        self.plaTE_recor.setGeometry(QtCore.QRect(350, 90, 301, 191))
+        self.plaTE_recor.setObjectName("plaTE_recor")
+        self.btn_configAlarma = QtWidgets.QPushButton(Form)
+        self.btn_configAlarma.setGeometry(QtCore.QRect(170, 310, 51, 41))
+        self.btn_configAlarma.setStyleSheet("QPushButton {\n"
 "    border-image: url(:/ICON/IMAGENES/config_off.png);\n"
 " }\n"
 "QPushButton:hover {\n"
@@ -56,21 +56,8 @@ class Ui_Form(object):
 "    border-image: url(:/ICON/IMAGENES/config_off.png);\n"
 "}\n"
 "")
-        self.pushButton_11.setText("")
-        self.pushButton_11.setObjectName("pushButton_11")
-        self.pushButton_5 = QtWidgets.QPushButton(Form)
-        self.pushButton_5.setGeometry(QtCore.QRect(530, 330, 121, 111))
-        self.pushButton_5.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_off.png);\n"
-"")
-        self.pushButton_5.setText("")
-        self.pushButton_5.setObjectName("pushButton_5")
-        self.pushButton_8 = QtWidgets.QPushButton(Form)
-        self.pushButton_8.setGeometry(QtCore.QRect(300, 340, 121, 101))
-        self.pushButton_8.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_off.png);\n"
-"\n"
-"")
-        self.pushButton_8.setText("")
-        self.pushButton_8.setObjectName("pushButton_8")
+        self.btn_configAlarma.setText("")
+        self.btn_configAlarma.setObjectName("btn_configAlarma")
         self.label_2 = QtWidgets.QLabel(Form)
         self.label_2.setGeometry(QtCore.QRect(160, 210, 61, 41))
         font = QtGui.QFont()
@@ -84,9 +71,9 @@ class Ui_Form(object):
         font.setPointSize(20)
         self.label_7.setFont(font)
         self.label_7.setObjectName("label_7")
-        self.pushButton_9 = QtWidgets.QPushButton(Form)
-        self.pushButton_9.setGeometry(QtCore.QRect(410, 320, 51, 41))
-        self.pushButton_9.setStyleSheet("QPushButton {\n"
+        self.btn_configVenti = QtWidgets.QPushButton(Form)
+        self.btn_configVenti.setGeometry(QtCore.QRect(410, 320, 51, 41))
+        self.btn_configVenti.setStyleSheet("QPushButton {\n"
 "    border-image: url(:/ICON/IMAGENES/config_off.png);\n"
 " }\n"
 "QPushButton:hover {\n"
@@ -96,8 +83,8 @@ class Ui_Form(object):
 "    border-image: url(:/ICON/IMAGENES/config_off.png);\n"
 "}\n"
 "")
-        self.pushButton_9.setText("")
-        self.pushButton_9.setObjectName("pushButton_9")
+        self.btn_configVenti.setText("")
+        self.btn_configVenti.setObjectName("btn_configVenti")
         self.label_5 = QtWidgets.QLabel(Form)
         self.label_5.setGeometry(QtCore.QRect(340, 50, 101, 41))
         font = QtGui.QFont()
@@ -105,30 +92,16 @@ class Ui_Form(object):
         self.label_5.setFont(font)
         self.label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.label_5.setObjectName("label_5")
-        self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(110, 210, 51, 41))
+        self.bel_temp = QtWidgets.QLabel(Form)
+        self.bel_temp.setGeometry(QtCore.QRect(110, 210, 51, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
-        self.label.setFont(font)
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
-        self.pushButton_4 = QtWidgets.QPushButton(Form)
-        self.pushButton_4.setGeometry(QtCore.QRect(40, 330, 161, 141))
-        self.pushButton_4.setStyleSheet("QPushButton {\n"
-"border-image: url(:/ICON/IMAGENES/alarm_off.png);\n"
-" }\n"
-"QPushButton:hover {\n"
-"border-image: url(:/ICON/IMAGENES/alarm_on.png);\n"
-"}\n"
-"QPushButton:pressed {\n"
-"border-image: url(:/ICON/IMAGENES/alarm_off.png);\n"
-"}\n"
-"")
-        self.pushButton_4.setText("")
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.pushButton_10 = QtWidgets.QPushButton(Form)
-        self.pushButton_10.setGeometry(QtCore.QRect(640, 310, 51, 41))
-        self.pushButton_10.setStyleSheet("QPushButton {\n"
+        self.bel_temp.setFont(font)
+        self.bel_temp.setAlignment(QtCore.Qt.AlignCenter)
+        self.bel_temp.setObjectName("bel_temp")
+        self.btn_configFoco = QtWidgets.QPushButton(Form)
+        self.btn_configFoco.setGeometry(QtCore.QRect(640, 310, 51, 41))
+        self.btn_configFoco.setStyleSheet("QPushButton {\n"
 "    border-image: url(:/ICON/IMAGENES/config_off.png);\n"
 " }\n"
 "QPushButton:hover {\n"
@@ -138,11 +111,11 @@ class Ui_Form(object):
 "    border-image: url(:/ICON/IMAGENES/config_off.png);\n"
 "}\n"
 "")
-        self.pushButton_10.setText("")
-        self.pushButton_10.setObjectName("pushButton_10")
-        self.pushButton_6 = QtWidgets.QPushButton(Form)
-        self.pushButton_6.setGeometry(QtCore.QRect(630, 10, 61, 41))
-        self.pushButton_6.setStyleSheet("QPushButton {\n"
+        self.btn_configFoco.setText("")
+        self.btn_configFoco.setObjectName("btn_configFoco")
+        self.btn_configIdioma = QtWidgets.QPushButton(Form)
+        self.btn_configIdioma.setGeometry(QtCore.QRect(630, 10, 61, 41))
+        self.btn_configIdioma.setStyleSheet("QPushButton {\n"
 "border-image: url(:/ICON/IMAGENES/idioma_on.png);\n"
 " }\n"
 "QPushButton:hover {\n"
@@ -152,42 +125,42 @@ class Ui_Form(object):
 "border-image: url(:/ICON/IMAGENES/idioma_on.png);\n"
 "}\n"
 "")
-        self.pushButton_6.setText("")
-        self.pushButton_6.setObjectName("pushButton_6")
-        self.dateEdit = QtWidgets.QDateEdit(Form)
-        self.dateEdit.setGeometry(QtCore.QRect(120, 80, 161, 41))
+        self.btn_configIdioma.setText("")
+        self.btn_configIdioma.setObjectName("btn_configIdioma")
+        self.dateEdit_fecha = QtWidgets.QDateEdit(Form)
+        self.dateEdit_fecha.setGeometry(QtCore.QRect(120, 80, 161, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
-        self.dateEdit.setFont(font)
-        self.dateEdit.setReadOnly(True)
-        self.dateEdit.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
-        self.dateEdit.setObjectName("dateEdit")
-        self.timeEdit = QtWidgets.QTimeEdit(Form)
-        self.timeEdit.setGeometry(QtCore.QRect(120, 140, 161, 41))
+        self.dateEdit_fecha.setFont(font)
+        self.dateEdit_fecha.setReadOnly(True)
+        self.dateEdit_fecha.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.dateEdit_fecha.setObjectName("dateEdit_fecha")
+        self.timeEdit_tiempo = QtWidgets.QTimeEdit(Form)
+        self.timeEdit_tiempo.setGeometry(QtCore.QRect(120, 140, 161, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
-        self.timeEdit.setFont(font)
-        self.timeEdit.setWrapping(False)
-        self.timeEdit.setAlignment(QtCore.Qt.AlignCenter)
-        self.timeEdit.setReadOnly(True)
-        self.timeEdit.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
-        self.timeEdit.setObjectName("timeEdit")
-        self.horizontalSlider = QtWidgets.QSlider(Form)
-        self.horizontalSlider.setGeometry(QtCore.QRect(310, 450, 101, 16))
-        self.horizontalSlider.setMaximum(1)
-        self.horizontalSlider.setPageStep(1)
-        self.horizontalSlider.setOrientation(QtCore.Qt.Horizontal)
-        self.horizontalSlider.setTickPosition(QtWidgets.QSlider.TicksBothSides)
-        self.horizontalSlider.setObjectName("horizontalSlider")
+        self.timeEdit_tiempo.setFont(font)
+        self.timeEdit_tiempo.setWrapping(False)
+        self.timeEdit_tiempo.setAlignment(QtCore.Qt.AlignCenter)
+        self.timeEdit_tiempo.setReadOnly(True)
+        self.timeEdit_tiempo.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.timeEdit_tiempo.setObjectName("timeEdit_tiempo")
+        self.hoSli_venti = QtWidgets.QSlider(Form)
+        self.hoSli_venti.setGeometry(QtCore.QRect(310, 440, 101, 16))
+        self.hoSli_venti.setMaximum(1)
+        self.hoSli_venti.setPageStep(1)
+        self.hoSli_venti.setOrientation(QtCore.Qt.Horizontal)
+        self.hoSli_venti.setTickPosition(QtWidgets.QSlider.TicksBothSides)
+        self.hoSli_venti.setObjectName("hoSli_venti")
         self.label_3 = QtWidgets.QLabel(Form)
-        self.label_3.setGeometry(QtCore.QRect(290, 470, 41, 31))
+        self.label_3.setGeometry(QtCore.QRect(290, 460, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_3.setFont(font)
         self.label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(Form)
-        self.label_4.setGeometry(QtCore.QRect(380, 470, 41, 31))
+        self.label_4.setGeometry(QtCore.QRect(380, 460, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_4.setFont(font)
@@ -207,13 +180,41 @@ class Ui_Form(object):
         self.label_9.setFont(font)
         self.label_9.setAlignment(QtCore.Qt.AlignCenter)
         self.label_9.setObjectName("label_9")
-        self.horizontalSlider_2 = QtWidgets.QSlider(Form)
-        self.horizontalSlider_2.setGeometry(QtCore.QRect(540, 450, 101, 16))
-        self.horizontalSlider_2.setMaximum(1)
-        self.horizontalSlider_2.setPageStep(1)
-        self.horizontalSlider_2.setOrientation(QtCore.Qt.Horizontal)
-        self.horizontalSlider_2.setTickPosition(QtWidgets.QSlider.TicksBothSides)
-        self.horizontalSlider_2.setObjectName("horizontalSlider_2")
+        self.hoSli_foco = QtWidgets.QSlider(Form)
+        self.hoSli_foco.setGeometry(QtCore.QRect(540, 450, 101, 16))
+        self.hoSli_foco.setMaximum(1)
+        self.hoSli_foco.setPageStep(1)
+        self.hoSli_foco.setOrientation(QtCore.Qt.Horizontal)
+        self.hoSli_foco.setTickPosition(QtWidgets.QSlider.TicksBothSides)
+        self.hoSli_foco.setObjectName("hoSli_foco")
+        self.bel_colorFoco = QtWidgets.QLabel(Form)
+        self.bel_colorFoco.setGeometry(QtCore.QRect(620, 410, 31, 31))
+        self.bel_colorFoco.setMinimumSize(QtCore.QSize(20, 20))
+        self.bel_colorFoco.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.bel_colorFoco.setFont(font)
+        self.bel_colorFoco.setStyleSheet("border :3px solid black;\n"
+"border-radius: 15px;\n"
+"background-color: rgb(255, 0, 0);")
+        self.bel_colorFoco.setText("")
+        self.bel_colorFoco.setAlignment(QtCore.Qt.AlignCenter)
+        self.bel_colorFoco.setObjectName("bel_colorFoco")
+        self.label_11 = QtWidgets.QLabel(Form)
+        self.label_11.setGeometry(QtCore.QRect(60, 320, 141, 121))
+        self.label_11.setStyleSheet("border-image: url(:/ICON/IMAGENES/alarm_on.png);")
+        self.label_11.setText("")
+        self.label_11.setObjectName("label_11")
+        self.bel_estadoVenti = QtWidgets.QLabel(Form)
+        self.bel_estadoVenti.setGeometry(QtCore.QRect(310, 340, 111, 91))
+        self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_off.png);")
+        self.bel_estadoVenti.setText("")
+        self.bel_estadoVenti.setObjectName("bel_estadoVenti")
+        self.bel_estadoFoco = QtWidgets.QLabel(Form)
+        self.bel_estadoFoco.setGeometry(QtCore.QRect(540, 340, 111, 91))
+        self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_off.png);")
+        self.bel_estadoFoco.setText("")
+        self.bel_estadoFoco.setObjectName("bel_estadoFoco")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -225,7 +226,7 @@ class Ui_Form(object):
         self.label_2.setText(_translate("Form", "[°C]"))
         self.label_7.setText(_translate("Form", "Hora:"))
         self.label_5.setText(_translate("Form", "Notas:"))
-        self.label.setText(_translate("Form", "38"))
+        self.bel_temp.setText(_translate("Form", "38"))
         self.label_3.setText(_translate("Form", "OFF"))
         self.label_4.setText(_translate("Form", "ON"))
         self.label_8.setText(_translate("Form", "ON"))
