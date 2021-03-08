@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="ICON">
+    <file>IMAGENES/add_off.png</file>
+    <file>IMAGENES/add_on.png</file>
+    <file>IMAGENES/edit_off.png</file>
+    <file>IMAGENES/edit_on.png</file>
+    <file>IMAGENES/tache_1.png</file>
+    <file>IMAGENES/tache_2.png</file>
     <file>IMAGENES/alarm_off.png</file>
     <file>IMAGENES/alarm_on.png</file>
     <file>IMAGENES/config_off.png</file>
