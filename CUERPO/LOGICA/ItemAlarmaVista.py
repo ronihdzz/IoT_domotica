@@ -10,13 +10,14 @@ from functools import partial
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
 ##############################################################
-from CUERPO.DISENO.itemAlarma_dise import Ui_Form
+from CUERPO.DISENO.itemAlarmaVista_dise import Ui_Form
 
 ###############################################################
 #  MIS LIBRERIAS...
 ##############################################################
+from CUERPO.LOGICA.ItemAlarmaEdit import ItemAlarmaEdit
 
-class ItemAlarma(QtWidgets.QWidget, Ui_Form):
+class ItemAlarmaVista(QtWidgets.QWidget, Ui_Form):
     suHoraMorir= pyqtSignal(int)#indicara quien es el objeto que quiere morir...
     def __init__(self,id):
         Ui_Form.__init__(self)
@@ -25,12 +26,17 @@ class ItemAlarma(QtWidgets.QWidget, Ui_Form):
         self.btn_eliminar.clicked.connect(self.mandarSenalMuerto)
         self.id=id
 
-        self.btn_editar.clicked.connect(self.habilitar)
-        self.ESTADO=True
-        self.habilitar()
-    
-    def habilitar(self):
-        self.ESTADO=not(self.ESTADO)
+        self.btn_editar.clicked.connect(self.editar)
+        
+
+        self.ESTADO=False
+        self.deshabilitar()
+
+    def editar(self):
+        self.venEdicion=ItemAlarmaEdit()
+        self.venEdicion.show()
+
+    def deshabilitar(self):
         self.lineEdit_nombre.setEnabled(self.ESTADO)
         self.comBox_asunto.setEnabled(self.ESTADO)
         self.timeEdit_hora.setEnabled(self.ESTADO)
@@ -70,7 +76,7 @@ class ItemAlarma(QtWidgets.QWidget, Ui_Form):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
-    application = ItemAlarma()
+    application = ItemAlarmaVista()
     application.show()
     app.exec()
     #sys.exit(app.exec())

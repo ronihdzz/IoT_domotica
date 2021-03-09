@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(707, 513)
+        Form.resize(707, 558)
         self.btn_info = QtWidgets.QPushButton(Form)
         self.btn_info.setGeometry(QtCore.QRect(10, 10, 31, 31))
         self.btn_info.setStyleSheet("QPushButton {\n"
@@ -72,42 +72,82 @@ class Ui_Form(object):
         self.btn_configIdioma.setText("")
         self.btn_configIdioma.setObjectName("btn_configIdioma")
         self.hoSli_venti = QtWidgets.QSlider(Form)
-        self.hoSli_venti.setGeometry(QtCore.QRect(190, 450, 101, 16))
+        self.hoSli_venti.setGeometry(QtCore.QRect(180, 460, 131, 40))
+        self.hoSli_venti.setStyleSheet("QSlider {\n"
+"    min-height: 40px;\n"
+"    max-height: 40px;\n"
+"}\n"
+"\n"
+"QSlider::groove:horizontal {\n"
+"    border: 1px solid #262626;\n"
+"    height: 5px;\n"
+"    background: #393939;\n"
+"    margin: 0 12px;\n"
+"}\n"
+"\n"
+"QSlider::handle:horizontal {\n"
+"    background: #22B14C;\n"
+"    /*background-color: rgb(1, 255, 226);*/\n"
+"    /*border: 5px solid #B5E61D;*/\n"
+"    width: 15px;\n"
+"    height: 80px;\n"
+"    margin: 24px -12px;\n"
+"}")
         self.hoSli_venti.setMaximum(1)
         self.hoSli_venti.setPageStep(1)
         self.hoSli_venti.setOrientation(QtCore.Qt.Horizontal)
         self.hoSli_venti.setTickPosition(QtWidgets.QSlider.TicksBothSides)
         self.hoSli_venti.setObjectName("hoSli_venti")
         self.label_3 = QtWidgets.QLabel(Form)
-        self.label_3.setGeometry(QtCore.QRect(170, 470, 41, 31))
+        self.label_3.setGeometry(QtCore.QRect(170, 500, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_3.setFont(font)
         self.label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(Form)
-        self.label_4.setGeometry(QtCore.QRect(260, 470, 41, 31))
+        self.label_4.setGeometry(QtCore.QRect(280, 500, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_4.setFont(font)
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
         self.label_4.setObjectName("label_4")
         self.label_8 = QtWidgets.QLabel(Form)
-        self.label_8.setGeometry(QtCore.QRect(500, 480, 41, 31))
+        self.label_8.setGeometry(QtCore.QRect(510, 500, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_8.setFont(font)
         self.label_8.setAlignment(QtCore.Qt.AlignCenter)
         self.label_8.setObjectName("label_8")
         self.label_9 = QtWidgets.QLabel(Form)
-        self.label_9.setGeometry(QtCore.QRect(410, 480, 41, 31))
+        self.label_9.setGeometry(QtCore.QRect(410, 500, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_9.setFont(font)
         self.label_9.setAlignment(QtCore.Qt.AlignCenter)
         self.label_9.setObjectName("label_9")
         self.hoSli_foco = QtWidgets.QSlider(Form)
-        self.hoSli_foco.setGeometry(QtCore.QRect(430, 460, 101, 16))
+        self.hoSli_foco.setGeometry(QtCore.QRect(420, 460, 121, 40))
+        self.hoSli_foco.setStyleSheet("QSlider {\n"
+"    min-height: 40px;\n"
+"    max-height: 40px;\n"
+"}\n"
+"\n"
+"QSlider::groove:horizontal {\n"
+"    border: 1px solid #262626;\n"
+"    height: 5px;\n"
+"    background: #393939;\n"
+"    margin: 0 12px;\n"
+"}\n"
+"\n"
+"QSlider::handle:horizontal {\n"
+"    background: #22B14C;\n"
+"    /*background-color: rgb(1, 255, 226);*/\n"
+"    /*border: 5px solid #B5E61D;*/\n"
+"    width: 15px;\n"
+"    height: 80px;\n"
+"    margin: 24px -12px;\n"
+"}")
         self.hoSli_foco.setMaximum(1)
         self.hoSli_foco.setPageStep(1)
         self.hoSli_foco.setOrientation(QtCore.Qt.Horizontal)
@@ -213,6 +253,20 @@ class Ui_Form(object):
         self.label.setGeometry(QtCore.QRect(630, 80, 51, 20))
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
+        self.bel_temp_2 = QtWidgets.QLabel(Form)
+        self.bel_temp_2.setGeometry(QtCore.QRect(280, 430, 31, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.bel_temp_2.setFont(font)
+        self.bel_temp_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.bel_temp_2.setObjectName("bel_temp_2")
+        self.label_5 = QtWidgets.QLabel(Form)
+        self.label_5.setGeometry(QtCore.QRect(310, 430, 41, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_5.setFont(font)
+        self.label_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_5.setObjectName("label_5")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -230,4 +284,6 @@ class Ui_Form(object):
         self.label_2.setText(_translate("Form", "[°C]"))
         self.label_10.setText(_translate("Form", "Recordatorios:"))
         self.label.setText(_translate("Form", "Alarmas"))
+        self.bel_temp_2.setText(_translate("Form", "38"))
+        self.label_5.setText(_translate("Form", "[°C]"))
 import IMAG_rc

@@ -15,7 +15,7 @@ from CUERPO.DISENO.configAlarm_dise import  Ui_Dialog
 ###############################################################
 #  MIS LIBRERIAS...
 ##############################################################
-from CUERPO.LOGICA.ItemAlarma import ItemAlarma
+from CUERPO.LOGICA.ItemAlarmaVista import ItemAlarmaVista
 
 class itemRoniano(QObject):
     suHoraMorir= pyqtSignal(int)#indicara quien es el objeto que quiere morir...
@@ -75,7 +75,7 @@ class Dialog_configAlarma(QtWidgets.QDialog, Ui_Dialog):
         
     def agregarCheckBox(self,texto="",estado=0):
         if self.punteroNoItems<self.MAX_ITEMS:
-            itemAlarma=ItemAlarma(self.contadorIdsVivosMuertos)
+            itemAlarma=ItemAlarmaVista(self.contadorIdsVivosMuertos)
             itemAlarma.suHoraMorir.connect(self.borrarItem)
             self.listIdsItemsVivos.append(self.contadorIdsVivosMuertos)
       
