@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'main_dise.ui'
+# Form implementation generated from reading ui file '.\main_dise.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.3
 #
@@ -199,7 +199,7 @@ class Ui_Form(object):
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
         self.bel_temp = QtWidgets.QLabel(Form)
-        self.bel_temp.setGeometry(QtCore.QRect(110, 260, 51, 41))
+        self.bel_temp.setGeometry(QtCore.QRect(110, 260, 81, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.bel_temp.setFont(font)
@@ -212,7 +212,7 @@ class Ui_Form(object):
         self.label_7.setFont(font)
         self.label_7.setObjectName("label_7")
         self.label_2 = QtWidgets.QLabel(Form)
-        self.label_2.setGeometry(QtCore.QRect(160, 260, 61, 41))
+        self.label_2.setGeometry(QtCore.QRect(200, 260, 61, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.label_2.setFont(font)
@@ -253,15 +253,15 @@ class Ui_Form(object):
         self.label.setGeometry(QtCore.QRect(630, 80, 51, 20))
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
-        self.bel_temp_2 = QtWidgets.QLabel(Form)
-        self.bel_temp_2.setGeometry(QtCore.QRect(280, 430, 31, 31))
+        self.bel_tempActVenti = QtWidgets.QLabel(Form)
+        self.bel_tempActVenti.setGeometry(QtCore.QRect(280, 430, 51, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
-        self.bel_temp_2.setFont(font)
-        self.bel_temp_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.bel_temp_2.setObjectName("bel_temp_2")
+        self.bel_tempActVenti.setFont(font)
+        self.bel_tempActVenti.setAlignment(QtCore.Qt.AlignCenter)
+        self.bel_tempActVenti.setObjectName("bel_tempActVenti")
         self.label_5 = QtWidgets.QLabel(Form)
-        self.label_5.setGeometry(QtCore.QRect(310, 430, 41, 31))
+        self.label_5.setGeometry(QtCore.QRect(330, 430, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_5.setFont(font)
@@ -284,6 +284,6 @@ class Ui_Form(object):
         self.label_2.setText(_translate("Form", "[°C]"))
         self.label_10.setText(_translate("Form", "Recordatorios:"))
         self.label.setText(_translate("Form", "Alarmas"))
-        self.bel_temp_2.setText(_translate("Form", "38"))
+        self.bel_tempActVenti.setText(_translate("Form", "38"))
         self.label_5.setText(_translate("Form", "[°C]"))
 import IMAG_rc

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'configLed_dise.ui'
+# Form implementation generated from reading ui file '.\configLed_dise.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.3
 #
@@ -15,7 +15,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.setWindowModality(QtCore.Qt.NonModal)
-        Dialog.resize(311, 146)
+        Dialog.resize(416, 149)
         Dialog.setMouseTracking(False)
         Dialog.setAcceptDrops(False)
         Dialog.setWindowTitle("")
@@ -25,29 +25,38 @@ class Ui_Dialog(object):
         Dialog.setInputMethodHints(QtCore.Qt.ImhNone)
         Dialog.setSizeGripEnabled(False)
         Dialog.setModal(True)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
+        self.verticalLayout.setObjectName("verticalLayout")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(9, 9, 293, 23))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label.setFont(font)
         self.label.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label)
         self.scrollArea = QtWidgets.QScrollArea(Dialog)
-        self.scrollArea.setGeometry(QtCore.QRect(9, 38, 293, 99))
         self.scrollArea.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.scrollArea.setFrameShadow(QtWidgets.QFrame.Raised)
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 410, 80))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 406, 83))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
+        self.btn_0 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
+        self.btn_0.setMinimumSize(QtCore.QSize(50, 50))
+        self.btn_0.setStyleSheet("border :3px solid black;\n"
+"border-radius: 15px;\n"
+"background-color: rgb(255,255,255);")
+        self.btn_0.setText("")
+        self.btn_0.setObjectName("btn_0")
+        self.horizontalLayout.addWidget(self.btn_0)
         self.btn_1 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
-        self.btn_1.setMinimumSize(QtCore.QSize(60, 60))
+        self.btn_1.setMinimumSize(QtCore.QSize(50, 50))
         self.btn_1.setStyleSheet("border :3px solid black;\n"
 "border-radius: 15px;\n"
 "background-color: rgb(255, 0, 0);")
@@ -55,7 +64,7 @@ class Ui_Dialog(object):
         self.btn_1.setObjectName("btn_1")
         self.horizontalLayout.addWidget(self.btn_1)
         self.btn_2 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
-        self.btn_2.setMinimumSize(QtCore.QSize(60, 60))
+        self.btn_2.setMinimumSize(QtCore.QSize(50, 50))
         self.btn_2.setStyleSheet("border :3px solid black;\n"
 "border-radius: 15px;\n"
 "background-color: rgb(0,255, 0);")
@@ -63,7 +72,7 @@ class Ui_Dialog(object):
         self.btn_2.setObjectName("btn_2")
         self.horizontalLayout.addWidget(self.btn_2)
         self.btn_3 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
-        self.btn_3.setMinimumSize(QtCore.QSize(60, 60))
+        self.btn_3.setMinimumSize(QtCore.QSize(50, 50))
         self.btn_3.setStyleSheet("border :3px solid black;\n"
 "border-radius: 15px;\n"
 "background-color: rgb(0,0,255);")
@@ -71,7 +80,7 @@ class Ui_Dialog(object):
         self.btn_3.setObjectName("btn_3")
         self.horizontalLayout.addWidget(self.btn_3)
         self.btn_4 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
-        self.btn_4.setMinimumSize(QtCore.QSize(60, 60))
+        self.btn_4.setMinimumSize(QtCore.QSize(50, 50))
         self.btn_4.setStyleSheet("border :3px solid black;\n"
 "border-radius: 15px;\n"
 "background-color: rgb(255,255, 0);")
@@ -79,7 +88,7 @@ class Ui_Dialog(object):
         self.btn_4.setObjectName("btn_4")
         self.horizontalLayout.addWidget(self.btn_4)
         self.btn_5 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
-        self.btn_5.setMinimumSize(QtCore.QSize(60, 60))
+        self.btn_5.setMinimumSize(QtCore.QSize(50, 50))
         self.btn_5.setStyleSheet("border :3px solid black;\n"
 "border-radius: 15px;\n"
 "background-color: rgb(255, 0, 255);")
@@ -87,7 +96,7 @@ class Ui_Dialog(object):
         self.btn_5.setObjectName("btn_5")
         self.horizontalLayout.addWidget(self.btn_5)
         self.btn_6 = QtWidgets.QPushButton(self.scrollAreaWidgetContents)
-        self.btn_6.setMinimumSize(QtCore.QSize(60, 60))
+        self.btn_6.setMinimumSize(QtCore.QSize(50, 50))
         self.btn_6.setStyleSheet("border :3px solid black;\n"
 "border-radius: 15px;\n"
 "background-color: rgb(0,255,255);")
@@ -96,6 +105,7 @@ class Ui_Dialog(object):
         self.horizontalLayout.addWidget(self.btn_6)
         self.horizontalLayout_2.addLayout(self.horizontalLayout)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.verticalLayout.addWidget(self.scrollArea)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)

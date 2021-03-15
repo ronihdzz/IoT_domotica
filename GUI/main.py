@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import  QDialog,QApplication
 from PyQt5 import QtWidgets
 from functools import partial
+from PyQt5.QtWidgets import (QMessageBox,QButtonGroup,QDialog)
 
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
@@ -21,36 +22,86 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         QtWidgets.QWidget.__init__(self)
         self.setupUi(self)
 
+        self.foco_prendido=False
+        self.ventilador_prendido=False
+
+
         self.venConfig_foco=Dialog_configLed()
-        self.venConfig_venti=Dialog_configVenti()
+        self.venConfig_venti=Dialog_configVenti(self)
         self.venConfig_alarma=Dialog_configAlarma()
 
+
+        self.venConfig_foco.senal_colorElegido.connect(self.cambiarColorFoco)
+        self.venConfig_venti.senal_cambioTempPrendeVenti.connect(self.cambiarTempPrendeVenti)
+
+        #Configuración de los parametros de automatización
         self.btn_configFoco.clicked.connect(self.configurarFoco)
         self.btn_configVenti.clicked.connect(self.configurarVenti)
-
         self.btn_configAlarm.clicked.connect(self.configurarAlarma)
 
+
+        #Configuraciones de la extensión de arduino en la Rasberry pi
         self.extencionArduino=ArduinoExtension_hilo(velocidad=9600,puerto="COM6")
         self.extencionArduino.senal_temperatura.connect(self.actualizarTemp)
-        self.extencionArduino.senal_aplausoDetectado.connect(self.prenderApagarFoco)
+        self.extencionArduino.senal_aplausoDetectado.connect(self.cambiarEstadoFoco)
         self.extencionArduino.start()
 
+        self.hoSli_foco.valueChanged.connect(self.prenderApagarFoco)
 
-    
+        self.tempActual=22 #temperatura actual...
 
-    def actualizarTemp(self,nuevaTemp):
-        print(nuevaTemp)
+    def cambiarEstadoFoco(self,dato):
+        #esto simula que alguien cambio la posicion del slider
+        #por ende al hacer eso se llamara a la función asociada
+        #a la señal cuando se activa o desactiva el slider
+        estado=not(self.foco_prendido)
+        estado=int(estado)
+        self.hoSli_foco.setValue( estado ) 
     
     def prenderApagarFoco(self,dato):
-        print(dato)
+        self.foco_prendido=not(self.foco_prendido)
+        if self.foco_prendido:
+            self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_on.png);")
+        else:
+            self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_off.png);")
+    
+    def cambiarColorFoco(self,listDatos):
+        idColor=listDatos[0]
+        colorRGB=listDatos[1]
+        self.bel_colorFoco.setStyleSheet("""border :3px solid black;
+                                            border-radius: 15px;
+                                            background-color: rgb{};""".format(colorRGB))
+        print("Color recibido:",idColor)
+
+
+    def actualizarTemp(self,nuevaTemp):
+        nuevaTemp=float(nuevaTemp)
+        if abs(nuevaTemp-self.tempActual)>0.3:
+            self.tempActual=nuevaTemp
+            print("temp Registrada: {}".format(nuevaTemp))
+            self.bel_temp.setText(str(self.tempActual))
+    
+    def cambiarTempPrendeVenti(self,nuevaTemp):
+        print("Nueva temp:",nuevaTemp)
+        self.bel_tempActVenti.setText(str(nuevaTemp))
 
     def configurarFoco(self):
-        self.venConfig_foco.show()
-    
+        self.venConfig_foco.show()    
     def configurarVenti(self):
         self.venConfig_venti.show()
     def configurarAlarma(self):
         self.venConfig_alarma.show()
+
+    
+    def closeEvent(self,event):
+        resultado = QMessageBox.question(self, "Salir ...",
+                                            "¿Seguro que quieres salir?",
+                                            QMessageBox.Yes | QMessageBox.No)
+        if resultado == QMessageBox.Yes:
+            event.accept()
+        else:
+            event.ignore()  # No saldremos del evento
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
