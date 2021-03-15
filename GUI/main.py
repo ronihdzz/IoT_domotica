@@ -12,6 +12,8 @@ from CUERPO.DISENO.main_dise import Ui_Form
 from CUERPO.LOGICA.configLed import Dialog_configLed
 from CUERPO.LOGICA.configVenti import Dialog_configVenti
 from CUERPO.LOGICA.configAlarma import Dialog_configAlarma
+from CUERPO.LOGICA.arduinoExtension import ArduinoExtension_hilo
+
 
 class Main_IoT(QtWidgets.QWidget, Ui_Form):
     def __init__(self):
@@ -27,6 +29,20 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         self.btn_configVenti.clicked.connect(self.configurarVenti)
 
         self.btn_configAlarm.clicked.connect(self.configurarAlarma)
+
+        self.extencionArduino=ArduinoExtension_hilo(velocidad=9600,puerto="COM6")
+        self.extencionArduino.senal_temperatura.connect(self.actualizarTemp)
+        self.extencionArduino.senal_aplausoDetectado.connect(self.prenderApagarFoco)
+        self.extencionArduino.start()
+
+
+    
+
+    def actualizarTemp(self,nuevaTemp):
+        print(nuevaTemp)
+    
+    def prenderApagarFoco(self,dato):
+        print(dato)
 
     def configurarFoco(self):
         self.venConfig_foco.show()
