@@ -1,6 +1,6 @@
  int led = 5;        // used for ESP32
- int Fire_analog = 4;    // used for ESP32
- int Fire_digital = 2;   // used for ESP32
+ int Fire_analog = 2;    // used for ESP32
+ int Fire_digital = 4;   // used for ESP32
 
 void setup() {
   Serial.begin(115200);
