@@ -14,7 +14,7 @@ from CUERPO.LOGICA.configLed import Dialog_configLed
 from CUERPO.LOGICA.configVenti import Dialog_configVenti
 from CUERPO.LOGICA.configAlarma import Dialog_configAlarma
 from CUERPO.LOGICA.arduinoExtension import ArduinoExtension_hilo
-from CUERPO.LOGICA.bluetoothSerial import BluetoothSerial_hiloEscucha
+from CUERPO.LOGICA.bluetoothSerial import BluetoothSerial_hilo
 
 class Main_IoT(QtWidgets.QWidget, Ui_Form):
     def __init__(self):
@@ -42,16 +42,19 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 
         #Configuraciones de la extensión de arduino en la Rasberry pi
         self.extencionArduino=ArduinoExtension_hilo(velocidad=9600,puerto="COM6")
-        self.bluetooth=BluetoothSerial_hiloEscucha(velocidad=9600,puerto="COM5")
+        self.bluetooth=BluetoothSerial_hilo(velocidad=9600,puerto="COM5")
 
         self.extencionArduino.senal_temperatura.connect(self.actualizarTemp)
         self.extencionArduino.senal_aplausoDetectado.connect(self.cambiarEstadoFoco)
         self.extencionArduino.start()
-        self.bluetooth.run()
+        #self.bluetooth.run()
 
         self.hoSli_foco.valueChanged.connect(self.prenderApagarFoco)
+        self.hoSli_venti.valueChanged.connect(self.prenderApagarVenti)
 
         self.tempActual=22 #temperatura actual...
+
+        self.bluetooth.start()
 
     def cambiarEstadoFoco(self,dato):
         #esto simula que alguien cambio la posicion del slider
@@ -65,9 +68,10 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         self.foco_prendido=not(self.foco_prendido)
         if self.foco_prendido:
             self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_on.png);")
-            #self.bluetooth.moduloBlutetooth.write("_11,1_".encode("utf-8"))
+            self.bluetooth.foco_prenderApagar(prender=True)
         else:
             self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_off.png);")
+            self.bluetooth.foco_prenderApagar(apagar=True)
             #self.bluetooth.moduloBlutetooth.write("_11,0_".encode("utf-8"))
     
     def cambiarColorFoco(self,listDatos):
@@ -77,7 +81,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
                                             border-radius: 15px;
                                             background-color: rgb{};""".format(colorRGB))
         print("Color recibido:",idColor)
-        self.bluetooth.moduloBlutetooth.write(f"_11,2,{idColor}_".encode("utf-8"))
+        self.bluetooth.foco_cambiarColor(idColor)
 
     def actualizarTemp(self,nuevaTemp):
         nuevaTemp=float(nuevaTemp)
@@ -85,6 +89,18 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
             self.tempActual=nuevaTemp
             print("temp Registrada: {}".format(nuevaTemp))
             self.bel_temp.setText(str(self.tempActual))
+
+    def prenderApagarVenti(self,dato):
+        self.ventilador_prendido=not(self.ventilador_prendido)
+        if self.ventilador_prendido:
+            self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_on.png);")
+            self.bluetooth.venti_prenderApagar(prender=True)
+        else:
+            self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_off.png);")
+            self.bluetooth.venti_prenderApagar(apagar=True)
+            #self.bluetooth.moduloBlutetooth.write("_11,0_".encode("utf-8"))
+
+
     
     def cambiarTempPrendeVenti(self,nuevaTemp):
         print("Nueva temp:",nuevaTemp)

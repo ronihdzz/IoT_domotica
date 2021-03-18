@@ -17,7 +17,7 @@
 #define CAMBIAR_COLOR_FOCO 2
 #define FUEGO_DETECTADO 3
 #define FUEGO_APAGADO 4
-
+#define ORDEN_ATENDIDA 5
 
 //ID DE LOS SENSORES...
 #define VENTILADOR  10
@@ -116,7 +116,8 @@ void loop() {
   if(charTerminaMensaje==CHAR_SEGURIDAD){
       //Serial.println("EJECUTANDO ORDEN: ");
       ordenRealizar(param_1); 
-      respuesta=CHAR_SEGURIDAD+String(idSensor)+CHAR_SEGURIDAD+"\n";
+      //respuesta=CHAR_SEGURIDAD+String(idSensor)+CHAR_SEGURIDAD+"\n";
+      respuesta=empaquetarMensaje( String(ORDEN_ATENDIDA));
       SerialBT.println(respuesta); //le notificamos que ya fue realizado la orden
   }          
  }else{ //SE DETECO FUEGO...
@@ -124,9 +125,10 @@ void loop() {
     apagarFoco(10);apagarVentilador(10); //hacemos esto por precaucion...
     
     while(true){
-        delay(100);
+        delay(500);
         //Serial.print("ALERTA ");Serial.println(SIN_FLAMA);
-        respuesta=CHAR_SEGURIDAD+String(FUEGO_DETECTADO)+CHAR_SEGURIDAD+"\n";
+        //respuesta=CHAR_SEGURIDAD+String(FUEGO_DETECTADO)+CHAR_SEGURIDAD+"\n";
+        respuesta=empaquetarMensaje( String(FUEGO_DETECTADO) );
         SerialBT.println(respuesta);
         SIN_FLAMA =!(digitalRead(PIN_SENSOR_FLAMA));
         if (SIN_FLAMA){
@@ -138,10 +140,11 @@ void loop() {
     //ya que se apago el incendio debemos noticarle a la casa que 
     //ya no hay fuego y debemos sercioaranos que ya recibio el mensaje
     //en caso contrario no podremos continuar los labores normales...
-    respuesta=CHAR_SEGURIDAD+String(FUEGO_APAGADO)+CHAR_SEGURIDAD+"\n";
+    //respuesta=CHAR_SEGURIDAD+String(FUEGO_APAGADO)+CHAR_SEGURIDAD+"\n";
+    respuesta=empaquetarMensaje( String(FUEGO_APAGADO) );
     while( !SerialBT.available() ) {
       SerialBT.println(respuesta);
-      delay(250);
+      delay(500);
     }//lo siguiente a esperar sera una instruccion...
  }
  
@@ -173,4 +176,9 @@ void apagarVentilador(int _noImporta ){
 
 void flamaDetectada(){
   SIN_FLAMA=false;
+}
+
+String empaquetarMensaje(String mensaje){
+  mensaje=CHAR_SEGURIDAD+mensaje+CHAR_SEGURIDAD;
+  return mensaje;
 }
