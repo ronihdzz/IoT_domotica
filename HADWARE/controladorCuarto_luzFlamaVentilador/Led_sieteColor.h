@@ -17,6 +17,7 @@ class Led_sieteColor{
     bool prendido; //true o false
   public:
    static const bool COLORES[8][3];
+   static const byte NO_COLORES;
    Led_sieteColor(byte _pinRojo,byte _pinVerde, byte _pinAzul,byte _anodo);
    void cambiarColor(byte idColor);
    void prender();
@@ -32,6 +33,7 @@ const bool Led_sieteColor::COLORES[8][3]={ //configuración para leds anodos
                    {0,1,0}, //magenta
                    {1,0,0}, //cian
                 };
+const byte Led_sieteColor::NO_COLORES=7;
 Led_sieteColor::Led_sieteColor(byte _pinRojo,byte _pinVerde, byte _pinAzul,byte _anodo){
   this->pinRojo=_pinRojo;
   this->pinVerde=_pinVerde;
@@ -46,10 +48,12 @@ Led_sieteColor::Led_sieteColor(byte _pinRojo,byte _pinVerde, byte _pinAzul,byte 
     
 }
 void Led_sieteColor::cambiarColor(byte idColor){
-  this->estadoRojo=COLORES[idColor][0];
-  this->estadoVerde=COLORES[idColor][1];
-  this->estadoAzul=COLORES[idColor][2];
-  if(this->prendido) this->prender();
+  if (idColor<NO_COLORES){
+      this->estadoRojo=COLORES[idColor][0];
+      this->estadoVerde=COLORES[idColor][1];
+      this->estadoAzul=COLORES[idColor][2];
+      if(this->prendido) this->prender();
+  }
 }
 void Led_sieteColor::prender(){
   this->prendido=true;

@@ -15,16 +15,16 @@ from  CUERPO.DISENO.configVenti_dise import Ui_Dialog
 
 class Dialog_configVenti(QtWidgets.QDialog, Ui_Dialog):
     senal_cambioTempPrendeVenti= pyqtSignal(float)
-    def __init__(self,context):
+    def __init__(self,tempPrenderaVenti):
         Ui_Dialog.__init__(self)
         QtWidgets.QDialog.__init__(self)
         self.setupUi(self)
-        self.context=context
 
         self.setWindowFlags(Qt.CustomizeWindowHint | Qt.WindowCloseButtonHint)
         self.setWindowTitle(" ")
         self.setWindowModality(Qt.ApplicationModal)
-        self.temp_prendeVentilador=25 #valor por default
+        self.temp_prendeVentilador=tempPrenderaVenti #valor por default
+        self.dSB_tempActVenti.setValue(tempPrenderaVenti)
 
         self.btn_guardarSalir.clicked.connect(self.guardarSalir)
 

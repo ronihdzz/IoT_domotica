@@ -15,8 +15,6 @@
 #define APAGAR 0
 #define PRENDER 1
 #define CAMBIAR_COLOR_FOCO 2
-#define FUEGO_DETECTADO 3
-#define FUEGO_APAGADO 4
 #define ORDEN_ATENDIDA 5
 
 //ID DE LOS SENSORES...
@@ -25,131 +23,130 @@
 
 //CONSTANTES...
 const char CHAR_SEGURIDAD='_';  
+const char CHAR_NO_SEGURIDAD='+';
 const byte PIN_VENTILADOR=32; //D32
-const byte PIN_LED_ALERTA_FLAMA=23; //D23
-const byte PIN_SENSOR_FLAMA=15; //D15
+
+// Dato de tipo puntero a funcion que retornaran unas funciones...
+typedef void (*ordenUnSensor)(int);
+
 
 //VARIABLES GLOBALES...
 BluetoothSerial SerialBT;
 Led_sieteColor G_focoDelCuarto(25,26,27,false);
-bool SIN_FLAMA=true;
-String respuesta="";
 
 void setup() {
   Serial.begin(115200);
   SerialBT.begin("Cuarto_luzFlamaVentilador");
 
-  pinMode(PIN_VENTILADOR,OUTPUT);
-  pinMode(PIN_LED_ALERTA_FLAMA,OUTPUT);
-  
-  pinMode(PIN_SENSOR_FLAMA, INPUT_PULLUP);
-  attachInterrupt(PIN_SENSOR_FLAMA,flamaDetectada,RISING);  
+  pinMode(PIN_VENTILADOR,OUTPUT); 
+
 }
 
 
 
 void loop() {
-  char charTerminaMensaje='+'; //le asignamos un char diferente al CHAR_SEGURIDAD
+  char charTerminaMensaje;
   byte idSensor,idOrdenRealizar; 
-  void (*ordenRealizar)(int); //puntero a funcion...
-  int param_1=0;
-  char charBufer='+'; 
+  //void (*ordenRealizar)(int); //puntero a funcion...
+  ordenUnSensor ordenRealizar; //puntero a funcion..
+  int param_1;
+  char charBufer; 
+  String respuesta;
 
-  while( charBufer!=CHAR_SEGURIDAD &&  SIN_FLAMA ){
-    charBufer= char( SerialBT.read() );
-    //Serial.print(charBufer);
-    delay(100);
-  }
   
-  if(SIN_FLAMA){
-        //Serial.println("ENTRAMOS AL PARSEint: ");
-        idSensor=SerialBT.parseInt();
-        //Serial.println("SALIMOS DEL PARSEint: ");
-        //SerialBT.read();//con esto eliminamos al separador(en este caso a la ',' ) del buffer
-
-        //Serial.println("ENTRAMOS AL PARSEint: ");
-        idOrdenRealizar=SerialBT.parseInt();//puede ser cero(apagar) o uno(prender)
-        //Serial.println("SALIMOS DEL PARSEint: ");
-
-        
-        //Serial.print("ID SENSOR: ");Serial.println(idSensor);
-        //Serial.print("ID ORDEN: ");Serial.println(idOrdenRealizar);
-  
-        switch(idSensor){
-            case FOCO:
-                switch(idOrdenRealizar){
-                 case PRENDER:
-                    ordenRealizar=&prenderFoco;
-                    break;
-                 case APAGAR:
-                    ordenRealizar=&apagarFoco;
-                    break;
-                 case CAMBIAR_COLOR_FOCO:
-                    ordenRealizar=&cambiarColorFoco;
-                    Serial.read();//con esto eliminamos al separador(en este caso a la ',' ) del buffer
-                    param_1=SerialBT.parseInt(); //esto representara el color del foco
-                    break;
-                 default:
-                   break;
-               }  
-           break;
-                   
-           case VENTILADOR:
-                switch(idOrdenRealizar){
-                  case PRENDER:
-                    ordenRealizar=&prenderVentilador;
-                    break;
-                  case APAGAR:
-                    ordenRealizar=&apagarVentilador;
-                    break;
-                  default:
-                   break;
-               }
-            break;
-            
-           default:
-               break;  
-  }//fin del swith...
+  while(true){
+      charTerminaMensaje=CHAR_NO_SEGURIDAD; //le asignamos un char diferente al CHAR_SEGURIDAD
+      charBufer=CHAR_NO_SEGURIDAD; 
+      respuesta="";
+      param_1=0;
       
-  charTerminaMensaje=char(SerialBT.read());
-  //Serial.print("FIN MENSAJE: ");Serial.println(charTerminaMensaje);
-  if(charTerminaMensaje==CHAR_SEGURIDAD){
-      //Serial.println("EJECUTANDO ORDEN: ");
-      ordenRealizar(param_1); 
-      //respuesta=CHAR_SEGURIDAD+String(idSensor)+CHAR_SEGURIDAD+"\n";
-      respuesta=empaquetarMensaje( String(ORDEN_ATENDIDA));
-      SerialBT.println(respuesta); //le notificamos que ya fue realizado la orden
-  }          
- }else{ //SE DETECO FUEGO...
-    digitalWrite(PIN_LED_ALERTA_FLAMA,HIGH);
-    apagarFoco(10);apagarVentilador(10); //hacemos esto por precaucion...
-    
-    while(true){
-        delay(500);
-        //Serial.print("ALERTA ");Serial.println(SIN_FLAMA);
-        //respuesta=CHAR_SEGURIDAD+String(FUEGO_DETECTADO)+CHAR_SEGURIDAD+"\n";
-        respuesta=empaquetarMensaje( String(FUEGO_DETECTADO) );
-        SerialBT.println(respuesta);
-        SIN_FLAMA =!(digitalRead(PIN_SENSOR_FLAMA));
-        if (SIN_FLAMA){
-          break;
-        }
-    }
-    digitalWrite(PIN_LED_ALERTA_FLAMA,LOW); 
-    SIN_FLAMA=true;
-    //ya que se apago el incendio debemos noticarle a la casa que 
-    //ya no hay fuego y debemos sercioaranos que ya recibio el mensaje
-    //en caso contrario no podremos continuar los labores normales...
-    //respuesta=CHAR_SEGURIDAD+String(FUEGO_APAGADO)+CHAR_SEGURIDAD+"\n";
-    respuesta=empaquetarMensaje( String(FUEGO_APAGADO) );
-    while( !SerialBT.available() ) {
-      SerialBT.println(respuesta);
-      delay(500);
-    }//lo siguiente a esperar sera una instruccion...
- }
- 
-}
+      while( charBufer!=CHAR_SEGURIDAD   ){
+        charBufer= char( SerialBT.read() );
+        Serial.print(charBufer);
+        delay(100);
+      }
+      Serial.println("ENTRAMOS AL PARSEint: ");
+      idSensor=SerialBT.parseInt();
+      Serial.println("SALIMOS DEL PARSEint: ");
+      SerialBT.read();//con esto eliminamos al separador(en este caso a la ',' ) del buffer
   
+      Serial.println("ENTRAMOS AL PARSEint: ");
+      idOrdenRealizar=SerialBT.parseInt();//puede ser cero(apagar) o uno(prender)
+      Serial.println("SALIMOS DEL PARSEint: ");
+      
+      Serial.print("ID SENSOR: ");Serial.println(idSensor);
+      Serial.print("ID ORDEN: ");Serial.println(idOrdenRealizar);
+  
+      switch(idSensor){
+          case FOCO:
+            ordenRealizar=foco_dameOrden(idOrdenRealizar,&param_1);
+            break;
+                   
+         case VENTILADOR:
+            ordenRealizar=ventilador_dameOrden(idOrdenRealizar);
+          break;
+          
+         default:
+             break;  
+    }//fin del swith...
+        
+    charTerminaMensaje=char(SerialBT.read());
+    Serial.print("FIN MENSAJE: ");Serial.println(charTerminaMensaje);
+    if(charTerminaMensaje==CHAR_SEGURIDAD){
+        Serial.println("EJECUTANDO ORDEN: ");
+        ordenRealizar(param_1); 
+        respuesta=empaquetarMensaje(String(ORDEN_ATENDIDA));
+        SerialBT.println(respuesta); //le notificamos que ya fue realizado la orden
+    }
+    
+  }          
+}
+
+  
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// MENUS DE CADA SENSOR...
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ordenUnSensor foco_dameOrden(int idOrden,int *puntero_param1){
+    int param_1;
+    //void (*ordenRealizar)(int); //puntero a funcion...
+    ordenUnSensor ordenRealizar; //puntero a funcion...
+    switch(idOrden){
+     case PRENDER:
+        ordenRealizar=&prenderFoco;
+        break;
+     case APAGAR:
+        ordenRealizar=&apagarFoco;
+        break;
+     case CAMBIAR_COLOR_FOCO:
+        ordenRealizar=&cambiarColorFoco;
+        Serial.read();//con esto eliminamos al separador(en este caso a la ',' ) del buffer
+        param_1=SerialBT.parseInt(); //esto representara el color del foco
+        *puntero_param1=param_1;
+        break;
+     default:
+       break;
+   }
+   return ordenRealizar; 
+}
+
+
+ordenUnSensor ventilador_dameOrden(int idOrden){
+    //void (*ordenRealizar)(int); //puntero a funcion...
+    ordenUnSensor ordenRealizar; //puntero a funcion...
+    switch(idOrden){
+        case PRENDER:
+          ordenRealizar=&prenderVentilador;
+          break;
+        case APAGAR:
+          ordenRealizar=&apagarVentilador;
+          break;
+        default:
+         break;
+   }
+   return ordenRealizar; 
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  COMPORTAMIENTOS DE LOS DIFERENTES ESTADOS DE MIS CENSORES...
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -174,9 +171,6 @@ void apagarVentilador(int _noImporta ){
  digitalWrite(PIN_VENTILADOR,LOW);     
 }
 
-void flamaDetectada(){
-  SIN_FLAMA=false;
-}
 
 String empaquetarMensaje(String mensaje){
   mensaje=CHAR_SEGURIDAD+mensaje+CHAR_SEGURIDAD;

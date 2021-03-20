@@ -35,7 +35,6 @@ class BluetoothSerial_hilo(QThread):
 
     def run(self):
         while not(self.terminarHilo):
-
             if self.datosMandar:
                 mensajeMandar=self.empaquetarMensaje(self.datosMandar)
                 print("DATOS A MANDAR:",self.datosMandar)
@@ -54,28 +53,6 @@ class BluetoothSerial_hilo(QThread):
                         print("¿RECIBIDO?:NO")
                         self.senal_ordenRealizada.emit(False)
                 self.datosMandar=None
-
-            while True and  not(self.datosMandar):
-                mensajeRespuesta=self.moduloBlutetooth.readline()
-                print("FUEGO:",mensajeRespuesta)
-                if mensajeRespuesta:
-                    listaDatos=self.desempaquetarMensaje(mensajeRespuesta)
-                    if listaDatos[0]==self.IDS["FUEGO_DETECTADO"]:
-                        print("fuego detectado")
-                        self.senal_fuegoDetectado.emit(True)
-                        while True: #esperando a que nos nofiquen que ya se apago el fuego
-                            mensajeRespuesta=self.moduloBlutetooth.readline()
-                            print("FUEGO-PENDIENTE:",mensajeRespuesta)
-                            if mensajeRespuesta:
-                                listaDatos=self.desempaquetarMensaje(mensajeRespuesta)
-                                print("LISTA fuego:",listaDatos)
-                                if listaDatos[0]==self.IDS["FUEGO_APAGADO"]:
-                                    break
-                        self.senal_fuegoDetectado.emit(False)
-                        print("FUEGO-APAGADO:",mensajeRespuesta)
-                        #mandar un mensaje sin sentido para decirle que ya estamos de vuelta
-                        self.moduloBlutetooth.write(self.empaquetarMensaje("pokg") )
-
 
     def foco_prenderApagar(self,prender=False,apagar=False):
         datosMandar=[]
@@ -115,7 +92,8 @@ class BluetoothSerial_hilo(QThread):
         # \n\r es con lo que termina el mensaje
         mensaje=mensaje.decode("utf-8")
         datos=None
-        if mensaje[0]==self.CHAR_SEGURIDAD and mensaje[-3]==self.CHAR_SEGURIDAD:
-            mensaje=mensaje[1:-3] #primero quitamos los caracteres de seguridad y el salto de linea...
-            datos=mensaje.split(self.SEP_ENTRE_DATOS)
+        if len(mensaje)>4:#minimo debe de tener 5 datos
+            if mensaje[0]==self.CHAR_SEGURIDAD and mensaje[-3]==self.CHAR_SEGURIDAD:
+                mensaje=mensaje[1:-3] #primero quitamos los caracteres de seguridad y el salto de linea...
+                datos=mensaje.split(self.SEP_ENTRE_DATOS)
         return datos

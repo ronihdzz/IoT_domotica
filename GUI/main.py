@@ -24,10 +24,13 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 
         self.foco_prendido=False
         self.ventilador_prendido=False
+        self.tempActual=22 #temperatura actual...
+        self.tempPrenderaVenti=100
+        self.cambiarTempPrendeVenti(self.tempPrenderaVenti)
 
 
         self.venConfig_foco=Dialog_configLed()
-        self.venConfig_venti=Dialog_configVenti(self)
+        self.venConfig_venti=Dialog_configVenti(self.tempPrenderaVenti)
         self.venConfig_alarma=Dialog_configAlarma()
 
 
@@ -51,8 +54,11 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 
         self.hoSli_foco.valueChanged.connect(self.prenderApagarFoco)
         self.hoSli_venti.valueChanged.connect(self.prenderApagarVenti)
+        self.hoSli_venti.setEnabled(False)
+        self.hoSli_foco.setEnabled(False)
 
-        self.tempActual=22 #temperatura actual...
+
+        self.venConfig_venti.temp_prendeVentilador
 
         self.bluetooth.start()
 
@@ -89,10 +95,21 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
             self.tempActual=nuevaTemp
             print("temp Registrada: {}".format(nuevaTemp))
             self.bel_temp.setText(str(self.tempActual))
+        if nuevaTemp>=self.tempPrenderaVenti:
+            if not(self.ventilador_prendido):
+                self.hoSli_venti.setValue(1)
+                #self.prenderApagarVenti(prender=True)
+        else:
+            if self.ventilador_prendido:
+                self.hoSli_venti.setValue(0)
+                #self.prenderApagarVenti(prender=False)
 
-    def prenderApagarVenti(self,dato):
+
+    def prenderApagarVenti(self,prender):
         self.ventilador_prendido=not(self.ventilador_prendido)
-        if self.ventilador_prendido:
+        print("*****************************************=",prender)
+        #if self.ventilador_prendido:
+        if prender:
             self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_on.png);")
             self.bluetooth.venti_prenderApagar(prender=True)
         else:
@@ -105,6 +122,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
     def cambiarTempPrendeVenti(self,nuevaTemp):
         print("Nueva temp:",nuevaTemp)
         self.bel_tempActVenti.setText(str(nuevaTemp))
+        self.tempPrenderaVenti=nuevaTemp
 
     def configurarFoco(self):
         self.venConfig_foco.show()    
