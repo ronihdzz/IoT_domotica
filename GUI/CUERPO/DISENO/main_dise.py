@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\main_dise.ui'
+# Form implementation generated from reading ui file 'main_dise.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.3
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(707, 558)
+        Form.resize(747, 551)
         self.btn_info = QtWidgets.QPushButton(Form)
         self.btn_info.setGeometry(QtCore.QRect(10, 10, 31, 31))
         self.btn_info.setStyleSheet("QPushButton {\n"
@@ -29,34 +29,6 @@ class Ui_Form(object):
 "")
         self.btn_info.setText("")
         self.btn_info.setObjectName("btn_info")
-        self.btn_configVenti = QtWidgets.QPushButton(Form)
-        self.btn_configVenti.setGeometry(QtCore.QRect(300, 320, 51, 41))
-        self.btn_configVenti.setStyleSheet("QPushButton {\n"
-"    border-image: url(:/ICON/IMAGENES/config_off.png);\n"
-" }\n"
-"QPushButton:hover {\n"
-"    border-image: url(:/ICON/IMAGENES/config_on.png);\n"
-"}\n"
-"QPushButton:pressed {\n"
-"    border-image: url(:/ICON/IMAGENES/config_off.png);\n"
-"}\n"
-"")
-        self.btn_configVenti.setText("")
-        self.btn_configVenti.setObjectName("btn_configVenti")
-        self.btn_configFoco = QtWidgets.QPushButton(Form)
-        self.btn_configFoco.setGeometry(QtCore.QRect(530, 320, 51, 41))
-        self.btn_configFoco.setStyleSheet("QPushButton {\n"
-"    border-image: url(:/ICON/IMAGENES/config_off.png);\n"
-" }\n"
-"QPushButton:hover {\n"
-"    border-image: url(:/ICON/IMAGENES/config_on.png);\n"
-"}\n"
-"QPushButton:pressed {\n"
-"    border-image: url(:/ICON/IMAGENES/config_off.png);\n"
-"}\n"
-"")
-        self.btn_configFoco.setText("")
-        self.btn_configFoco.setObjectName("btn_configFoco")
         self.btn_configIdioma = QtWidgets.QPushButton(Form)
         self.btn_configIdioma.setGeometry(QtCore.QRect(50, 10, 41, 31))
         self.btn_configIdioma.setStyleSheet("QPushButton {\n"
@@ -72,7 +44,7 @@ class Ui_Form(object):
         self.btn_configIdioma.setText("")
         self.btn_configIdioma.setObjectName("btn_configIdioma")
         self.hoSli_venti = QtWidgets.QSlider(Form)
-        self.hoSli_venti.setGeometry(QtCore.QRect(180, 460, 131, 40))
+        self.hoSli_venti.setGeometry(QtCore.QRect(300, 470, 131, 40))
         self.hoSli_venti.setStyleSheet("QSlider {\n"
 "    min-height: 40px;\n"
 "    max-height: 40px;\n"
@@ -81,14 +53,14 @@ class Ui_Form(object):
 "QSlider::groove:horizontal {\n"
 "    border: 1px solid #262626;\n"
 "    height: 5px;\n"
-"    background: #393939;\n"
+"   /* background: #393939;*/\n"
+"    background:#95DEE7;\n"
 "    margin: 0 12px;\n"
 "}\n"
 "\n"
 "QSlider::handle:horizontal {\n"
-"    background: #22B14C;\n"
-"    /*background-color: rgb(1, 255, 226);*/\n"
-"    /*border: 5px solid #B5E61D;*/\n"
+"   /* background: #22B14C;*/\n"
+"    background:#95DEE7;\n"
 "    width: 15px;\n"
 "    height: 80px;\n"
 "    margin: 24px -12px;\n"
@@ -99,35 +71,35 @@ class Ui_Form(object):
         self.hoSli_venti.setTickPosition(QtWidgets.QSlider.TicksBothSides)
         self.hoSli_venti.setObjectName("hoSli_venti")
         self.label_3 = QtWidgets.QLabel(Form)
-        self.label_3.setGeometry(QtCore.QRect(170, 500, 41, 31))
+        self.label_3.setGeometry(QtCore.QRect(290, 510, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_3.setFont(font)
         self.label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(Form)
-        self.label_4.setGeometry(QtCore.QRect(280, 500, 41, 31))
+        self.label_4.setGeometry(QtCore.QRect(400, 510, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_4.setFont(font)
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
         self.label_4.setObjectName("label_4")
         self.label_8 = QtWidgets.QLabel(Form)
-        self.label_8.setGeometry(QtCore.QRect(510, 500, 41, 31))
+        self.label_8.setGeometry(QtCore.QRect(630, 510, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_8.setFont(font)
         self.label_8.setAlignment(QtCore.Qt.AlignCenter)
         self.label_8.setObjectName("label_8")
         self.label_9 = QtWidgets.QLabel(Form)
-        self.label_9.setGeometry(QtCore.QRect(410, 500, 41, 31))
+        self.label_9.setGeometry(QtCore.QRect(530, 510, 41, 31))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label_9.setFont(font)
         self.label_9.setAlignment(QtCore.Qt.AlignCenter)
         self.label_9.setObjectName("label_9")
         self.hoSli_foco = QtWidgets.QSlider(Form)
-        self.hoSli_foco.setGeometry(QtCore.QRect(420, 460, 121, 40))
+        self.hoSli_foco.setGeometry(QtCore.QRect(540, 470, 121, 40))
         self.hoSli_foco.setStyleSheet("QSlider {\n"
 "    min-height: 40px;\n"
 "    max-height: 40px;\n"
@@ -136,48 +108,38 @@ class Ui_Form(object):
 "QSlider::groove:horizontal {\n"
 "    border: 1px solid #262626;\n"
 "    height: 5px;\n"
-"    background: #393939;\n"
+"   /* background: #393939;*/\n"
+"    background:#95DEE7;\n"
 "    margin: 0 12px;\n"
 "}\n"
 "\n"
 "QSlider::handle:horizontal {\n"
-"    background: #22B14C;\n"
-"    /*background-color: rgb(1, 255, 226);*/\n"
-"    /*border: 5px solid #B5E61D;*/\n"
+"   /* background: #22B14C;*/\n"
+"    background:#95DEE7;\n"
 "    width: 15px;\n"
 "    height: 80px;\n"
 "    margin: 24px -12px;\n"
-"}")
+"}\n"
+"\n"
+"\n"
+"")
         self.hoSli_foco.setMaximum(1)
         self.hoSli_foco.setPageStep(1)
         self.hoSli_foco.setOrientation(QtCore.Qt.Horizontal)
         self.hoSli_foco.setTickPosition(QtWidgets.QSlider.TicksBothSides)
         self.hoSli_foco.setObjectName("hoSli_foco")
-        self.bel_colorFoco = QtWidgets.QLabel(Form)
-        self.bel_colorFoco.setGeometry(QtCore.QRect(510, 420, 31, 31))
-        self.bel_colorFoco.setMinimumSize(QtCore.QSize(20, 20))
-        self.bel_colorFoco.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.bel_colorFoco.setFont(font)
-        self.bel_colorFoco.setStyleSheet("border :3px solid black;\n"
-"border-radius: 15px;\n"
-"background-color: rgb(255, 0, 0);")
-        self.bel_colorFoco.setText("")
-        self.bel_colorFoco.setAlignment(QtCore.Qt.AlignCenter)
-        self.bel_colorFoco.setObjectName("bel_colorFoco")
         self.bel_estadoVenti = QtWidgets.QLabel(Form)
-        self.bel_estadoVenti.setGeometry(QtCore.QRect(190, 350, 111, 91))
+        self.bel_estadoVenti.setGeometry(QtCore.QRect(310, 380, 111, 91))
         self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_off.png);")
         self.bel_estadoVenti.setText("")
         self.bel_estadoVenti.setObjectName("bel_estadoVenti")
         self.bel_estadoFoco = QtWidgets.QLabel(Form)
-        self.bel_estadoFoco.setGeometry(QtCore.QRect(430, 350, 111, 91))
+        self.bel_estadoFoco.setGeometry(QtCore.QRect(550, 380, 111, 91))
         self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_off.png);")
         self.bel_estadoFoco.setText("")
         self.bel_estadoFoco.setObjectName("bel_estadoFoco")
         self.timeEdit_tiempo = QtWidgets.QTimeEdit(Form)
-        self.timeEdit_tiempo.setGeometry(QtCore.QRect(110, 170, 161, 41))
+        self.timeEdit_tiempo.setGeometry(QtCore.QRect(100, 160, 161, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.timeEdit_tiempo.setFont(font)
@@ -187,88 +149,149 @@ class Ui_Form(object):
         self.timeEdit_tiempo.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.timeEdit_tiempo.setObjectName("timeEdit_tiempo")
         self.pushButton_3 = QtWidgets.QPushButton(Form)
-        self.pushButton_3.setGeometry(QtCore.QRect(30, 250, 81, 51))
+        self.pushButton_3.setGeometry(QtCore.QRect(20, 240, 81, 51))
         self.pushButton_3.setStyleSheet("border-image: url(:/ICON/IMAGENES/termo.png);\n"
 "")
         self.pushButton_3.setText("")
         self.pushButton_3.setObjectName("pushButton_3")
         self.label_6 = QtWidgets.QLabel(Form)
-        self.label_6.setGeometry(QtCore.QRect(20, 110, 91, 31))
+        self.label_6.setGeometry(QtCore.QRect(10, 100, 91, 31))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
         self.bel_temp = QtWidgets.QLabel(Form)
-        self.bel_temp.setGeometry(QtCore.QRect(110, 260, 81, 41))
+        self.bel_temp.setGeometry(QtCore.QRect(100, 250, 81, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.bel_temp.setFont(font)
         self.bel_temp.setAlignment(QtCore.Qt.AlignCenter)
         self.bel_temp.setObjectName("bel_temp")
         self.label_7 = QtWidgets.QLabel(Form)
-        self.label_7.setGeometry(QtCore.QRect(20, 170, 81, 31))
+        self.label_7.setGeometry(QtCore.QRect(10, 160, 81, 31))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.label_7.setFont(font)
         self.label_7.setObjectName("label_7")
         self.label_2 = QtWidgets.QLabel(Form)
-        self.label_2.setGeometry(QtCore.QRect(200, 260, 61, 41))
+        self.label_2.setGeometry(QtCore.QRect(190, 250, 61, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.label_2.setFont(font)
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.dateEdit_fecha = QtWidgets.QDateEdit(Form)
-        self.dateEdit_fecha.setGeometry(QtCore.QRect(110, 100, 161, 41))
+        self.dateEdit_fecha.setGeometry(QtCore.QRect(100, 90, 161, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.dateEdit_fecha.setFont(font)
         self.dateEdit_fecha.setReadOnly(True)
         self.dateEdit_fecha.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.dateEdit_fecha.setObjectName("dateEdit_fecha")
-        self.plaTextEdit_notas = QtWidgets.QPlainTextEdit(Form)
-        self.plaTextEdit_notas.setGeometry(QtCore.QRect(310, 100, 371, 211))
-        self.plaTextEdit_notas.setObjectName("plaTextEdit_notas")
-        self.label_10 = QtWidgets.QLabel(Form)
-        self.label_10.setGeometry(QtCore.QRect(320, 60, 181, 31))
-        font = QtGui.QFont()
-        font.setPointSize(20)
-        self.label_10.setFont(font)
-        self.label_10.setObjectName("label_10")
-        self.btn_configAlarm = QtWidgets.QPushButton(Form)
-        self.btn_configAlarm.setGeometry(QtCore.QRect(640, 40, 41, 41))
-        self.btn_configAlarm.setStyleSheet("QPushButton {\n"
-"    border-image: url(:/ICON/IMAGENES/alarm_on.png);\n"
-" }\n"
-"QPushButton:hover {\n"
-"    border-image: url(:/ICON/IMAGENES/alarm_off.png);\n"
-"}\n"
-"QPushButton:pressed {\n"
-"    border-image: url(:/ICON/IMAGENES/alarm_on.png);\n"
-"}\n"
-"")
-        self.btn_configAlarm.setText("")
-        self.btn_configAlarm.setObjectName("btn_configAlarm")
-        self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(630, 80, 51, 20))
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
-        self.bel_tempActVenti = QtWidgets.QLabel(Form)
-        self.bel_tempActVenti.setGeometry(QtCore.QRect(280, 430, 51, 31))
+        self.groupBox = QtWidgets.QGroupBox(Form)
+        self.groupBox.setGeometry(QtCore.QRect(50, 380, 151, 111))
         font = QtGui.QFont()
         font.setPointSize(14)
-        self.bel_tempActVenti.setFont(font)
-        self.bel_tempActVenti.setAlignment(QtCore.Qt.AlignCenter)
-        self.bel_tempActVenti.setObjectName("bel_tempActVenti")
-        self.label_5 = QtWidgets.QLabel(Form)
-        self.label_5.setGeometry(QtCore.QRect(330, 430, 41, 31))
+        self.groupBox.setFont(font)
+        self.groupBox.setObjectName("groupBox")
+        self.rb_controlManual = QtWidgets.QRadioButton(self.groupBox)
+        self.rb_controlManual.setGeometry(QtCore.QRect(10, 40, 101, 21))
         font = QtGui.QFont()
         font.setPointSize(14)
-        self.label_5.setFont(font)
-        self.label_5.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_5.setObjectName("label_5")
+        self.rb_controlManual.setFont(font)
+        self.rb_controlManual.setObjectName("rb_controlManual")
+        self.rb_controlAutomatico = QtWidgets.QRadioButton(self.groupBox)
+        self.rb_controlAutomatico.setGeometry(QtCore.QRect(10, 70, 121, 21))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.rb_controlAutomatico.setFont(font)
+        self.rb_controlAutomatico.setObjectName("rb_controlAutomatico")
+        self.btn_configFoco = QtWidgets.QPushButton(Form)
+        self.btn_configFoco.setGeometry(QtCore.QRect(660, 350, 31, 31))
+        self.btn_configFoco.setStyleSheet("border :3px solid black;\n"
+"border-radius: 15px;\n"
+"background-color: rgb(255, 0, 0);")
+        self.btn_configFoco.setText("")
+        self.btn_configFoco.setObjectName("btn_configFoco")
+        self.btn_configVenti = QtWidgets.QPushButton(Form)
+        self.btn_configVenti.setGeometry(QtCore.QRect(410, 350, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.btn_configVenti.setFont(font)
+        self.btn_configVenti.setObjectName("btn_configVenti")
+        self.tabWidget = QtWidgets.QTabWidget(Form)
+        self.tabWidget.setGeometry(QtCore.QRect(270, 10, 471, 331))
+        self.tabWidget.setStyleSheet("QTabWidget::pane { /* The tab widget frame */\n"
+"/* La linea encabezado que se encuentra abajo de los cuadros de seleccion*/\n"
+"    border-top: 2px solid #C2C7CB;\n"
+"}\n"
+"\n"
+"QTabWidget::tab-bar { \n"
+"/*Que tan alejado se encuentra el primer cuadro de seleccion de la parte izquierda del TabWiget*/\n"
+"   left: 5px; /* move to the right by 5px */\n"
+"}\n"
+"\n"
+"/* Style the tab using the tab sub-control. Note that\n"
+"    it reads QTabBar _not_ QTabWidget */\n"
+"QTabBar::tab {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
+"                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
+"    border: 2px solid #C4C4C3; /*contorno de los cuadros de seleccion*/\n"
+"   \n"
+" /*linea de abajo del cuadro(s) que no esta(n) seleccionado(s)*/\n"
+"    border-bottom-color:#C2C7CB; /* same as the pane color */\n"
+"\n"
+"    border-top-left-radius: 10px; /*curvatura de los cuadros de seleccion*/\n"
+"    border-top-right-radius: 4px; /*curvatura de los cuadros de seleccion*/\n"
+"    min-width: 25ex; /*ancho de cada casila*/\n"
+"    min-height:5ex;/*alto de cada casilla*/\n"
+"    padding: 2px;\n"
+"   font: 14pt \"MS Shell Dlg 2\";\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected, QTabBar::tab:hover {\n"
+"background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,\n"
+"                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected {\n"
+"    border-color:#9B9B9B;/*Color del borde de la casilla que esta seleccionada*/\n"
+"   /*borde del suelo del cuadro que esta seleccionado*/ \n"
+"   border-bottom-color: #C2C7CB; /* same as pane color */\n"
+"}\n"
+"\n"
+"QTabBar::tab:!selected {\n"
+"   /*tamaño de superiodida de alto del cuadro seleccionado y los que no*/\n"
+"    margin-top: 2px; /* make non-selected tabs look smaller */\n"
+"    font: 14pt \"MS Shell Dlg 2\"; /*Tamaño de letra de los cuadros que no estan\n"
+"   seleccionados*/\n"
+"}\n"
+"\n"
+"/* make use of negative margins for overlapping tabs */\n"
+"QTabBar::tab:selected {\n"
+"    /* expand/overlap to the left and right by 4px */\n"
+"    margin-left: -4px;/*longitud que se alejara una casilla de la parte izquierda \n"
+"   cuando este seleccionada*/\n"
+"    margin-right: -4px;\n"
+"}\n"
+"\n"
+"QTabBar::tab:first:selected {\n"
+"    margin-left: 0; /* the first selected tab has nothing to overlap with on the left */\n"
+"}\n"
+"\n"
+"QTabBar::tab:last:selected {\n"
+" margin-right: 0; /* the last selected tab has nothing to overlap with on the right */\n"
+"}\n"
+"\n"
+"QTabBar::tab:only-one {\n"
+"    margin: 0; /* if there is only one tab, we don\'t want overlapping margins */\n"
+"}")
+        self.tabWidget.setObjectName("tabWidget")
 
         self.retranslateUi(Form)
+        self.tabWidget.setCurrentIndex(-1)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -282,8 +305,8 @@ class Ui_Form(object):
         self.bel_temp.setText(_translate("Form", "38"))
         self.label_7.setText(_translate("Form", "Hora:"))
         self.label_2.setText(_translate("Form", "[°C]"))
-        self.label_10.setText(_translate("Form", "Recordatorios:"))
-        self.label.setText(_translate("Form", "Alarmas"))
-        self.bel_tempActVenti.setText(_translate("Form", "38"))
-        self.label_5.setText(_translate("Form", "[°C]"))
+        self.groupBox.setTitle(_translate("Form", "Control"))
+        self.rb_controlManual.setText(_translate("Form", "Manual"))
+        self.rb_controlAutomatico.setText(_translate("Form", "Automatico"))
+        self.btn_configVenti.setText(_translate("Form", "100 [°C]"))
 import IMAG_rc

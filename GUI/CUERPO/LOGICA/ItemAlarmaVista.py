@@ -26,49 +26,25 @@ class ItemAlarmaVista(QtWidgets.QWidget, Ui_Form):
         self.btn_eliminar.clicked.connect(self.mandarSenalMuerto)
         self.id=id
 
-        self.btn_editar.clicked.connect(self.editar)
+        self.hora="9:30"
+        self.nombre="Roni"
+        self.dias="lu,ma,mi,ju"
+        self.tipo="depertar"
         
 
-        self.ESTADO=False
-        self.deshabilitar()
+        self.btn_editar.clicked.connect(self.editar)
+        self.textEdit_alarma.setText("""<h2>{}({})</h2>
+        <h5>{}:{}</h5>
+        """.format(self.hora,self.tipo,self.nombre,self.dias))
+
+        self.textEdit_alarma.setReadOnly(True)
+        self.textEdit_alarma.setEnabled(False)
+
+
 
     def editar(self):
         self.venEdicion=ItemAlarmaEdit()
         self.venEdicion.show()
-
-    def deshabilitar(self):
-        self.lineEdit_nombre.setEnabled(self.ESTADO)
-        self.comBox_asunto.setEnabled(self.ESTADO)
-        self.timeEdit_hora.setEnabled(self.ESTADO)
-        self.cB_1.setEnabled(self.ESTADO)
-        self.cB_2.setEnabled(self.ESTADO)
-        self.cB_3.setEnabled(self.ESTADO)
-        self.cB_4.setEnabled(self.ESTADO)
-        self.cB_5.setEnabled(self.ESTADO)
-        self.cB_6.setEnabled(self.ESTADO)
-        self.cB_7.setEnabled(self.ESTADO)
-
-        self.bel_1.setEnabled(self.ESTADO)
-        self.bel_2.setEnabled(self.ESTADO)
-        self.bel_3.setEnabled(self.ESTADO)
-        self.bel_4.setEnabled(self.ESTADO)
-        self.bel_5.setEnabled(self.ESTADO)
-        self.bel_6.setEnabled(self.ESTADO)
-        self.bel_7.setEnabled(self.ESTADO)
-
-        self.bel_secNombre.setEnabled(self.ESTADO)
-        self.bel_secAsunto.setEnabled(self.ESTADO)
-
-
-
-
-
-
-
-
-
-
-
     
     def mandarSenalMuerto(self):
         self.suHoraMorir.emit(self.id)

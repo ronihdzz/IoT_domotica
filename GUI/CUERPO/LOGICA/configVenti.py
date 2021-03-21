@@ -29,13 +29,9 @@ class Dialog_configVenti(QtWidgets.QDialog, Ui_Dialog):
         self.btn_guardarSalir.clicked.connect(self.guardarSalir)
 
     def guardarSalir(self):
-        resultado = QMessageBox.question(self, "Salir ...",
-                                            "¿Seguro que la configuración es correcta?",
-                                            QMessageBox.Yes | QMessageBox.No)
-        if resultado == QMessageBox.Yes:
-            self.temp_prendeVentilador=self.dSB_tempActVenti.value()
-            self.senal_cambioTempPrendeVenti.emit(self.temp_prendeVentilador)
-            self.close()
+        self.temp_prendeVentilador=self.dSB_tempActVenti.value()
+        self.senal_cambioTempPrendeVenti.emit(self.temp_prendeVentilador)
+        self.close()
     
 
 if __name__ == "__main__":

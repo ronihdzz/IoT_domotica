@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'itemAlarmaEdit_dise.ui'
+# Form implementation generated from reading ui file '.\itemAlarmaEdit_dise.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.3
 #
@@ -15,7 +15,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.setWindowModality(QtCore.Qt.NonModal)
-        Dialog.resize(363, 304)
+        Dialog.resize(363, 161)
         Dialog.setMouseTracking(False)
         Dialog.setAcceptDrops(False)
         Dialog.setWindowTitle("")
@@ -226,18 +226,6 @@ class Ui_Dialog(object):
         self.timeEdit_hora.setObjectName("timeEdit_hora")
         self.layoutHor_3.addWidget(self.timeEdit_hora)
         self.verticalLayout_8.addLayout(self.layoutHor_3)
-        self.bel_secNombre_2 = QtWidgets.QLabel(Dialog)
-        self.bel_secNombre_2.setMinimumSize(QtCore.QSize(61, 31))
-        self.bel_secNombre_2.setMaximumSize(QtCore.QSize(16777215, 35))
-        font = QtGui.QFont()
-        font.setPointSize(11)
-        self.bel_secNombre_2.setFont(font)
-        self.bel_secNombre_2.setObjectName("bel_secNombre_2")
-        self.verticalLayout_8.addWidget(self.bel_secNombre_2)
-        self.textEdit = QtWidgets.QTextEdit(Dialog)
-        self.textEdit.setMinimumSize(QtCore.QSize(320, 100))
-        self.textEdit.setObjectName("textEdit")
-        self.verticalLayout_8.addWidget(self.textEdit)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label = QtWidgets.QLabel(Dialog)
@@ -280,6 +268,5 @@ class Ui_Dialog(object):
         self.cB_6.setShortcut(_translate("Dialog", "Backspace, Backspace"))
         self.bel_7.setText(_translate("Dialog", "Do"))
         self.cB_7.setShortcut(_translate("Dialog", "Backspace, Backspace"))
-        self.bel_secNombre_2.setText(_translate("Dialog", "Recordatorios:"))
         self.pushButton.setText(_translate("Dialog", "GUARDAR CAMBIOS"))
 import IMAG_rc

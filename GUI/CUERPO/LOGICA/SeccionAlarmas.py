@@ -10,42 +10,21 @@ from functools import partial
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
 ##############################################################
-from CUERPO.DISENO.configAlarm_dise import  Ui_Dialog
+from CUERPO.DISENO.seccionAlarmas_dise import  Ui_Form
 
 ###############################################################
 #  MIS LIBRERIAS...
 ##############################################################
 from CUERPO.LOGICA.ItemAlarmaVista import ItemAlarmaVista
 
-class itemRoniano(QObject):
-    suHoraMorir= pyqtSignal(int)#indicara quien es el objeto que quiere morir...
-    def __init__(self,id,checkBox_estado,textEdit_texto,boton_muerte):
-
-        QObject.__init__(self)
-        self.id=id
-        self.checkBox_estado=checkBox_estado
-        self.textEdit_texto=textEdit_texto
-        self.boton_muerte=boton_muerte
-        self.boton_muerte.clicked.connect(self.mandarSenalMuerto)
-
-    def mandarSenalMuerto(self):
-        self.suHoraMorir.emit(self.id)
 
 
-#https://www.youtube.com/watch?v=P-SZn5eSDp8&list=PL7Euic11sPg_OYLhPN3QUh3BZINlhFApE
-
-
-class Dialog_configAlarma(QtWidgets.QDialog, Ui_Dialog):
+class SeccionAlarmas(QtWidgets.QWidget, Ui_Form):
     quierePreguntaImagen = pyqtSignal()
     def __init__(self):
-        Ui_Dialog.__init__(self)
-        QtWidgets.QDialog.__init__(self)
+        Ui_Form.__init__(self)
+        QtWidgets.QWidget.__init__(self)
         self.setupUi(self)
-
-        
-        self.setWindowFlags(Qt.CustomizeWindowHint | Qt.WindowCloseButtonHint)
-        self.setWindowTitle(" ")
-        self.setWindowModality(Qt.ApplicationModal)
 
         self.SEPARADOR_ITEMS = "-*^~^*-"
 
@@ -126,7 +105,7 @@ class Dialog_configAlarma(QtWidgets.QDialog, Ui_Dialog):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
-    application = Dialog_configAlarma()
+    application = SeccionAlarmas()
     application.show()
     app.exec()
     #sys.exit(app.exec())

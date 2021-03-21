@@ -12,9 +12,11 @@ from CUERPO.DISENO.main_dise import Ui_Form
 ##############################################################
 from CUERPO.LOGICA.configLed import Dialog_configLed
 from CUERPO.LOGICA.configVenti import Dialog_configVenti
-from CUERPO.LOGICA.configAlarma import Dialog_configAlarma
+from CUERPO.LOGICA.SeccionAlarmas import SeccionAlarmas
+from CUERPO.LOGICA.SeccionNotas import SeccionNotas
 from CUERPO.LOGICA.arduinoExtension import ArduinoExtension_hilo
 from CUERPO.LOGICA.bluetoothSerial import BluetoothSerial_hilo
+
 
 class Main_IoT(QtWidgets.QWidget, Ui_Form):
     def __init__(self):
@@ -24,6 +26,10 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 
         self.foco_prendido=False
         self.ventilador_prendido=False
+        self.disenoManual=("#393939","#22B14C")
+        self.disenoAutomatico=("#95DEE7","#95DEE7")
+
+
         self.tempActual=22 #temperatura actual...
         self.tempPrenderaVenti=100
         self.cambiarTempPrendeVenti(self.tempPrenderaVenti)
@@ -31,8 +37,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 
         self.venConfig_foco=Dialog_configLed()
         self.venConfig_venti=Dialog_configVenti(self.tempPrenderaVenti)
-        self.venConfig_alarma=Dialog_configAlarma()
-
+      
 
         self.venConfig_foco.senal_colorElegido.connect(self.cambiarColorFoco)
         self.venConfig_venti.senal_cambioTempPrendeVenti.connect(self.cambiarTempPrendeVenti)
@@ -40,28 +45,58 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         #Configuración de los parametros de automatización
         self.btn_configFoco.clicked.connect(self.configurarFoco)
         self.btn_configVenti.clicked.connect(self.configurarVenti)
-        self.btn_configAlarm.clicked.connect(self.configurarAlarma)
 
 
         #Configuraciones de la extensión de arduino en la Rasberry pi
-        self.extencionArduino=ArduinoExtension_hilo(velocidad=9600,puerto="COM6")
-        self.bluetooth=BluetoothSerial_hilo(velocidad=9600,puerto="COM5")
+        #self.extencionArduino=ArduinoExtension_hilo(velocidad=9600,puerto="COM6")
+        #self.bluetooth=BluetoothSerial_hilo(velocidad=9600,puerto="COM5")
+         
 
-        self.extencionArduino.senal_temperatura.connect(self.actualizarTemp)
-        self.extencionArduino.senal_aplausoDetectado.connect(self.cambiarEstadoFoco)
-        self.extencionArduino.start()
-        #self.bluetooth.run()
+
+        #self.extencionArduino.senal_temperatura.connect(self.actualizarTemp)
+        #self.extencionArduino.senal_aplausoDetectado.connect(self.cambiarEstadoFoco)
+        #self.extencionArduino.start()
+        #self.bluetooth.start()
 
         self.hoSli_foco.valueChanged.connect(self.prenderApagarFoco)
         self.hoSli_venti.valueChanged.connect(self.prenderApagarVenti)
         self.hoSli_venti.setEnabled(False)
-        self.hoSli_foco.setEnabled(False)
-
+        #self.hoSli_foco.setEnabled(False)
 
         self.venConfig_venti.temp_prendeVentilador
 
-        self.bluetooth.start()
 
+
+        
+
+
+        self.seccionAlarmas=SeccionAlarmas()
+        self.seccionNotas=SeccionNotas()
+        self.tabWidget.addTab(self.seccionNotas,"Anotaciones")
+        self.tabWidget.addTab(self.seccionAlarmas,"Alarmas")
+        
+        self.rb_controlManual.toggled.connect(self.cambiarControl)
+        self.rb_controlAutomatico.toggle() #lo seleccionamos
+
+    def cambiarControl(self):
+        if self.rb_controlManual.isChecked():
+            diseno=self.disenoManual
+        else:
+            diseno=self.disenoAutomatico
+        
+        disenoHorizontal="""QSlider {min-height: 40px;max-height: 40px;}
+        QSlider::groove:horizontal {
+            border: 1px solid #262626;
+            height: 5px;
+            margin: 0 12px;
+            background:"""+diseno[0]+";}"
+        disenoHorizontal+="""QSlider::handle:horizontal {
+            width: 15px;
+            height: 80px;
+            margin: 24px -12px;
+            background:"""+diseno[1]+"};"
+        self.hoSli_foco.setStyleSheet(disenoHorizontal)
+        self.hoSli_venti.setStyleSheet(disenoHorizontal)
     def cambiarEstadoFoco(self,dato):
         #esto simula que alguien cambio la posicion del slider
         #por ende al hacer eso se llamara a la función asociada
@@ -74,20 +109,19 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         self.foco_prendido=not(self.foco_prendido)
         if self.foco_prendido:
             self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_on.png);")
-            self.bluetooth.foco_prenderApagar(prender=True)
+            #self.bluetooth.foco_prenderApagar(prender=True)
         else:
             self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_off.png);")
-            self.bluetooth.foco_prenderApagar(apagar=True)
-            #self.bluetooth.moduloBlutetooth.write("_11,0_".encode("utf-8"))
-    
+            #self.bluetooth.foco_prenderApagar(apagar=True)
+            
     def cambiarColorFoco(self,listDatos):
         idColor=listDatos[0]
         colorRGB=listDatos[1]
-        self.bel_colorFoco.setStyleSheet("""border :3px solid black;
+        self.btn_configFoco.setStyleSheet("""border :3px solid black;
                                             border-radius: 15px;
                                             background-color: rgb{};""".format(colorRGB))
         print("Color recibido:",idColor)
-        self.bluetooth.foco_cambiarColor(idColor)
+        #self.bluetooth.foco_cambiarColor(idColor)
 
     def actualizarTemp(self,nuevaTemp):
         nuevaTemp=float(nuevaTemp)
@@ -111,17 +145,16 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         #if self.ventilador_prendido:
         if prender:
             self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_on.png);")
-            self.bluetooth.venti_prenderApagar(prender=True)
+            #self.bluetooth.venti_prenderApagar(prender=True)
         else:
             self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_off.png);")
-            self.bluetooth.venti_prenderApagar(apagar=True)
-            #self.bluetooth.moduloBlutetooth.write("_11,0_".encode("utf-8"))
-
+            #self.bluetooth.venti_prenderApagar(apagar=True)
+            
 
     
     def cambiarTempPrendeVenti(self,nuevaTemp):
         print("Nueva temp:",nuevaTemp)
-        self.bel_tempActVenti.setText(str(nuevaTemp))
+        self.btn_configVenti.setText(str(nuevaTemp)+" [°C]")
         self.tempPrenderaVenti=nuevaTemp
 
     def configurarFoco(self):
@@ -129,7 +162,9 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
     def configurarVenti(self):
         self.venConfig_venti.show()
     def configurarAlarma(self):
-        self.venConfig_alarma.show()
+        #self.venConfig_alarma.show()
+        #self.scrollControl.agregarCheckBox()
+        pass
 
     
     def closeEvent(self,event):
@@ -148,3 +183,36 @@ if __name__ == "__main__":
     application.show()
     app.exec()
     #sys.exit(app.exec())
+
+
+'''
+EDITAR...
+
+QSlider {
+    min-height: 40px;
+    max-height: 40px;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #262626;
+    height: 5px;
+    background: #393939;
+    margin: 0 12px;
+}
+
+QSlider::handle:horizontal {
+    background: #22B14C;
+	/*background-color: rgb(1, 255, 226);*/
+    /*border: 5px solid #B5E61D;*/
+    width: 15px;
+    height: 80px;
+    margin: 24px -12px;
+}
+
+
+AUTOMATICO...
+
+
+
+
+'''

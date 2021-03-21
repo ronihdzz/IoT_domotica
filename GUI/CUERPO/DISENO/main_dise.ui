@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>707</width>
-    <height>558</height>
+    <width>747</width>
+    <height>551</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,56 +31,6 @@ border-image: url(:/ICON/IMAGENES/info_off.png);
 }
 QPushButton:pressed {
 	border-image: url(:/ICON/IMAGENES/info_on.png);
-}
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_configVenti">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>320</y>
-     <width>51</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-	border-image: url(:/ICON/IMAGENES/config_off.png);
- }
-QPushButton:hover {
-	border-image: url(:/ICON/IMAGENES/config_on.png);
-}
-QPushButton:pressed {
-	border-image: url(:/ICON/IMAGENES/config_off.png);
-}
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_configFoco">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>320</y>
-     <width>51</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-	border-image: url(:/ICON/IMAGENES/config_off.png);
- }
-QPushButton:hover {
-	border-image: url(:/ICON/IMAGENES/config_on.png);
-}
-QPushButton:pressed {
-	border-image: url(:/ICON/IMAGENES/config_off.png);
 }
 </string>
    </property>
@@ -116,8 +66,8 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
   <widget class="QSlider" name="hoSli_venti">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>460</y>
+     <x>300</x>
+     <y>470</y>
      <width>131</width>
      <height>40</height>
     </rect>
@@ -131,14 +81,14 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
 QSlider::groove:horizontal {
     border: 1px solid #262626;
     height: 5px;
-    background: #393939;
+   /* background: #393939;*/
+	background:#95DEE7;
     margin: 0 12px;
 }
 
 QSlider::handle:horizontal {
-    background: #22B14C;
-	/*background-color: rgb(1, 255, 226);*/
-    /*border: 5px solid #B5E61D;*/
+   /* background: #22B14C;*/
+    background:#95DEE7;
     width: 15px;
     height: 80px;
     margin: 24px -12px;
@@ -160,8 +110,8 @@ QSlider::handle:horizontal {
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>500</y>
+     <x>290</x>
+     <y>510</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -181,8 +131,8 @@ QSlider::handle:horizontal {
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>500</y>
+     <x>400</x>
+     <y>510</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -202,8 +152,8 @@ QSlider::handle:horizontal {
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>500</y>
+     <x>630</x>
+     <y>510</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -223,8 +173,8 @@ QSlider::handle:horizontal {
   <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>500</y>
+     <x>530</x>
+     <y>510</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -244,8 +194,8 @@ QSlider::handle:horizontal {
   <widget class="QSlider" name="hoSli_foco">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>460</y>
+     <x>540</x>
+     <y>470</y>
      <width>121</width>
      <height>40</height>
     </rect>
@@ -259,18 +209,21 @@ QSlider::handle:horizontal {
 QSlider::groove:horizontal {
     border: 1px solid #262626;
     height: 5px;
-    background: #393939;
+   /* background: #393939;*/
+	background:#95DEE7;
     margin: 0 12px;
 }
 
 QSlider::handle:horizontal {
-    background: #22B14C;
-	/*background-color: rgb(1, 255, 226);*/
-    /*border: 5px solid #B5E61D;*/
+   /* background: #22B14C;*/
+    background:#95DEE7;
     width: 15px;
     height: 80px;
     margin: 24px -12px;
-}</string>
+}
+
+
+</string>
    </property>
    <property name="maximum">
     <number>1</number>
@@ -285,49 +238,11 @@ QSlider::handle:horizontal {
     <enum>QSlider::TicksBothSides</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="bel_colorFoco">
-   <property name="geometry">
-    <rect>
-     <x>510</x>
-     <y>420</y>
-     <width>31</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>20</width>
-     <height>20</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>16777215</width>
-     <height>16777215</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border :3px solid black;
-border-radius: 15px;
-background-color: rgb(255, 0, 0);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
   <widget class="QLabel" name="bel_estadoVenti">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>350</y>
+     <x>310</x>
+     <y>380</y>
      <width>111</width>
      <height>91</height>
     </rect>
@@ -342,8 +257,8 @@ background-color: rgb(255, 0, 0);</string>
   <widget class="QLabel" name="bel_estadoFoco">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>350</y>
+     <x>550</x>
+     <y>380</y>
      <width>111</width>
      <height>91</height>
     </rect>
@@ -358,8 +273,8 @@ background-color: rgb(255, 0, 0);</string>
   <widget class="QTimeEdit" name="timeEdit_tiempo">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>170</y>
+     <x>100</x>
+     <y>160</y>
      <width>161</width>
      <height>41</height>
     </rect>
@@ -385,8 +300,8 @@ background-color: rgb(255, 0, 0);</string>
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>250</y>
+     <x>20</x>
+     <y>240</y>
      <width>81</width>
      <height>51</height>
     </rect>
@@ -402,8 +317,8 @@ background-color: rgb(255, 0, 0);</string>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>110</y>
+     <x>10</x>
+     <y>100</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -420,8 +335,8 @@ background-color: rgb(255, 0, 0);</string>
   <widget class="QLabel" name="bel_temp">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>260</y>
+     <x>100</x>
+     <y>250</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -441,8 +356,8 @@ background-color: rgb(255, 0, 0);</string>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>170</y>
+     <x>10</x>
+     <y>160</y>
      <width>81</width>
      <height>31</height>
     </rect>
@@ -459,8 +374,8 @@ background-color: rgb(255, 0, 0);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>260</y>
+     <x>190</x>
+     <y>250</y>
      <width>61</width>
      <height>41</height>
     </rect>
@@ -480,8 +395,8 @@ background-color: rgb(255, 0, 0);</string>
   <widget class="QDateEdit" name="dateEdit_fecha">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>100</y>
+     <x>100</x>
+     <y>90</y>
      <width>161</width>
      <height>41</height>
     </rect>
@@ -498,81 +413,84 @@ background-color: rgb(255, 0, 0);</string>
     <enum>QAbstractSpinBox::NoButtons</enum>
    </property>
   </widget>
-  <widget class="QPlainTextEdit" name="plaTextEdit_notas">
+  <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>100</y>
-     <width>371</width>
-     <height>211</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_10">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>60</y>
-     <width>181</width>
-     <height>31</height>
+     <x>50</x>
+     <y>380</y>
+     <width>151</width>
+     <height>111</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>20</pointsize>
+     <pointsize>14</pointsize>
     </font>
    </property>
-   <property name="text">
-    <string>Recordatorios:</string>
+   <property name="title">
+    <string>Control</string>
    </property>
+   <widget class="QRadioButton" name="rb_controlManual">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Manual</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rb_controlAutomatico">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Automatico</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QPushButton" name="btn_configAlarm">
+  <widget class="QPushButton" name="btn_configFoco">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>40</y>
-     <width>41</width>
-     <height>41</height>
+     <x>660</x>
+     <y>350</y>
+     <width>31</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-	border-image: url(:/ICON/IMAGENES/alarm_on.png);
- }
-QPushButton:hover {
-	border-image: url(:/ICON/IMAGENES/alarm_off.png);
-}
-QPushButton:pressed {
-	border-image: url(:/ICON/IMAGENES/alarm_on.png);
-}
-</string>
+    <string notr="true">border :3px solid black;
+border-radius: 15px;
+background-color: rgb(255, 0, 0);</string>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QPushButton" name="btn_configVenti">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>80</y>
-     <width>51</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Alarmas</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="bel_tempActVenti">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>430</y>
-     <width>51</width>
+     <x>410</x>
+     <y>350</y>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -582,31 +500,89 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="text">
-    <string>38</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <string>100 [°C]</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>430</y>
-     <width>41</width>
-     <height>31</height>
+     <x>270</x>
+     <y>10</y>
+     <width>471</width>
+     <height>331</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget::pane { /* The tab widget frame */
+/* La linea encabezado que se encuentra abajo de los cuadros de seleccion*/
+    border-top: 2px solid #C2C7CB;
+}
+
+QTabWidget::tab-bar { 
+/*Que tan alejado se encuentra el primer cuadro de seleccion de la parte izquierda del TabWiget*/
+   left: 5px; /* move to the right by 5px */
+}
+
+/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */
+QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid #C4C4C3; /*contorno de los cuadros de seleccion*/
+   
+ /*linea de abajo del cuadro(s) que no esta(n) seleccionado(s)*/
+    border-bottom-color:#C2C7CB; /* same as the pane color */
+
+    border-top-left-radius: 10px; /*curvatura de los cuadros de seleccion*/
+    border-top-right-radius: 4px; /*curvatura de los cuadros de seleccion*/
+    min-width: 25ex; /*ancho de cada casila*/
+	min-height:5ex;/*alto de cada casilla*/
+    padding: 2px;
+   font: 14pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+}
+
+QTabBar::tab:selected {
+    border-color:#9B9B9B;/*Color del borde de la casilla que esta seleccionada*/
+   /*borde del suelo del cuadro que esta seleccionado*/ 
+   border-bottom-color: #C2C7CB; /* same as pane color */
+}
+
+QTabBar::tab:!selected {
+   /*tamaño de superiodida de alto del cuadro seleccionado y los que no*/
+    margin-top: 2px; /* make non-selected tabs look smaller */
+    font: 14pt &quot;MS Shell Dlg 2&quot;; /*Tamaño de letra de los cuadros que no estan
+   seleccionados*/
+}
+
+/* make use of negative margins for overlapping tabs */
+QTabBar::tab:selected {
+    /* expand/overlap to the left and right by 4px */
+    margin-left: -4px;/*longitud que se alejara una casilla de la parte izquierda 
+   cuando este seleccionada*/
+    margin-right: -4px;
+}
+
+QTabBar::tab:first:selected {
+    margin-left: 0; /* the first selected tab has nothing to overlap with on the left */
+}
+
+QTabBar::tab:last:selected {
+ margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
+}
+
+QTabBar::tab:only-one {
+    margin: 0; /* if there is only one tab, we don't want overlapping margins */
+}</string>
    </property>
-   <property name="text">
-    <string>[°C]</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
+   <property name="currentIndex">
+    <number>-1</number>
    </property>
   </widget>
  </widget>
