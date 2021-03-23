@@ -56,19 +56,19 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 #Hilos:
 
         #Hilo que nos permitira la comunicación entre la rasberry pi y el arduino nano:
-        self.extencionArduino=ArduinoExtension_hilo(velocidad=9600,puerto="COM6")
+        #self.extencionArduino=ArduinoExtension_hilo(velocidad=9600,puerto="COM6")
 
         #Hilo que nos permitira la comunicación entre la rasberry pi y el modulo Bluetooth HC-05:
-        self.bluetooth=BluetoothSerial_hilo(velocidad=9600,puerto="COM5")
+        #self.bluetooth=BluetoothSerial_hilo(velocidad=9600,puerto="COM5")
          
 
         #Asociando algunas señales de los hilos:
-        self.extencionArduino.senal_temperatura.connect(self.actualizarTemp)
-        self.extencionArduino.senal_aplausoDetectado.connect(self.cambiarEstadoFoco)
+        #self.extencionArduino.senal_temperatura.connect(self.actualizarTemp)
+        #self.extencionArduino.senal_aplausoDetectado.connect(self.cambiarEstadoFoco)
 
         #Iniciando los hilos...
-        self.extencionArduino.start()
-        self.bluetooth.start()
+        #self.extencionArduino.start()
+        #self.bluetooth.start()
 
 
 #Horizontal Sliders:
@@ -176,10 +176,10 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
     def prenderApagarFoco(self,prender=False):
         if prender:
             self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_on.png);")
-            self.bluetooth.foco_prenderApagar(prender=True)
+            #self.bluetooth.foco_prenderApagar(prender=True)
         else:
             self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_off.png);")
-            self.bluetooth.foco_prenderApagar(apagar=True)
+            #self.bluetooth.foco_prenderApagar(apagar=True)
             
     def cambiarColorFoco(self,listDatos):
         idColor=listDatos[0]
@@ -188,7 +188,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
                                             border-radius: 15px;
                                             background-color: rgb{};""".format(colorRGB))
         print("Color recibido:",idColor)
-        self.bluetooth.foco_cambiarColor(idColor)
+        #self.bluetooth.foco_cambiarColor(idColor)
 
 #########################################################################################################################
 #    V E N T I L A D O R : 
@@ -203,10 +203,10 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
     def prenderApagarVenti(self,prender=False):
         if prender:
             self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_on.png);")
-            self.bluetooth.venti_prenderApagar(prender=True)
+            #self.bluetooth.venti_prenderApagar(prender=True)
         else:
             self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_off.png);")
-            self.bluetooth.venti_prenderApagar(apagar=True)
+            #self.bluetooth.venti_prenderApagar(apagar=True)
             
     def cambiarTempPrendeVenti(self,nuevaTemp):
         print("Nueva temp:",nuevaTemp)

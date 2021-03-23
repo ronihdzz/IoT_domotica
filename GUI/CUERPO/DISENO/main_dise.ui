@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>836</width>
-    <height>591</height>
+    <width>761</width>
+    <height>533</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,10 +30,13 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <property name="sizeConstraint">
-      <enum>QLayout::SetFixedSize</enum>
+      <enum>QLayout::SetMinAndMaxSize</enum>
      </property>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinAndMaxSize</enum>
+       </property>
        <item>
         <widget class="QPushButton" name="btn_info">
          <property name="minimumSize">
@@ -123,6 +126,9 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinAndMaxSize</enum>
+       </property>
        <item>
         <widget class="QLabel" name="label_6">
          <property name="minimumSize">
@@ -201,6 +207,9 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinAndMaxSize</enum>
+       </property>
        <item>
         <widget class="QLabel" name="label_7">
          <property name="minimumSize">
@@ -285,6 +294,9 @@ border-image: url(:/ICON/IMAGENES/idioma_on.png);
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinAndMaxSize</enum>
+       </property>
        <item>
         <widget class="QLabel" name="label_4">
          <property name="minimumSize">
@@ -313,7 +325,7 @@ padding:0px;
         <widget class="QLabel" name="bel_temp">
          <property name="minimumSize">
           <size>
-           <width>60</width>
+           <width>80</width>
            <height>50</height>
           </size>
          </property>
@@ -329,7 +341,7 @@ padding:0px;
           </font>
          </property>
          <property name="text">
-          <string>38</string>
+          <string>38.00</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -515,20 +527,20 @@ padding:0px;
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_5">
      <property name="sizeConstraint">
-      <enum>QLayout::SetFixedSize</enum>
+      <enum>QLayout::SetMinAndMaxSize</enum>
      </property>
      <item>
       <widget class="QTabWidget" name="tabWidget">
        <property name="minimumSize">
         <size>
-         <width>470</width>
-         <height>330</height>
+         <width>390</width>
+         <height>300</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>800</width>
-         <height>16777215</height>
+         <height>450</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -607,6 +619,9 @@ QTabBar::tab:only-one {
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMinAndMaxSize</enum>
+       </property>
        <item>
         <widget class="QLabel" name="label_21">
          <property name="minimumSize">
@@ -628,16 +643,16 @@ QTabBar::tab:only-one {
        </item>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_6">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMinAndMaxSize</enum>
+         </property>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_8">
-           <property name="bottomMargin">
-            <number>20</number>
-           </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_12">
            <item>
-            <widget class="QLabel" name="label_8">
+            <widget class="QLabel" name="label_27">
              <property name="maximumSize">
               <size>
-               <width>40</width>
+               <width>30</width>
                <height>40</height>
               </size>
              </property>
@@ -656,7 +671,7 @@ QTabBar::tab:only-one {
              </property>
              <property name="maximumSize">
               <size>
-               <width>120</width>
+               <width>100</width>
                <height>40</height>
               </size>
              </property>
@@ -673,17 +688,36 @@ QTabBar::tab:only-one {
           </layout>
          </item>
          <item>
-          <widget class="QLabel" name="bel_estadoVenti">
+          <widget class="QLabel" name="label_8">
            <property name="minimumSize">
             <size>
-             <width>110</width>
-             <height>90</height>
+             <width>0</width>
+             <height>5</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>150</width>
-             <height>120</height>
+             <height>10</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="bel_estadoVenti">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>130</width>
+             <height>100</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -704,7 +738,7 @@ QTabBar::tab:only-one {
            </property>
            <property name="maximumSize">
             <size>
-             <width>150</width>
+             <width>130</width>
              <height>40</height>
             </size>
            </property>
@@ -783,7 +817,7 @@ QSlider::handle:horizontal {
              </property>
              <property name="maximumSize">
               <size>
-               <width>70</width>
+               <width>50</width>
                <height>30</height>
               </size>
              </property>
@@ -844,13 +878,16 @@ QSlider::handle:horizontal {
        </item>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMinAndMaxSize</enum>
+         </property>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_9">
            <item>
             <widget class="QLabel" name="label_9">
              <property name="maximumSize">
               <size>
-               <width>110</width>
+               <width>90</width>
                <height>40</height>
               </size>
              </property>
@@ -886,16 +923,35 @@ background-color: rgb(255, 0, 0);</string>
           </layout>
          </item>
          <item>
-          <widget class="QLabel" name="bel_estadoFoco">
+          <widget class="QLabel" name="label_31">
            <property name="minimumSize">
             <size>
-             <width>110</width>
-             <height>90</height>
+             <width>0</width>
+             <height>5</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>150</width>
+             <height>10</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="bel_estadoFoco">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>130</width>
              <height>120</height>
             </size>
            </property>
@@ -911,7 +967,7 @@ background-color: rgb(255, 0, 0);</string>
           <widget class="QSlider" name="hoSli_foco">
            <property name="maximumSize">
             <size>
-             <width>150</width>
+             <width>130</width>
              <height>40</height>
             </size>
            </property>
@@ -990,7 +1046,7 @@ QSlider::handle:horizontal {
              </property>
              <property name="maximumSize">
               <size>
-               <width>70</width>
+               <width>50</width>
                <height>30</height>
               </size>
              </property>

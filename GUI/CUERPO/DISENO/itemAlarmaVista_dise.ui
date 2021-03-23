@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>300</width>
-    <height>100</height>
+    <width>330</width>
+    <height>130</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>300</width>
-    <height>100</height>
+    <width>330</width>
+    <height>130</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -32,6 +32,57 @@
       <widget class="QLabel" name="label_3">
        <property name="text">
         <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="hoSli_estado">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>90</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider {
+    min-height: 20px; /*tamano de la cosa que se mueve*/
+    max-height: 20px;
+}
+/*BARRA HORIZONTAL SOBRE LA CUAL LA BARRA CONMUTA*/
+QSlider::groove:horizontal {
+	border-radius: 2px;
+    border: 1px solid #262626;
+    height: 15px; /*tamano de la barra*/
+   background: #393939;
+   /*background:#95DEE7;*/
+    margin: 0 20px; /*margen entre lo que se mueve y la barra*/
+}
+
+
+QSlider::handle:horizontal {
+    background: #22B14C;
+    /*background:#95DEE7;*/
+    width: 20px;
+    margin: 24px -12px;
+}</string>
+       </property>
+       <property name="maximum">
+        <number>1</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBothSides</enum>
        </property>
       </widget>
      </item>
@@ -100,7 +151,14 @@ border-image: url(:/ICON/IMAGENES/tache_1.png);
     </layout>
    </item>
    <item>
-    <widget class="QTextEdit" name="textEdit_alarma"/>
+    <widget class="QTextEdit" name="textEdit_alarma">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>80</height>
+      </size>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

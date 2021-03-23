@@ -38,8 +38,18 @@ class ItemAlarmaVista(QtWidgets.QWidget, Ui_Form):
         """.format(self.hora,self.tipo,self.nombre,self.dias))
 
         self.textEdit_alarma.setReadOnly(True)
-        self.textEdit_alarma.setEnabled(False)
 
+        self.hoSli_estado.valueChanged.connect(self.activarDesactivarAlarma)
+        self.hoSli_estado.setValue(1)
+
+    
+    def activarDesactivarAlarma(self):
+        if self.hoSli_estado.value():
+            self.textEdit_alarma.setEnabled(True)
+        #Si el control requerido es el control automatico,
+        #se pondra otro diseño especial a los horizontal sliders...
+        else:
+            self.textEdit_alarma.setEnabled(False)
 
 
     def editar(self):
