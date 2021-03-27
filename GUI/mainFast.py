@@ -2,6 +2,8 @@ from PyQt5.QtWidgets import  QDialog,QApplication
 from PyQt5 import QtWidgets
 from functools import partial
 from PyQt5.QtWidgets import (QMessageBox,QButtonGroup,QDialog)
+from PyQt5.QtCore import QTimer, QTime, Qt
+import datetime
 
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
@@ -12,7 +14,7 @@ from CUERPO.DISENO.main_dise import Ui_Form
 ##############################################################
 from CUERPO.LOGICA.configLed import Dialog_configLed
 from CUERPO.LOGICA.configVenti import Dialog_configVenti
-from CUERPO.LOGICA.SeccionAlarmas import SeccionAlarmas
+from CUERPO.LOGICA.ALARMA.SeccionAlarmas import SeccionAlarmas
 from CUERPO.LOGICA.SeccionNotas import SeccionNotas
 from CUERPO.LOGICA.arduinoExtension import ArduinoExtension_hilo
 from CUERPO.LOGICA.bluetoothSerial import BluetoothSerial_hilo
@@ -33,8 +35,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 
         self.tempActual=22 #La temperatura que se esta sensando
         self.tempPrenderaVenti=100 #La temperatura a la cual se va a prender el ventilador
-        self.cambiarTempPrendeVenti(self.tempPrenderaVenti)#poniendo en la etiqueta la 
-        #temperatura a la cual nos encontramos
+
 
 
 #Cuadros emergentes de dialogos:
@@ -61,17 +62,21 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         #Hilo que nos permitira la comunicación entre la rasberry pi y el modulo Bluetooth HC-05:
         #self.bluetooth=BluetoothSerial_hilo(velocidad=9600,puerto="COM5")
          
-
         #Asociando algunas señales de los hilos:
-        #self.extencionArduino.senal_temperatura.connect(self.actualizarTemp)
-        #self.extencionArduino.senal_aplausoDetectado.connect(self.cambiarEstadoFoco)
+    
+        #self.extencionArduino.senal_prenderFoco.connect(self.cambiarEstadoFoco)
+        #self.extencionArduino.senal_prenderVentilador.connect(self.cambiarEstadoVenti)
+        
+        #self.extencionArduino.senal_actTemp.connect(self.actualizarTemp)
 
-        #Iniciando los hilos...
+#Iniciando los hilos...
         #self.extencionArduino.start()
         #self.bluetooth.start()
 
 
+
 #Horizontal Sliders:
+
         #Asociando la señal del horizontal slider que emite cuando cambia de posición,
         # con el motivo de permitirnos  apagar o prender el foco:
         self.hoSli_foco.valueChanged.connect(self.prenderApagarFoco)
@@ -90,8 +95,6 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         self.rb_controlAutomatico.toggle() #Como valor por default nos decantamos por un
         #control automatico
 
-
-
 #Seccion de alarmas y notas
         self.seccionAlarmas=SeccionAlarmas() #creando widget de alarmas
         self.seccionNotas=SeccionNotas() #creando widget de notas
@@ -99,7 +102,6 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         self.tabWidget.addTab(self.seccionNotas,"Anotaciones")
         self.tabWidget.addTab(self.seccionAlarmas,"Alarmas")
         
-
 #Valores default:
         self.rb_controlAutomatico.toggle() #Como valor por default nos decantamos por un
         #control automatico
@@ -108,9 +110,42 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         self.prenderApagarVenti(prender=False)
         self.prenderApagarFoco(prender=False)
 
+        self.cambiarTempPrendeVenti(self.tempPrenderaVenti)#poniendo en la etiqueta la 
+        #temperatura a la cual nos encontramos
 
+
+
+#Reloj....
+
+        self.fecha=datetime.datetime.now()
+
+        #print("Día:",ahora.day)  # Muestra día
+        # print("Mes:",ahora.month)  # Muestra mes
+        # print("Año:",ahora.year)  # Muestra año
+        # print("Hora:", ahora.hour)  # Muestra hora
+        # print("Minutos:",ahora.minute)  # Muestra minuto
+
+        #QtimeEdit()
+        #dateEdit_fecha   timeEdit_tiempo 
+        self.hora=QTime()
+        self.hora.setHMS(self.fecha.hour,self.fecha.minute,self.fecha.second)
+        self.timeEdit_tiempo.setTime(self.hora)
         
 
+
+        self.contador=QTimer()
+        #self.contador.connect()
+        self.contador.timeout.connect(self.clockContador)
+        # Call start() method to modify the timer value
+        self.contador.start(.01)
+
+
+
+        
+    def clockContador(self):
+         self.hora=self.hora.addSecs(1)
+         
+         self.timeEdit_tiempo.setTime(self.hora)
 
 
 #########################################################################################################################
@@ -151,10 +186,15 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         self.hoSli_venti.setEnabled(controlManual)
 
 
+        #Como el ventilador depende de la temperatura es importante poner en contexto
+        #a lo que el hilo esta haciendo
+        
+        #self.cambiarEstadoVenti(prender=self.extencionArduino.ventilador_on)
+        #self.extencionArduino.foco_on=self.hoSli_venti.value() 
+
 #########################################################################################################################
 #    F O C O :
 # #######################################################################################################################    
-
 
     def configurarFoco(self):
         '''Mostrara el cuadro de dialogo que nos permitira modicar
@@ -162,7 +202,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         '''
         self.venConfig_foco.show()    
 
-    def cambiarEstadoFoco(self,dato):
+    def cambiarEstadoFoco(self,prender):
         #esto simula que alguien cambio la posicion del slider
         #por ende al hacer eso se llamara a la función asociada
         #a la señal cuando se activa o desactiva el slider
@@ -170,10 +210,10 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         #solo se efecturan los cambios si el control automatico
         #esta activado
         if self.rb_controlAutomatico.isChecked():
-            estado=not(self.hoSli_foco.value())
-            self.hoSli_foco.setValue( estado ) 
-    
-    def prenderApagarFoco(self,prender=False):
+            self.hoSli_foco.setValue( prender ) #prender=False=0 prender=True=1
+
+
+    def prenderApagarFoco(self,prender):
         if prender:
             self.bel_estadoFoco.setStyleSheet("border-image: url(:/ICON/IMAGENES/foco_on.png);")
             #self.bluetooth.foco_prenderApagar(prender=True)
@@ -199,38 +239,31 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         editar la temperatura a la cual el ventilador
         se preder automaticamente...'''
         self.venConfig_venti.show()
-    
-    def prenderApagarVenti(self,prender=False):
+
+
+    def cambiarEstadoVenti(self,prender):
+        #solo se efectura si el control automatico
+        #esta activado:
+        if self.rb_controlAutomatico.isChecked():
+            self.hoSli_venti.setValue( prender )  #prender=False=0 prender=True=1  
+
+
+    def prenderApagarVenti(self,prender):
         if prender:
             self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_on.png);")
             #self.bluetooth.venti_prenderApagar(prender=True)
         else:
             self.bel_estadoVenti.setStyleSheet("border-image: url(:/ICON/IMAGENES/ventilador_off.png);")
             #self.bluetooth.venti_prenderApagar(apagar=True)
-            
+
     def cambiarTempPrendeVenti(self,nuevaTemp):
         print("Nueva temp:",nuevaTemp)
         self.btn_configVenti.setText(str(nuevaTemp)+" [°C]")
-        self.tempPrenderaVenti=nuevaTemp
+        #self.extencionArduino.tempPrenderaVenti=nuevaTemp
 
-
-    def actualizarTemp(self,nuevaTemp):
-        nuevaTemp=float(nuevaTemp)
-        if abs(nuevaTemp-self.tempActual)>0.3:
-            self.tempActual=nuevaTemp
-            print("temp Registrada: {}".format(nuevaTemp))
-            self.bel_temp.setText(str(self.tempActual))
-
-        #solo se efectura si el control automatico
-        #esta activado:
-        if self.rb_controlAutomatico.isChecked():
-            if nuevaTemp>=self.tempPrenderaVenti:
-                if not( self.hoSli_venti.value() ):
-                    self.hoSli_venti.setValue(1)
-            else:
-                if self.hoSli_venti.value():
-                    self.hoSli_venti.setValue(0)
-                    
+    def actualizarTemp(self,nuevaTemp_str):
+        self.bel_temp.setText( nuevaTemp_str )
+            
 
 #########################################################################################################################
 #    O T R A S   F U N C I O N E S : 

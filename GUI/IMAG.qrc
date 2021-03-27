@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="ICON">
+    <file>IMAGENES/subir_off.png</file>
+    <file>IMAGENES/subir_on.png</file>
     <file>IMAGENES/add_off.png</file>
     <file>IMAGENES/plus_off.png</file>
     <file>IMAGENES/plus_on.png</file>

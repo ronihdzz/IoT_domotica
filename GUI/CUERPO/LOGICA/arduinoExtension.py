@@ -5,6 +5,8 @@ import datetime
 from PyQt5.QtCore import pyqtSignal, QThread  # hilos
 import serial
 
+
+
 class ArduinoExtension_hilo(QThread):
     CHAR_SEGURIDAD="_"
     SEP_ENTRE_DATOS=","
@@ -17,20 +19,40 @@ class ArduinoExtension_hilo(QThread):
     }
 
 
-    senal_temperatura=pyqtSignal(str) # no retornara el valor de la temperatura sensada por arduino
-    senal_aplausoDetectado=pyqtSignal(bool)# nos avisara cuando se quiera prender el foco
     senal_flamaDetectada=pyqtSignal(bool)
-    senal_prenderVentilador=pyqtSignal(bool)
+
+    senal_prenderFoco=pyqtSignal(bool)
+
+
+    senal_prenderVentilador=pyqtSignal(bool)#prender/apagar ventilador
+    senal_actTemp=pyqtSignal(str) #actualizar temperatura 
     
     
-    def __init__(self,velocidad,puerto):
+    def __init__(self,velocidad,puerto,foco_on=False,ventilador_on=False,tempPrenderaVenti=100):
         super().__init__()
+        
+        #Atributos relacionados con la configuración del la comunicación del arduino
         self.velocidad=velocidad 
         self.puerto=puerto
-        #Conectandos a arduinos
+
+        #Conectandonos con arduino..
         self.arduino=serial.Serial(port=self.puerto,baudrate=self.velocidad,timeout=1)#conectandonos a posible arduino
-        self.terminarHilo=False
+        
+        #Atributos relacionados con el cheque constante de la flama...
         self.flamaDetectada=False
+
+        #Atributos relacionados con el foco...
+        self.foco_on=foco_on
+
+
+        #Atributos relacionados con el ventilador...
+        self.ventilador_on=ventilador_on
+        self.tempActual=22 #La temperatura que se esta sensando
+        self.tempPrenderaVenti=tempPrenderaVenti #La temperatura a la cual se va a prender el ventilador
+
+        #Atributo que nos dara 
+        self.terminarHilo=False
+             
 
     def run(self):
         while not(self.terminarHilo):
@@ -42,11 +64,13 @@ class ArduinoExtension_hilo(QThread):
 
             if mensajeRecibido:
                 if mensajeRecibido[0]==self.IDS["TEMPERATURA"]:
-                    print("Temp: {}".format(mensajeRecibido[1]))
-                    self.senal_temperatura.emit(mensajeRecibido[1])
+                    temp=mensajeRecibido[1] #dato string
+                    self.procesarTemp(temp)
+
                 elif mensajeRecibido[0]==self.IDS["SONIDO_DETECTADO"]:
                     print("BEEP")
-                    self.senal_aplausoDetectado.emit(True)
+                    self.procesarFoco()
+
                 elif mensajeRecibido[0]==self.IDS["FUEGO_DETECTADO"]:
                     print("FUEGO")
                     self.senal_flamaDetectada.emit(True)
@@ -60,8 +84,6 @@ class ArduinoExtension_hilo(QThread):
                                 print("FUEGO APAGADO")
                                 self.arduino.write(b"pwejfpwjofp")
 
-
-    
     def desempaquetarMensaje(self,mensaje):
         # _DATO,DATO,DATO_\n\r
         # _  es char seguridad
@@ -76,4 +98,27 @@ class ArduinoExtension_hilo(QThread):
         return datos
 
 
+    #procesar la temperatura:
+    def procesarTemp(self,nuevaTemp_str):
+        nuevaTemp_float=float(nuevaTemp_str)
+        if abs( nuevaTemp_float - self.tempActual ) > 0.3:
+            self.tempActual=nuevaTemp_float
+            self.senal_actTemp.emit(nuevaTemp_str)
+
+        if self.tempActual>=self.tempPrenderaVenti:
+            if not(self.ventilador_on):
+                self.senal_prenderVentilador.emit(True)
+                self.ventilador_on=True
+        else:
+            if self.ventilador_on:
+                self.senal_prenderVentilador.emit(False)
+                self.ventilador_on=False
                 
+            
+    
+    def procesarFoco(self):
+        if self.foco_on:
+            self.senal_prenderFoco.emit(False)
+        else:
+            self.senal_prenderFoco.emit(True)
+        self.foco_on=not(self.foco_on)

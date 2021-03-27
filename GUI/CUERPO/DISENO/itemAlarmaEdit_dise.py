@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\itemAlarmaEdit_dise.ui'
+# Form implementation generated from reading ui file 'itemAlarmaEdit_dise.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.3
 #
@@ -15,7 +15,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.setWindowModality(QtCore.Qt.NonModal)
-        Dialog.resize(363, 161)
+        Dialog.resize(363, 359)
         Dialog.setMouseTracking(False)
         Dialog.setAcceptDrops(False)
         Dialog.setWindowTitle("")
@@ -226,17 +226,62 @@ class Ui_Dialog(object):
         self.timeEdit_hora.setObjectName("timeEdit_hora")
         self.layoutHor_3.addWidget(self.timeEdit_hora)
         self.verticalLayout_8.addLayout(self.layoutHor_3)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.label_3 = QtWidgets.QLabel(Dialog)
+        self.label_3.setText("")
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_3.addWidget(self.label_3)
+        self.bel_secNombre_2 = QtWidgets.QLabel(Dialog)
+        self.bel_secNombre_2.setMinimumSize(QtCore.QSize(150, 31))
+        self.bel_secNombre_2.setMaximumSize(QtCore.QSize(65, 35))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.bel_secNombre_2.setFont(font)
+        self.bel_secNombre_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.bel_secNombre_2.setObjectName("bel_secNombre_2")
+        self.horizontalLayout_3.addWidget(self.bel_secNombre_2)
+        self.label_4 = QtWidgets.QLabel(Dialog)
+        self.label_4.setText("")
+        self.label_4.setObjectName("label_4")
+        self.horizontalLayout_3.addWidget(self.label_4)
+        self.btn_addCancion = QtWidgets.QPushButton(Dialog)
+        self.btn_addCancion.setMinimumSize(QtCore.QSize(25, 30))
+        self.btn_addCancion.setMaximumSize(QtCore.QSize(30, 35))
+        self.btn_addCancion.setStyleSheet("QPushButton {\n"
+"    border-image: url(:/ICON/IMAGENES/subir_off.png);\n"
+" }\n"
+"QPushButton:hover {\n"
+"border-image: url(:/ICON/IMAGENES/subir_on.png);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"border-image: url(:/ICON/IMAGENES/subir_off.png);\n"
+"}\n"
+"")
+        self.btn_addCancion.setText("")
+        self.btn_addCancion.setObjectName("btn_addCancion")
+        self.horizontalLayout_3.addWidget(self.btn_addCancion)
+        self.verticalLayout_8.addLayout(self.horizontalLayout_3)
+        self.listWidget_sonidosAlarmas = QtWidgets.QListWidget(Dialog)
+        self.listWidget_sonidosAlarmas.setMinimumSize(QtCore.QSize(0, 100))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.listWidget_sonidosAlarmas.setFont(font)
+        self.listWidget_sonidosAlarmas.setObjectName("listWidget_sonidosAlarmas")
+        item = QtWidgets.QListWidgetItem()
+        self.listWidget_sonidosAlarmas.addItem(item)
+        self.verticalLayout_8.addWidget(self.listWidget_sonidosAlarmas)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setText("")
         self.label.setObjectName("label")
         self.horizontalLayout_2.addWidget(self.label)
-        self.pushButton = QtWidgets.QPushButton(Dialog)
-        self.pushButton.setMinimumSize(QtCore.QSize(110, 40))
-        self.pushButton.setMaximumSize(QtCore.QSize(130, 55))
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout_2.addWidget(self.pushButton)
+        self.btn_finalizar = QtWidgets.QPushButton(Dialog)
+        self.btn_finalizar.setMinimumSize(QtCore.QSize(110, 40))
+        self.btn_finalizar.setMaximumSize(QtCore.QSize(130, 55))
+        self.btn_finalizar.setObjectName("btn_finalizar")
+        self.horizontalLayout_2.addWidget(self.btn_finalizar)
         self.label_2 = QtWidgets.QLabel(Dialog)
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
@@ -244,6 +289,7 @@ class Ui_Dialog(object):
         self.verticalLayout_8.addLayout(self.horizontalLayout_2)
 
         self.retranslateUi(Dialog)
+        self.listWidget_sonidosAlarmas.setCurrentRow(0)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -268,5 +314,11 @@ class Ui_Dialog(object):
         self.cB_6.setShortcut(_translate("Dialog", "Backspace, Backspace"))
         self.bel_7.setText(_translate("Dialog", "Do"))
         self.cB_7.setShortcut(_translate("Dialog", "Backspace, Backspace"))
-        self.pushButton.setText(_translate("Dialog", "GUARDAR CAMBIOS"))
+        self.bel_secNombre_2.setText(_translate("Dialog", "Musica de alarma:"))
+        __sortingEnabled = self.listWidget_sonidosAlarmas.isSortingEnabled()
+        self.listWidget_sonidosAlarmas.setSortingEnabled(False)
+        item = self.listWidget_sonidosAlarmas.item(0)
+        item.setText(_translate("Dialog", "Sin musica de alarma"))
+        self.listWidget_sonidosAlarmas.setSortingEnabled(__sortingEnabled)
+        self.btn_finalizar.setText(_translate("Dialog", "GUARDAR CAMBIOS"))
 import IMAG_rc

@@ -31,5 +31,3 @@ if __name__ == "__main__":
     application.show()
     app.exec()
     #sys.exit(app.exec())
-
-

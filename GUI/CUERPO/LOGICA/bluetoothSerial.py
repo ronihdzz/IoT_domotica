@@ -34,25 +34,24 @@ class BluetoothSerial_hilo(QThread):
         self.datosMandar=None 
 
     def run(self):
-        while not(self.terminarHilo):
-            if self.datosMandar:
-                mensajeMandar=self.empaquetarMensaje(self.datosMandar)
-                print("DATOS A MANDAR:",self.datosMandar)
-                print("DATOS EMPEQUETADOS:",mensajeMandar)
+        if self.datosMandar:
+            mensajeMandar=self.empaquetarMensaje(self.datosMandar)
+            print("DATOS A MANDAR:",self.datosMandar)
+            print("DATOS EMPEQUETADOS:",mensajeMandar)
 
-                self.moduloBlutetooth.write(mensajeMandar)
-                mensajeRespuesta=self.moduloBlutetooth.readline()
-                print("¿RECIBIDO?:",mensajeRespuesta)
-                listaDatos=self.desempaquetarMensaje(mensajeRespuesta)
-                print("¿RECIBIDO?:",listaDatos)
-                if listaDatos:
-                    if listaDatos[0]==self.IDS["ORDEN_ATENDIDA"]:
-                        print("¿RECIBIDO?:SI")
-                        self.senal_ordenRealizada.emit(True)
-                    else:
-                        print("¿RECIBIDO?:NO")
-                        self.senal_ordenRealizada.emit(False)
-                self.datosMandar=None
+            self.moduloBlutetooth.write(mensajeMandar)
+            mensajeRespuesta=self.moduloBlutetooth.readline()
+            print("¿RECIBIDO?:",mensajeRespuesta)
+            listaDatos=self.desempaquetarMensaje(mensajeRespuesta)
+            print("¿RECIBIDO?:",listaDatos)
+            if listaDatos:
+                if listaDatos[0]==self.IDS["ORDEN_ATENDIDA"]:
+                    print("¿RECIBIDO?:SI")
+                    self.senal_ordenRealizada.emit(True)
+                else:
+                    print("¿RECIBIDO?:NO")
+                    self.senal_ordenRealizada.emit(False)
+            print("HILO TERMINADO....")
 
     def foco_prenderApagar(self,prender=False,apagar=False):
         datosMandar=[]
@@ -62,6 +61,7 @@ class BluetoothSerial_hilo(QThread):
         else:
             datosMandar.append( self.IDS["APAGAR"]  )
         self.datosMandar=datosMandar
+        self.run()
 
     def foco_cambiarColor(self,idColor):
         datosMandar=[]
@@ -69,6 +69,7 @@ class BluetoothSerial_hilo(QThread):
         datosMandar.append( self.IDS["CAMBIAR_COLOR_FOCO"] )
         datosMandar.append( str(idColor) )
         self.datosMandar=datosMandar
+        self.run()
 
     def venti_prenderApagar(self,prender=False,apagar=False):
         datosMandar=[]
@@ -78,6 +79,7 @@ class BluetoothSerial_hilo(QThread):
         else:
             datosMandar.append( self.IDS["APAGAR"]  )
         self.datosMandar=datosMandar
+        self.run()
       
     def empaquetarMensaje(self,listaDatos):
         mensaje=self.SEP_ENTRE_DATOS.join(listaDatos)

@@ -1,0 +1,5 @@
+
+class Recursos_IoT_Domotica():
+    NOMBRE_BASE_DATOS_ALARMAS="CUERPO/LOGICA/ALARMA/BaseDatosAlarma.db"
+    CARPETA_MUSICA="CUERPO/RECURSOS/MUSICA/"
+
