@@ -5,39 +5,86 @@ from PyQt5 import QtCore
 from pygame import mixer
 from PyQt5.QtWidgets import  QFileDialog
 from os import getcwd
+from PyQt5.QtCore import pyqtSignal
+import os
 
+
+
+
+import shutil  #para copiar archivos
+from mutagen.wave import WAVE  #para ver la duracion de las canciones
+from mutagen.mp3 import MP3 
 
 class ReproductorSonidosAlarmas(QtCore.QObject):
-    def __init__(self,context,carpetaMusica):
+    MAX_DURACION=6*60 #6 minutos
+
+    senal_cancionAgregada=pyqtSignal(str)
+
+
+    def __init__(self,context,carpetaMusicaDefault,carpetaMusicaMia):
         QtCore.QObject.__init__(self)
-        self.carpetaMusica=carpetaMusica
 
-        self.listaCanciones=self.cargarNombresCanciones()
-        self.noCanciones=len(self.listaCanciones)
-        self.context=context
-
+        self.carpetaMusicaMia=carpetaMusicaMia
+        self.carpetaMusicaDefault=carpetaMusicaDefault
+        
         self.cargarNombresCanciones()
+
+
+    
+        self.context=context
 
         mixer.init()
 
     
     def agregarUnaCancion(self):
         print("Agregando una cancion")                                                        
-        song, _ = QFileDialog.getOpenFileName(self.context, "Sonido de mi elección","c://", "Formatos validos (*.mp3  *.wav )")
-        print(song)
+        cancion,_= QFileDialog.getOpenFileName(self.context, "Sonido de mi elección","c://", "Formatos validos (*.mp3  *.wav )")
+        if cancion:
+            cancion = os.path.normpath(cancion) #normalizando la ruta
+            soloNombreCancion = cancion.split(os.sep)[-1]
+            
+            
+            origenArchivoCopiar=cancion
+            destinoArchivoCopiar=self.carpetaMusicaMia+soloNombreCancion
+
+            if soloNombreCancion.endswith(".wav"):
+                infoCancion=WAVE(cancion)
+            else:
+                infoCancion=MP3(cancion)
+            
+            tamano=infoCancion.info.length #tiempo en segundos de la cancion
+            print("Tamano cancion:",tamano)
+            if tamano<self.MAX_DURACION:
+                #Copiando cancion...
+                shutil.copyfile(origenArchivoCopiar,destinoArchivoCopiar)
+                self.senal_cancionAgregada.emit(soloNombreCancion)
+            else:
+                print("La duracion del archivo no puede ser mayor a los 6 minutos")
+
 
 
 
 
 
     def cargarNombresCanciones(self):
-        archivosCarpeta=os.listdir(self.carpetaMusica)
-        listaCanciones=[archivo for archivo in archivosCarpeta if archivo.endswith(".mp3")]
-        print("Lista de canciones",listaCanciones)
-        return listaCanciones
-    
-    def tocar(self,nombreCancion):
-        nombreCancion=self.carpetaMusica+nombreCancion
+        self.listaCancionesDefault=[]
+        archivosCarpetaDefault=os.listdir(self.carpetaMusicaDefault)
+        self.listaCancionesDefault=[archivo for archivo in archivosCarpetaDefault if archivo.endswith(".mp3") or  archivo.endswith(".wav")]        
+
+        self.listaCancionesMias=[]
+        archivosCarpetaMia=os.listdir(self.carpetaMusicaMia)
+        self.listaCancionesMias=[archivo for archivo in archivosCarpetaMia if archivo.endswith(".mp3") or  archivo.endswith(".wav")]
+        
+
+    def tocar(self,nombreCancion,musicaDefault=True):
+        #C:\Users\ronal\Desktop\PROYECTO\IoT_domotica\GUI\CUERPO\RECURSOS\MUSICA\DEFAULT
+        if musicaDefault:
+            ruta=self.carpetaMusicaDefault
+        else:
+            ruta=self.carpetaMusicaMia
+        nombreCancion=ruta+nombreCancion
+
+
         # Loading the song
         mixer.music.load(nombreCancion)
 

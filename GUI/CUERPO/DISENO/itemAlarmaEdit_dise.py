@@ -15,7 +15,7 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.setWindowModality(QtCore.Qt.NonModal)
-        Dialog.resize(363, 359)
+        Dialog.resize(368, 406)
         Dialog.setMouseTracking(False)
         Dialog.setAcceptDrops(False)
         Dialog.setWindowTitle("")
@@ -245,7 +245,119 @@ class Ui_Dialog(object):
         self.label_4.setText("")
         self.label_4.setObjectName("label_4")
         self.horizontalLayout_3.addWidget(self.label_4)
-        self.btn_addCancion = QtWidgets.QPushButton(Dialog)
+        self.verticalLayout_8.addLayout(self.horizontalLayout_3)
+        self.tabWid_sonidosAlarmas = QtWidgets.QTabWidget(Dialog)
+        self.tabWid_sonidosAlarmas.setMinimumSize(QtCore.QSize(350, 200))
+        self.tabWid_sonidosAlarmas.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.tabWid_sonidosAlarmas.setStyleSheet("QTabWidget::pane { /* The tab widget frame */\n"
+"/* La linea encabezado que se encuentra abajo de los cuadros de seleccion*/\n"
+"    border-top: 2px solid #C2C7CB;\n"
+"}\n"
+"\n"
+"QTabWidget::tab-bar { \n"
+"/*Que tan alejado se encuentra el primer cuadro de seleccion de la parte izquierda del TabWiget*/\n"
+"   left: 5px; /* move to the right by 5px */\n"
+"}\n"
+"\n"
+"/* Style the tab using the tab sub-control. Note that\n"
+"    it reads QTabBar _not_ QTabWidget */\n"
+"QTabBar::tab {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
+"                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
+"    border: 2px solid #C4C4C3; /*contorno de los cuadros de seleccion*/\n"
+"   \n"
+" /*linea de abajo del cuadro(s) que no esta(n) seleccionado(s)*/\n"
+"    border-bottom-color:#C2C7CB; /* same as the pane color */\n"
+"\n"
+"    border-top-left-radius: 10px; /*curvatura de los cuadros de seleccion*/\n"
+"    border-top-right-radius: 4px; /*curvatura de los cuadros de seleccion*/\n"
+"    min-width: 30ex; /*ancho de cada casila*/\n"
+"    min-height:5ex;/*alto de cada casilla*/\n"
+"    padding: 2px;\n"
+"   font: 12pt \"MS Shell Dlg 2\";\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected, QTabBar::tab:hover {\n"
+"background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,\n"
+"                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected {\n"
+"    border-color:#9B9B9B;/*Color del borde de la casilla que esta seleccionada*/\n"
+"   /*borde del suelo del cuadro que esta seleccionado*/ \n"
+"   border-bottom-color: #C2C7CB; /* same as pane color */\n"
+"}\n"
+"\n"
+"QTabBar::tab:!selected {\n"
+"   /*tamaño de superiodida de alto del cuadro seleccionado y los que no*/\n"
+"    margin-top: 2px; /* make non-selected tabs look smaller */\n"
+"    font: 12pt \"MS Shell Dlg 2\"; /*Tamaño de letra de los cuadros que no estan\n"
+"   seleccionados*/\n"
+"}\n"
+"\n"
+"/* make use of negative margins for overlapping tabs */\n"
+"QTabBar::tab:selected {\n"
+"    /* expand/overlap to the left and right by 4px */\n"
+"    margin-left: -4px;/*longitud que se alejara una casilla de la parte izquierda \n"
+"   cuando este seleccionada*/\n"
+"    margin-right: -4px;\n"
+"}\n"
+"\n"
+"QTabBar::tab:first:selected {\n"
+"    margin-left: 0; /* the first selected tab has nothing to overlap with on the left */\n"
+"}\n"
+"\n"
+"QTabBar::tab:last:selected {\n"
+" margin-right: 0; /* the last selected tab has nothing to overlap with on the right */\n"
+"}\n"
+"\n"
+"QTabBar::tab:only-one {\n"
+"    margin: 0; /* if there is only one tab, we don\'t want overlapping margins */\n"
+"}")
+        self.tabWid_sonidosAlarmas.setObjectName("tabWid_sonidosAlarmas")
+        self.pistasDefault = QtWidgets.QWidget()
+        self.pistasDefault.setObjectName("pistasDefault")
+        self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.pistasDefault)
+        self.verticalLayout_11.setObjectName("verticalLayout_11")
+        self.listWid_soniDef = QtWidgets.QListWidget(self.pistasDefault)
+        self.listWid_soniDef.setMinimumSize(QtCore.QSize(0, 100))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.listWid_soniDef.setFont(font)
+        self.listWid_soniDef.setStyleSheet("QListWidget\n"
+"{\n"
+"/*border : 1px solid black;*/\n"
+"background : rgb(219, 235, 235);\n"
+"}\n"
+"\n"
+"QListWidget QScrollBar\n"
+"{\n"
+"background-color: rgb(219, 235, 235);\n"
+"}\n"
+"\n"
+" QListView::item:selected\n"
+"{\n"
+"background-color: rgb(249, 196, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"}")
+        self.listWid_soniDef.setObjectName("listWid_soniDef")
+        item = QtWidgets.QListWidgetItem()
+        self.listWid_soniDef.addItem(item)
+        self.verticalLayout_11.addWidget(self.listWid_soniDef)
+        self.tabWid_sonidosAlarmas.addTab(self.pistasDefault, "")
+        self.pistasMias = QtWidgets.QWidget()
+        self.pistasMias.setObjectName("pistasMias")
+        self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.pistasMias)
+        self.verticalLayout_10.setObjectName("verticalLayout_10")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.label_6 = QtWidgets.QLabel(self.pistasMias)
+        self.label_6.setText("")
+        self.label_6.setObjectName("label_6")
+        self.horizontalLayout_5.addWidget(self.label_6)
+        self.btn_addCancion = QtWidgets.QPushButton(self.pistasMias)
         self.btn_addCancion.setMinimumSize(QtCore.QSize(25, 30))
         self.btn_addCancion.setMaximumSize(QtCore.QSize(30, 35))
         self.btn_addCancion.setStyleSheet("QPushButton {\n"
@@ -260,17 +372,35 @@ class Ui_Dialog(object):
 "")
         self.btn_addCancion.setText("")
         self.btn_addCancion.setObjectName("btn_addCancion")
-        self.horizontalLayout_3.addWidget(self.btn_addCancion)
-        self.verticalLayout_8.addLayout(self.horizontalLayout_3)
-        self.listWidget_sonidosAlarmas = QtWidgets.QListWidget(Dialog)
-        self.listWidget_sonidosAlarmas.setMinimumSize(QtCore.QSize(0, 100))
+        self.horizontalLayout_5.addWidget(self.btn_addCancion)
+        self.verticalLayout_10.addLayout(self.horizontalLayout_5)
+        self.listWid_soniMio = QtWidgets.QListWidget(self.pistasMias)
+        self.listWid_soniMio.setMinimumSize(QtCore.QSize(0, 100))
         font = QtGui.QFont()
         font.setPointSize(11)
-        self.listWidget_sonidosAlarmas.setFont(font)
-        self.listWidget_sonidosAlarmas.setObjectName("listWidget_sonidosAlarmas")
+        self.listWid_soniMio.setFont(font)
+        self.listWid_soniMio.setStyleSheet("QListWidget\n"
+"{\n"
+"/*border : 1px solid black;*/\n"
+"background : rgb(219, 235, 235);\n"
+"}\n"
+"\n"
+"QListWidget QScrollBar\n"
+"{\n"
+"background-color: rgb(219, 235, 235);\n"
+"}\n"
+"\n"
+" QListView::item:selected\n"
+"{\n"
+"background-color: rgb(249, 196, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"}")
+        self.listWid_soniMio.setObjectName("listWid_soniMio")
         item = QtWidgets.QListWidgetItem()
-        self.listWidget_sonidosAlarmas.addItem(item)
-        self.verticalLayout_8.addWidget(self.listWidget_sonidosAlarmas)
+        self.listWid_soniMio.addItem(item)
+        self.verticalLayout_10.addWidget(self.listWid_soniMio)
+        self.tabWid_sonidosAlarmas.addTab(self.pistasMias, "")
+        self.verticalLayout_8.addWidget(self.tabWid_sonidosAlarmas)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label = QtWidgets.QLabel(Dialog)
@@ -289,7 +419,9 @@ class Ui_Dialog(object):
         self.verticalLayout_8.addLayout(self.horizontalLayout_2)
 
         self.retranslateUi(Dialog)
-        self.listWidget_sonidosAlarmas.setCurrentRow(0)
+        self.tabWid_sonidosAlarmas.setCurrentIndex(1)
+        self.listWid_soniDef.setCurrentRow(0)
+        self.listWid_soniMio.setCurrentRow(0)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -315,10 +447,17 @@ class Ui_Dialog(object):
         self.bel_7.setText(_translate("Dialog", "Do"))
         self.cB_7.setShortcut(_translate("Dialog", "Backspace, Backspace"))
         self.bel_secNombre_2.setText(_translate("Dialog", "Musica de alarma:"))
-        __sortingEnabled = self.listWidget_sonidosAlarmas.isSortingEnabled()
-        self.listWidget_sonidosAlarmas.setSortingEnabled(False)
-        item = self.listWidget_sonidosAlarmas.item(0)
+        __sortingEnabled = self.listWid_soniDef.isSortingEnabled()
+        self.listWid_soniDef.setSortingEnabled(False)
+        item = self.listWid_soniDef.item(0)
         item.setText(_translate("Dialog", "Sin musica de alarma"))
-        self.listWidget_sonidosAlarmas.setSortingEnabled(__sortingEnabled)
+        self.listWid_soniDef.setSortingEnabled(__sortingEnabled)
+        self.tabWid_sonidosAlarmas.setTabText(self.tabWid_sonidosAlarmas.indexOf(self.pistasDefault), _translate("Dialog", "Pistas default"))
+        __sortingEnabled = self.listWid_soniMio.isSortingEnabled()
+        self.listWid_soniMio.setSortingEnabled(False)
+        item = self.listWid_soniMio.item(0)
+        item.setText(_translate("Dialog", "Sin musica de alarma"))
+        self.listWid_soniMio.setSortingEnabled(__sortingEnabled)
+        self.tabWid_sonidosAlarmas.setTabText(self.tabWid_sonidosAlarmas.indexOf(self.pistasMias), _translate("Dialog", "Mis pistas"))
         self.btn_finalizar.setText(_translate("Dialog", "GUARDAR CAMBIOS"))
 import IMAG_rc

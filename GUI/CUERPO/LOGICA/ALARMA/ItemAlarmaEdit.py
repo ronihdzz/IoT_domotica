@@ -35,8 +35,11 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
         QtWidgets.QDialog.__init__(self)
         self.setupUi(self)
         self.baseDatosAlarmas=BaseDatos_alarmas(Recursos_IoT_Domotica.NOMBRE_BASE_DATOS_ALARMAS)
-        self.reproductor=ReproductorSonidosAlarmas(self,Recursos_IoT_Domotica.CARPETA_MUSICA)
+        self.reproductor=ReproductorSonidosAlarmas(self,carpetaMusicaDefault=Recursos_IoT_Domotica.CARPETA_MUSICA_DEFAULT,
+        carpetaMusicaMia=Recursos_IoT_Domotica.CARPETA_MUSICA_MIA)
 
+
+        self.reproductor.senal_cancionAgregada.connect(self.sonidoAlarmaAgregado)
             
         self.setWindowFlags(Qt.CustomizeWindowHint | Qt.WindowCloseButtonHint)
         self.setWindowTitle(" ")
@@ -47,21 +50,58 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
         self.mostrarSonidosParaAlarma()
         
 
-
         self.btn_finalizar.clicked.connect(self.terminar)
+        
+
+        #reproducir una cancion cada vez que hagan click sobre la lista de reproduccion default
+        #self.listWid_soniDef.itemDoubleClicked.connect(self.reproducirSonidoAlarma)
+        self.listWid_soniDef.clicked.connect(self.reproducirSonidoAlarma)
+        self.listWid_soniMio.clicked.connect(self.reproducirSonidoAlarma)
+
+        self.listWid_soniDef.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
+
+
+
+        #estableciendo opciones a partir del clic derecho a los items de la lista
+        #de reproduccion del usuario
+        self.listWid_soniMio.installEventFilter(self)
+
+        #vinculando el boton de cargar cancion...
         self.btn_addCancion.clicked.connect(self.agregarUnaCancion)
-        self.listWidget_sonidosAlarmas.itemDoubleClicked.connect(self.reproducirSonidoAlarma)
+        
+        #Cuando cambiemos a la otra lista de reproduccion los valores
+        #de la otra se inicializaran a cero...
+        self.tabWid_sonidosAlarmas.currentChanged.connect(self.cambioDeListaReproduccion)
 
 
-        self.listWidget_sonidosAlarmas.installEventFilter(self)
+
+        #self.tabWid_sonidosAlarmas.pistasDefault.listWid_soniDef
+        #self.tabWid_sonidosAlarmas.pistasMias.listWid_soniMio
+
+    
+    def cambioDeListaReproduccion(self,indice):
+        
+        self.reproductor.pausar()
+        #0 =carpeta de canciones defecto...
+        #1 =carpeta de cancion mias...
+        estaEnListaDefault=not( indice )
+        if estaEnListaDefault:
+            listWidget=self.listWid_soniDef
+        else:
+            listWidget=self.listWid_soniMio
+
+        listWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        listWidget.setCurrentRow(0)
+        listWidget.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
 
 
+
+    def sonidoAlarmaAgregado(self,nombreSonido):
+        self.listWid_soniMio.addItem(nombreSonido)
 
     def eventFilter(self, source, event):
-        if event.type() == QEvent.ContextMenu and source is  self.listWidget_sonidosAlarmas:
+        if event.type() == QEvent.ContextMenu and source is  self.listWid_soniMio:
             menu = QMenu()
-            menu.addAction('Action 1')
-            menu.addAction('Action 2')
             menu.addAction("Eliminar",self.correr)
             if menu.exec_(event.globalPos()):
                 item = source.itemAt(event.pos())
@@ -85,16 +125,41 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
 
         self.modoEdicion=modoEdicion
         
-    def reproducirSonidoAlarma(self,item):
+    def reproducirSonidoAlarma(self,row):
         #id=self.listWidget_sonidosAlarmas.currentRow()
-        nombreCancion=item.text()
-        self.reproductor.tocar(nombreCancion)
+        #nombreCancion=item.text()
+        indice=row.row()
+
+        #0 =carpeta de canciones defecto...
+        #1 =carpeta de cancion mias...
+        estaEnListaDefault=not( self.tabWid_sonidosAlarmas.currentIndex()  )
+        if estaEnListaDefault:
+            listWidget=self.listWid_soniDef
+        else:
+            listWidget=self.listWid_soniMio
+
+        listWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        listWidget.setCurrentRow(indice)
+        listWidget.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
+
+        if indice>0:
+            nombreCancion=listWidget.item(indice).text()
+            self.reproductor.tocar(nombreCancion=nombreCancion,musicaDefault=estaEnListaDefault)
+        else:
+            self.reproductor.pausar()
 
 
-    def mostrarSonidosParaAlarma(self):
-        listaCanciones=self.reproductor.listaCanciones
+    def mostrarSonidosParaAlarma(self): 
+        listaCanciones=self.reproductor.listaCancionesDefault
         for cancion in listaCanciones:
-            self.listWidget_sonidosAlarmas.addItem(cancion)
+            #agregando todas las canciones default
+            self.listWid_soniDef.addItem(cancion)
+
+        listaCanciones=self.reproductor.listaCancionesMias
+        for cancion in listaCanciones:
+            #agregando todas las canciones default
+            self.listWid_soniMio.addItem(cancion)
+         
 
     def mostrarAlarmaEditar(self,alarma):
         self.lineEdit_nombre.setText(alarma.nombre)
