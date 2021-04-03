@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import  QFileDialog
 from os import getcwd
 from PyQt5.QtCore import pyqtSignal
 import os
-
+from PyQt5.QtWidgets import QMessageBox
 
 
 
@@ -21,21 +21,33 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
     senal_cancionAgregada=pyqtSignal(str)
 
 
-    def __init__(self,context,carpetaMusicaDefault,carpetaMusicaMia):
+    def __init__(self,context,direccionCarpetas,carpetaMusicaDefault,carpetaMusicaMia,cancionDefault):
         QtCore.QObject.__init__(self)
 
+        self.direccionCarpetas=direccionCarpetas
         self.carpetaMusicaMia=carpetaMusicaMia
         self.carpetaMusicaDefault=carpetaMusicaDefault
         
         self.cargarNombresCanciones()
-
-
     
         self.context=context
 
-        mixer.init()
+        self.cancionDefault=cancionDefault
 
-    
+        self.cancionReproduccion_completa=""
+        self.cancionReproduccion=""
+
+        mixer.init()
+    #dame el nombre completo de la cancion seleccionada
+
+
+
+    def getNomCom_cancionSelec(self):
+        return self.cancionReproduccion_completa
+
+    def getNom_cancionSelec(self):
+        return self.cancionReproduccion
+
     def agregarUnaCancion(self):
         print("Agregando una cancion")                                                        
         cancion,_= QFileDialog.getOpenFileName(self.context, "Sonido de mi elección","c://", "Formatos validos (*.mp3  *.wav )")
@@ -43,9 +55,16 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
             cancion = os.path.normpath(cancion) #normalizando la ruta
             soloNombreCancion = cancion.split(os.sep)[-1]
             
-            
+            if len(soloNombreCancion)>30:
+                #.wav==4 caracteres
+                #.mp3==4 caracteres
+                #de esta manera reducimos el nombre de izquierda a derecha y no quitamos
+                #la extension del archivo 
+                soloNombreCancion= (soloNombreCancion[:26])+ (soloNombreCancion[-4:])
+
+
             origenArchivoCopiar=cancion
-            destinoArchivoCopiar=self.carpetaMusicaMia+soloNombreCancion
+            destinoArchivoCopiar=self.direccionCarpetas+self.carpetaMusicaMia+soloNombreCancion
 
             if soloNombreCancion.endswith(".wav"):
                 infoCancion=WAVE(cancion)
@@ -60,21 +79,35 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
                 self.senal_cancionAgregada.emit(soloNombreCancion)
             else:
                 print("La duracion del archivo no puede ser mayor a los 6 minutos")
-
-
-
-
-
+                ventanaDialogo = QMessageBox()
+                ventanaDialogo.setIcon(QMessageBox.Critical)
+                ventanaDialogo.setWindowTitle('Error')
+                ventanaDialogo.setText("Lo sentimos pero no puede cargar\narchivos mayores a los 6 minutos")
+                ventanaDialogo.setStandardButtons(QMessageBox.Ok)
+                btn_ok = ventanaDialogo.button(QMessageBox.Ok)
+                btn_ok.setText('Entendido')
+                ventanaDialogo.exec_()
 
     def cargarNombresCanciones(self):
         self.listaCancionesDefault=[]
-        archivosCarpetaDefault=os.listdir(self.carpetaMusicaDefault)
+        archivosCarpetaDefault=os.listdir( str(self.direccionCarpetas+self.carpetaMusicaDefault) )
         self.listaCancionesDefault=[archivo for archivo in archivosCarpetaDefault if archivo.endswith(".mp3") or  archivo.endswith(".wav")]        
 
         self.listaCancionesMias=[]
-        archivosCarpetaMia=os.listdir(self.carpetaMusicaMia)
+        archivosCarpetaMia=os.listdir( str(self.direccionCarpetas+self.carpetaMusicaMia) )
         self.listaCancionesMias=[archivo for archivo in archivosCarpetaMia if archivo.endswith(".mp3") or  archivo.endswith(".wav")]
-        
+
+    def refrescarListaMisAlarmas(self):
+        self.listaCancionesMias=[]
+        archivosCarpetaMia=os.listdir(   self.direccionCarpetas+self.carpetaMusicaMia )
+        self.listaCancionesMias=[archivo for archivo in archivosCarpetaMia if archivo.endswith(".mp3") or  archivo.endswith(".wav")]
+
+
+    def tocarCancionDefault(self):
+        self.cancionReproduccion_completa=self.carpetaMusicaDefault+self.cancionDefault
+        self.cancionReproduccion=self.cancionDefault
+        self.pausar()
+
 
     def tocar(self,nombreCancion,musicaDefault=True):
         #C:\Users\ronal\Desktop\PROYECTO\IoT_domotica\GUI\CUERPO\RECURSOS\MUSICA\DEFAULT
@@ -82,15 +115,15 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
             ruta=self.carpetaMusicaDefault
         else:
             ruta=self.carpetaMusicaMia
-        nombreCancion=ruta+nombreCancion
+
+        self.cancionReproduccion_completa=ruta+nombreCancion
+        self.cancionReproduccion=nombreCancion
 
 
         # Loading the song
-        mixer.music.load(nombreCancion)
-
+        mixer.music.load(self.direccionCarpetas + self.cancionReproduccion_completa)
         # Setting the volume
         mixer.music.set_volume(0.7)
-        
         # Start playing the song
         mixer.music.play()
 
@@ -99,6 +132,20 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
     
     def detener(self):
         mixer.music.stop()
+
+    def eliminarMiCancion(self,nombreCancion):
+        #self.detener()
+        mixer.quit()
+
+        mixer.init()
+
+        nombreCompleto=self.direccionCarpetas+self.carpetaMusicaMia+nombreCancion
+        #eliminando a la cancion de la lista
+        self.listaCancionesMias.remove(nombreCancion)
+        os.remove(nombreCompleto)
+
+        #print(nombreCompleto)
+
 
 
 

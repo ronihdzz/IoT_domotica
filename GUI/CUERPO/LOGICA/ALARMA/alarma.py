@@ -2,13 +2,30 @@
 class Alarma():
     DIAS_SEMANA=("lunes","martes","miercoles","jueves","viernes","sabado","domingo")
 
-    def __init__(self,nombre="",asunto=0,hora=0,minuto=0,diasActiva=[0,0,0,0,0,0,0],prendida=1):
+    def __init__(self,nombre="",sonido="",asunto=0,hora=0,minuto=0,diasActiva=[0,0,0,0,0,0,0],prendida=1):
         self.nombre=nombre
         self.asunto=asunto
         self.hora=hora
         self.minuto=minuto
         self.diasActiva=diasActiva
         self.prendida=prendida
+        self.sonido=sonido
+    
+    @staticmethod
+    def tupla_toAlarma(tuplaDatos):
+
+        nombre=tuplaDatos[0]
+        sonido=tuplaDatos[1]
+        asunto=tuplaDatos[2]
+        hora=tuplaDatos[3]
+        minuto=tuplaDatos[4]
+        diasActiva=tuplaDatos[5:-1]
+        prendida=tuplaDatos[-1]
+
+        alarma=Alarma(nombre=nombre,sonido=sonido, asunto=asunto,hora=hora,minuto=minuto,
+            diasActiva=diasActiva,prendida=prendida)
+
+        return alarma        
     
     def getDias(self):
         nombreDias=[]
@@ -18,7 +35,7 @@ class Alarma():
         return  ",".join(nombreDias)
     
     def to_tupla(self):
-        alarmaTupla=[self.nombre,self.asunto,self.hora,self.minuto]+self.diasActiva+[self.prendida] 
+        alarmaTupla=[self.nombre,self.sonido,self.asunto,self.hora,self.minuto]+self.diasActiva+[self.prendida] 
         alarmaTupla=tuple(alarmaTupla)
         return alarmaTupla
 

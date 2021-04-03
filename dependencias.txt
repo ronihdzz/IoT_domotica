@@ -1,0 +1,5 @@
+pip3 install pyqt5
+pip3 install pyqt5-tools
+pip3 install pyserial
+pip3 install pygame
+pip3 install mutagen

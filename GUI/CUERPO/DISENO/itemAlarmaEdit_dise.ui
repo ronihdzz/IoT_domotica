@@ -741,7 +741,7 @@ QTabBar::tab:only-one {
 }</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="pistasDefault">
       <attribute name="title">
@@ -780,13 +780,8 @@ color: rgb(0, 0, 0);
 }</string>
          </property>
          <property name="currentRow">
-          <number>0</number>
+          <number>-1</number>
          </property>
-         <item>
-          <property name="text">
-           <string>Sin musica de alarma</string>
-          </property>
-         </item>
         </widget>
        </item>
       </layout>
@@ -870,13 +865,8 @@ color: rgb(0, 0, 0);
 }</string>
          </property>
          <property name="currentRow">
-          <number>0</number>
+          <number>-1</number>
          </property>
-         <item>
-          <property name="text">
-           <string>Sin musica de alarma</string>
-          </property>
-         </item>
         </widget>
        </item>
       </layout>

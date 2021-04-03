@@ -270,10 +270,17 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 # #######################################################################################################################    
 
     def closeEvent(self,event):
-        resultado = QMessageBox.question(self, "Salir ...",
-                                            "¿Seguro que quieres salir?",
-                                            QMessageBox.Yes | QMessageBox.No)
-        if resultado == QMessageBox.Yes:
+        ventanaDialogo = QMessageBox()
+        ventanaDialogo.setIcon(QMessageBox.Question)
+        ventanaDialogo.setWindowTitle('Salir')
+        ventanaDialogo.setText("¿Seguro que quieres salir?")
+        ventanaDialogo.setStandardButtons(QMessageBox.Yes|QMessageBox.No)
+        btn_yes = ventanaDialogo.button(QMessageBox.Yes)
+        btn_yes.setText('Si')
+        btn_no = ventanaDialogo.button(QMessageBox.No)
+        btn_no.setText('No')
+        ventanaDialogo.exec_()
+        if ventanaDialogo.clickedButton()  ==  btn_yes:
             event.accept()
         else:
             event.ignore()  # No saldremos del evento

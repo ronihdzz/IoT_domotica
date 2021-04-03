@@ -81,7 +81,8 @@ class SeccionAlarmas(QtWidgets.QWidget,Ui_Form):
 
     def agregarAlarma(self,alarma):
         if self.punteroNoItems<self.MAX_ITEMS:
-            itemAlarma=ItemAlarmaVista(id=self.contadorIdsVivosMuertos,alarma=alarma)
+            itemAlarma=ItemAlarmaVista(id=self.contadorIdsVivosMuertos)
+            itemAlarma.cargarAlarma(alarma)
             itemAlarma.suHoraMorir.connect(self.borrarItem)
             self.listIdsItemsVivos.append(self.contadorIdsVivosMuertos)
 
@@ -98,6 +99,7 @@ class SeccionAlarmas(QtWidgets.QWidget,Ui_Form):
 
 
     def borrarItem(self,listaIdIs_itemAMatar):
+        print("BORRAR: ",listaIdIs_itemAMatar)
         idItemAMatar=listaIdIs_itemAMatar[0] #id en el orden las widget
         nombreAlarma=listaIdIs_itemAMatar[1] #id en la base de datos
 

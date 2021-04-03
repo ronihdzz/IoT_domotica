@@ -27,29 +27,31 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
     senal_alarmaEditada=pyqtSignal(bool)
 
 
-    senal_alarmaQuiereEdicion=pyqtSignal(list)
-    #[ contextoEllaMisma,  ]
+    senal_alarmaQuiereEdicion=pyqtSignal(str)
+    #nombreAlarma
     
 
-    def __init__(self,id,alarma):
+    def __init__(self,id):
         Ui_Form.__init__(self)
         QtWidgets.QWidget.__init__(self)
         self.setupUi(self)
         self.btn_eliminar.clicked.connect(self.mandarSenalMuerto)
         self.id=id
-
-        self.alarma=alarma
+        self.nombreAlarma=None
+        
         self.btn_editar.clicked.connect(self.editar)
         self.textEdit_alarma.setReadOnly(True)
         self.hoSli_estado.valueChanged.connect(self.activarDesactivarAlarma)
         self.hoSli_estado.setValue(1)
 
-        self.cargarAlarma()
     
-    def cargarAlarma(self):
-        self.textEdit_alarma.setText("""<h2>{}:{} hrs ({})</h2>
-        <h5>{}:{}</h5>
-        """.format(  self.alarma.hora,self.alarma.minuto,self.alarma.asunto,self.alarma.nombre, self.alarma.getDias() ) )
+
+    
+    def cargarAlarma(self,alarma):
+        self.nombreAlarma=alarma.nombre
+        self.textEdit_alarma.setText("""<h1> {}:{} hrs </h1>
+        <h3>{}: {}</h3>
+        """.format(alarma.hora,alarma.minuto,alarma.nombre,alarma.getDias() ) )
     
     def activarDesactivarAlarma(self):
         if self.hoSli_estado.value():
@@ -62,7 +64,8 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
 
     def editar(self):
         self.ventana=ItemAlarmaEdit()
-        self.ventana.modoTrabajo(modoEdicion=True,alarma=self.alarma)
+        #getDatosAlarma(self,nombreAlarma):
+        self.ventana.modoTrabajo(modoEdicion=True,nombreAlarma=self.nombreAlarma)
         self.ventana.senal_alarmaEditada.connect(self.alarmaEditada)
         self.ventana.show()
         #del (self.ventana)
@@ -70,14 +73,14 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
     def alarmaEditada(self,alarma):
         #print(alarma[0])
         #print(type(alarma[0]))
-        self.alarma=alarma[0]
-        self.cargarAlarma()
+        alarma=alarma[0]
+        self.cargarAlarma(alarma)
         self.senal_alarmaEditada.emit(True)
         del(self.ventana)
 
 
     def mandarSenalMuerto(self):
-        self.suHoraMorir.emit( [ self.id,self.alarma.nombre] )
+        self.suHoraMorir.emit( [self.id,self.nombreAlarma] )
 
 
 
