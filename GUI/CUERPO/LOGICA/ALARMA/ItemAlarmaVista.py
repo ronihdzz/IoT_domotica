@@ -1,11 +1,13 @@
 from PyQt5 import QtWidgets,Qt
 from PyQt5.QtWidgets import QWidget,QVBoxLayout,QPushButton,QGridLayout,QCheckBox,QTextEdit
 from PyQt5.QtWidgets import  QMessageBox
-from PyQt5.QtCore import Qt, pyqtSignal,QObject
+from PyQt5.QtCore import Qt, pyqtSignal,QObject,QTime
 from PyQt5 import QtCore
 #import numpy as np
 import os
 from functools import partial
+
+
 
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
@@ -43,15 +45,18 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
         self.textEdit_alarma.setReadOnly(True)
         self.hoSli_estado.valueChanged.connect(self.activarDesactivarAlarma)
         self.hoSli_estado.setValue(1)
-
-    
-
     
     def cargarAlarma(self,alarma):
         self.nombreAlarma=alarma.nombre
-        self.textEdit_alarma.setText("""<h1> {}:{} hrs </h1>
+
+        horaAlarma=QTime()
+        horaAlarma.setHMS(alarma.hora,alarma.minuto,0)
+        horaAlarma=horaAlarma.toString("hh:mm")
+        print("HORA:",horaAlarma)
+        
+        self.textEdit_alarma.setText("""<h1>{}  </h1>
         <h3>{}: {}</h3>
-        """.format(alarma.hora,alarma.minuto,alarma.nombre,alarma.getDias() ) )
+        """.format(alarma.getHora_string(),alarma.nombre,alarma.getDias() ) )
     
     def activarDesactivarAlarma(self):
         if self.hoSli_estado.value():
@@ -81,7 +86,6 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
 
     def mandarSenalMuerto(self):
         self.suHoraMorir.emit( [self.id,self.nombreAlarma] )
-
 
 
 

@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets,Qt
 from PyQt5.QtWidgets import QWidget,QVBoxLayout,QPushButton,QGridLayout,QCheckBox,QTextEdit,QMenu
-from PyQt5.QtWidgets import  QMessageBox
+from PyQt5.QtWidgets import  QMessageBox,QCompleter
 from PyQt5.QtCore import Qt, pyqtSignal,QObject,QEvent
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QMessageBox
@@ -9,6 +9,11 @@ from PyQt5.QtWidgets import QMessageBox
 import os
 from functools import partial
 from PyQt5.QtCore import QTimer, QTime, Qt,QObject,pyqtSignal
+from PyQt5.QtCore import QRegExp
+from PyQt5.QtGui import QDoubleValidator,QRegExpValidator
+import textwrap
+
+
 
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
@@ -22,6 +27,7 @@ from CUERPO.LOGICA.ALARMA.alarma import Alarma
 from CUERPO.LOGICA.ALARMA.baseDatos_alarma import BaseDatos_alarmas
 from CUERPO.LOGICA.recursos import Recursos_IoT_Domotica
 from CUERPO.LOGICA.ALARMA.reproductorSonidosAlarmas import ReproductorSonidosAlarmas
+from CUERPO.LOGICA.recursos import Recursos_IoT_Domotica
 
 #https://learndataanalysis.org/source-code-how-to-implement-context-menu-to-a-qlistwidget-pyqt5-tutorial/
 #https://stackoverflow.com/questions/59798284/pyqt-multiple-objects-share-context-menu
@@ -39,6 +45,8 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
         carpetaMusicaDefault=Recursos_IoT_Domotica.CARPETA_MUSICA_DEFAULT,
         carpetaMusicaMia=Recursos_IoT_Domotica.CARPETA_MUSICA_MIA,
         cancionDefault=Recursos_IoT_Domotica.NOMBRE_SONIDO_NULL)
+
+        self.restringirLasEntradas()
 
 
         self.reproductor.senal_cancionAgregada.connect(self.sonidoAlarmaAgregado)
@@ -80,6 +88,8 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
         self.listWid_soniMio.clear()
         self.listWid_soniDef.clear()
 
+        self.dictNombresAlarmasYaCreadas=self.baseDatosAlarmas.getNombresAlarmas()
+    
         #Si se quiere editar una alarma
         if modoEdicion:
             if nombreAlarma:
@@ -89,29 +99,30 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
                 self.mostrarAlarmaEditar(alarma)#cargamos los datos de la alarma en la widget
                 self.mostrarSonidosParaAlarma(  alarma.sonido   )#mostramos la lista de sonidos
                 #disponibles para elegir asi como seleccionamos el sonido que fue escogido previamente
+                #eliminando del diccionario de alarmas el nombre de esta alarma 
+                del self.dictNombresAlarmasYaCreadas[alarma.nombre]
         
         #Si se quiere crear una nueva alarma
         else:
-            self.mostrarAlarmaBlanco()
             #el sonido default de la alarma es no tener sonido, por eso cargamos esa opcion
-            self.mostrarSonidosParaAlarma( self.reproductor.carpetaMusicaDefault+Recursos_IoT_Domotica.NOMBRE_SONIDO_NULL  ) 
+            self.mostrarAlarmaBlanco()
+            self.mostrarSonidosParaAlarma() 
         
         self.modoEdicion=modoEdicion
+        self.mostrarNombresAlarmas()
 
 
 ###############################################################################################################
 # SONIDO DE LA ALARMA
 ###############################################################################################################
 
-    def mostrarSonidosParaAlarma(self,nombreCancionAlarma): 
+    def mostrarSonidosParaAlarma(self,nombreSonidoAlarma=None): 
         """Carga en las 'listWidget' el nombre de las canciones, es decir
         la 'listWidget':
             1)Que muestra las canciones por defecto atraves de este metodo
             cargara todos los nombres de  las canciones por defecto.
             2)Que muestra las canciones agregadas por el usuario a traves de 
             este metodo cargara todos  los nombres de las  canciones descargada
-        Y finalmente seleccionara el item que representa la cancion que escogio
-        el usuario como sonido de alarma
         """
         #cargando los nombres de las canciones default:
         listaCanciones=self.reproductor.listaCancionesDefault
@@ -124,31 +135,48 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
         self.listWid_soniMio.addItem(Recursos_IoT_Domotica.NOMBRE_SONIDO_NULL)
         for cancion in listaCanciones:
             self.listWid_soniMio.addItem(cancion)
+
+        self.selecSonidoAlarma(nombreCancionAlarma=nombreSonidoAlarma)
+
         
+        
+    def selecSonidoAlarma(self,nombreCancionAlarma=None):
+        """Seleccionara el item cuyo nombre es: 'nombreCancionAlarma', y mostrara
+        la pestaña del 'TabWidget' que contiene la lista de reproduccion que contiene
+        el: 'nombreCancionAlarma'.Si 'nombreCancionAlarma'=None, significara que 
+        se seleccione la 'cancionNull' es decir la opcion de silencio.
+        """
+
         #desconectamo es señal ya que a la hora de seleccionar la pestaña de la
         #lista de reproduccion, no queremos que haga el comportamiento predeterminado
         self.tabWid_sonidosAlarmas.currentChanged.disconnect(self.cambioDeListaReproduccion)
-        
+        if nombreCancionAlarma==None:
+            nombreCancionAlarma=self.reproductor.getNombre_cancionDefault_guardaBase()
+
         if nombreCancionAlarma.startswith(self.reproductor.carpetaMusicaDefault):
             listaWidget=self.listWid_soniDef
             dirCarpeta=self.reproductor.carpetaMusicaDefault
             #En la pestaña 0  se encunetra la 'listWiget' de canciones default
             self.tabWid_sonidosAlarmas.setCurrentIndex(0)
+            estaEnListaDefault=True 
         else:
             listaWidget=self.listWid_soniMio
             dirCarpeta=self.reproductor.carpetaMusicaMia
             #En la pestaña 1  se encunetra la 'listWiget' de canciones del usuario
             self.tabWid_sonidosAlarmas.setCurrentIndex(1)
+            estaEnListaDefault=False
   
         #quitamos el nombre de la carpeta en el cual se encuentra la pestaña
         nombreCancionAlarma=nombreCancionAlarma.replace(dirCarpeta,"")
         
         #buscamos en la list widget cual es la sonido de alarma elegido por el usuario
         #y lo seleccionamos
+        listaWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         try:
             items=listaWidget.findItems(nombreCancionAlarma,QtCore.Qt.MatchCaseSensitive)
             items[0].setSelected(True)
-        
+            self.reproductor.cargarCancion(nombreCancion=nombreCancionAlarma,musicaDefault=estaEnListaDefault)
+            self.reproductor.tocar()
         except:
             mensaje="""La cancion cuyo nombre es:'{}' 
 que escogiste como tu sonido de alarma 
@@ -163,6 +191,7 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
             btn_ok = ventanaDialogo.button(QMessageBox.Ok)
             btn_ok.setText('Entendido')
             ventanaDialogo.exec_()
+            self.reproductor.cargarCancion() #cargamos la cancion sin sonido 
 
 
         #hacemos esto  para que no se sombree un item, almenos que sea con un click
@@ -171,7 +200,6 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
 
         #volvemos a ligar la señal que desconectamos...
         self.tabWid_sonidosAlarmas.currentChanged.connect(self.cambioDeListaReproduccion)
-
 
     def cambioDeListaReproduccion(self,indice):
         """Cada vez que la GUI detecte que hay un cambio de vista entre
@@ -183,7 +211,8 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
         """
         #pausando cualquier cancion que se este escuchando y poniendo como valor de
         #sonido de alarma, la opcion de 'SIN MUSICA'
-        self.reproductor.tocarCancionDefault()
+        self.reproductor.cargarCancion()
+        self.reproductor.tocar() 
 
 
         #El 'tabWidget' solo contiene dos ventanas
@@ -238,11 +267,13 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
         if indice>0:
             nombreCancion=listWidget.item(indice).text()#obtenemos el texto de la cancion
             #tocamo la cancion por medio del reproductor
-            self.reproductor.tocar(nombreCancion=nombreCancion,musicaDefault=estaEnListaDefault)
+            self.reproductor.cargarCancion(nombreCancion=nombreCancion,musicaDefault=estaEnListaDefault)
+            self.reproductor.tocar()
         else:
             #si se selecciono el indice cero, significa que tomar el valor default
-            self.reproductor.tocarCancionDefault()
-
+             #si no ponemos nada se se cargara la cancion default
+            self.reproductor.cargarCancion()
+            self.reproductor.tocar()
 
     def eventFilter(self, source, event):
         """Cada vez que alguien haga click derecho sobre algun
@@ -338,12 +369,55 @@ a ser el sonido default.
                 self.listWid_soniMio.setCurrentRow(0)
                 self.listWid_soniMio.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
 
-                self.reproductor.tocarCancionDefault()
+
+                self.reproductor.cargarCancion()
+                self.reproductor.tocar()
+                
                 
 
 ###############################################################################################################
 # SONIDO DE LA ALARMA
 ###############################################################################################################
+
+    def mostrarNombresAlarmas(self):
+        acompletador=QCompleter(list(self.dictNombresAlarmasYaCreadas) )
+        self.lineEdit_nombre.setCompleter(acompletador)
+
+
+
+    def restringirLasEntradas(self):
+        # validacion del nombre de usuario...
+        validator = QRegExpValidator(QRegExp("[0-9a-zA-Z]{1,15}"))  # maximo solo 15 caracteres
+        self.lineEdit_nombre.setValidator(validator)
+
+    def comprobarSiDatosCorrectos(self):
+        mensajeError=""
+        datosCorrectos=True
+        nombreAlarma=self.lineEdit_nombre.text()
+        if nombreAlarma=="" or nombreAlarma==None:
+            mensajeError="Debes asignar un nombre a la alarma"
+            datosCorrectos=False
+        #si ya existe el nombre de la alarma
+        elif self.dictNombresAlarmasYaCreadas.get(nombreAlarma,False):
+            nombreAlarmasExistentes= ",".join( list(self.dictNombresAlarmasYaCreadas.keys())  )
+            mensajeError="Ya existe una alarma con el nombre de :{}".format(nombreAlarma)
+            mensajeError+=", los nombres  de alarmas existentes son:{}".format(nombreAlarmasExistentes)
+            mensajeError+=" y no puede elegir ninguno de ellos como nombre de alarma."
+            mensajeError=textwrap.fill(mensajeError,len("mi longitud deseada es la siguiente para"))
+            datosCorrectos=False
+        
+        if mensajeError:
+            ventanaDialogo = QMessageBox()
+            ventanaDialogo.setIcon(QMessageBox.Critical)
+            ventanaDialogo.setWindowTitle('Error')
+            ventanaDialogo.setText(mensajeError)
+            ventanaDialogo.setStandardButtons(QMessageBox.Ok)
+            btn_ok = ventanaDialogo.button(QMessageBox.Ok)
+            btn_ok.setText('Entendido')
+            ventanaDialogo.exec_()
+            return datosCorrectos
+        return datosCorrectos
+
 
     def mostrarAlarmaBlanco(self):
         """Cargara los datos default de un objeto de tipo alarma
@@ -381,44 +455,45 @@ a ser el sonido default.
         posteriormente retornarlo
         """
 
-        #obteniendo el nombre de la alarma
-        nombre=self.lineEdit_nombre.text()
+        if self.comprobarSiDatosCorrectos():
+            #obteniendo el nombre de la alarma
+            nombre=self.lineEdit_nombre.text()
 
-        #obteniendo el nombre de la cancion con ruta completa...
-        sonido=self.reproductor.getNomCom_cancionSelec() 
+            #obteniendo el nombre de la cancion con ruta completa...
+            sonido=self.reproductor.getNom_cancionSelec_guardaBase()
 
 
-        #Guardando los dias que son...
-        diasActiva=[0,0,0,0,0,0,0] 
-        for c,rb_dia in enumerate(self.tuplaDias_rb):
-            if rb_dia.isChecked():
-                diasActiva[c]=1
+            #Guardando los dias que son...
+            diasActiva=[0,0,0,0,0,0,0] 
+            for c,rb_dia in enumerate(self.tuplaDias_rb):
+                if rb_dia.isChecked():
+                    diasActiva[c]=1
 
-        #Guardando el asunto:
-        asunto=self.comBox_asunto.currentIndex()
+            #Guardando el asunto:
+            asunto=self.comBox_asunto.currentIndex()
 
-        #obteniendo la hora a la cual se ejecutara la alarma
-        hora=self.timeEdit_hora.time().hour()
-        minuto=self.timeEdit_hora.time().minute()
+            #obteniendo la hora a la cual se ejecutara la alarma
+            hora=self.timeEdit_hora.time().hour()
+            minuto=self.timeEdit_hora.time().minute()
 
-        alarma=Alarma(nombre=nombre,sonido=sonido,asunto=asunto,hora=hora,minuto=minuto,diasActiva=diasActiva)
-       
-        #si no estabamos en modo de edicion, significa que estamos
-        #creando una alarma mas 
-        if not(self.modoEdicion):
-            #informando acerca de la nueva alarma creada
-            self.senal_alarmaCreada.emit([alarma])
-            #registrar los datos de la nueva alarma en la base de datos
-            self.baseDatosAlarmas.addAlarma(alarma)
-        else:
-            #informado acerca de la alarma ya editada
-            self.senal_alarmaEditada.emit([alarma])
-            #eliminando la alarma previa
-            self.baseDatosAlarmas.eliminar(A=self.nombreAlarmaEditar)
-            #agregando la alarma editada a la base de datos
-            self.baseDatosAlarmas.addAlarma(alarma)
+            alarma=Alarma(nombre=nombre,sonido=sonido,asunto=asunto,hora=hora,minuto=minuto,diasActiva=diasActiva)
+        
+            #si no estabamos en modo de edicion, significa que estamos
+            #creando una alarma mas 
+            if not(self.modoEdicion):
+                #informando acerca de la nueva alarma creada
+                self.senal_alarmaCreada.emit([alarma])
+                #registrar los datos de la nueva alarma en la base de datos
+                self.baseDatosAlarmas.addAlarma(alarma)
+            else:
+                #informado acerca de la alarma ya editada
+                self.senal_alarmaEditada.emit([alarma])
+                #eliminando la alarma previa
+                self.baseDatosAlarmas.eliminar(A=self.nombreAlarmaEditar)
+                #agregando la alarma editada a la base de datos
+                self.baseDatosAlarmas.addAlarma(alarma)
 
-        self.close()
+            self.close()
 
     def closeEvent(self,event):
         self.reproductor.detener()

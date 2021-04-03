@@ -9,15 +9,14 @@ from PyQt5.QtCore import pyqtSignal
 import os
 from PyQt5.QtWidgets import QMessageBox
 
-
-
 import shutil  #para copiar archivos
 from mutagen.wave import WAVE  #para ver la duracion de las canciones
 from mutagen.mp3 import MP3 
 
+from CUERPO.LOGICA.recursos import Recursos_IoT_Domotica
+
 class ReproductorSonidosAlarmas(QtCore.QObject):
     MAX_DURACION=6*60 #6 minutos
-
     senal_cancionAgregada=pyqtSignal(str)
 
 
@@ -27,26 +26,19 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
         self.direccionCarpetas=direccionCarpetas
         self.carpetaMusicaMia=carpetaMusicaMia
         self.carpetaMusicaDefault=carpetaMusicaDefault
-        
         self.cargarNombresCanciones()
     
         self.context=context
-
         self.cancionDefault=cancionDefault
 
-        self.cancionReproduccion_completa=""
-        self.cancionReproduccion=""
+        self.nombreCancionSeleccionada=""
+        self.carpetaCancionSeleccionada="" #puede ser el nombre de la carpeta
+        #que almacena las 'canciones default' o las 'canciones que descargo el usuario'
 
         mixer.init()
     #dame el nombre completo de la cancion seleccionada
 
 
-
-    def getNomCom_cancionSelec(self):
-        return self.cancionReproduccion_completa
-
-    def getNom_cancionSelec(self):
-        return self.cancionReproduccion
 
     def agregarUnaCancion(self):
         print("Agregando una cancion")                                                        
@@ -88,6 +80,7 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
                 btn_ok.setText('Entendido')
                 ventanaDialogo.exec_()
 
+
     def cargarNombresCanciones(self):
         self.listaCancionesDefault=[]
         archivosCarpetaDefault=os.listdir( str(self.direccionCarpetas+self.carpetaMusicaDefault) )
@@ -98,34 +91,36 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
         self.listaCancionesMias=[archivo for archivo in archivosCarpetaMia if archivo.endswith(".mp3") or  archivo.endswith(".wav")]
 
     def refrescarListaMisAlarmas(self):
-        self.listaCancionesMias=[]
-        archivosCarpetaMia=os.listdir(   self.direccionCarpetas+self.carpetaMusicaMia )
-        self.listaCancionesMias=[archivo for archivo in archivosCarpetaMia if archivo.endswith(".mp3") or  archivo.endswith(".wav")]
+        self.cargarNombresCanciones()
 
-
-    def tocarCancionDefault(self):
-        self.cancionReproduccion_completa=self.carpetaMusicaDefault+self.cancionDefault
-        self.cancionReproduccion=self.cancionDefault
-        self.pausar()
-
-
-    def tocar(self,nombreCancion,musicaDefault=True):
-        #C:\Users\ronal\Desktop\PROYECTO\IoT_domotica\GUI\CUERPO\RECURSOS\MUSICA\DEFAULT
-        if musicaDefault:
-            ruta=self.carpetaMusicaDefault
+    
+    def cargarCancion(self,nombreCancion=None ,musicaDefault=True):
+        if nombreCancion==None:
+            self.nombreCancionSeleccionada=self.cancionDefault
         else:
-            ruta=self.carpetaMusicaMia
+            self.nombreCancionSeleccionada=nombreCancion
+        if musicaDefault:
+            self.carpetaCancionSeleccionada=self.carpetaMusicaDefault
+        else:
+            self.carpetaCancionSeleccionada=self.carpetaMusicaMia
 
-        self.cancionReproduccion_completa=ruta+nombreCancion
-        self.cancionReproduccion=nombreCancion
+    def getNom_cancionSelec_guardaBase(self):
+        return self.carpetaCancionSeleccionada+self.nombreCancionSeleccionada
 
+    def getNombre_cancionDefault_guardaBase(self):
+        return self.carpetaMusicaDefault+self.cancionDefault
 
+    def tocar(self):
+        #C:\Users\ronal\Desktop\PROYECTO\IoT_domotica\GUI\CUERPO\RECURSOS\MUSICA\DEFAULT
         # Loading the song
-        mixer.music.load(self.direccionCarpetas + self.cancionReproduccion_completa)
-        # Setting the volume
-        mixer.music.set_volume(0.7)
-        # Start playing the song
-        mixer.music.play()
+        if self.nombreCancionSeleccionada==self.cancionDefault:
+            self.pausar()
+        else:
+            mixer.music.load(self.direccionCarpetas + self.carpetaCancionSeleccionada + self.nombreCancionSeleccionada)
+            # Setting the volume
+            mixer.music.set_volume(0.7)
+            # Start playing the song
+            mixer.music.play()
 
     def pausar(self):
         mixer.music.pause()
@@ -139,28 +134,7 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
 
         mixer.init()
 
-        nombreCompleto=self.direccionCarpetas+self.carpetaMusicaMia+nombreCancion
+        nombreCompleto=self.direccionCarpetas + self.carpetaCancionSeleccionada + self.nombreCancionSeleccionada
         #eliminando a la cancion de la lista
         self.listaCancionesMias.remove(nombreCancion)
         os.remove(nombreCompleto)
-
-        #print(nombreCompleto)
-
-
-
-
-
-'''
-playlist = new QMediaPlaylist(player);
-playlist->addMedia(QUrl("http://example.com/myfile1.mp3"));
-playlist->addMedia(QUrl("http://example.com/myfile2.mp3"));
-// ...
-playlist->setCurrentIndex(1);
-player->play();
-
-'''
-
-#https://www.youtube.com/watch?v=tF1U93I3-90
-
-
-#https://python.hotexamples.com/es/examples/PyQt5.QtMultimedia/QMediaPlaylist/addMedia/python-qmediaplaylist-addmedia-method-examples.html

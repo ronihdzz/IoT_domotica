@@ -163,6 +163,31 @@ class BaseDatos_alarmas():
             conexion.close()
             return listaNombresAlarmas
 
+    
+    def getNombresAlarmas(self):
+        conexion=self.iniciarConexion_sql()
+        if conexion==None:
+            print("Error a la hora de obtener los datos de la alarma:",nombreAlarma)
+            return False
+        else:
+            cursor = conexion.cursor()
+            # necesitamos obtener el tipo de respuesta de la pregunta...
+            sqlOrden = f"SELECT NOMBRE FROM  "+self.NAME_TABLA
+            cursor.execute(sqlOrden)
+            listaNombresAlarmas= tuple(cursor.fetchall())  # devuelve una lista con
+            #(     ('luis',) ,('')    )
+
+
+            #Las llaves del diccionario indicaran seran los nombres de la alarma
+            #y todos sus values valdran True, hara alusion a dichos nombres ya existen
+            resultado={}
+            for nombreAlarma in listaNombresAlarmas:
+                resultado [ nombreAlarma[0] ]=True
+
+            return resultado
+
+
+
 
     def getAlarma(self,nombreAlarma):
         conexion=self.iniciarConexion_sql()

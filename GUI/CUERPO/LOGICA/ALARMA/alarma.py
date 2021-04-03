@@ -2,6 +2,7 @@
 class Alarma():
     DIAS_SEMANA=("lunes","martes","miercoles","jueves","viernes","sabado","domingo")
 
+
     def __init__(self,nombre="",sonido="",asunto=0,hora=0,minuto=0,diasActiva=[0,0,0,0,0,0,0],prendida=1):
         self.nombre=nombre
         self.asunto=asunto
@@ -33,6 +34,34 @@ class Alarma():
             if diaRequerido:
                 nombreDias.append(  self.DIAS_SEMANA[c]     )
         return  ",".join(nombreDias)
+
+    def getHora_string(self):
+        resultado=['0','0',':','0','0','am'] # hh:mm pm/am
+        pm_am='P.M.'
+        resultado=''
+
+        hora=self.hora
+        minuto=self.minuto
+
+
+        if hora<12:
+            pm_am='A.M.'
+        elif hora>12:
+            hora-=12
+        if hora<10:
+            resultado="0"
+        resultado+=str(hora)+":"
+        
+        if minuto<10:
+            resultado+="0"
+        resultado+=str(minuto)
+
+        resultado=resultado+" "+pm_am
+        return resultado
+
+
+
+
     
     def to_tupla(self):
         alarmaTupla=[self.nombre,self.sonido,self.asunto,self.hora,self.minuto]+self.diasActiva+[self.prendida] 
