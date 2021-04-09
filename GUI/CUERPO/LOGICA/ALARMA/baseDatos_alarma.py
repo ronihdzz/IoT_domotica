@@ -1,7 +1,7 @@
 import os
 import sqlite3
 
-from CUERPO.LOGICA.ALARMA.alarma import Alarma
+from CUERPO.LOGICA.ALARMA.alarma import Alarma,HoraAlarma
 
 
 class BaseDatos_alarmas():
@@ -208,6 +208,39 @@ class BaseDatos_alarmas():
 
             return alarma
 
+    def getDictHoraAlarmas(self,noDia,hora,minuto):
+        DICT_IDS_DIAS=['LUNES','MARTES','MIERCOLES','JUEVES','VIERNES','SABADO','DOMINGO']
+
+        dia=DICT_IDS_DIAS[noDia]
+        
+        conexion=self.iniciarConexion_sql()
+
+        if conexion==None:
+            print("Error a la hora de obtener diccionario de hora de  alarmas que suenan el  dia:",dia)
+            return False
+        else:
+            cursor = conexion.cursor()
+            # necesitamos obtener el tipo de respuesta de la pregunta...
+            sqlOrden = f"SELECT NOMBRE,HORA,MINUTO  FROM  "+self.NAME_TABLA
+
+            #SELECT NOMBRE,HORA,MINUTO FROM ALARMAS  WHERE LUNES=1 AND (  (HORA>19) OR (HORA==19 AND MINUTO>0) ) ORDER BY HORA,MINUTO
+            sqlOrden+= " WHERE "+dia+"=1"+" AND ( (HORA>"+str(hora)+") OR (HORA=="+str(hora)+" AND MINUTO>="+str(minuto)+")  ) ORDER BY HORA ASC, MINUTO ASC"
+            cursor.execute(sqlOrden)
+            
+
+            listaDatosAlarmas= tuple(cursor.fetchall())  # devuelve una lista con
+            #(   ('Julian',9, 30, ), ....   )
+            print("PETICION:",sqlOrden)
+            print("RESPUESTA:",listaDatosAlarmas)
+
+            dictHorasAlarmas={}
+            for nombre,hora,minuto in listaDatosAlarmas:
+                dictHorasAlarmas[nombre]=HoraAlarma(hora,minuto)
+                
+            conexion.commit()
+            conexion.close()
+
+            return dictHorasAlarmas
 
 
     def getTodas_alarmas(self):
@@ -218,7 +251,7 @@ class BaseDatos_alarmas():
         else:
             cursor = conexion.cursor()
             # necesitamos obtener el tipo de respuesta de la pregunta...
-            sqlOrden = f"SELECT * FROM  "+self.NAME_TABLA
+            sqlOrden = f"SELECT * FROM  "+self.NAME_TABLA+" ORDER BY HORA ASC, MINUTO ASC"
             cursor.execute(sqlOrden)
             listaDatosAlarmas= tuple(cursor.fetchall())  # devuelve una lista con
             #(   ('Julian', 1, 9, 30, 1, 1, 1, 0, 0, 0, 0, 0), ....   )
@@ -233,3 +266,19 @@ class BaseDatos_alarmas():
             conexion.close()
 
             return listaAlarmas
+
+    def getSonido_alarma(self,nombreAlarma):
+        conexion=self.iniciarConexion_sql()
+        if conexion==None:
+            print("Error a la hora de obtener los datos de la pregunta....")
+            return False
+        else:
+            cursor = conexion.cursor()
+            # necesitamos obtener el tipo de respuesta de la pregunta...
+            sqlOrden = f"SELECT SONIDO FROM  "+self.NAME_TABLA+" WHERE NOMBRE="+"'"+nombreAlarma+"'"
+            print("INSTRUCCINO",sqlOrden)
+            cursor.execute(sqlOrden)
+            nombreCancion= tuple(cursor.fetchall())  # devuelve una lista con
+            #(   ('nombre/123.mp3', ),  )
+            return nombreCancion[0][0]
+

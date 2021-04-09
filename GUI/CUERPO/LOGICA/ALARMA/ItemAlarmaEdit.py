@@ -444,7 +444,7 @@ a ser el sonido default.
 
         #mostrando la hora a la cual sonara la alarma
         horaAlarma=QTime()
-        horaAlarma.setHMS(alarma.hora,alarma.minuto,0)
+        horaAlarma.setHMS(alarma.horaAlarma.hora,alarma.horaAlarma.minuto,0)
         self.timeEdit_hora.setTime( horaAlarma )
 
 

@@ -26,7 +26,8 @@ from CUERPO.LOGICA.ALARMA.ItemAlarmaEdit import ItemAlarmaEdit
 class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
     suHoraMorir= pyqtSignal(list)#indicara quien es el objeto que quiere morir...
     #[id,nombre]
-    senal_alarmaEditada=pyqtSignal(bool)
+    senal_alarmaEditada=pyqtSignal(list)#indicara quien es el objeto que quiere morir...
+    #[id,nombre]
 
 
     senal_alarmaQuiereEdicion=pyqtSignal(str)
@@ -50,13 +51,13 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
         self.nombreAlarma=alarma.nombre
 
         horaAlarma=QTime()
-        horaAlarma.setHMS(alarma.hora,alarma.minuto,0)
+        horaAlarma.setHMS(alarma.horaAlarma.hora,alarma.horaAlarma.minuto,0)
         horaAlarma=horaAlarma.toString("hh:mm")
         print("HORA:",horaAlarma)
         
         self.textEdit_alarma.setText("""<h1>{}  </h1>
         <h3>{}: {}</h3>
-        """.format(alarma.getHora_string(),alarma.nombre,alarma.getDias() ) )
+        """.format(alarma.horaAlarma,alarma.nombre,alarma.getDias() ) )
     
     def activarDesactivarAlarma(self):
         if self.hoSli_estado.value():
@@ -78,9 +79,10 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
     def alarmaEditada(self,alarma):
         #print(alarma[0])
         #print(type(alarma[0]))
+        self.senal_alarmaEditada.emit(alarma)
+
         alarma=alarma[0]
         self.cargarAlarma(alarma)
-        self.senal_alarmaEditada.emit(True)
         del(self.ventana)
 
 

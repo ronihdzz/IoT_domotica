@@ -23,7 +23,12 @@ from CUERPO.LOGICA.recursos import Recursos_IoT_Domotica
 
 
 class SeccionAlarmas(QtWidgets.QWidget,Ui_Form):
-    quierePreguntaImagen = pyqtSignal()
+    senal_creoUnaAlarma=pyqtSignal(list)
+    senal_editoUnaAlarma=pyqtSignal(list)
+    senal_eliminoUnaAlarma=pyqtSignal(str)#nombre de la alarma que se elimino
+
+
+
     def __init__(self):
         Ui_Form.__init__(self)
         QtWidgets.QWidget.__init__(self)
@@ -61,7 +66,6 @@ class SeccionAlarmas(QtWidgets.QWidget,Ui_Form):
 
 
     def cargarAlarmas(self):
-
         listaAlarmas=self.baseDatosAlarmas.getTodas_alarmas()
         #(   ('Julian', 1, 9, 30, 1, 1, 1, 0, 0, 0, 0, 0), ....   )
         
@@ -76,14 +80,20 @@ class SeccionAlarmas(QtWidgets.QWidget,Ui_Form):
     def nuevaAlarmaCreada(self,alarma):
         #print(alarma[0])
         #print(type(alarma[0]))
+        self.senal_creoUnaAlarma.emit(alarma)
         alarma=alarma[0]
         self.agregarAlarma(alarma)
+
+
+    def notificarEdicionUnaAlarma(self,alarma):
+        self.senal_editoUnaAlarma.emit(alarma)
 
     def agregarAlarma(self,alarma):
         if self.punteroNoItems<self.MAX_ITEMS:
             itemAlarma=ItemAlarmaVista(id=self.contadorIdsVivosMuertos)
             itemAlarma.cargarAlarma(alarma)
             itemAlarma.suHoraMorir.connect(self.borrarItem)
+            itemAlarma.senal_alarmaEditada.connect(self.notificarEdicionUnaAlarma)
             self.listIdsItemsVivos.append(self.contadorIdsVivosMuertos)
 
             self.vbox.addWidget(itemAlarma)
@@ -123,6 +133,8 @@ class SeccionAlarmas(QtWidgets.QWidget,Ui_Form):
             self.punteroNoItems -= 1
 
             self.baseDatosAlarmas.eliminar(A=nombreAlarma)
+            self.senal_eliminoUnaAlarma.emit(nombreAlarma)
+            
 
 
     def closeEvent(self, event):

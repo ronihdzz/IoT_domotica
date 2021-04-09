@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import  QDialog,QApplication
 from PyQt5 import QtWidgets
 from functools import partial
 from PyQt5.QtWidgets import (QMessageBox,QButtonGroup,QDialog)
-from PyQt5.QtCore import QTimer, QTime, Qt
+from PyQt5.QtCore import QTimer, QTime, Qt,QDateTime,QDate
 import datetime
 
 ###############################################################
@@ -15,6 +15,12 @@ from CUERPO.DISENO.main_dise import Ui_Form
 from CUERPO.LOGICA.configLed import Dialog_configLed
 from CUERPO.LOGICA.configVenti import Dialog_configVenti
 from CUERPO.LOGICA.ALARMA.SeccionAlarmas import SeccionAlarmas
+from CUERPO.LOGICA.ALARMA.checadorAlarma import ChecadorAlarma
+from CUERPO.LOGICA.ALARMA.notificadorAlarmas import NotificadorAlarmas
+
+from CUERPO.LOGICA.reloj import Reloj
+
+
 from CUERPO.LOGICA.SeccionNotas import SeccionNotas
 from CUERPO.LOGICA.arduinoExtension import ArduinoExtension_hilo
 from CUERPO.LOGICA.bluetoothSerial import BluetoothSerial_hilo
@@ -116,36 +122,70 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 
 
 #Reloj....
+  
+        tiempo = QTime.currentTime() 
+        self.timeEdit_tiempo.setTime(tiempo)
+        #print ( tiempo.toString(Qt.DefaultLocaleLongDate) )
 
-        self.fecha=datetime.datetime.now()
+        fechaHoy=QDate.currentDate()
+        #donde 1 es el lunes y 7 es el domingo.
+        #https://zetcode.com/gui/qt5/datetime/
+        noDiaEntreSemana=fechaHoy.dayOfWeek()-1  
 
-        #print("Día:",ahora.day)  # Muestra día
-        # print("Mes:",ahora.month)  # Muestra mes
-        # print("Año:",ahora.year)  # Muestra año
-        # print("Hora:", ahora.hour)  # Muestra hora
-        # print("Minutos:",ahora.minute)  # Muestra minuto
-
-        #QtimeEdit()
-        #dateEdit_fecha   timeEdit_tiempo 
-        self.hora=QTime()
-        self.hora.setHMS(self.fecha.hour,self.fecha.minute,self.fecha.second)
-        self.timeEdit_tiempo.setTime(self.hora)
         
+        self.dateEdit_fecha.setDate(fechaHoy)
+        #print (fecha.toString ()) 
+
+        print("SEMANA QUE PASO:",noDiaEntreSemana)
 
 
+        self.checadorAlarma=ChecadorAlarma( noDiaEntreSemana, tiempo.hour(),  tiempo.minute() )
+        self.reloj=Reloj(noDiaEntreSemana, tiempo.hour(),  tiempo.minute(),  tiempo.second()  )
+        self.hora=QTime(tiempo.hour(),  tiempo.minute(),  tiempo.second(), 0 )
+        self.avisador=NotificadorAlarmas()    
+
+
+
+
+        self.reloj.senal_minutoCambio.connect(self.consultarChecadorAlarmas)
+        self.reloj.senal_diaCambio.connect(self.renovarAlarmas)
+
+
+        
+        self.seccionAlarmas.senal_eliminoUnaAlarma.connect(self.checadorAlarma.actuarAnte_eliminacionUnaAlarma)
+        self.seccionAlarmas.senal_creoUnaAlarma.connect(self.checadorAlarma.actuarAnte_anexionAlarma)
+        self.seccionAlarmas.senal_editoUnaAlarma.connect(self.checadorAlarma.actuarAnte_edicionUnaAlarma)
+
+        self.checadorAlarma.senal_alarmaDetectada.connect( self.avisador.activarAlarmas )
+        self.avisador.senal_alarmaSonando.connect( self.mostrarAvisadorAlarmas )
+
+        
         self.contador=QTimer()
         #self.contador.connect()
         self.contador.timeout.connect(self.clockContador)
         # Call start() method to modify the timer value
-        self.contador.start(.01)
+        self.contador.start(10)
+
+    
+
+    def mostrarAvisadorAlarmas(self):
+        self.avisador.show()
+
+    def renovarAlarmas(self,listaDatos):
+        print("SOLCITANDO RENOVACION...")
+        #listaDatos[0]=dia   listaDatos[1]=hora   listaDatos[2]=minutos
+        self.checadorAlarma.actualizarAlarmasHoy( listaDatos[0],listaDatos[1],listaDatos[2] )
+
+    def consultarChecadorAlarmas(self,listaDatos):
+        #listaDatos[0]=dia   listaDatos[1]=hora   listaDatos[2]=minutos
+        self.checadorAlarma.revisar(listaDatos[1],listaDatos[2])
 
 
-
-        
     def clockContador(self):
          self.hora=self.hora.addSecs(1)
-         
+         #self.timeEdit_tiempo.addSecs(1)
          self.timeEdit_tiempo.setTime(self.hora)
+         self.reloj.clock()
 
 
 #########################################################################################################################

@@ -1,6 +1,5 @@
 from CUERPO.LOGICA.recursos import Recursos_IoT_Domotica
 import os 
-from PyQt5 import QtMultimedia
 from PyQt5 import QtCore
 from pygame import mixer
 from PyQt5.QtWidgets import  QFileDialog
@@ -22,6 +21,7 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
 
     def __init__(self,context,direccionCarpetas,carpetaMusicaDefault,carpetaMusicaMia,cancionDefault):
         QtCore.QObject.__init__(self)
+        
 
         self.direccionCarpetas=direccionCarpetas
         self.carpetaMusicaMia=carpetaMusicaMia
