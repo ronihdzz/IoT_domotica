@@ -209,6 +209,7 @@ class BaseDatos_alarmas():
             return alarma
 
     def getDictHoraAlarmas(self,noDia,hora,minuto):
+        print("Solicitando datos del dia:",noDia)
         DICT_IDS_DIAS=['LUNES','MARTES','MIERCOLES','JUEVES','VIERNES','SABADO','DOMINGO']
 
         dia=DICT_IDS_DIAS[noDia]
@@ -267,7 +268,7 @@ class BaseDatos_alarmas():
 
             return listaAlarmas
 
-    def getSonido_alarma(self,nombreAlarma):
+    def getSonidoAsunto_alarma(self,nombreAlarma):
         conexion=self.iniciarConexion_sql()
         if conexion==None:
             print("Error a la hora de obtener los datos de la pregunta....")
@@ -275,10 +276,11 @@ class BaseDatos_alarmas():
         else:
             cursor = conexion.cursor()
             # necesitamos obtener el tipo de respuesta de la pregunta...
-            sqlOrden = f"SELECT SONIDO FROM  "+self.NAME_TABLA+" WHERE NOMBRE="+"'"+nombreAlarma+"'"
-            print("INSTRUCCINO",sqlOrden)
+            sqlOrden = f"SELECT SONIDO,ASUNTO FROM  "+self.NAME_TABLA+" WHERE NOMBRE="+"'"+nombreAlarma+"'"
+            print("INSTRUCCION",sqlOrden)
             cursor.execute(sqlOrden)
-            nombreCancion= tuple(cursor.fetchall())  # devuelve una lista con
-            #(   ('nombre/123.mp3', ),  )
-            return nombreCancion[0][0]
+            sonidoYasunto= tuple(cursor.fetchall())  # devuelve una lista con
+            print(sonidoYasunto)
+            #(   ('nombre/123.mp3',asunto),  )
+            return sonidoYasunto[0] #(sonido,asunto)
 

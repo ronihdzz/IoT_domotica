@@ -111,7 +111,7 @@ class Reloj(QtCore.QObject):
                     self.noDiaEntreSemana+=1
                     senalEmitir=self.CAMBIO_DIA
                     print("CAMBIO DIaaaaaaaaaaaaaaaaaaaaaaaA")
-                    if self.noDiaEntreSemana>7:
+                    if self.noDiaEntreSemana>6:
                         self.noDiaEntreSemana=0
     
         self.informarPosible_cambio(senalEmitir)

@@ -45,8 +45,12 @@ class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
 
 
     def closeEvent(self,event):
+
+        
         mixer.music.stop()
         event.accept()
+        if self.reproductorAudio!=None:
+            self.reproductorAudio.stop()
         self.hoSli_estadoAlarma.setValue(0)
 
     def activarAlarmas(self,listaAlarmas):
@@ -55,7 +59,20 @@ class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
         tiempo=listaAlarmas[0][1]
         nombreUnaAlarma=nombres[0]
         nombres=",".join(nombres)
-        cancion=self.baseDatosAlarmas.getSonido_alarma(nombreUnaAlarma)
+        cancion,asunto=self.baseDatosAlarmas.getSonidoAsunto_alarma(nombreUnaAlarma)
+        audio_asunto=None
+        self.reproductorAudio=None
+        if asunto==0: #despertar
+            audio_asunto=Recursos_IoT_Domotica.AUDIO_YA_DESPIERTA
+        elif asunto==1: #dormir
+            audio_asunto=Recursos_IoT_Domotica.AUDIO_IR_DORMIR
+        elif asunto==2: #debres
+            audio_asunto=Recursos_IoT_Domotica.AUDIO_HAZ_DEBERES
+        if audio_asunto!=None:
+            self.reproductorAudio=mixer.Sound (audio_asunto)
+            self.reproductorAudio.play ()
+
+        #despertar,dormir,deberes y otro
 
         print("Mostrando alarmas....")
         print(listaAlarmas)

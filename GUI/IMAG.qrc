@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="ICON">
+    <file>IMAGENES/centrado.png</file>
+    <file>IMAGENES/derecha.png</file>
+    <file>IMAGENES/izquierda.png</file>
+    <file>IMAGENES/justificado.png</file>
+    <file>IMAGENES/check_off.png</file>
+    <file>IMAGENES/check_on.png</file>
     <file>IMAGENES/subir_off.png</file>
     <file>IMAGENES/subir_on.png</file>
     <file>IMAGENES/add_off.png</file>
