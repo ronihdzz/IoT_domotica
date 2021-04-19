@@ -1,41 +1,41 @@
-from PyQt5 import QtWidgets,Qt
-from PyQt5.QtWidgets import QWidget,QVBoxLayout,QPushButton,QGridLayout,QCheckBox,QTextEdit,QMenu
-from PyQt5.QtWidgets import  QMessageBox,QCompleter
-from PyQt5.QtCore import Qt, pyqtSignal,QObject,QEvent
+from PyQt5.QtWidgets import QMenu,QCompleter
+from PyQt5.QtCore import Qt,QEvent,pyqtSignal,QTime,QRegExp
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QMessageBox
-
-#import numpy as np
-import os
-from functools import partial
-from PyQt5.QtCore import QTimer, QTime, Qt,QObject,pyqtSignal
-from PyQt5.QtCore import QRegExp
-from PyQt5.QtGui import QDoubleValidator,QRegExpValidator
+from PyQt5.QtGui import  QRegExpValidator
 import textwrap
-
-
+from PyQt5 import QtWidgets
 
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
 ##############################################################
-from CUERPO.DISENO.itemAlarmaEdit_dise import Ui_Dialog
+from CUERPO.DISENO.ALARMA.itemAlarmaEdit_dise import Ui_Dialog
 
 ###############################################################
 #  MIS LIBRERIAS...
 ##############################################################
 from CUERPO.LOGICA.ALARMA.alarma import Alarma
 from CUERPO.LOGICA.ALARMA.baseDatos_alarma import BaseDatos_alarmas
-from CUERPO.LOGICA.recursos import Recursos_IoT_Domotica
 from CUERPO.LOGICA.ALARMA.reproductorSonidosAlarmas import ReproductorSonidosAlarmas
-from CUERPO.LOGICA.recursos import Recursos_IoT_Domotica
+from CUERPO.LOGICA.RECURSOS.recursos import Recursos_IoT_Domotica
 
-#https://learndataanalysis.org/source-code-how-to-implement-context-menu-to-a-qlistwidget-pyqt5-tutorial/
-#https://stackoverflow.com/questions/59798284/pyqt-multiple-objects-share-context-menu
 
 class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
+    '''Esta clase sirve para editar o crear alarmas, si:
+        A)Se crea una alarma se emitira la senal cuyo
+        nombre es: 'senal_alarma'
+        B)Se edita una alarma emitira la senal cuyo
+        nombre es: 'senal_alarmaEditada'  '''
 
-    senal_alarmaCreada=pyqtSignal(list)
-    senal_alarmaEditada=pyqtSignal(list)
+    senal_alarmaCreada=pyqtSignal(list) #una lista con un solo elemento el cual sera  'unaInstanciaAlarma'
+    #la cual contendra  los datos de la alarma creada
+
+    senal_alarmaEditada=pyqtSignal(list)#una lista con un solo elemento el cual sera 'unaInstanciaAlarma'
+    #la cual contendra los datos de la alarma creada
+
+    senal_editorCreador_cerrado=pyqtSignal(bool)#dicha senal se emitiara cuando este cuadro de dialogo
+    #este por cerrarse.
+
     def __init__(self):
         Ui_Dialog.__init__(self)
         QtWidgets.QDialog.__init__(self)
@@ -48,7 +48,6 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
 
         self.restringirLasEntradas()
 
-
         self.reproductor.senal_cancionAgregada.connect(self.sonidoAlarmaAgregado)
             
         self.setWindowFlags(Qt.CustomizeWindowHint | Qt.WindowCloseButtonHint)
@@ -59,7 +58,6 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
         self.cB_5, self.cB_6, self.cB_7  )
 
         self.btn_finalizar.clicked.connect(self.terminar)
-        
 
         #reproducir una cancion cada vez que hagan click sobre la lista de reproduccion default
         self.listWid_soniDef.clicked.connect(self.reproducirSonidoAlarma)
@@ -80,26 +78,38 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
     def modoTrabajo(self,modoEdicion=False,nombreAlarma=None):
         """Actualiza la lista de alarmas del reproductor de musica
         por si hay alguna alarma eliminada u agregada.
-        Carga el contenido de la alarma que se quiere editar, o muestra
-        todos los apartados con los valores default de una alarma
-        """
+        En funcion del valor que puede tomar el parametro 'modoEdicion' tiene
+        un comportamiento diferente, es decir si el parametro 'modoEdicion' toma:
+            A)El valor de 'True', carga el contenido de la alarma que se quiere editar
+            B)El valor de 'False', muestra todos los apartados de la widget con los
+            valores default de una alarma """
+
         self.reproductor.refrescarListaMisAlarmas()
         #borrando el contenido de las: 'listWidget'
         self.listWid_soniMio.clear()
         self.listWid_soniDef.clear()
 
-        self.dictNombresAlarmasYaCreadas=self.baseDatosAlarmas.getNombresAlarmas()
+        #los 'keys' son los nombres de todas las alarmas, y sus 'values' son siempre 'True' en todos los casos
+        #   Ejemplo:
+        #       {"nombre_1":True, "nombre_2":True ... "nombre_n":True} ,con esto la busqueda de la
+        #       existencia de una alarma sera mas rapida
+        self.dictNombresAlarmasYaCreadas=dict( [ (nombre,True)  for nombre in self.baseDatosAlarmas.getNombresAlarmas() ] )
     
         #Si se quiere editar una alarma
         if modoEdicion:
             if nombreAlarma:
+
                 #consultamos todos los datos de la alarma que se quiere editar
                 alarma=self.baseDatosAlarmas.getAlarma(nombreAlarma=nombreAlarma)
+
                 self.nombreAlarmaEditar=alarma.nombre #el nombre es el id de cada alarma registrada
+
                 self.mostrarAlarmaEditar(alarma)#cargamos los datos de la alarma en la widget
+
                 self.mostrarSonidosParaAlarma(  alarma.sonido   )#mostramos la lista de sonidos
                 #disponibles para elegir asi como seleccionamos el sonido que fue escogido previamente
-                #eliminando del diccionario de alarmas el nombre de esta alarma 
+
+                #eliminando del diccionario de alarmas el nombre de esta alarma
                 del self.dictNombresAlarmasYaCreadas[alarma.nombre]
         
         #Si se quiere crear una nueva alarma
@@ -122,8 +132,9 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
             1)Que muestra las canciones por defecto atraves de este metodo
             cargara todos los nombres de  las canciones por defecto.
             2)Que muestra las canciones agregadas por el usuario a traves de 
-            este metodo cargara todos  los nombres de las  canciones descargada
+            este metodo cargara todos  los nombres de las  canciones descargadas
         """
+
         #cargando los nombres de las canciones default:
         listaCanciones=self.reproductor.listaCancionesDefault
         self.listWid_soniDef.addItem(Recursos_IoT_Domotica.NOMBRE_SONIDO_NULL)
@@ -193,7 +204,6 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
             ventanaDialogo.exec_()
             self.reproductor.cargarCancion() #cargamos la cancion sin sonido 
 
-
         #hacemos esto  para que no se sombree un item, almenos que sea con un click
         self.listWid_soniDef.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
         self.listWid_soniMio.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
@@ -209,6 +219,7 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
         pausarla.La lista de reproduccion que dejara de mostrarse para mostrarse la otra
         tomara el valor de cancion por defecto.
         """
+        
         #pausando cualquier cancion que se este escuchando y poniendo como valor de
         #sonido de alarma, la opcion de 'SIN MUSICA'
         self.reproductor.cargarCancion()
@@ -301,9 +312,10 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
         de alarma, posteriormente mostrara un cuadro de dialogo explicando cuales son las 
         alarmas que se verian afectadas si se decide eliminar dicha canción y como las afectaria,
         si el usuario procede a querer eliminar la cancion, se borrara la cancion de la carpeta,
-        tambien de la 'listWid_soniMio' y la alarmas que tenian esa cancion como sonido de alarma
+        tambien de la 'listWid_soniMio' y las alarmas que tenian esa cancion como sonido de alarma
         ahora tendran como sonido de alarma el 'sonido_default'
         """
+
         print("Cancion eliminada...")
         indice=self.listWid_soniMio.currentIndex().row()
         cancionEliminar=self.listWid_soniMio.item(indice).text()
@@ -380,17 +392,31 @@ a ser el sonido default.
 ###############################################################################################################
 
     def mostrarNombresAlarmas(self):
+        '''Este metodo cargara los nombres de alarmas ya existentes en el
+        line edit donde colocamos el nombre de alarma, con el fin de
+        que el usuario pueda darse cuenta que nombres ya no estan disponibles.'''
+
         acompletador=QCompleter(list(self.dictNombresAlarmasYaCreadas) )
         self.lineEdit_nombre.setCompleter(acompletador)
 
-
-
     def restringirLasEntradas(self):
+        '''Este metodo restrgira a ciertos caracteres el nombre de la alarma,
+        las restricciones son las siguientes:
+            A)El nombre de alarma no puede contener espacios en blanco
+            B)El nombre de alarma no puede tener mas de 15 caracteres
+            C)El nombre de alarma solo puede usar letras(minusculas y mayusculas)
+            y solo numeros naturales'''
+
         # validacion del nombre de usuario...
         validator = QRegExpValidator(QRegExp("[0-9a-zA-Z]{1,15}"))  # maximo solo 15 caracteres
         self.lineEdit_nombre.setValidator(validator)
 
     def comprobarSiDatosCorrectos(self):
+        ''' Este metodo comprobara que todos los datos de la alarma ingresados
+        por el usuario esten correctos, en caso de que no, le explicara al
+        usuario las razones y retornara False, en caso de que esten correctos
+        todos los datos retornara True '''
+
         mensajeError=""
         datosCorrectos=True
         nombreAlarma=self.lineEdit_nombre.text()
@@ -420,14 +446,13 @@ a ser el sonido default.
 
 
     def mostrarAlarmaBlanco(self):
-        """Cargara los datos default de un objeto de tipo alarma
-        """
+        """Cargara los datos default de un objeto de tipo alarma en la widget """
+
         self.mostrarAlarmaEditar( Alarma() )
         
  
     def mostrarAlarmaEditar(self,alarma):
-        """Cargara los datos de un objeto de tipo 'Alarma'
-        en la widget"""
+        """Cargara los datos de un objeto de tipo 'Alarma'  en la widget"""
 
         #cargando el nombre de la alarma
         self.lineEdit_nombre.setText(alarma.nombre)
@@ -449,10 +474,11 @@ a ser el sonido default.
 
 
     def terminar(self):
-        """Carga todos los datos de la widget, no importando
-        que no todos se hayan modificado, posteriormente dichos
-        datos los utiliza para crear un objeto de tipo 'Alarma' y 
-        posteriormente retornarlo
+        """Carga todos los datos ingresados por el usuario en la widget, no importando
+        posteriormente dichos datos los utiliza  para crear un objeto de tipo 'Alarma'
+        con dichos datos, despues de hacer lo anterior procede a  emitir la señal cuyo
+        nombre es: 'senal_alarmaEditada' la cual mandara la instancia de alarma creada
+        contenida en una lista.
         """
 
         if self.comprobarSiDatosCorrectos():
@@ -489,14 +515,18 @@ a ser el sonido default.
                 #informado acerca de la alarma ya editada
                 self.senal_alarmaEditada.emit([alarma])
                 #eliminando la alarma previa
-                self.baseDatosAlarmas.eliminar(A=self.nombreAlarmaEditar)
+                self.baseDatosAlarmas.eliminar(nombreAlarma=self.nombreAlarmaEditar)
                 #agregando la alarma editada a la base de datos
                 self.baseDatosAlarmas.addAlarma(alarma)
 
             self.close()
 
     def closeEvent(self,event):
+        ''' Antes de cerra la widget, pausara la reproduccion de una posible cancion que
+         se este ejecutando. '''
+
         self.reproductor.detener()
+        self.senal_editorCreador_cerrado.emit(True)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
@@ -504,11 +534,3 @@ if __name__ == "__main__":
     application.show()
     app.exec()
     #sys.exit(app.exec())
-
-
-
-
-
-#FUENTE DE ICONOS:
-#https://p.yusukekamiyamane.com/
-#https://icons8.com/?utm_source=http%3A%2F%2Ficons8.com%2Fweb-app%2Fnew-icons%2Fall&utm_medium=link&utm_content=search-and-download&utm_campaign=yusuke

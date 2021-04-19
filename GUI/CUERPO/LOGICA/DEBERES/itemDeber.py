@@ -13,7 +13,7 @@ from PyQt5.QtCore import QRegExp
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
 ##############################################################
-from CUERPO.DISENO.itemDeber_dise import Ui_Form
+from CUERPO.DISENO.DEBERES.itemDeber_dise import Ui_Form
 
 ###############################################################
 #  MIS LIBRERIAS...

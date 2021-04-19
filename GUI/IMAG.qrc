@@ -1,33 +1,35 @@
 <RCC>
-  <qresource prefix="ICON">
-    <file>IMAGENES/centrado.png</file>
-    <file>IMAGENES/derecha.png</file>
-    <file>IMAGENES/izquierda.png</file>
-    <file>IMAGENES/justificado.png</file>
-    <file>IMAGENES/check_off.png</file>
-    <file>IMAGENES/check_on.png</file>
-    <file>IMAGENES/subir_off.png</file>
-    <file>IMAGENES/subir_on.png</file>
-    <file>IMAGENES/add_off.png</file>
-    <file>IMAGENES/plus_off.png</file>
-    <file>IMAGENES/plus_on.png</file>
-    <file>IMAGENES/add_on.png</file>
-    <file>IMAGENES/edit_off.png</file>
-    <file>IMAGENES/edit_on.png</file>
-    <file>IMAGENES/tache_1.png</file>
-    <file>IMAGENES/tache_2.png</file>
-    <file>IMAGENES/alarm_off.png</file>
-    <file>IMAGENES/alarm_on.png</file>
-    <file>IMAGENES/config_off.png</file>
-    <file>IMAGENES/config_on.png</file>
-    <file>IMAGENES/foco_off.png</file>
-    <file>IMAGENES/foco_on.png</file>
-    <file>IMAGENES/idioma_off.png</file>
-    <file>IMAGENES/idioma_on.png</file>
-    <file>IMAGENES/info_off.png</file>
-    <file>IMAGENES/info_on.png</file>
-    <file>IMAGENES/termo.png</file>
-    <file>IMAGENES/ventilador_off.png</file>
-    <file>IMAGENES/ventilador_on.png</file>
+  <qresource prefix="ALARMA">
+    <file>IMAGENES/ALARMA/edit_off.png</file>
+    <file>IMAGENES/ALARMA/edit_on.png</file>
+    <file>IMAGENES/ALARMA/plus_off.png</file>
+    <file>IMAGENES/ALARMA/plus_on.png</file>
+    <file>IMAGENES/ALARMA/subir_off.png</file>
+    <file>IMAGENES/ALARMA/subir_on.png</file>
+    <file>IMAGENES/ALARMA/tache_1.png</file>
+    <file>IMAGENES/ALARMA/tache_2.png</file>
+  </qresource>
+  <qresource prefix="DEBERES">
+    <file>IMAGENES/DEBERES/centrado.png</file>
+    <file>IMAGENES/DEBERES/check_off.png</file>
+    <file>IMAGENES/DEBERES/check_on.png</file>
+    <file>IMAGENES/DEBERES/derecha.png</file>
+    <file>IMAGENES/DEBERES/izquierda.png</file>
+    <file>IMAGENES/DEBERES/justificado.png</file>
+    <file>IMAGENES/DEBERES/plus_off.png</file>
+    <file>IMAGENES/DEBERES/plus_on.png</file>
+  </qresource>
+  <qresource prefix="SISTEMA_CONTROL">
+    <file>IMAGENES/SISTEMA_CONTROL/config_off.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/config_on.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco_off.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco_on.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/idioma_off.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/idioma_on.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/info_off.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/info_on.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/termo.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/ventilador_off.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/ventilador_on.png</file>
   </qresource>
 </RCC>

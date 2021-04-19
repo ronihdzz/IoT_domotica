@@ -1,23 +1,17 @@
-from PyQt5.QtWidgets import  QDialog,QApplication
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import Qt
-from functools import partial
-from PyQt5.QtCore import Qt, pyqtSignal,QObject
+from PyQt5.QtCore import Qt, pyqtSignal
 from pygame import mixer
 
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
 ##############################################################
-from CUERPO.DISENO.notificadorAlarmas_dise import  Ui_Dialog
+from CUERPO.DISENO.ALARMA.notificadorAlarmas_dise import  Ui_Dialog
 
 ###############################################################
 #  MIS LIBRERIAS...
 ##############################################################
 from CUERPO.LOGICA.ALARMA.baseDatos_alarma import BaseDatos_alarmas
-from CUERPO.LOGICA.recursos import Recursos_IoT_Domotica
-
-
-
+from CUERPO.LOGICA.RECURSOS.recursos import Recursos_IoT_Domotica
 
 class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
     senal_alarmaSonando = pyqtSignal(bool)

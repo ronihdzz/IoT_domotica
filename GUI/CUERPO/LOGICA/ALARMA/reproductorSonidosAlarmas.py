@@ -1,9 +1,8 @@
-from CUERPO.LOGICA.recursos import Recursos_IoT_Domotica
-import os 
+
 from PyQt5 import QtCore
 from pygame import mixer
 from PyQt5.QtWidgets import  QFileDialog
-from os import getcwd
+
 from PyQt5.QtCore import pyqtSignal
 import os
 from PyQt5.QtWidgets import QMessageBox
@@ -12,7 +11,6 @@ import shutil  #para copiar archivos
 from mutagen.wave import WAVE  #para ver la duracion de las canciones
 from mutagen.mp3 import MP3 
 
-from CUERPO.LOGICA.recursos import Recursos_IoT_Domotica
 
 class ReproductorSonidosAlarmas(QtCore.QObject):
     MAX_DURACION=6*60 #6 minutos
