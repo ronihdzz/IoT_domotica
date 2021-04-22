@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import  QDialog,QApplication
 from PyQt5 import QtWidgets
 from functools import partial
 from PyQt5.QtWidgets import (QMessageBox,QButtonGroup,QDialog)
-from PyQt5.QtCore import QTimer, QTime, Qt,QDateTime,QDate
+from PyQt5.QtCore import QTimer, QTime, Qt,QDateTime,QDate,QCoreApplication
 import datetime
 
 ###############################################################
@@ -14,6 +14,7 @@ from CUERPO.DISENO.SISTEMA_CONTROL.main_dise import Ui_Form
 ##############################################################
 from CUERPO.LOGICA.SISTEMA_CONTROL.configLed import Dialog_configLed
 from CUERPO.LOGICA.SISTEMA_CONTROL.configVenti import Dialog_configVenti
+from CUERPO.LOGICA.SISTEMA_CONTROL.datosCreador import Dialog_datosCreador
 from CUERPO.LOGICA.ALARMA.administradorAlarmas import AdministradorAlarmas
 
 from CUERPO.LOGICA.DEBERES.SeccionNotas import SeccionNotas
@@ -27,13 +28,6 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         QtWidgets.QWidget.__init__(self)
         self.setupUi(self)
 
-
-        self.disenoManual=("#393939","#22B14C") #diseño de los horizontal sliders
-        #cuando se quiere contralar de forma manual el foco y el ventilador
-        self.disenoAutomatico=("#95DEE7","#95DEE7")#diseño de los horizontal sliders
-        #cuando se quiere controlar de forma automatico al ventilador
-
-
         self.tempActual=22 #La temperatura que se esta sensando
         self.tempPrenderaVenti=100 #La temperatura a la cual se va a prender el ventilador
 
@@ -45,6 +39,8 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         #modicar el color al cual se prendera el led
         self.venConfig_venti=Dialog_configVenti(self.tempPrenderaVenti)#cuadro de dialogo
         #que nos permitira editar la temperatura a la cual se prendera el ventilador
+
+        self.venDatosCreador=Dialog_datosCreador()
       
 
         #Asociando las señales de los cuadros de dialogo con funciones:
@@ -54,6 +50,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         #Botones que nos permitiran llamar a los cuadros de dialogo:
         self.btn_configFoco.clicked.connect(self.configurarFoco)
         self.btn_configVenti.clicked.connect(self.configurarVenti)
+        self.btn_info.clicked.connect( lambda x : self.venDatosCreador.show() )
 
 #Hilos:
 
@@ -103,12 +100,12 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         self.timeEdit_tiempo.setTime(tiempo)
         #print ( tiempo.toString(Qt.DefaultLocaleLongDate) )
 
-        fechaHoy=QDate.currentDate()
+        self.fechaHoy=QDate.currentDate()
         #donde 1 es el lunes y 7 es el domingo.
         #https://zetcode.com/gui/qt5/datetime/
-        noDiaEntreSemana=fechaHoy.dayOfWeek()-1  
+        noDiaEntreSemana=self.fechaHoy.dayOfWeek()-1  
         
-        self.dateEdit_fecha.setDate(fechaHoy)
+        self.dateEdit_fecha.setDate(self.fechaHoy)
         #print (fecha.toString ()) 
 
         print("SEMANA QUE PASO:",noDiaEntreSemana)
@@ -120,6 +117,8 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         self.seccionAlarmas=AdministradorAlarmas(noDiaEntreSemana,tiempo.hour(),tiempo.minute(),tiempo.second() ) #creando widget de alarmas
         self.seccionNotas=SeccionNotas() #creando widget de notas
         self.seccionAlarmas.reloj.senal_minutoCambio.connect(self.cambiarMinuteroRelojMostrador)
+
+        self.seccionAlarmas.reloj.senal_diaCambio.connect(lambda x : self.dateEdit_fecha.setDate( self.fechaHoy.addDays(1)  )  )
 
 
         #Agregando los widgets anteriores al 'tabWidget' 
@@ -153,30 +152,9 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         #Si el control requerido es el control manual,
         #se pondra un diseño especial a los horizontal
         #sliders...
-        if self.rb_controlManual.isChecked():
-            diseno=self.disenoManual 
-            controlManual=True
-        #Si el control requerido es el control automatico,
-        #se pondra otro diseño especial a los horizontal sliders...
-        else:
-            diseno=self.disenoAutomatico
-            controlManual=False
-        
-        disenoHorizontal="""QSlider {min-height: 40px;max-height: 40px;}
-        QSlider::groove:horizontal {
-            border: 1px solid #262626;
-            height: 5px;
-            margin: 0 12px;
-            background:"""+diseno[0]+";}"
-        disenoHorizontal+="""QSlider::handle:horizontal {
-            width: 15px;
-            height: 80px;
-            margin: 24px -12px;
-            background:"""+diseno[1]+"};"
+        controlManual=self.rb_controlManual.isChecked()
         
         #Editando el diseños de los horizontal sliders:
-        self.hoSli_foco.setStyleSheet(disenoHorizontal)
-        self.hoSli_venti.setStyleSheet(disenoHorizontal)
         self.hoSli_foco.setEnabled(controlManual)
         self.hoSli_venti.setEnabled(controlManual)
 
@@ -210,10 +188,10 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 
     def prenderApagarFoco(self,prender):
         if prender:#
-            self.bel_estadoFoco.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco_off.png);")
+            self.bel_estadoFoco.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco_on.png);")
             #self.bluetooth.foco_prenderApagar(prender=True)
         else:
-            self.bel_estadoFoco.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco_on.png);")
+            self.bel_estadoFoco.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco_off.png);")
             #self.bluetooth.foco_prenderApagar(apagar=True)
             
     def cambiarColorFoco(self,listDatos):
@@ -268,6 +246,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         ventanaDialogo = QMessageBox()
         ventanaDialogo.setIcon(QMessageBox.Question)
         ventanaDialogo.setWindowTitle('Salir')
+        #QCoreApplication.translate('A', "Hello")
         ventanaDialogo.setText("¿Seguro que quieres salir?")
         ventanaDialogo.setStandardButtons(QMessageBox.Yes|QMessageBox.No)
         btn_yes = ventanaDialogo.button(QMessageBox.Yes)

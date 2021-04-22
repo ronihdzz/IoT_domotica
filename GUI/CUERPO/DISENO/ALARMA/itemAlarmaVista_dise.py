@@ -14,8 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(330, 130)
-        Form.setMinimumSize(QtCore.QSize(330, 130))
+        Form.resize(330, 120)
+        Form.setMinimumSize(QtCore.QSize(330, 120))
         Form.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -27,28 +27,62 @@ class Ui_Form(object):
         self.horizontalLayout_2.addWidget(self.label_3)
         self.hoSli_estado = QtWidgets.QSlider(Form)
         self.hoSli_estado.setMinimumSize(QtCore.QSize(50, 20))
-        self.hoSli_estado.setMaximumSize(QtCore.QSize(90, 20))
-        self.hoSli_estado.setStyleSheet("QSlider {\n"
-"    min-height: 20px; /*tamano de la cosa que se mueve*/\n"
-"    max-height: 20px;\n"
-"}\n"
-"/*BARRA HORIZONTAL SOBRE LA CUAL LA BARRA CONMUTA*/\n"
-"QSlider::groove:horizontal {\n"
-"    border-radius: 2px;\n"
-"    border: 1px solid #262626;\n"
-"    height: 15px; /*tamano de la barra*/\n"
-"   background: #393939;\n"
-"   /*background:#95DEE7;*/\n"
-"    margin: 0 20px; /*margen entre lo que se mueve y la barra*/\n"
+        self.hoSli_estado.setMaximumSize(QtCore.QSize(90, 16777215))
+        self.hoSli_estado.setStyleSheet("QSlider::groove:horizontal {\n"
+"border: 1px solid #bbb;\n"
+"/*background: white;*/\n"
+"background: #393939; /*COLOR DE LA COSA QUE SE MUEVE*/\n"
+"height: 15px; /*ALTURA DE LA BARRA*/\n"
+"border-radius: 4px;\n"
 "}\n"
 "\n"
+"QSlider::sub-page:horizontal {\n"
+"background: #393939; /*COLOR DE LA BARRA CUANDO COSA  DERECHA*/\n"
+"border: 1px solid #777;\n"
+"height: 10px;\n"
+"border-radius: 4px;\n"
+"}\n"
+"\n"
+"QSlider::add-page:horizontal {\n"
+"background: #fff;   /*COLOR DE BARRA CUANDO COSA IZQUIERDA*/\n"
+"border: 1px solid #777;\n"
+"height: 10px;\n"
+"border-radius: 4px;\n"
+"}\n"
 "\n"
 "QSlider::handle:horizontal {\n"
-"    background: #22B14C;\n"
-"    /*background:#95DEE7;*/\n"
-"    width: 20px;\n"
-"    margin: 24px -12px;\n"
-"}")
+"background:qlineargradient(x1:0, y1:0, x2:1, y2:1,stop:0 #eee, stop:1 #ccc); \n"
+"border: 1px solid #777;\n"
+"width: 40px; /* ancho de la barra que se  mueve*/\n"
+"margin-top: -2px;\n"
+"margin-bottom: -2px;\n"
+"border-radius: 4px;\n"
+"}\n"
+"\n"
+"QSlider::handle:horizontal:hover {\n"
+"background: qlineargradient(x1:0, y1:0, x2:1, y2:1,\n"
+"    stop:0 #fff, stop:1 #ddd);  /*color de la cosa cuando se mueve */\n"
+"border: 1px solid #444;\n"
+"border-radius: 4px;\n"
+"height: 10px;\n"
+"}\n"
+"\n"
+"QSlider::sub-page:horizontal:disabled {\n"
+"background: #bbb;\n"
+"border-color: #999;\n"
+"}\n"
+"\n"
+"QSlider::add-page:horizontal:disabled {\n"
+"background: #eee;\n"
+"border-color: #999;\n"
+"}\n"
+"\n"
+"QSlider::handle:horizontal:disabled {\n"
+"background: #eee;\n"
+"border: 1px solid #aaa;\n"
+"border-radius: 4px;\n"
+"}\n"
+"")
         self.hoSli_estado.setMaximum(1)
         self.hoSli_estado.setPageStep(1)
         self.hoSli_estado.setOrientation(QtCore.Qt.Horizontal)
@@ -56,7 +90,7 @@ class Ui_Form(object):
         self.hoSli_estado.setObjectName("hoSli_estado")
         self.horizontalLayout_2.addWidget(self.hoSli_estado)
         self.btn_editar = QtWidgets.QPushButton(Form)
-        self.btn_editar.setMinimumSize(QtCore.QSize(20, 20))
+        self.btn_editar.setMinimumSize(QtCore.QSize(18, 18))
         self.btn_editar.setMaximumSize(QtCore.QSize(30, 30))
         self.btn_editar.setStyleSheet("QPushButton {\n"
 "    border-image: url(:/ALARMA/IMAGENES/ALARMA/edit_off.png);\n"
@@ -72,7 +106,7 @@ class Ui_Form(object):
         self.btn_editar.setObjectName("btn_editar")
         self.horizontalLayout_2.addWidget(self.btn_editar)
         self.btn_eliminar = QtWidgets.QPushButton(Form)
-        self.btn_eliminar.setMinimumSize(QtCore.QSize(20, 20))
+        self.btn_eliminar.setMinimumSize(QtCore.QSize(18, 18))
         self.btn_eliminar.setMaximumSize(QtCore.QSize(30, 30))
         self.btn_eliminar.setStyleSheet("QPushButton {\n"
 "    border-image: url(:/ALARMA/IMAGENES/ALARMA/tache_1.png);\n"

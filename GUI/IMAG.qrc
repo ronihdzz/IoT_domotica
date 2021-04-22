@@ -20,6 +20,7 @@
     <file>IMAGENES/DEBERES/plus_on.png</file>
   </qresource>
   <qresource prefix="SISTEMA_CONTROL">
+    <file>IMAGENES/SISTEMA_CONTROL/yoMero.jpg</file>
     <file>IMAGENES/SISTEMA_CONTROL/config_off.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/config_on.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/foco_off.png</file>

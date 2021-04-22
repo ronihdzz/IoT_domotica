@@ -65,8 +65,19 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
             print("Tamano cancion:",tamano)
             if tamano<self.MAX_DURACION:
                 #Copiando cancion...
-                shutil.copyfile(origenArchivoCopiar,destinoArchivoCopiar)
-                self.senal_cancionAgregada.emit(soloNombreCancion)
+                if os.path.exists(destinoArchivoCopiar):
+                    ventanaDialogo = QMessageBox()
+                    ventanaDialogo.setIcon(QMessageBox.Information)
+                    ventanaDialogo.setWindowTitle('Informacion')
+                    ventanaDialogo.setText("Ya has guardado una cancion con el mismo \n"
+                    "nombre, por tal motivo no se realizo la copia\n""de la cancion seleccionada ")
+                    ventanaDialogo.setStandardButtons(QMessageBox.Ok)
+                    btn_ok = ventanaDialogo.button(QMessageBox.Ok)
+                    btn_ok.setText('Entendido')
+                    ventanaDialogo.exec_()
+                else:
+                    shutil.copyfile(origenArchivoCopiar,destinoArchivoCopiar)
+                    self.senal_cancionAgregada.emit(soloNombreCancion)
             else:
                 print("La duracion del archivo no puede ser mayor a los 6 minutos")
                 ventanaDialogo = QMessageBox()

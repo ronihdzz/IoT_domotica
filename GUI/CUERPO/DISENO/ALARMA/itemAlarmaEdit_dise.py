@@ -272,8 +272,8 @@ class Ui_Dialog(object):
 "\n"
 "    border-top-left-radius: 10px; /*curvatura de los cuadros de seleccion*/\n"
 "    border-top-right-radius: 4px; /*curvatura de los cuadros de seleccion*/\n"
-"    min-width: 30ex; /*ancho de cada casila*/\n"
-"    min-height:5ex;/*alto de cada casilla*/\n"
+"    min-width: 120px; /*ancho de cada casila*/\n"
+"    min-height:30px;/*alto de cada casilla*/\n"
 "    padding: 2px;\n"
 "   font: 12pt \"MS Shell Dlg 2\";\n"
 "}\n"
@@ -445,5 +445,5 @@ class Ui_Dialog(object):
         self.bel_secNombre_2.setText(_translate("Dialog", "Musica de alarma:"))
         self.tabWid_sonidosAlarmas.setTabText(self.tabWid_sonidosAlarmas.indexOf(self.pistasDefault), _translate("Dialog", "Pistas default"))
         self.tabWid_sonidosAlarmas.setTabText(self.tabWid_sonidosAlarmas.indexOf(self.pistasMias), _translate("Dialog", "Mis pistas"))
-        self.btn_finalizar.setText(_translate("Dialog", "GUARDAR CAMBIOS"))
+        self.btn_finalizar.setText(_translate("Dialog", "GUARDAR"))
 import IMAG_rc

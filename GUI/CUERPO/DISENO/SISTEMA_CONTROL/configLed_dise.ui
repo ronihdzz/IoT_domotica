@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>416</width>
-    <height>149</height>
+    <width>433</width>
+    <height>140</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -75,8 +75,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>406</width>
-        <height>83</height>
+        <width>413</width>
+        <height>91</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">

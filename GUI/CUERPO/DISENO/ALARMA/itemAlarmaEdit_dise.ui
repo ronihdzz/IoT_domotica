@@ -695,8 +695,8 @@ QTabBar::tab {
 
     border-top-left-radius: 10px; /*curvatura de los cuadros de seleccion*/
     border-top-right-radius: 4px; /*curvatura de los cuadros de seleccion*/
-    min-width: 30ex; /*ancho de cada casila*/
-	min-height:5ex;/*alto de cada casilla*/
+    min-width: 120px; /*ancho de cada casila*/
+	min-height:30px;/*alto de cada casilla*/
     padding: 2px;
    font: 12pt &quot;MS Shell Dlg 2&quot;;
 }
@@ -897,7 +897,7 @@ color: rgb(0, 0, 0);
         </size>
        </property>
        <property name="text">
-        <string>GUARDAR CAMBIOS</string>
+        <string>GUARDAR</string>
        </property>
       </widget>
      </item>

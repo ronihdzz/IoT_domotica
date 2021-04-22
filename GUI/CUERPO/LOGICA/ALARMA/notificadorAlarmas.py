@@ -71,18 +71,21 @@ class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
         print("Mostrando alarmas....")
         print(listaAlarmas)
         self.senal_alarmaSonando.emit(True)
+        
+        try:
+            mixer.init()
+            mixer.music.load(Recursos_IoT_Domotica.CARPETA_MUSICA+cancion)
+            # Setting the volume
+            mixer.music.set_volume(1)
+            # Start playing the song
+            mixer.music.play()
+            self.textEdit_alarmas.setText("""<h1 style="text-align:center" >{}  </h1>
+            <h3 style="text-align:center">{}</h3>""".format(tiempo,nombres) )
+        except:
+            self.textEdit_alarmas.setText("""<h1 style="text-align:center" >{}  </h1>
+            <h3 style="text-align:center">{}</h3>
+            <h6 style="text-align:center">Sin musica </h6>""".format(tiempo,nombres) )
 
-        self.textEdit_alarmas.setText("""<h1 style="text-align:center" >{}  </h1>
-        <h3 style="text-align:center">{}</h3>""".format(tiempo,nombres) )
-
-
-        mixer.init()
-
-        mixer.music.load(Recursos_IoT_Domotica.CARPETA_MUSICA+cancion)
-        # Setting the volume
-        mixer.music.set_volume(1)
-        # Start playing the song
-        mixer.music.play()
 
 
 

@@ -49,6 +49,7 @@ class SeccionNotas(QMainWindow):
         self.textPregunta=""
         self.listIdsItemsVivos=[]
         self.listPunterosItems=[]
+        self.siguienteItemEliminar=None
         
 
 
@@ -168,8 +169,10 @@ class SeccionNotas(QMainWindow):
 
     def alinear(self,idAlineo):
         self.ESTADO_ALINEO=idAlineo
-        for item in self.listPunterosItems:
-            item.alinear(self.ESTADO_ALINEO)        
+        layout=self.vbox
+        for noItem in range( self.punteroNoItems ):        
+            widget = layout.itemAt(noItem).widget()
+            widget.alinear(self.ESTADO_ALINEO)        
                 
     def cargarDeberes(self):
         datos=""
@@ -205,12 +208,15 @@ class SeccionNotas(QMainWindow):
     def respaldarDeberes(self):
         listaDeberes=[]
         listaDeberes.append( str(self.ESTADO_ALINEO)+","+str(self.TAMANO_LETRA)  )
-        for deber in self.listPunterosItems:
-            listaDeberes.append( deber.lineEdit_deber.text() )
+        layout=self.vbox
+        for noItem in range( self.punteroNoItems ):        
+            widget = layout.itemAt(noItem).widget()
+            listaDeberes.append( widget.lineEdit_deber.text() )        
+                
         contenidoArchivo=Recursos_IoT_Domotica.SEPARADOR_DEBERES.join(listaDeberes)
 
         with open(Recursos_IoT_Domotica.ARCHIVO_DEBERES,'w') as archivoDeberes:
-            datos=archivoDeberes.write(contenidoArchivo)
+            archivoDeberes.write(contenidoArchivo)
 
     def agregarNuevoItem(self,textoDeber):
         if self.punteroNoItems<self.MAX_ITEMS:
@@ -219,18 +225,23 @@ class SeccionNotas(QMainWindow):
             itemDeber.senal_deberCumplido.connect(self.borrarItem)
 
             self.listIdsItemsVivos.append(self.contadorIdsVivosMuertos)
-            self.listPunterosItems.append(itemDeber)
             self.vbox.addWidget(itemDeber)
+            self.listPunterosItems.append(itemDeber)
             self.punteroNoItems+=1
             self.contadorIdsVivosMuertos+=1
 
         else:
-            QMessageBox.question(self, "DelphiPreguntas",
-                                 "El numero maximo de items es de:\n"
-                                 f"{self.MAX_ITEMS} items, y usted ya ha llegado\n"
-                                 "a dicho limite.",
-                                 QMessageBox.Ok)
-
+            mensaje="El numero maximo numero de notas que\n"
+            mensaje+=f"puedes registrar es de: {self.MAX_ITEMS} notas\n"  
+            mensaje+=f"y usted ya ha creado {self.MAX_ITEMS} notas."
+            ventanaDialogo = QMessageBox()
+            ventanaDialogo.setIcon(QMessageBox.Information)
+            ventanaDialogo.setWindowTitle('Error')
+            ventanaDialogo.setText(mensaje)
+            ventanaDialogo.setStandardButtons(QMessageBox.Ok)
+            btn_ok = ventanaDialogo.button(QMessageBox.Ok)
+            btn_ok.setText('Entendido')
+            ventanaDialogo.exec_()
 
     def borrarItem(self,id):
         idItemAMatar=id
@@ -243,10 +254,17 @@ class SeccionNotas(QMainWindow):
         layout.removeWidget(widgetToRemove)
         # remove it from the gui
         widgetToRemove.setParent(None)
-
-        #self.listaItemsRonianos.pop(posItemMatar)
         self.listIdsItemsVivos.pop(posItemMatar)
-        self.listPunterosItems.pop(posItemMatar)
+
+        if self.siguienteItemEliminar!=None:
+            print("Muerte ha*************************************************************",self.siguienteItemEliminar)
+            print("Sentencia para********************************************************",posItemMatar)
+            self.listPunterosItems.pop(self.siguienteItemEliminar)
+            self.siguienteItemEliminar=posItemMatar
+        else:
+            print("Setencia para**************************************************************",posItemMatar)
+            self.siguienteItemEliminar=posItemMatar
+
         self.punteroNoItems -= 1
 
     def get_separadorQAction(self):
@@ -261,13 +279,10 @@ class SeccionNotas(QMainWindow):
 
     def cambiarTamano_letra(self,nuevoValor):
         self.TAMANO_LETRA=nuevoValor
-        for item in self.listPunterosItems:
-            item.cambiarTamano(nuevoValor)
-
-
-
-
-
+        layout=self.vbox
+        for noItem in range( self.punteroNoItems ):        
+            widget = layout.itemAt(noItem).widget()
+            widget.cambiarTamano(nuevoValor)   
 
 
 def main():

@@ -142,11 +142,17 @@ class AdministradorAlarmas(QtWidgets.QWidget,Ui_Form):
             self.punteroNoItems+=1
             self.contadorIdsVivosMuertos+=1
         else:
-            QMessageBox.question(self, "DelphiPreguntas",
-                                 "El numero maximo de items es de:\n"
-                                 f"{self.MAX_ITEMS} items, y usted ya ha llegado\n"
-                                 "a dicho limite.",
-                                 QMessageBox.Ok)
+            mensaje="El numero maximo de alarmas que\n"
+            mensaje+=f"puedes registrar es de: {self.MAX_ITEMS} alarmas\n"  
+            mensaje+=f"y usted ya ha creado {self.MAX_ITEMS} alarmas."
+            ventanaDialogo = QMessageBox()
+            ventanaDialogo.setIcon(QMessageBox.Information)
+            ventanaDialogo.setWindowTitle('Error')
+            ventanaDialogo.setText(mensaje)
+            ventanaDialogo.setStandardButtons(QMessageBox.Ok)
+            btn_ok = ventanaDialogo.button(QMessageBox.Ok)
+            btn_ok.setText('Entendido')
+            ventanaDialogo.exec_()
 
 
 
@@ -156,12 +162,21 @@ class AdministradorAlarmas(QtWidgets.QWidget,Ui_Form):
         nombreAlarma=listaIdIs_itemAMatar[1] #id en la base de datos
 
         posItemMatar=self.listIdsItemsVivos.index(idItemAMatar)
-        resultado = QMessageBox.question(self, "DelphiPreguntas",
-                                            "¿Esta seguro que quieres\n"
-                                            f"eliminar la alarma numero: {posItemMatar+1}\n"
-                                            f" cuyo nombre es: {nombreAlarma}?",
-                                            QMessageBox.Yes | QMessageBox.No)
-        if resultado == QMessageBox.Yes:
+
+        ventanaDialogo = QMessageBox()
+        ventanaDialogo.setIcon(QMessageBox.Question)
+        ventanaDialogo.setWindowTitle('Salir')
+        mensaje="¿Esta seguro que quieres\n" 
+        mensaje+=f"eliminar la alarma numero: {posItemMatar+1}\n"
+        mensaje+=f" cuyo nombre es: {nombreAlarma}?"
+        ventanaDialogo.setText(mensaje)
+        ventanaDialogo.setStandardButtons(QMessageBox.Yes|QMessageBox.No)
+        btn_yes = ventanaDialogo.button(QMessageBox.Yes)
+        btn_yes.setText('Si')
+        btn_no = ventanaDialogo.button(QMessageBox.No)
+        btn_no.setText('No')
+        ventanaDialogo.exec_()
+        if ventanaDialogo.clickedButton()  ==  btn_yes:
             layout=self.vbox
             noWidgetBorrar=posItemMatar
             widgetToRemove = layout.itemAt(noWidgetBorrar).widget()

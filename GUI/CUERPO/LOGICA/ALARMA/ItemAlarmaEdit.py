@@ -203,6 +203,7 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
             btn_ok.setText('Entendido')
             ventanaDialogo.exec_()
             self.reproductor.cargarCancion() #cargamos la cancion sin sonido 
+            self.reproductor.tocar()
 
         #hacemos esto  para que no se sombree un item, almenos que sea con un click
         self.listWid_soniDef.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)

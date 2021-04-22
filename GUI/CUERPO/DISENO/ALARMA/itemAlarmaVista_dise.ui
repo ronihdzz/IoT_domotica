@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>330</width>
-    <height>130</height>
+    <height>120</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>330</width>
-    <height>130</height>
+    <height>120</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -46,31 +46,65 @@
        <property name="maximumSize">
         <size>
          <width>90</width>
-         <height>20</height>
+         <height>16777215</height>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">QSlider {
-    min-height: 20px; /*tamano de la cosa que se mueve*/
-    max-height: 20px;
-}
-/*BARRA HORIZONTAL SOBRE LA CUAL LA BARRA CONMUTA*/
-QSlider::groove:horizontal {
-	border-radius: 2px;
-    border: 1px solid #262626;
-    height: 15px; /*tamano de la barra*/
-   background: #393939;
-   /*background:#95DEE7;*/
-    margin: 0 20px; /*margen entre lo que se mueve y la barra*/
+        <string notr="true">QSlider::groove:horizontal {
+border: 1px solid #bbb;
+/*background: white;*/
+background: #393939; /*COLOR DE LA COSA QUE SE MUEVE*/
+height: 15px; /*ALTURA DE LA BARRA*/
+border-radius: 4px;
 }
 
+QSlider::sub-page:horizontal {
+background: #393939; /*COLOR DE LA BARRA CUANDO COSA  DERECHA*/
+border: 1px solid #777;
+height: 10px;
+border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+background: #fff;   /*COLOR DE BARRA CUANDO COSA IZQUIERDA*/
+border: 1px solid #777;
+height: 10px;
+border-radius: 4px;
+}
 
 QSlider::handle:horizontal {
-    background: #22B14C;
-    /*background:#95DEE7;*/
-    width: 20px;
-    margin: 24px -12px;
-}</string>
+background:qlineargradient(x1:0, y1:0, x2:1, y2:1,stop:0 #eee, stop:1 #ccc); 
+border: 1px solid #777;
+width: 40px; /* ancho de la barra que se  mueve*/
+margin-top: -2px;
+margin-bottom: -2px;
+border-radius: 4px;
+}
+
+QSlider::handle:horizontal:hover {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+    stop:0 #fff, stop:1 #ddd);  /*color de la cosa cuando se mueve */
+border: 1px solid #444;
+border-radius: 4px;
+height: 10px;
+}
+
+QSlider::sub-page:horizontal:disabled {
+background: #bbb;
+border-color: #999;
+}
+
+QSlider::add-page:horizontal:disabled {
+background: #eee;
+border-color: #999;
+}
+
+QSlider::handle:horizontal:disabled {
+background: #eee;
+border: 1px solid #aaa;
+border-radius: 4px;
+}
+</string>
        </property>
        <property name="maximum">
         <number>1</number>
@@ -90,8 +124,8 @@ QSlider::handle:horizontal {
       <widget class="QPushButton" name="btn_editar">
        <property name="minimumSize">
         <size>
-         <width>20</width>
-         <height>20</height>
+         <width>18</width>
+         <height>18</height>
         </size>
        </property>
        <property name="maximumSize">
@@ -121,8 +155,8 @@ QPushButton:pressed {
       <widget class="QPushButton" name="btn_eliminar">
        <property name="minimumSize">
         <size>
-         <width>20</width>
-         <height>20</height>
+         <width>18</width>
+         <height>18</height>
         </size>
        </property>
        <property name="maximumSize">
