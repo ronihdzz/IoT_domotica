@@ -1,0 +1,18 @@
+[Desktop Entry]
+
+# nombre de la aplicacion
+Name=IoT_domotica
+
+Comment=Sitema de domotica hecho en python3 con pyqt5
+
+# ubicacion del icono de la aplicacion
+Icon=/home/pi/Desktop/proyectos/IoT_domotica/GUI/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico
+
+# no olvidar el " #!/usr/bin/env python3 " en el script a ejecutar y hacerlo ejecutable con " chmod +x  "
+Exec=/home/pi/Desktop/proyectos/IoT_domotica/GUI/mainFast.py
+
+Type=Application
+Encoding=UTF-8
+Terminal=false
+Categories=None;
+

@@ -372,6 +372,16 @@ if __name__ == "__main__":
     from PyQt5.QtGui import QPixmap
     from PyQt5.QtWidgets import QSplashScreen
     import sys, time
+    import recursos
+
+    print("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo",sys.argv)
+    direccionTotal=sys.argv[0]
+    ubicacionPrograma=direccionTotal[ :direccionTotal.find("main.py") ]
+    print("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo",ubicacionPrograma)
+    #recursos.App_Alarmas.App_PrincipalApp_Notas actualizarUbicaciones
+    recursos.App_Alarmas.actualizarUbicaciones(ubicacionPrograma)
+    recursos.App_Notas.actualizarUbicaciones(ubicacionPrograma)
+    recursos.App_Principal.actualizarUbicaciones(ubicacionPrograma)
 
     app = QApplication(sys.argv)
     splash_pix = QPixmap(App_Principal.IMAGEN_SPLASH_SCREEN)
