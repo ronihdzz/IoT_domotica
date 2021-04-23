@@ -17,26 +17,24 @@ from PyQt5.Qt import QSizePolicy,Qt
 #  MIS LIBRERIAS...
 ##############################################################
 from CUERPO.LOGICA.DEBERES.itemDeber import ItemDeber
-from CUERPO.LOGICA.RECURSOS.recursos import Recursos_IoT_Domotica
+from recursos import App_Notas,HuellaAplicacion
 import IMAG_rc
 
 
 
-class SeccionNotas(QMainWindow):
+class SeccionNotas(QMainWindow,HuellaAplicacion):
 
     def __init__(self):
-        super().__init__()
-
+        QMainWindow.__init__(self)
         self.initUI()
+
+        HuellaAplicacion.__init__(self)
 
 
     def initUI(self):
 
         self.ESTADO_ALINEO=0   #0=IZQUIERDA, 1=CENTRO, 2=DERECHA
         self.TAMANO_LETRA=12
-
-
-
 
         self.MAX_ITEMS=20
         self.punteroNoItems=0
@@ -177,11 +175,11 @@ class SeccionNotas(QMainWindow):
     def cargarDeberes(self):
         datos=""
         try:
-            with open(Recursos_IoT_Domotica.ARCHIVO_DEBERES,'r') as archivoDeberes:
+            with open(App_Notas.ARCHIVO_DEBERES,'r') as archivoDeberes:
                 datos=archivoDeberes.read()
         except FileNotFoundError:
             pass
-        listaDeberes=datos.split(Recursos_IoT_Domotica.SEPARADOR_DEBERES)
+        listaDeberes=datos.split(App_Notas.SEPARADOR_DEBERES)
         confiConArchivo_exitosa=False
         if len(listaDeberes)>1 and type(listaDeberes)==list:
             try:
@@ -213,9 +211,9 @@ class SeccionNotas(QMainWindow):
             widget = layout.itemAt(noItem).widget()
             listaDeberes.append( widget.lineEdit_deber.text() )        
                 
-        contenidoArchivo=Recursos_IoT_Domotica.SEPARADOR_DEBERES.join(listaDeberes)
+        contenidoArchivo=App_Notas.SEPARADOR_DEBERES.join(listaDeberes)
 
-        with open(Recursos_IoT_Domotica.ARCHIVO_DEBERES,'w') as archivoDeberes:
+        with open(App_Notas.ARCHIVO_DEBERES,'w') as archivoDeberes:
             archivoDeberes.write(contenidoArchivo)
 
     def agregarNuevoItem(self,textoDeber):
@@ -236,7 +234,10 @@ class SeccionNotas(QMainWindow):
             mensaje+=f"y usted ya ha creado {self.MAX_ITEMS} notas."
             ventanaDialogo = QMessageBox()
             ventanaDialogo.setIcon(QMessageBox.Information)
-            ventanaDialogo.setWindowTitle('Error')
+            ventanaDialogo.setWindowIcon( QIcon(self.ICONO_APLICACION)  )
+            ventanaDialogo.setWindowTitle(self.NOMBRE_APLICACION)
+
+
             ventanaDialogo.setText(mensaje)
             ventanaDialogo.setStandardButtons(QMessageBox.Ok)
             btn_ok = ventanaDialogo.button(QMessageBox.Ok)

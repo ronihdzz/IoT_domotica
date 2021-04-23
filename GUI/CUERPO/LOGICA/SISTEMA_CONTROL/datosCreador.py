@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (QMessageBox,QButtonGroup,QDialog)
 from PyQt5.QtCore import Qt, pyqtSignal,QObject
+from PyQt5.QtGui import QIcon
 
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
@@ -11,17 +12,16 @@ from  CUERPO.DISENO.SISTEMA_CONTROL.datosCreador_dise import Ui_Dialog
 ###############################################################
 #  MIS LIBRERIAS...
 ##############################################################
+from recursos import HuellaAplicacion
 
-
-class Dialog_datosCreador(QtWidgets.QDialog, Ui_Dialog):
+class Dialog_datosCreador(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
     def __init__(self):
         Ui_Dialog.__init__(self)
         QtWidgets.QDialog.__init__(self)
         self.setupUi(self)
-
         self.setWindowFlags(Qt.CustomizeWindowHint | Qt.WindowCloseButtonHint)
-        self.setWindowTitle(" ")
         self.setWindowModality(Qt.ApplicationModal)
+        HuellaAplicacion.__init__(self)
 
         nombre="Roni Hernández"
         gmail="ronaldo.runing.r@gmail.com"
@@ -50,6 +50,7 @@ class Dialog_datosCreador(QtWidgets.QDialog, Ui_Dialog):
     def test(self,argv_1):
         print(argv_1)
         print('!!!')
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])

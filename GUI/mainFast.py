@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import (QMessageBox,QButtonGroup,QDialog)
 from PyQt5.QtCore import QTimer, QTime, Qt,QDateTime,QDate,QCoreApplication
 import datetime
 import os
+from PyQt5.QtGui import QIcon
 
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
@@ -22,16 +23,18 @@ from CUERPO.LOGICA.ALARMA.administradorAlarmas import AdministradorAlarmas
 from CUERPO.LOGICA.DEBERES.SeccionNotas import SeccionNotas
 from CUERPO.LOGICA.SISTEMA_CONTROL.arduinoExtension import ArduinoExtension_hilo
 from CUERPO.LOGICA.SISTEMA_CONTROL.bluetoothSerial import BluetoothSerial_hilo
-from CUERPO.LOGICA.RECURSOS.recursos import Recursos_IoT_Domotica
+from recursos import HuellaAplicacion,App_Principal
 
 
-#El diseno default son los sliders apagados la temp con 100 y el radio buttom en automatico
 
-class Main_IoT(QtWidgets.QWidget, Ui_Form):
+class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
+
     def __init__(self):
         Ui_Form.__init__(self)
         QtWidgets.QWidget.__init__(self)
         self.setupUi(self)
+        HuellaAplicacion.__init__(self)
+
 
 #Cuadros emergentes de dialogos:
         #cuadro de dialogo que nos permitira modicar el color al cual se prendera el led
@@ -54,9 +57,9 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 
 #Hilos:
         #Hilo que nos permitira la comunicación entre la rasberry pi y el arduino nano:
-        #self.extencionArduino=ArduinoExtension_hilo(velocidad=9600,puerto=Recursos_IoT_Domotica.ARDUINO_NANO_EXTENSION)
+        #self.extencionArduino=ArduinoExtension_hilo(velocidad=9600,puerto=App_principal.ARDUINO_NANO_EXTENSION)
         #Hilo que nos permitira la comunicación entre la rasberry pi y el modulo Bluetooth HC-05:
-        #self.bluetooth=BluetoothSerial_hilo(velocidad=9600,puerto=Recursos_IoT_Domotica.BLUETOOTH_HC05)
+        #self.bluetooth=BluetoothSerial_hilo(velocidad=9600,puerto=App_principal.BLUETOOTH_HC05)
          
         #Asociando algunas señales de los hilos:
         #self.extencionArduino.senal_prenderFoco.connect(self.cambiarEstadoFoco)
@@ -297,8 +300,8 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         de la GUI, por tal motivo primero se busca cargar las configuraciones
         default.
         ''' 
-        if os.path.exists(Recursos_IoT_Domotica.ARCHIVO_ESTADOS_SENSORES) :
-            with open(Recursos_IoT_Domotica.ARCHIVO_ESTADOS_SENSORES, 'r') as archivo:
+        if os.path.exists(App_Principal.ARCHIVO_ESTADOS_SENSORES) :
+            with open(App_Principal.ARCHIVO_ESTADOS_SENSORES, 'r') as archivo:
                 datos=archivo.read()
             COLOR_FOCO, TEMP_PRENDE_VENTILADOR=datos.split(",,,")
             COLOR_FOCO=int(COLOR_FOCO)
@@ -336,7 +339,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
         #listaEstados.append( str( self.extencionArduino.tempPrenderaVenti ) ) #TEMP_PRENDE_VENTILADOR
         listaEstados.append( str( 100 ) ) #TEMP_PRENDE_VENTILADOR
         datos=",,,".join(listaEstados)
-        with open( Recursos_IoT_Domotica.ARCHIVO_ESTADOS_SENSORES , 'w' ) as archivo:
+        with open( App_Principal.ARCHIVO_ESTADOS_SENSORES , 'w' ) as archivo:
             archivo.write(datos)
 
 
@@ -349,7 +352,9 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
     def closeEvent(self,event):
         ventanaDialogo = QMessageBox()
         ventanaDialogo.setIcon(QMessageBox.Question)
-        ventanaDialogo.setWindowTitle('Salir')
+        ventanaDialogo.setWindowIcon( QIcon(self.ICONO_APLICACION)  )
+        ventanaDialogo.setWindowTitle(self.NOMBRE_APLICACION)
+        
         ventanaDialogo.setText("¿Seguro que quieres salir?")
         ventanaDialogo.setStandardButtons(QMessageBox.Yes|QMessageBox.No)
         btn_yes = ventanaDialogo.button(QMessageBox.Yes)
@@ -366,8 +371,27 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form):
 
 
 if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
-    application = Main_IoT()
-    application.show()
-    app.exec()
+    from PyQt5.QtCore import QCoreApplication,Qt
+    from PyQt5.QtGui import QPixmap
+    from PyQt5.QtWidgets import QSplashScreen
+    import sys, time
+
+    app = QApplication(sys.argv)
+    splash_pix = QPixmap(App_Principal.IMAGEN_SPLASH_SCREEN)
+    splash = QSplashScreen(splash_pix, Qt.WindowStaysOnTopHint)
+    splash.setMask(splash_pix.mask())
+    splash.show()
+    app.processEvents()
+
+    # Simulate something that takes time
+    time.sleep(4)
+    form = Main_IoT()
+    form.show()
+    splash.finish(form)
+    app.exec_()
+
+    #app = QtWidgets.QApplication([])
+    #application = Main_IoT()
+    #application.show()
+    #app.exec()
     #sys.exit(app.exec())

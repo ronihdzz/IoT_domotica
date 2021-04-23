@@ -11,9 +11,9 @@ from CUERPO.DISENO.ALARMA.notificadorAlarmas_dise import  Ui_Dialog
 #  MIS LIBRERIAS...
 ##############################################################
 from CUERPO.LOGICA.ALARMA.baseDatos_alarma import BaseDatos_alarmas
-from CUERPO.LOGICA.RECURSOS.recursos import Recursos_IoT_Domotica
+from recursos import App_Alarmas,HuellaAplicacion
 
-class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
+class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
     senal_alarmaSonando = pyqtSignal(bool)
     def __init__(self):
         Ui_Dialog.__init__(self)
@@ -23,12 +23,12 @@ class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
         #hoSli_estadoAlarma
         #setWindowFlags(Qt::Window | Qt::WindowTitleHint | Qt::CustomizeWindowHint);
         self.setWindowFlags(Qt.WindowTitleHint | Qt.CustomizeWindowHint)
-        self.setWindowTitle(" ")
         self.setWindowModality(Qt.ApplicationModal)
+        HuellaAplicacion.__init__(self)
         
 
         self.hayAlarmaSonando=False
-        self.baseDatosAlarmas=BaseDatos_alarmas(Recursos_IoT_Domotica.NOMBRE_BASE_DATOS_ALARMAS)
+        self.baseDatosAlarmas=BaseDatos_alarmas(App_Alarmas.NOMBRE_BASE_DATOS_ALARMAS)
         self.hoSli_estadoAlarma.sliderReleased.connect( self.checarEstadoRespuesta )
         self.textEdit_alarmas.setReadOnly(True)
         self.alarmaFuego_sonando=False
@@ -57,11 +57,11 @@ class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
             audio_asunto=None
             self.reproductorAudio=None
             if asunto==0: #despertar
-                audio_asunto=Recursos_IoT_Domotica.AUDIO_YA_DESPIERTA
+                audio_asunto=App_Alarmas.AUDIO_YA_DESPIERTA
             elif asunto==1: #dormir
-                audio_asunto=Recursos_IoT_Domotica.AUDIO_IR_DORMIR
+                audio_asunto=App_Alarmas.AUDIO_IR_DORMIR
             elif asunto==2: #debres
-                audio_asunto=Recursos_IoT_Domotica.AUDIO_HAZ_DEBERES
+                audio_asunto=App_Alarmas.AUDIO_HAZ_DEBERES
             if audio_asunto!=None:
                 self.reproductorAudio=mixer.Sound(audio_asunto)
                 self.reproductorAudio.play ()
@@ -73,7 +73,7 @@ class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
             self.senal_alarmaSonando.emit(True)
             try:
                 mixer.init()
-                mixer.music.load(Recursos_IoT_Domotica.CARPETA_MUSICA+cancion)
+                mixer.music.load(App_Alarmas.CARPETA_MUSICA+cancion)
                 # Setting the volume
                 mixer.music.set_volume(1)
                 # Start playing the song
@@ -85,14 +85,6 @@ class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
                 <h3 style="text-align:center">{}</h3>
                 <h6 style="text-align:center">Sin musica </h6>""".format(tiempo,nombres) )
         
-
-
-            
-
-
-        
-
- 
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])

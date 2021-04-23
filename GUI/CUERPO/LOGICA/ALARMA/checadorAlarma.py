@@ -6,8 +6,7 @@ from PyQt5 import QtCore
 ##############################################################
 from CUERPO.LOGICA.ALARMA.alarma import HoraAlarma
 from CUERPO.LOGICA.ALARMA.baseDatos_alarma import BaseDatos_alarmas
-from CUERPO.LOGICA.RECURSOS.recursos import Recursos_IoT_Domotica
-
+from recursos import App_Alarmas
 
 class ChecadorAlarma(QtCore.QObject):
     '''El proposito de esta clase es tener un control, un seguimiento
@@ -38,6 +37,7 @@ class ChecadorAlarma(QtCore.QObject):
         '''
 
         QtCore.QObject.__init__(self)
+        
         self.punteroMinuto=minuto
         self.punteroHora=hora
         self.punteroDia=noDiaHoy
@@ -51,7 +51,7 @@ class ChecadorAlarma(QtCore.QObject):
         #      'nombreAlarma_3': HoraAlarma(hora=19,minuto=30),
         #       } 
 
-        self.baseDatosAlarmas=BaseDatos_alarmas(Recursos_IoT_Domotica.NOMBRE_BASE_DATOS_ALARMAS)
+        self.baseDatosAlarmas=BaseDatos_alarmas(App_Alarmas.NOMBRE_BASE_DATOS_ALARMAS)
         self.actualizarAlarmasHoy(noDiaHoy,hora,minuto)
 
     def revisar(self,hora,minuto):

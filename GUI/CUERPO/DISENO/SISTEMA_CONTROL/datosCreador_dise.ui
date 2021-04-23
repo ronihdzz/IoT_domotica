@@ -23,7 +23,18 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>RoniHernandez99/IoT_domotica</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../IMAG.qrc">
+    <normaloff>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico</normaloff>
+    <normalon>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico</normalon>
+    <disabledoff>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico</disabledoff>
+    <disabledon>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico</disabledon>
+    <activeoff>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico</activeoff>
+    <activeon>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico</activeon>
+    <selectedoff>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico</selectedoff>
+    <selectedon>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico</selectedon>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

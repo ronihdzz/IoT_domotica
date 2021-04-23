@@ -10,7 +10,9 @@ from PyQt5.QtWidgets import QMessageBox
 import shutil  #para copiar archivos
 from mutagen.wave import WAVE  #para ver la duracion de las canciones
 from mutagen.mp3 import MP3 
+from PyQt5.QtGui import QIcon
 
+from recursos import HuellaAplicacion
 
 class ReproductorSonidosAlarmas(QtCore.QObject):
     MAX_DURACION=6*60 #6 minutos
@@ -19,7 +21,7 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
 
     def __init__(self,context,direccionCarpetas,carpetaMusicaDefault,carpetaMusicaMia,cancionDefault):
         QtCore.QObject.__init__(self)
-        
+
 
         self.direccionCarpetas=direccionCarpetas
         self.carpetaMusicaMia=carpetaMusicaMia
@@ -68,7 +70,10 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
                 if os.path.exists(destinoArchivoCopiar):
                     ventanaDialogo = QMessageBox()
                     ventanaDialogo.setIcon(QMessageBox.Information)
-                    ventanaDialogo.setWindowTitle('Informacion')
+                    ventanaDialogo.setWindowIcon( QIcon(HuellaAplicacion.ICONO_APLICACION)  )
+                    ventanaDialogo.setWindowTitle(HuellaAplicacion.NOMBRE_APLICACION)
+
+
                     ventanaDialogo.setText("Ya has guardado una cancion con el mismo \n"
                     "nombre, por tal motivo no se realizo la copia\n""de la cancion seleccionada ")
                     ventanaDialogo.setStandardButtons(QMessageBox.Ok)
@@ -82,7 +87,10 @@ class ReproductorSonidosAlarmas(QtCore.QObject):
                 print("La duracion del archivo no puede ser mayor a los 6 minutos")
                 ventanaDialogo = QMessageBox()
                 ventanaDialogo.setIcon(QMessageBox.Critical)
-                ventanaDialogo.setWindowTitle('Error')
+                ventanaDialogo.setWindowIcon( QIcon(HuellaAplicacion.ICONO_APLICACION)  )
+                ventanaDialogo.setWindowTitle(HuellaAplicacion.NOMBRE_APLICACION)
+
+
                 ventanaDialogo.setText("Lo sentimos pero no puede cargar\narchivos mayores a los 6 minutos")
                 ventanaDialogo.setStandardButtons(QMessageBox.Ok)
                 btn_ok = ventanaDialogo.button(QMessageBox.Ok)

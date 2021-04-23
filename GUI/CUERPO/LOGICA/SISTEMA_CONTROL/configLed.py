@@ -3,17 +3,21 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 from functools import partial
 from PyQt5.QtCore import Qt, pyqtSignal,QObject
+from PyQt5.QtGui import QIcon
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
 ##############################################################
 from  CUERPO.DISENO.SISTEMA_CONTROL.configLed_dise import Ui_Dialog
+from recursos import HuellaAplicacion
+
 ###############################################################
 #  MIS LIBRERIAS...
 ##############################################################
 
 
-class Dialog_configLed(QtWidgets.QDialog, Ui_Dialog):
+class Dialog_configLed(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
     senal_colorElegido= pyqtSignal(int)
+
 
     COLORES_RGB=( 
     "(255,255,255)",#blanco
@@ -29,17 +33,16 @@ class Dialog_configLed(QtWidgets.QDialog, Ui_Dialog):
         Ui_Dialog.__init__(self)
         QtWidgets.QDialog.__init__(self)
         self.setupUi(self)
+        HuellaAplicacion.__init__(self)
 
         self.setWindowFlags(Qt.CustomizeWindowHint | Qt.WindowCloseButtonHint)
-        self.setWindowTitle(" ")
         self.setWindowModality(Qt.ApplicationModal)
-
+        
         self.tuplaBotones=(self.btn_0,self.btn_1,self.btn_2,self.btn_3,self.btn_4,self.btn_5,self.btn_6)
         for n in range(len(self.tuplaBotones)):
             self.tuplaBotones[n].clicked.connect(partial(self.eligioColor,n))
 
         self.idColorFoco=0
-        
     
     def eligioColor(self,idColor):
         #CONVENCIO DE COLORES USADAS EN ARDUINO...

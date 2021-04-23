@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets,Qt
 from PyQt5.QtWidgets import QWidget,QVBoxLayout
 from PyQt5.QtWidgets import  QMessageBox
 from PyQt5.QtCore import Qt, pyqtSignal,QTimer
+from PyQt5.QtGui import QIcon
 
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
@@ -14,19 +15,20 @@ from CUERPO.DISENO.ALARMA.administradorAlarmas_dise import  Ui_Form
 from CUERPO.LOGICA.ALARMA.ItemAlarmaVista import ItemAlarmaVista
 from CUERPO.LOGICA.ALARMA.ItemAlarmaEdit import ItemAlarmaEdit
 from CUERPO.LOGICA.ALARMA.baseDatos_alarma import BaseDatos_alarmas
-from CUERPO.LOGICA.RECURSOS.recursos import Recursos_IoT_Domotica
+from recursos import App_Alarmas,HuellaAplicacion
 from CUERPO.LOGICA.ALARMA.reloj import Reloj
 from CUERPO.LOGICA.ALARMA.notificadorAlarmas import NotificadorAlarmas
 from CUERPO.LOGICA.ALARMA.checadorAlarma import ChecadorAlarma
 
-class AdministradorAlarmas(QtWidgets.QWidget,Ui_Form):
+class AdministradorAlarmas(QtWidgets.QWidget,Ui_Form,HuellaAplicacion):
 
     def __init__(self,noDia,hora,minuto,segundo):
         Ui_Form.__init__(self)
         QtWidgets.QWidget.__init__(self)
         self.setupUi(self)
+        HuellaAplicacion.__init__(self)
 
-        self.baseDatosAlarmas=BaseDatos_alarmas(Recursos_IoT_Domotica.NOMBRE_BASE_DATOS_ALARMAS)
+        self.baseDatosAlarmas=BaseDatos_alarmas(App_Alarmas.NOMBRE_BASE_DATOS_ALARMAS)
         self.baseDatosAlarmas.crearBaseDatos()
         self.ventanaCreadoraAlarmas=ItemAlarmaEdit()
 
@@ -145,9 +147,12 @@ class AdministradorAlarmas(QtWidgets.QWidget,Ui_Form):
             mensaje="El numero maximo de alarmas que\n"
             mensaje+=f"puedes registrar es de: {self.MAX_ITEMS} alarmas\n"  
             mensaje+=f"y usted ya ha creado {self.MAX_ITEMS} alarmas."
+            
             ventanaDialogo = QMessageBox()
+            ventanaDialogo.setWindowIcon(QIcon(self.ICONO_APLICACION)  )
+            ventanaDialogo.setWindowTitle(self.NOMBRE_APLICACION)
             ventanaDialogo.setIcon(QMessageBox.Information)
-            ventanaDialogo.setWindowTitle('Error')
+
             ventanaDialogo.setText(mensaje)
             ventanaDialogo.setStandardButtons(QMessageBox.Ok)
             btn_ok = ventanaDialogo.button(QMessageBox.Ok)
@@ -165,7 +170,9 @@ class AdministradorAlarmas(QtWidgets.QWidget,Ui_Form):
 
         ventanaDialogo = QMessageBox()
         ventanaDialogo.setIcon(QMessageBox.Question)
-        ventanaDialogo.setWindowTitle('Salir')
+        ventanaDialogo.setWindowIcon( QIcon(self.ICONO_APLICACION)  )
+        ventanaDialogo.setWindowTitle(self.NOMBRE_APLICACION)
+
         mensaje="¿Esta seguro que quieres\n" 
         mensaje+=f"eliminar la alarma numero: {posItemMatar+1}\n"
         mensaje+=f" cuyo nombre es: {nombreAlarma}?"

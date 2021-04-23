@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QMenu,QCompleter
 from PyQt5.QtCore import Qt,QEvent,pyqtSignal,QTime,QRegExp
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QMessageBox
-from PyQt5.QtGui import  QRegExpValidator
+from PyQt5.QtGui import  QRegExpValidator,QIcon
 import textwrap
 from PyQt5 import QtWidgets
 
@@ -17,10 +17,10 @@ from CUERPO.DISENO.ALARMA.itemAlarmaEdit_dise import Ui_Dialog
 from CUERPO.LOGICA.ALARMA.alarma import Alarma
 from CUERPO.LOGICA.ALARMA.baseDatos_alarma import BaseDatos_alarmas
 from CUERPO.LOGICA.ALARMA.reproductorSonidosAlarmas import ReproductorSonidosAlarmas
-from CUERPO.LOGICA.RECURSOS.recursos import Recursos_IoT_Domotica
+from  recursos import App_Alarmas,HuellaAplicacion
 
 
-class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
+class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog,HuellaAplicacion):
     '''Esta clase sirve para editar o crear alarmas, si:
         A)Se crea una alarma se emitira la senal cuyo
         nombre es: 'senal_alarma'
@@ -40,19 +40,21 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
         Ui_Dialog.__init__(self)
         QtWidgets.QDialog.__init__(self)
         self.setupUi(self)
-        self.baseDatosAlarmas=BaseDatos_alarmas(Recursos_IoT_Domotica.NOMBRE_BASE_DATOS_ALARMAS)
-        self.reproductor=ReproductorSonidosAlarmas(self,direccionCarpetas=Recursos_IoT_Domotica.CARPETA_MUSICA,
-        carpetaMusicaDefault=Recursos_IoT_Domotica.CARPETA_MUSICA_DEFAULT,
-        carpetaMusicaMia=Recursos_IoT_Domotica.CARPETA_MUSICA_MIA,
-        cancionDefault=Recursos_IoT_Domotica.NOMBRE_SONIDO_NULL)
+        self.setWindowFlags(Qt.CustomizeWindowHint | Qt.WindowCloseButtonHint)
+        self.setWindowModality(Qt.ApplicationModal)
+        HuellaAplicacion.__init__(self)
+        
+        self.baseDatosAlarmas=BaseDatos_alarmas(App_Alarmas.NOMBRE_BASE_DATOS_ALARMAS)
+        self.reproductor=ReproductorSonidosAlarmas(self,direccionCarpetas=App_Alarmas.CARPETA_MUSICA,
+        carpetaMusicaDefault=App_Alarmas.CARPETA_MUSICA_DEFAULT,
+        carpetaMusicaMia=App_Alarmas.CARPETA_MUSICA_MIA,
+        cancionDefault=App_Alarmas.NOMBRE_SONIDO_NULL)
 
         self.restringirLasEntradas()
 
         self.reproductor.senal_cancionAgregada.connect(self.sonidoAlarmaAgregado)
             
-        self.setWindowFlags(Qt.CustomizeWindowHint | Qt.WindowCloseButtonHint)
-        self.setWindowTitle(" ")
-        self.setWindowModality(Qt.ApplicationModal)
+
 
         self.tuplaDias_rb=(self.cB_1, self.cB_2, self.cB_3, self.cB_4,
         self.cB_5, self.cB_6, self.cB_7  )
@@ -137,13 +139,13 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog):
 
         #cargando los nombres de las canciones default:
         listaCanciones=self.reproductor.listaCancionesDefault
-        self.listWid_soniDef.addItem(Recursos_IoT_Domotica.NOMBRE_SONIDO_NULL)
+        self.listWid_soniDef.addItem(App_Alarmas.NOMBRE_SONIDO_NULL)
         for cancion in listaCanciones:
             self.listWid_soniDef.addItem(cancion)
 
         #cargando los nombres de las canciones del usuario:
         listaCanciones=self.reproductor.listaCancionesMias
-        self.listWid_soniMio.addItem(Recursos_IoT_Domotica.NOMBRE_SONIDO_NULL)
+        self.listWid_soniMio.addItem(App_Alarmas.NOMBRE_SONIDO_NULL)
         for cancion in listaCanciones:
             self.listWid_soniMio.addItem(cancion)
 
@@ -196,7 +198,9 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
 
             ventanaDialogo = QMessageBox()
             ventanaDialogo.setIcon(QMessageBox.Information)
-            ventanaDialogo.setWindowTitle('Error')
+            ventanaDialogo.setWindowIcon( QIcon(self.ICONO_APLICACION)  )
+            ventanaDialogo.setWindowTitle(self.NOMBRE_APLICACION)
+
             ventanaDialogo.setText(mensaje)
             ventanaDialogo.setStandardButtons(QMessageBox.Ok)
             btn_ok = ventanaDialogo.button(QMessageBox.Ok)
@@ -325,7 +329,9 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
         if indice==0:
             ventanaDialogo = QMessageBox()
             ventanaDialogo.setIcon(QMessageBox.Information)
-            ventanaDialogo.setWindowTitle('Error')
+            ventanaDialogo.setWindowIcon( QIcon(self.ICONO_APLICACION)  )
+            ventanaDialogo.setWindowTitle(self.NOMBRE_APLICACION)
+
             ventanaDialogo.setText("No puedes eliminar la opcion default")
             ventanaDialogo.setStandardButtons(QMessageBox.Ok)
             btn_ok = ventanaDialogo.button(QMessageBox.Ok)
@@ -355,7 +361,9 @@ a ser el sonido default.
             #Cuadro de dialogo de advertencia si elimina esa alarma
             ventanaDialogo = QMessageBox()
             ventanaDialogo.setIcon(QMessageBox.Warning)
-            ventanaDialogo.setWindowTitle('Error')
+            ventanaDialogo.setWindowIcon( QIcon(self.ICONO_APLICACION)  )
+            ventanaDialogo.setWindowTitle(self.NOMBRE_APLICACION)
+
             ventanaDialogo.setText(mensajeAdvertencia)
             ventanaDialogo.setStandardButtons(QMessageBox.Yes|QMessageBox.No)
             btn_yes = ventanaDialogo.button(QMessageBox.Yes)
@@ -375,7 +383,7 @@ a ser el sonido default.
                 #actualizando la base de datos, por si habia una alarma que usara como 
                 #sonido de alarma la cancion que se elimino
                 self.baseDatosAlarmas.eliminarCancion(cancionEliminar=self.reproductor.carpetaMusicaMia+cancionEliminar,
-                cancionDefault=self.reproductor.carpetaMusicaDefault+Recursos_IoT_Domotica.NOMBRE_SONIDO_NULL)
+                cancionDefault=self.reproductor.carpetaMusicaDefault+App_Alarmas.NOMBRE_SONIDO_NULL)
 
                 #cuando eliminemos la cancion que se escogera  la defualt...
                 self.listWid_soniMio.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
@@ -436,7 +444,10 @@ a ser el sonido default.
         if mensajeError:
             ventanaDialogo = QMessageBox()
             ventanaDialogo.setIcon(QMessageBox.Critical)
-            ventanaDialogo.setWindowTitle('Error')
+            ventanaDialogo.setWindowIcon( QIcon(self.ICONO_APLICACION)  )
+            ventanaDialogo.setWindowTitle(self.NOMBRE_APLICACION)
+
+
             ventanaDialogo.setText(mensajeError)
             ventanaDialogo.setStandardButtons(QMessageBox.Ok)
             btn_ok = ventanaDialogo.button(QMessageBox.Ok)

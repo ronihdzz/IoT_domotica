@@ -18,7 +18,7 @@ from CUERPO.DISENO.DEBERES.itemDeber_dise import Ui_Form
 ###############################################################
 #  MIS LIBRERIAS...
 ##############################################################
-
+from recursos import HuellaAplicacion
 
 class ItemDeber(QtWidgets.QWidget,Ui_Form):
     senal_deberCumplido= pyqtSignal(int)#indicara quien es el objeto que quiere morir...
@@ -62,7 +62,9 @@ class ItemDeber(QtWidgets.QWidget,Ui_Form):
         if self.estadoDeber.isChecked():
             ventanaDialogo = QMessageBox()
             ventanaDialogo.setIcon(QMessageBox.Question)
-            ventanaDialogo.setWindowTitle('Deberes')
+            ventanaDialogo.setWindowIcon( QIcon(HuellaAplicacion.ICONO_APLICACION)  )
+            ventanaDialogo.setWindowTitle(HuellaAplicacion.NOMBRE_APLICACION)
+
             mensaje="Bien hecho, confirma de que haz cumplido :D" 
             ventanaDialogo.setText(mensaje)
             ventanaDialogo.setStandardButtons(QMessageBox.Yes|QMessageBox.No)

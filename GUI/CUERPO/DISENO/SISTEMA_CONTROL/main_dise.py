@@ -15,6 +15,16 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(823, 518)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Disabled, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Active, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Selected, QtGui.QIcon.On)
+        Form.setWindowIcon(icon)
         Form.setLocale(QtCore.QLocale(QtCore.QLocale.Spanish, QtCore.QLocale.Mexico))
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout(Form)
         self.horizontalLayout_10.setObjectName("horizontalLayout_10")
@@ -594,7 +604,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "RoniHernandez99/IoT_domotica"))
         self.dateEdit_fecha.setDisplayFormat(_translate("Form", "ddd dd MMM yy"))
         self.timeEdit_tiempo.setDisplayFormat(_translate("Form", "hh:mm AP"))
         self.bel_temp.setText(_translate("Form", "38.00"))

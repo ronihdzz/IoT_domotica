@@ -20,7 +20,11 @@
    <bool>false</bool>
   </property>
   <property name="windowTitle">
-   <string/>
+   <string>RoniHernandez99/IoT_domotica </string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../IMAG.qrc">
+    <normaloff>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/IoT_domotica.png</normaloff>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/IoT_domotica.png</iconset>
   </property>
   <property name="windowOpacity">
    <double>1.000000000000000</double>
