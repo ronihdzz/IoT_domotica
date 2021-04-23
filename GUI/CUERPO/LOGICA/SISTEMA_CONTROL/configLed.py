@@ -13,7 +13,7 @@ from  CUERPO.DISENO.SISTEMA_CONTROL.configLed_dise import Ui_Dialog
 
 
 class Dialog_configLed(QtWidgets.QDialog, Ui_Dialog):
-    senal_colorElegido= pyqtSignal(list)
+    senal_colorElegido= pyqtSignal(int)
 
     COLORES_RGB=( 
     "(255,255,255)",#blanco
@@ -37,6 +37,8 @@ class Dialog_configLed(QtWidgets.QDialog, Ui_Dialog):
         self.tuplaBotones=(self.btn_0,self.btn_1,self.btn_2,self.btn_3,self.btn_4,self.btn_5,self.btn_6)
         for n in range(len(self.tuplaBotones)):
             self.tuplaBotones[n].clicked.connect(partial(self.eligioColor,n))
+
+        self.idColorFoco=0
         
     
     def eligioColor(self,idColor):
@@ -48,9 +50,8 @@ class Dialog_configLed(QtWidgets.QDialog, Ui_Dialog):
         # 4-amarillo
         # 5-magenta
         # 6-cian
-
-        listDatos=[idColor,self.COLORES_RGB[idColor]]
-        self.senal_colorElegido.emit(listDatos)
+        self.idColorFoco=idColor
+        self.senal_colorElegido.emit(idColor)
         self.close()
 
 

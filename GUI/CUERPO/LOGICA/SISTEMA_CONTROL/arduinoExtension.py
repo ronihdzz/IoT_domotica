@@ -20,10 +20,7 @@ class ArduinoExtension_hilo(QThread):
 
 
     senal_flamaDetectada=pyqtSignal(bool)
-
     senal_prenderFoco=pyqtSignal(bool)
-
-
     senal_prenderVentilador=pyqtSignal(bool)#prender/apagar ventilador
     senal_actTemp=pyqtSignal(str) #actualizar temperatura 
     
@@ -47,7 +44,7 @@ class ArduinoExtension_hilo(QThread):
 
         #Atributos relacionados con el ventilador...
         self.ventilador_on=ventilador_on
-        self.tempActual=22 #La temperatura que se esta sensando
+        self.tempActual=10000 #La temperatura que se esta sensando
         self.tempPrenderaVenti=tempPrenderaVenti #La temperatura a la cual se va a prender el ventilador
 
         #Atributo que nos dara 
@@ -81,6 +78,7 @@ class ArduinoExtension_hilo(QThread):
                         if mensajeRecibido:
                             if mensajeRecibido[0]==self.IDS["FUEGO_APAGADO"]:
                                 self.flamaDetectada=False
+                                self.senal_flamaDetectada.emit(False)
                                 print("FUEGO APAGADO")
                                 self.arduino.write(b"pwejfpwjofp")
 

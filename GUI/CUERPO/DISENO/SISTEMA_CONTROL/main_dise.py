@@ -186,6 +186,7 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         self.rb_controlAutomatico.setFont(font)
+        self.rb_controlAutomatico.setChecked(True)
         self.rb_controlAutomatico.setObjectName("rb_controlAutomatico")
         self.verticalLayout.addWidget(self.rb_controlAutomatico)
         self.label_41 = QtWidgets.QLabel(self.widget)
@@ -314,7 +315,7 @@ class Ui_Form(object):
         self.btn_configFoco.setMaximumSize(QtCore.QSize(40, 40))
         self.btn_configFoco.setStyleSheet("border :3px solid black;\n"
 "border-radius: 15px;\n"
-"background-color: rgb(255, 0, 0);")
+"background-color: rgb(255,255,255);")
         self.btn_configFoco.setText("")
         self.btn_configFoco.setObjectName("btn_configFoco")
         self.horizontalLayout_9.addWidget(self.btn_configFoco)
@@ -566,7 +567,7 @@ class Ui_Form(object):
         self.hoSli_venti.setMaximum(1)
         self.hoSli_venti.setSingleStep(1)
         self.hoSli_venti.setPageStep(1)
-        self.hoSli_venti.setProperty("value", 1)
+        self.hoSli_venti.setProperty("value", 0)
         self.hoSli_venti.setTracking(True)
         self.hoSli_venti.setOrientation(QtCore.Qt.Horizontal)
         self.hoSli_venti.setObjectName("hoSli_venti")

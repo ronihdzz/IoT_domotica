@@ -15,7 +15,7 @@ from  CUERPO.DISENO.SISTEMA_CONTROL.configVenti_dise import Ui_Dialog
 
 class Dialog_configVenti(QtWidgets.QDialog, Ui_Dialog):
     senal_cambioTempPrendeVenti= pyqtSignal(float)
-    def __init__(self,tempPrenderaVenti):
+    def __init__(self,tempPrenderaVenti=100):
         Ui_Dialog.__init__(self)
         QtWidgets.QDialog.__init__(self)
         self.setupUi(self)

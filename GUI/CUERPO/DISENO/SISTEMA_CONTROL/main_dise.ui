@@ -473,6 +473,9 @@ padding:0px;
         <property name="text">
          <string>Automatico</string>
         </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item>
@@ -682,7 +685,7 @@ QTabBar::tab:only-one {
                 <property name="styleSheet">
                  <string notr="true">border :3px solid black;
 border-radius: 15px;
-background-color: rgb(255, 0, 0);</string>
+background-color: rgb(255,255,255);</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -1105,7 +1108,7 @@ text:&quot;roni&quot;;
                  <number>1</number>
                 </property>
                 <property name="value">
-                 <number>1</number>
+                 <number>0</number>
                 </property>
                 <property name="tracking">
                  <bool>true</bool>

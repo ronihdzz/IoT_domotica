@@ -30,8 +30,9 @@ class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
         self.hayAlarmaSonando=False
         self.baseDatosAlarmas=BaseDatos_alarmas(Recursos_IoT_Domotica.NOMBRE_BASE_DATOS_ALARMAS)
         self.hoSli_estadoAlarma.sliderReleased.connect( self.checarEstadoRespuesta )
-
         self.textEdit_alarmas.setReadOnly(True)
+        self.alarmaFuego_sonando=False
+        self.notificadorAlarmas_activado=True
     
     def checarEstadoRespuesta(self):
         if self.hoSli_estadoAlarma.value()==self.hoSli_estadoAlarma.maximum():
@@ -39,8 +40,6 @@ class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
 
 
     def closeEvent(self,event):
-
-        
         mixer.music.stop()
         event.accept()
         if self.reproductorAudio!=None:
@@ -48,45 +47,47 @@ class NotificadorAlarmas(QtWidgets.QDialog, Ui_Dialog):
         self.hoSli_estadoAlarma.setValue(0)
 
     def activarAlarmas(self,listaAlarmas):
-        # [ (nombre,horaAlarma), (nombre,horaAlarma), ... ]
-        nombres= [nombre for nombre, _ in listaAlarmas ] 
-        tiempo=listaAlarmas[0][1]
-        nombreUnaAlarma=nombres[0]
-        nombres=",".join(nombres)
-        cancion,asunto=self.baseDatosAlarmas.getSonidoAsunto_alarma(nombreUnaAlarma)
-        audio_asunto=None
-        self.reproductorAudio=None
-        if asunto==0: #despertar
-            audio_asunto=Recursos_IoT_Domotica.AUDIO_YA_DESPIERTA
-        elif asunto==1: #dormir
-            audio_asunto=Recursos_IoT_Domotica.AUDIO_IR_DORMIR
-        elif asunto==2: #debres
-            audio_asunto=Recursos_IoT_Domotica.AUDIO_HAZ_DEBERES
-        if audio_asunto!=None:
-            self.reproductorAudio=mixer.Sound (audio_asunto)
-            self.reproductorAudio.play ()
+            # [ (nombre,horaAlarma), (nombre,horaAlarma), ... ]
+        if self.notificadorAlarmas_activado:
+            nombres= [nombre for nombre, _ in listaAlarmas ] 
+            tiempo=listaAlarmas[0][1]
+            nombreUnaAlarma=nombres[0]
+            nombres=",".join(nombres)
+            cancion,asunto=self.baseDatosAlarmas.getSonidoAsunto_alarma(nombreUnaAlarma)
+            audio_asunto=None
+            self.reproductorAudio=None
+            if asunto==0: #despertar
+                audio_asunto=Recursos_IoT_Domotica.AUDIO_YA_DESPIERTA
+            elif asunto==1: #dormir
+                audio_asunto=Recursos_IoT_Domotica.AUDIO_IR_DORMIR
+            elif asunto==2: #debres
+                audio_asunto=Recursos_IoT_Domotica.AUDIO_HAZ_DEBERES
+            if audio_asunto!=None:
+                self.reproductorAudio=mixer.Sound(audio_asunto)
+                self.reproductorAudio.play ()
 
-        #despertar,dormir,deberes y otro
+            #despertar,dormir,deberes y otro
 
-        print("Mostrando alarmas....")
-        print(listaAlarmas)
-        self.senal_alarmaSonando.emit(True)
+            print("Mostrando alarmas....")
+            print(listaAlarmas)
+            self.senal_alarmaSonando.emit(True)
+            try:
+                mixer.init()
+                mixer.music.load(Recursos_IoT_Domotica.CARPETA_MUSICA+cancion)
+                # Setting the volume
+                mixer.music.set_volume(1)
+                # Start playing the song
+                mixer.music.play()
+                self.textEdit_alarmas.setText("""<h1 style="text-align:center" >{}  </h1>
+                <h3 style="text-align:center">{}</h3>""".format(tiempo,nombres) )
+            except:
+                self.textEdit_alarmas.setText("""<h1 style="text-align:center" >{}  </h1>
+                <h3 style="text-align:center">{}</h3>
+                <h6 style="text-align:center">Sin musica </h6>""".format(tiempo,nombres) )
         
-        try:
-            mixer.init()
-            mixer.music.load(Recursos_IoT_Domotica.CARPETA_MUSICA+cancion)
-            # Setting the volume
-            mixer.music.set_volume(1)
-            # Start playing the song
-            mixer.music.play()
-            self.textEdit_alarmas.setText("""<h1 style="text-align:center" >{}  </h1>
-            <h3 style="text-align:center">{}</h3>""".format(tiempo,nombres) )
-        except:
-            self.textEdit_alarmas.setText("""<h1 style="text-align:center" >{}  </h1>
-            <h3 style="text-align:center">{}</h3>
-            <h6 style="text-align:center">Sin musica </h6>""".format(tiempo,nombres) )
 
 
+            
 
 
         

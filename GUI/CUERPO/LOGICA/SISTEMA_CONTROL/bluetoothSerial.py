@@ -16,8 +16,6 @@ class BluetoothSerial_hilo(QThread):
             "APAGAR":"0",
             "PRENDER":"1",
             "CAMBIAR_COLOR_FOCO":"2",
-            "FUEGO_DETECTADO":"3",
-            "FUEGO_APAGADO":"4",
             "ORDEN_ATENDIDA":"5"
     }
 
