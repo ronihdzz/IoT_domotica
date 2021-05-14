@@ -10,6 +10,9 @@
     <file>IMAGENES/ALARMA/tache_2.png</file>
   </qresource>
   <qresource prefix="DEBERES">
+    <file>IMAGENES/SISTEMA_CONTROL/github.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/gmail.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/likedin.png</file>
     <file>IMAGENES/DEBERES/centrado.png</file>
     <file>IMAGENES/DEBERES/check_off.png</file>
     <file>IMAGENES/DEBERES/check_on.png</file>
@@ -20,19 +23,44 @@
     <file>IMAGENES/DEBERES/plus_on.png</file>
   </qresource>
   <qresource prefix="SISTEMA_CONTROL">
-    <file>IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_512px.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/alertaFuego.png</file>
-    <file>IMAGENES/SISTEMA_CONTROL/yoMero.jpg</file>
-    <file>IMAGENES/SISTEMA_CONTROL/config_off.png</file>
-    <file>IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico</file>
     <file>IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_256px.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_512px.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/yoMero2.jpg</file>
+    <file>IMAGENES/SISTEMA_CONTROL/github.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/gmail.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/likedin.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/config_off.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/config_on.png</file>
-    <file>IMAGENES/SISTEMA_CONTROL/foco_off.png</file>
-    <file>IMAGENES/SISTEMA_CONTROL/foco_on.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco1_blanco.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco2_rojo.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco3_verde.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco4_azul.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco5_amarillo.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco6_magenta.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco7_cian.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco8_default.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/info_off.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/info_on.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_512px.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rrueda1_blanco.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rrueda2_rojo.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rrueda3_verde.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rrueda4_azul.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rrueda5_amarillo.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rrueda6_magenta.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rrueda7_cian.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rueda1_blanco.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rueda2_rojo.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rueda3_verde.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rueda4_azul.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rueda5_amarillo.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rueda6_magenta.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/rueda7_cian.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/termo.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/ventilador_off.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/ventilador_on.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/yoMero.jpg</file>
   </qresource>
 </RCC>

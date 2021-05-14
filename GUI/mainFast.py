@@ -92,8 +92,19 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
         self.seccionAlarmas.reloj.senal_diaCambio.connect( self.cambiarDiaDateEdit )
 
         #Agregando los widgets anteriores al 'tabWidget' 
-        self.tabWidget.addTab(self.seccionNotas,"Notas")
-        self.tabWidget.addTab(self.seccionAlarmas,"Alarmas")
+        #self.tabWidget.addTab(self.seccionNotas,"Notas")
+        #self.tabWidget.addTab(self.seccionAlarmas,"Alarmas")
+        #self.layout_alarmas.setWidget(self.seccionAlarmas)
+        self.stack_notas.addWidget(self.seccionNotas)
+        self.stack_alarmas.addWidget(self.seccionAlarmas)
+
+        self.stack_alarmas.setSizePolicy(
+            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
+        )
+        self.stack_notas.setSizePolicy(
+            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
+        )
+        #self.stackedWidget_notas.setCurrentIndex(0)
 
 # Otras configuraciones 
         self.rb_controlManual.toggled.connect(self.cambiarControl)
@@ -187,10 +198,10 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
         '''
 
         if prender:
-            self.bel_estadoFoco.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco_on.png);")
+            self.bel_estadoFoco.setStyleSheet(f"border-image: url({ self.venConfig_foco.getImagenFoco_on() });")
             #self.bluetooth.foco_prenderApagar(prender=True)
         else:
-            self.bel_estadoFoco.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco_off.png);")
+            self.bel_estadoFoco.setStyleSheet(f"border-image: url({ self.venConfig_foco.getImagenFoco_off() });")
             #self.bluetooth.foco_prenderApagar(apagar=True)
             
     def cambiarColorFoco(self,idColorEligio):
@@ -211,13 +222,25 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
                 B) El segundo elemento es un string que represent
                 el 'id' del numero de color que se escogio
         '''
-
         idColor=idColorEligio
-        colorRGB=Dialog_configLed.COLORES_RGB[ idColor  ]  #listDatos[1]
-        self.btn_configFoco.setStyleSheet("""border :3px solid black;
-                                            border-radius: 15px;
-                                            background-color: rgb{};""".format(colorRGB))
+        #colorRGB=Dialog_configLed.COLORES_RGB[ idColor  ]  #listDatos[1]
+        self.btn_configFoco.setStyleSheet(f""" 
+                    QPushButton {'{'}
+                        border-image: url( { self.venConfig_foco.getImagen_ruedaChica() });
+                    {'}'}
+                    QPushButton:hover {'{'}
+                        border-image: url({ self.venConfig_foco.getImagen_ruedaGrande() });
+                    {'}'}
+                    QPushButton:pressed {'{'}
+                        border-image: url({ self.venConfig_foco.getImagen_ruedaChica() });
+                    {'}'} """)
+
+
         print("Color recibido:",idColor)
+        #self.hoSli_foco.value()=0=False=APAGADO    self.hoSli_foco.value()=1=True=PRENDIDO  
+        if self.hoSli_foco.value():
+            self.bel_estadoFoco.setStyleSheet(f"border-image:url({ self.venConfig_foco.getImagenFoco_on() });")
+
         #self.bluetooth.foco_cambiarColor(idColor)
 
 #########################################################################################################################
@@ -322,7 +345,8 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
 
         #self.prenderApagarVenti(prender=False)
         #self.extencionArduino.ventilador_on=False
-
+        self.venConfig_foco.eligioColor(COLOR_FOCO)
+        self.venConfig_foco.cambiarImagen(COLOR_FOCO)
         self.cambiarColorFoco(COLOR_FOCO)
 
         #Como el radiobutton tenia el check en automatico hay que llamar
@@ -368,6 +392,20 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
             event.accept()
         else:
             event.ignore()  # No saldremos del evento
+
+    def resizeEvent(self, event):
+        print("Window has been resized")
+        QtWidgets.QWidget.resizeEvent(self, event)
+        ancho=self.widget_alarmasNotas.width()
+        alto=self.widget_alarmasNotas.height()
+        
+        #self.stack_alarmas.setMaximumHeight(alto//2 -50)
+        self.stack_alarmas.setMinimumHeight(alto//2 -50)
+        
+        #self.stack_notas.setMaximumHeight(alto//2 -50)
+        self.stack_notas.setMinimumHeight(alto//2 -50)
+        print(ancho,alto)
+
 
 
 if __name__ == "__main__":

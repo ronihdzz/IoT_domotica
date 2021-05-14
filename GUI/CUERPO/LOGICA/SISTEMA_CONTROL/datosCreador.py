@@ -28,28 +28,46 @@ class Dialog_datosCreador(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
         likedin=" Roni Hernández "
         github="RoniHernandez99"
         repositorio="IoT_domotica"
+        fotoProgramador=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/yoMero2.jpg"
+
 
         likedin_link="https://www.linkedin.com/in/roni-hern%C3%A1ndez-613a62173/"
         github_link="https://github.com/RoniHernandez99"
         repositorio_link="https://github.com/RoniHernandez99"
 
-        datosCreador=f"""
-        <h1>Programador:{nombre}<\h1>
-        <h1 style="text-align:center" > < img src=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/yoMero.jpg" /> </h1>
-        <h3>Gmail:{gmail}<\h3>
-        <h3>Liked in: <a href="{likedin_link}">{likedin}</a> <\h3>
-        <h3>Github: <a href="{github_link}">{github}</a><\h3>
-        <h3>Repositorio de todo el proyecto: <a href="{repositorio_link}">{repositorio}</a><\h3> """
-        self.textBrowser_datosCreador.setHtml(datosCreador)
 
-        self.textBrowser_datosCreador.setOpenLinks(True)
-        self.textBrowser_datosCreador.setOpenExternalLinks(True)
-        #self.textBrowser_datosCreador.setOpenLinks(False)
-        #self.textBrowser_datosCreador.anchorClicked.connect(self.test)
+        likedin_html=f'<span style=" font-size:13px;font-family:TamilSangamMN;"><a href="{likedin_link}" style="color:black;text-decoration:none;">{likedin}</a></span>'
+        github_html=f'<span style=" font-size:13px;font-family:TamilSangamMN;"><a href="{github_link}" style="color:black;text-decoration:none;">{github}</a></span>'
 
-    def test(self,argv_1):
-        print(argv_1)
-        print('!!!')
+        self.textBrowser_repositorio.setOpenLinks(True)
+        self.textBrowser_repositorio.setOpenExternalLinks(True)
+
+
+        self.bel_gmail.setTextInteractionFlags(Qt.TextSelectableByMouse)
+
+        #self.textBrowser_nombreProgra.setOpenLinks(True)
+        #self.textBrowser_nombreProgra.setOpenExternalLinks(True)
+
+        self.textBrowser_repositorio.setHtml(f"""
+            <span style=" font-size:13px;font-family: TamilSangamMN;">Repositorio de todo el proyecto</span></p>
+            <span style=" font-size:13px;font-family: TamilSangamMN;"><a href="{repositorio_link}"  style="color:black;"> <b>{repositorio}<\b> </a></span>
+        """)
+
+        self.textBrowser_nombreProgra.setHtml(f"""
+        <p align="center"><span style="font-size:13px; font-family:TamilSangamMN; style='text-align:center">Desarrollador</span>
+        <br>
+        <span style="font-size:16px;font-family: TamilSangamMN;text-align:center;"><b>{nombre}</b></span>
+        </p>""")
+
+        self.bel_fotoProgramador.setStyleSheet(f"""
+                    border-image: url({fotoProgramador});
+                    border-radius:87%;""")
+        
+
+
+        self.bel_likedin.setText(likedin_html)
+        self.bel_github.setText(github_html)
+        self.bel_gmail.setText(gmail)
 
 
 if __name__ == "__main__":

@@ -26,6 +26,7 @@ from CUERPO.LOGICA.SISTEMA_CONTROL.bluetoothSerial import BluetoothSerial_hilo
 from recursos import HuellaAplicacion,App_Principal
 
 
+
 class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
 
     def __init__(self):
@@ -91,9 +92,16 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
         self.seccionAlarmas.reloj.senal_diaCambio.connect( self.cambiarDiaDateEdit )
 
         #Agregando los widgets anteriores al 'tabWidget' 
-        self.tabWidget.addTab(self.seccionNotas,"Notas")
-        self.tabWidget.addTab(self.seccionAlarmas,"Alarmas")
+        self.stack_notas.addWidget(self.seccionNotas)
+        self.stack_alarmas.addWidget(self.seccionAlarmas)
 
+        self.stack_alarmas.setSizePolicy(
+            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
+        )
+        self.stack_notas.setSizePolicy(
+            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
+        )
+        
 # Otras configuraciones 
         self.rb_controlManual.toggled.connect(self.cambiarControl)
         self.extencionArduino.senal_flamaDetectada.connect(self.actuarAnteFlama )
@@ -103,7 +111,8 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
     
 #Iniciando los hilos...
         self.extencionArduino.start()
-        
+        #self.bluetooth.start() ESTA YA FUE LLAMADO
+
     def actuarAnteFlama(self,flamaDetectada):
         if flamaDetectada:
             self.venAlertadorFuego.show()
@@ -150,7 +159,8 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
             #manual lo estabamos ignorando, por tal motivo hay que decirle en 
             #que estado se encuentra el foco
             self.extencionArduino.foco_on=self.hoSli_venti.value() 
-            
+
+
 
 #########################################################################################################################
 #    F O C O :
@@ -184,10 +194,10 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
         '''
 
         if prender:
-            self.bel_estadoFoco.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco_on.png);")
+            self.bel_estadoFoco.setStyleSheet(f"border-image: url({ self.venConfig_foco.getImagenFoco_on() });")
             self.bluetooth.foco_prenderApagar(prender=True)
         else:
-            self.bel_estadoFoco.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco_off.png);")
+            self.bel_estadoFoco.setStyleSheet(f"border-image: url({ self.venConfig_foco.getImagenFoco_off() });")
             self.bluetooth.foco_prenderApagar(apagar=True)
             
     def cambiarColorFoco(self,idColorEligio):
@@ -208,13 +218,24 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
                 B) El segundo elemento es un string que represent
                 el 'id' del numero de color que se escogio
         '''
-
         idColor=idColorEligio
-        colorRGB=Dialog_configLed.COLORES_RGB[ idColor  ]  #listDatos[1]
-        self.btn_configFoco.setStyleSheet("""border :3px solid black;
-                                            border-radius: 15px;
-                                            background-color: rgb{};""".format(colorRGB))
+        #colorRGB=Dialog_configLed.COLORES_RGB[ idColor  ]  #listDatos[1]
+        self.btn_configFoco.setStyleSheet(f""" 
+                    QPushButton {'{'}
+                        border-image: url( { self.venConfig_foco.getImagen_ruedaChica() });
+                    {'}'}
+                    QPushButton:hover {'{'}
+                        border-image: url({ self.venConfig_foco.getImagen_ruedaGrande() });
+                    {'}'}
+                    QPushButton:pressed {'{'}
+                        border-image: url({ self.venConfig_foco.getImagen_ruedaChica() });
+                    {'}'} """)
+
         print("Color recibido:",idColor)
+        #self.hoSli_foco.value()=0=False=APAGADO    self.hoSli_foco.value()=1=True=PRENDIDO  
+        if self.hoSli_foco.value():
+            self.bel_estadoFoco.setStyleSheet(f"border-image:url({ self.venConfig_foco.getImagenFoco_on() });")
+
         self.bluetooth.foco_cambiarColor(idColor)
 
 #########################################################################################################################
@@ -297,7 +318,6 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
         de la GUI, por tal motivo primero se busca cargar las configuraciones
         default.
         ''' 
-        
         if os.path.exists(App_Principal.ARCHIVO_ESTADOS_SENSORES) :
             with open(App_Principal.ARCHIVO_ESTADOS_SENSORES, 'r') as archivo:
                 datos=archivo.read()
@@ -320,7 +340,8 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
 
         self.prenderApagarVenti(prender=False)
         self.extencionArduino.ventilador_on=False
-
+        self.venConfig_foco.eligioColor(COLOR_FOCO)
+        self.venConfig_foco.cambiarImagen(COLOR_FOCO)
         self.cambiarColorFoco(COLOR_FOCO)
 
         #Como el radiobutton tenia el check en automatico hay que llamar
@@ -335,6 +356,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
         listaEstados=[]
         listaEstados.append( str( self.venConfig_foco.idColorFoco )  ) #COLOR_FOCO
         listaEstados.append( str( self.extencionArduino.tempPrenderaVenti ) ) #TEMP_PRENDE_VENTILADOR
+        #listaEstados.append( str( 100 ) ) #TEMP_PRENDE_VENTILADOR
         datos=",,,".join(listaEstados)
         with open( App_Principal.ARCHIVO_ESTADOS_SENSORES , 'w' ) as archivo:
             archivo.write(datos)
@@ -365,6 +387,19 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
             event.accept()
         else:
             event.ignore()  # No saldremos del evento
+
+    def resizeEvent(self, event):
+        print("Window has been resized")
+        QtWidgets.QWidget.resizeEvent(self, event)
+        ancho=self.widget_alarmasNotas.width()
+        alto=self.widget_alarmasNotas.height()
+        
+        #self.stack_alarmas.setMaximumHeight(alto//2 -50)
+        self.stack_alarmas.setMinimumHeight(alto//2 -50)
+        
+        #self.stack_notas.setMaximumHeight(alto//2 -50)
+        self.stack_notas.setMinimumHeight(alto//2 -50)
+        print(ancho,alto)
 
 
 if __name__ == "__main__":

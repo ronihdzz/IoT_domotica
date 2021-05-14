@@ -7,9 +7,9 @@ class App_Principal():
     ARDUINO_NANO_EXTENSION="COM7"
     BLUETOOTH_HC05="COM5"
 
-    ICONO_APLICACION=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"
+    ICONO_APLICACION=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.png"
     NOMBRE_APLICACION="RoniHernandez99/IoT_domotica"
-    IMAGEN_SPLASH_SCREEN=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_512px.png"
+    IMAGEN_SPLASH_SCREEN=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_256px.png"
     
     @classmethod
     def actualizarUbicaciones(cls,ubicacion):

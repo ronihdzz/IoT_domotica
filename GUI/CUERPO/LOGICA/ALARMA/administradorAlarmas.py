@@ -1,13 +1,20 @@
 from PyQt5 import QtWidgets,Qt
 from PyQt5.QtWidgets import QWidget,QVBoxLayout
-from PyQt5.QtWidgets import  QMessageBox
-from PyQt5.QtCore import Qt, pyqtSignal,QTimer
+from PyQt5.QtWidgets import  QMessageBox,QMainWindow
+from PyQt5.QtCore import Qt,QTimer
 from PyQt5.QtGui import QIcon
+
+from PyQt5.QtWidgets import QMainWindow,QLabel,QWidget,QPushButton, QVBoxLayout,QScrollArea,QMessageBox
+from PyQt5.QtGui import QIcon
+
+from PyQt5.Qt import QSizePolicy,Qt
+from PyQt5 import QtCore
+
 
 ###############################################################
 #  IMPORTACION DEL DISEÑO...
 ##############################################################
-from CUERPO.DISENO.ALARMA.administradorAlarmas_dise import  Ui_Form 
+
 
 ###############################################################
 #  MIS LIBRERIAS...
@@ -20,36 +27,29 @@ from CUERPO.LOGICA.ALARMA.reloj import Reloj
 from CUERPO.LOGICA.ALARMA.notificadorAlarmas import NotificadorAlarmas
 from CUERPO.LOGICA.ALARMA.checadorAlarma import ChecadorAlarma
 
-class AdministradorAlarmas(QtWidgets.QWidget,Ui_Form,HuellaAplicacion):
+###############################################################
+#  MIS LIBRERIAS...
+##############################################################
+import IMAG_rc
 
+
+
+class AdministradorAlarmas(QMainWindow,HuellaAplicacion):
     def __init__(self,noDia,hora,minuto,segundo):
-        Ui_Form.__init__(self)
-        QtWidgets.QWidget.__init__(self)
-        self.setupUi(self)
+        QMainWindow.__init__(self)
+        self.initUI()
         HuellaAplicacion.__init__(self)
 
         self.baseDatosAlarmas=BaseDatos_alarmas(App_Alarmas.NOMBRE_BASE_DATOS_ALARMAS)
         self.baseDatosAlarmas.crearBaseDatos()
         self.ventanaCreadoraAlarmas=ItemAlarmaEdit()
 
-    
-
-        self.widget = QWidget()  # Widget that contains the collection of Vertical Box
-        self.vbox = QVBoxLayout()  # The Vertical Box that contains the Horizontal Boxes of  labels and buttons
-        self.widget.setLayout(self.vbox)
-
-        #Scroll Area Properties
-        self.scroll_alarmas.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
-        self.scroll_alarmas.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.scroll_alarmas.setWidgetResizable(True)
-        self.scroll_alarmas.setWidget(self.widget)
         self.MAX_ITEMS=20
         self.punteroNoItems=0
         self.contadorIdsVivosMuertos = 0
 
-
         #self.btn_agregarItem.clicked.connect(partial(self.agregarAlarma,Alarma()))
-        self.btn_agregarItem.clicked.connect(self.crearUnaAlarma)
+        self.btnAgregarItem.clicked.connect(self.crearUnaAlarma)
         self.listaItemsRonianos=[]
         self.textPregunta=""
         self.listIdsItemsVivos=[]
@@ -60,6 +60,81 @@ class AdministradorAlarmas(QtWidgets.QWidget,Ui_Form,HuellaAplicacion):
         self.cargarAlarmas()
         self.ventanaCreadoraAlarmas.senal_alarmaCreada.connect(self.nuevaAlarmaCreada)
 
+        self.show()
+
+
+    def initUI(self):
+        self.statusBar() 
+        toolbar = self.addToolBar('Edicion')
+        self.addToolBar(QtCore.Qt.BottomToolBarArea,toolbar)
+        toolbar.setStyleSheet("QToolButton:checked {background-color:#94DCD3; border:none; } ")
+        toolbar.setMovable(False)
+        toolbar.setOrientation(QtCore.Qt.Horizontal)
+
+        toolbar.addWidget(self.get_expansorWidget() )    
+        self.btnAgregarItem=QPushButton()
+
+        self.btnAgregarItem.setStyleSheet("""
+            QPushButton {
+               	border-image: url(:/ALARMA/IMAGENES/ALARMA/plus_off.png);
+            }
+            QPushButton:hover {
+               	border-image: url(:/ALARMA/IMAGENES/ALARMA/plus_on.png);
+            }
+            QPushButton:pressed {
+                border-image: url(:/ALARMA/IMAGENES/ALARMA/plus_off.png);
+            }   
+        """)
+        self.btnAgregarItem.setMinimumSize(30,30)
+        toolbar.addWidget(self.btnAgregarItem)
+        toolbar.addWidget( self.get_separadorQAction() )
+
+        self.setGeometry(300, 300, 350, 250)
+
+        self.widget = QWidget()  # Widget that contains the collection of Vertical Box
+        self.vbox = QVBoxLayout()  # The Vertical Box that contains the Horizontal Boxes of  labels and buttons
+        self.widget.setLayout(self.vbox)
+
+        
+
+        #Scroll Area Properties
+        self.scroll_alarmas = QScrollArea()     # Scroll Area which contains the widgets, set as the centralWidget
+        self.scroll_alarmas.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.scroll_alarmas.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.scroll_alarmas.setWidgetResizable(True)
+        self.scroll_alarmas.setWidget(self.widget)
+        self.scroll_alarmas.setStyleSheet("""
+                        *{
+                        border:none;
+                        background:#FFFFFF;
+                        }
+                        QScrollArea{
+                            border-radius:20%;
+                            padding:10px;
+                            margin-bottom:15px;
+                        }
+                        QScrollBar{
+                        background : rgb(170, 255, 255);
+                        }
+                        QScrollBar::handle{
+                        background :#979797;
+                        }
+                        QScrollBar::handle::pressed{
+                        background :  #193b58;
+                        }
+                        """)
+        self.setCentralWidget(self.scroll_alarmas)
+
+
+    def get_separadorQAction(self):
+        separadorQAction=QLabel()
+        separadorQAction.setMinimumSize(10,2)
+        return separadorQAction
+
+    def get_expansorWidget(self):
+        expansorWidget=QWidget()
+        expansorWidget.setSizePolicy(QSizePolicy.Expanding,QSizePolicy.Expanding)
+        return expansorWidget   
 
 
 #######################################################################################################################3

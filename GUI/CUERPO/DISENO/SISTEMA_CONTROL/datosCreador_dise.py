@@ -14,29 +14,150 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 400)
-        Dialog.setMinimumSize(QtCore.QSize(400, 400))
+        Dialog.resize(350, 420)
+        Dialog.setMinimumSize(QtCore.QSize(350, 420))
         Dialog.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Disabled, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Disabled, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Active, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Selected, QtGui.QIcon.On)
+        Dialog.setWindowIcon(icon)
+        Dialog.setStyleSheet("background-color:#d8d8d8;")
+        self.widget = QtWidgets.QWidget(Dialog)
+        self.widget.setGeometry(QtCore.QRect(0, 190, 341, 190))
+        self.widget.setMinimumSize(QtCore.QSize(300, 190))
+        self.widget.setObjectName("widget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.textBrowser_datosCreador = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser_datosCreador.setObjectName("textBrowser_datosCreador")
-        self.verticalLayout.addWidget(self.textBrowser_datosCreador)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.label_2 = QtWidgets.QLabel(self.widget)
+        self.label_2.setMinimumSize(QtCore.QSize(50, 50))
+        self.label_2.setMaximumSize(QtCore.QSize(50, 50))
+        self.label_2.setBaseSize(QtCore.QSize(50, 50))
+        self.label_2.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/gmail.png);")
+        self.label_2.setText("")
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_2.addWidget(self.label_2)
+        self.bel_gmail = QtWidgets.QLabel(self.widget)
+        self.bel_gmail.setMinimumSize(QtCore.QSize(150, 20))
+        self.bel_gmail.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.bel_gmail.setStyleSheet("font-family: TamilSangamMN;\n"
+"font-size: 13px;")
+        self.bel_gmail.setOpenExternalLinks(False)
+        self.bel_gmail.setObjectName("bel_gmail")
+        self.horizontalLayout_2.addWidget(self.bel_gmail)
+        self.verticalLayout.addLayout(self.horizontalLayout_2)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.label = QtWidgets.QLabel(self.widget)
+        self.label.setMinimumSize(QtCore.QSize(50, 50))
+        self.label.setMaximumSize(QtCore.QSize(50, 50))
+        self.label.setBaseSize(QtCore.QSize(50, 50))
+        self.label.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/likedin.png);")
+        self.label.setText("")
+        self.label.setObjectName("label")
+        self.horizontalLayout.addWidget(self.label)
+        self.bel_likedin = QtWidgets.QLabel(self.widget)
+        self.bel_likedin.setMinimumSize(QtCore.QSize(150, 20))
+        self.bel_likedin.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.bel_likedin.setStyleSheet("font-family: TamilSangamMN;\n"
+"font-size: 13px;")
+        self.bel_likedin.setOpenExternalLinks(True)
+        self.bel_likedin.setObjectName("bel_likedin")
+        self.horizontalLayout.addWidget(self.bel_likedin)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.label_3 = QtWidgets.QLabel(self.widget)
+        self.label_3.setMinimumSize(QtCore.QSize(50, 50))
+        self.label_3.setMaximumSize(QtCore.QSize(50, 50))
+        self.label_3.setBaseSize(QtCore.QSize(50, 50))
+        self.label_3.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/github.png);")
+        self.label_3.setText("")
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_3.addWidget(self.label_3)
+        self.bel_github = QtWidgets.QLabel(self.widget)
+        self.bel_github.setMinimumSize(QtCore.QSize(150, 20))
+        self.bel_github.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.bel_github.setStyleSheet("font-family: TamilSangamMN;\n"
+"font-size: 13px;")
+        self.bel_github.setOpenExternalLinks(True)
+        self.bel_github.setObjectName("bel_github")
+        self.horizontalLayout_3.addWidget(self.bel_github)
+        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        self.bel_fotoProgramador = QtWidgets.QLabel(Dialog)
+        self.bel_fotoProgramador.setGeometry(QtCore.QRect(160, 10, 180, 175))
+        self.bel_fotoProgramador.setMinimumSize(QtCore.QSize(180, 175))
+        self.bel_fotoProgramador.setMaximumSize(QtCore.QSize(200, 200))
+        self.bel_fotoProgramador.setBaseSize(QtCore.QSize(180, 175))
+        self.bel_fotoProgramador.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/yoMero2.jpg);\n"
+"border-radius:87%;")
+        self.bel_fotoProgramador.setText("")
+        self.bel_fotoProgramador.setObjectName("bel_fotoProgramador")
+        self.textBrowser_repositorio = QtWidgets.QTextBrowser(Dialog)
+        self.textBrowser_repositorio.setGeometry(QtCore.QRect(20, 380, 300, 30))
+        self.textBrowser_repositorio.setMinimumSize(QtCore.QSize(300, 30))
+        self.textBrowser_repositorio.setStyleSheet("font-family: TamilSangamMN;\n"
+"border: 1px solid #d8d8d8;\n"
+"font-size: 13px;\n"
+"\n"
+"\n"
+"/*\n"
+"CON LINK:\n"
+"\n"
+"<span style=\" font-size:13px;font-family: TamilSangamMN;\">Repositorio de todo el proyecto</span></p>\n"
+"<span style=\" font-size:13px;\n"
+"font-family: TamilSangamMN;\">  <a href=\"{repositorio_link}\"  style=\"color:black;\"> <b> IoT Domotica <\\b> </a></span>\n"
+"\n"
+"SIN LINK:\n"
+"\n"
+"<span style=\" font-size:13px;font-family: TamilSangamMN;\">Repositorio de todo el proyecto</span></p>\n"
+"<span style=\" font-size:13px;\n"
+"font-family: TamilSangamMN;\">  <a href=\"{repositorio_link}\"  style=\"color:black;text-decoration:none;\"> <b> IoT Domotica <\\b> </a></span>\n"
+"\n"
+"*/\n"
+"")
+        self.textBrowser_repositorio.setObjectName("textBrowser_repositorio")
+        self.textBrowser_nombreProgra = QtWidgets.QTextBrowser(Dialog)
+        self.textBrowser_nombreProgra.setGeometry(QtCore.QRect(10, 50, 141, 70))
+        self.textBrowser_nombreProgra.setMinimumSize(QtCore.QSize(140, 70))
+        self.textBrowser_nombreProgra.setStyleSheet("font-family: TamilSangamMN;\n"
+"border: 1px solid #d8d8d8;\n"
+"font-size: 13px;\n"
+"\n"
+"/*\n"
+"<p align=\"center\">\n"
+"<span style=\"font-size:13px; font-family:TamilSangamMN; style=\'text-align:center\">Desarrollador</span>\n"
+"<br>\n"
+"<span style=\"font-size:16px;font-family: TamilSangamMN;text-align:center;\"><b>Roni Hernández</b></span>\n"
+"</p>\n"
+"*/")
+        self.textBrowser_nombreProgra.setObjectName("textBrowser_nombreProgra")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.textBrowser_datosCreador.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        Dialog.setWindowTitle(_translate("Dialog", "RoniHernandez99/IoT_domotica"))
+        self.bel_gmail.setText(_translate("Dialog", "Roni Hernandez"))
+        self.bel_likedin.setText(_translate("Dialog", "Roni Hernandez"))
+        self.bel_github.setText(_translate("Dialog", "Roni Hernandez"))
+        self.textBrowser_repositorio.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<h1 style=\" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">Programador: Roni Hernandez </span></h1>\n"
-"<h1 align=\"center\" style=\" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/yoMero.jpg\" /><span style=\" font-size:8pt; font-weight:600;\"> </span></h1>\n"
-"<h3 style=\" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">Gmail:ronaldo.runing.r@gmail.com </span></h3>\n"
-"<h3 style=\" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">Liked in: </span><a href=\"https://www.linkedin.com/in/roni-hern%C3%A1ndez-613a62173/\"><span style=\" font-size:8pt; font-weight:600; text-decoration: underline; color:#0000ff;\">Roni Hernández </span></a></h3>\n"
-"<h3 style=\" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">Github: </span><a href=\"https://github.com/RoniHernandez99\"><span style=\" font-size:8pt; font-weight:600; text-decoration: underline; color:#0000ff;\">RoniHernandez99 </span></a></h3>\n"
-"<h3 style=\" margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">Repositorio de todo el proyecto: </span><a href=\"https://github.com/RoniHernandez99\"><span style=\" font-size:8pt; font-weight:600; text-decoration: underline; color:#0000ff;\">IoT_domotica </span></a></h3></body></html>"))
+"</style></head><body style=\" font-family:\'TamilSangamMN\'; font-size:13px; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:13px;\">Repositorio de todo el proyecto </span><a href=\"{repositorio_link}\"><span style=\" font-size:13px; font-weight:600; text-decoration: underline; color:#000000;\">IoT Domotica </span></a></p></body></html>"))
+        self.textBrowser_nombreProgra.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'TamilSangamMN\'; font-size:13px; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:13px;\">Desarrollador <br /></span><span style=\" font-size:16px; font-weight:600;\">Roni Hernández</span><span style=\" font-size:13px;\"> </span></p></body></html>"))
 import IMAG_rc

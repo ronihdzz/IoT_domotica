@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>354</width>
-    <height>200</height>
+    <height>215</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -23,7 +23,7 @@
    <string>RoniHernandez99/IoT_domotica </string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../../IMAG.qrc">
+   <iconset>
     <normaloff>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/IoT_domotica.png</normaloff>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/IoT_domotica.png</iconset>
   </property>
   <property name="windowOpacity">
@@ -31,6 +31,10 @@
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #d8d8d8;
+</string>
   </property>
   <property name="windowFilePath">
    <string/>
@@ -61,11 +65,16 @@
      </property>
      <property name="font">
       <font>
-       <pointsize>14</pointsize>
+       <family>TamilSangamMN</family>
+       <pointsize>-1</pointsize>
       </font>
      </property>
      <property name="layoutDirection">
       <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  font-family: TamilSangamMN;
+  font-size: 20px;</string>
      </property>
      <property name="text">
       <string>Prender ventilador a partir de los:</string>

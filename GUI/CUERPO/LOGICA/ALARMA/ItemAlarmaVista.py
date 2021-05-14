@@ -28,6 +28,8 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
 
     senal_alarmaQuiereEdicion=pyqtSignal(str)#indicara el nombre de la  alarma que quiere ser editada...
     #nombreAlarma
+
+    
     
 
     def __init__(self,id):
@@ -46,6 +48,7 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
         self.textEdit_alarma.setReadOnly(True)
         self.hoSli_estado.valueChanged.connect(self.activarDesactivarAlarma)
         self.hoSli_estado.setValue(1)
+        self.textEdit_alarma.setStyleSheet("border:1px solid #C4C8C0;")
     
     def cargarAlarma(self,alarma):
         '''
@@ -61,6 +64,7 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
         horaAlarma.setHMS(alarma.horaAlarma.hora,alarma.horaAlarma.minuto,0)
         horaAlarma=horaAlarma.toString("hh:mm")
         print("HORA:",horaAlarma)
+        
         
         self.textEdit_alarma.setText("""<h1>{}  </h1>
         <h3>{}: {}</h3>

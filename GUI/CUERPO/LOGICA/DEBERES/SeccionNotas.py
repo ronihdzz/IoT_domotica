@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QMainWindow, QTextEdit, QAction, QApplication,QSpinB
 from PyQt5.QtGui import QIcon,QFont
 
 from PyQt5.Qt import QSizePolicy,Qt
+from PyQt5 import QtCore
 
 
 
@@ -72,10 +73,13 @@ class SeccionNotas(QMainWindow,HuellaAplicacion):
         #exitAct.setShortcut('Ctrl+Q')
         #exitAct.setStatusTip('Exit application')
         #exitAct.triggered.connect(self.close)
-
+        #QtCore.Qt.LeftToolBarArea
         self.statusBar() 
-        toolbar = self.addToolBar('Menu')
+        toolbar = self.addToolBar('Edicion')
+        self.addToolBar(QtCore.Qt.BottomToolBarArea,toolbar)
+        toolbar.setStyleSheet("QToolButton:checked {background-color:#94DCD3; border:none; } ")
         toolbar.setMovable(False)
+        toolbar.setOrientation(QtCore.Qt.Horizontal)
 
         toolbar.addWidget(self.get_expansorWidget() )    
         toolbar.addAction(self.alineacion_izquierda)
@@ -138,6 +142,26 @@ class SeccionNotas(QMainWindow,HuellaAplicacion):
 
 
         self.scroll = QScrollArea()     # Scroll Area which contains the widgets, set as the centralWidget
+        self.scroll.setStyleSheet("""
+                            *{
+                            border:none;
+                            background:#FFFFFF;
+                            }
+                            QScrollArea{
+                                border-radius:20%;
+                                padding:10px;
+                                margin-bottom:15px;
+                            }
+                            QScrollBar{
+                            background : rgb(170, 255, 255);
+                            }
+                            QScrollBar::handle{
+                            background :#979797;
+                            }
+                            QScrollBar::handle::pressed{
+                            background :  #193b58;
+                            }
+        """) #sin borde
         self.widget = QWidget()         # Widget that contains the collection of Vertical Box
         self.vbox = QVBoxLayout()       # The Vertical Box that contains the Horizontal Boxes of  labels and buttons
 

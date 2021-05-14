@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>418</width>
-    <height>392</height>
+    <width>537</width>
+    <height>215</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -23,7 +23,7 @@
    <string>RoniHernandez99/IoT_domotica </string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../../../IMAG.qrc">
+   <iconset>
     <normaloff>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/IoT_domotica.png</normaloff>:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/IoT_domotica.png</iconset>
   </property>
   <property name="windowOpacity">
@@ -33,7 +33,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);
+   <string notr="true">background-color: #d8d8d8;
 </string>
   </property>
   <property name="windowFilePath">
@@ -48,61 +48,49 @@
   <property name="modal">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QLabel" name="label_2">
-     <property name="minimumSize">
-      <size>
-       <width>330</width>
-       <height>80</height>
-      </size>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>36</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>¡Alerta!</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_3">
-     <property name="minimumSize">
-      <size>
-       <width>400</width>
-       <height>80</height>
-      </size>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>36</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Fuego detectado</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </item>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="leftMargin">
+      <number>30</number>
+     </property>
+     <property name="topMargin">
+      <number>30</number>
+     </property>
+     <property name="rightMargin">
+      <number>30</number>
+     </property>
+     <property name="bottomMargin">
+      <number>30</number>
+     </property>
      <item>
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="label_3">
        <property name="minimumSize">
         <size>
-         <width>10</width>
-         <height>0</height>
+         <width>300</width>
+         <height>70</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>TamilSangamMN</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">  opacity: 0.99;
+  font-family: TamilSangamMN;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f3705a;</string>
+       </property>
        <property name="text">
-        <string/>
+        <string>¡Fuego detectado!</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
@@ -110,8 +98,8 @@
       <widget class="QLabel" name="label">
        <property name="minimumSize">
         <size>
-         <width>200</width>
-         <height>200</height>
+         <width>137</width>
+         <height>137</height>
         </size>
        </property>
        <property name="maximumSize">

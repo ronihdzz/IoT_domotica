@@ -45,6 +45,8 @@ class ItemDeber(QtWidgets.QWidget,Ui_Form):
         #self.textEdit_deber.setMSize(30,30)
         self.estadoDeber.toggled.connect( self.verificarCumplio_deber )
 
+        self.lineEdit_deber.setStyleSheet("border:1px solid #C4C8C0;")
+
 
     def alinear(self,idAlineo):
         if idAlineo==0:

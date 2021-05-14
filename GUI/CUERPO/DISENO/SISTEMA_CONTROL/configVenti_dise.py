@@ -15,12 +15,16 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.setWindowModality(QtCore.Qt.NonModal)
-        Dialog.resize(354, 200)
+        Dialog.resize(354, 215)
         Dialog.setMouseTracking(False)
         Dialog.setAcceptDrops(False)
-        Dialog.setWindowTitle("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/IoT_domotica.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Dialog.setWindowIcon(icon)
         Dialog.setWindowOpacity(1.0)
         Dialog.setAutoFillBackground(False)
+        Dialog.setStyleSheet("background-color: #d8d8d8;\n"
+"")
         Dialog.setWindowFilePath("")
         Dialog.setInputMethodHints(QtCore.Qt.ImhNone)
         Dialog.setSizeGripEnabled(False)
@@ -31,9 +35,12 @@ class Ui_Dialog(object):
         self.label.setMinimumSize(QtCore.QSize(0, 50))
         self.label.setMaximumSize(QtCore.QSize(16777215, 50))
         font = QtGui.QFont()
-        font.setPointSize(14)
+        font.setFamily("TamilSangamMN")
+        font.setPointSize(-1)
         self.label.setFont(font)
         self.label.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label.setStyleSheet("  font-family: TamilSangamMN;\n"
+"  font-size: 20px;")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
@@ -138,6 +145,7 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "RoniHernandez99/IoT_domotica "))
         self.label.setText(_translate("Dialog", "Prender ventilador a partir de los:"))
         self.label_2.setText(_translate("Dialog", "°[C]"))
         self.btn_guardarSalir.setText(_translate("Dialog", "GUARDAR"))
