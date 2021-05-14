@@ -114,7 +114,7 @@ class AdministradorAlarmas(QMainWindow,HuellaAplicacion):
                             margin-bottom:15px;
                         }
                         QScrollBar{
-                        background : rgb(170, 255, 255);
+                        background:#F7E5E5;
                         }
                         QScrollBar::handle{
                         background :#979797;

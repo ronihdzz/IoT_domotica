@@ -14,8 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(350, 420)
-        Dialog.setMinimumSize(QtCore.QSize(350, 420))
+        Dialog.resize(380, 440)
+        Dialog.setMinimumSize(QtCore.QSize(380, 440))
         Dialog.setMaximumSize(QtCore.QSize(16777215, 16777215))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -28,20 +28,59 @@ class Ui_Dialog(object):
         icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Selected, QtGui.QIcon.On)
         Dialog.setWindowIcon(icon)
         Dialog.setStyleSheet("background-color:#d8d8d8;")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(Dialog)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem)
+        self.textBrowser_nombreProgra = QtWidgets.QTextBrowser(Dialog)
+        self.textBrowser_nombreProgra.setMinimumSize(QtCore.QSize(170, 70))
+        self.textBrowser_nombreProgra.setMaximumSize(QtCore.QSize(170, 70))
+        self.textBrowser_nombreProgra.setStyleSheet("font-family: TamilSangamMN;\n"
+"border: 1px solid #d8d8d8;\n"
+"font-size: 13px;\n"
+"\n"
+"/*\n"
+"<p align=\"center\">\n"
+"<span style=\"font-size:13px; font-family:TamilSangamMN; style=\'text-align:center\">Desarrollador</span>\n"
+"<br>\n"
+"<span style=\"font-size:16px;font-family: TamilSangamMN;text-align:center;\"><b>Roni Hernández</b></span>\n"
+"</p>\n"
+"*/")
+        self.textBrowser_nombreProgra.setObjectName("textBrowser_nombreProgra")
+        self.verticalLayout_2.addWidget(self.textBrowser_nombreProgra)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem1)
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.verticalLayout_2.addLayout(self.verticalLayout_3)
+        self.horizontalLayout_4.addLayout(self.verticalLayout_2)
+        self.bel_fotoProgramador = QtWidgets.QLabel(Dialog)
+        self.bel_fotoProgramador.setMinimumSize(QtCore.QSize(180, 175))
+        self.bel_fotoProgramador.setMaximumSize(QtCore.QSize(200, 200))
+        self.bel_fotoProgramador.setBaseSize(QtCore.QSize(180, 175))
+        self.bel_fotoProgramador.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/yoMero2.jpg);\n"
+"border-radius:87%;")
+        self.bel_fotoProgramador.setText("")
+        self.bel_fotoProgramador.setObjectName("bel_fotoProgramador")
+        self.horizontalLayout_4.addWidget(self.bel_fotoProgramador)
+        self.verticalLayout_4.addLayout(self.horizontalLayout_4)
         self.widget = QtWidgets.QWidget(Dialog)
-        self.widget.setGeometry(QtCore.QRect(0, 190, 341, 190))
         self.widget.setMinimumSize(QtCore.QSize(300, 190))
         self.widget.setObjectName("widget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label_2 = QtWidgets.QLabel(self.widget)
-        self.label_2.setMinimumSize(QtCore.QSize(50, 50))
+        self.label_2.setMinimumSize(QtCore.QSize(60, 50))
         self.label_2.setMaximumSize(QtCore.QSize(50, 50))
         self.label_2.setBaseSize(QtCore.QSize(50, 50))
-        self.label_2.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/gmail.png);")
+        self.label_2.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/gmail.png);\n"
+"margin-left:10px;")
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
         self.horizontalLayout_2.addWidget(self.label_2)
@@ -57,10 +96,11 @@ class Ui_Dialog(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.label = QtWidgets.QLabel(self.widget)
-        self.label.setMinimumSize(QtCore.QSize(50, 50))
+        self.label.setMinimumSize(QtCore.QSize(60, 50))
         self.label.setMaximumSize(QtCore.QSize(50, 50))
         self.label.setBaseSize(QtCore.QSize(50, 50))
-        self.label.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/likedin.png);")
+        self.label.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/likedin.png);\n"
+"margin-left:10px;")
         self.label.setText("")
         self.label.setObjectName("label")
         self.horizontalLayout.addWidget(self.label)
@@ -76,10 +116,11 @@ class Ui_Dialog(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.label_3 = QtWidgets.QLabel(self.widget)
-        self.label_3.setMinimumSize(QtCore.QSize(50, 50))
+        self.label_3.setMinimumSize(QtCore.QSize(60, 50))
         self.label_3.setMaximumSize(QtCore.QSize(50, 50))
         self.label_3.setBaseSize(QtCore.QSize(50, 50))
-        self.label_3.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/github.png);")
+        self.label_3.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/github.png);\n"
+"margin-left:10px;")
         self.label_3.setText("")
         self.label_3.setObjectName("label_3")
         self.horizontalLayout_3.addWidget(self.label_3)
@@ -92,21 +133,16 @@ class Ui_Dialog(object):
         self.bel_github.setObjectName("bel_github")
         self.horizontalLayout_3.addWidget(self.bel_github)
         self.verticalLayout.addLayout(self.horizontalLayout_3)
-        self.bel_fotoProgramador = QtWidgets.QLabel(Dialog)
-        self.bel_fotoProgramador.setGeometry(QtCore.QRect(160, 10, 180, 175))
-        self.bel_fotoProgramador.setMinimumSize(QtCore.QSize(180, 175))
-        self.bel_fotoProgramador.setMaximumSize(QtCore.QSize(200, 200))
-        self.bel_fotoProgramador.setBaseSize(QtCore.QSize(180, 175))
-        self.bel_fotoProgramador.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/yoMero2.jpg);\n"
-"border-radius:87%;")
-        self.bel_fotoProgramador.setText("")
-        self.bel_fotoProgramador.setObjectName("bel_fotoProgramador")
+        self.verticalLayout_4.addWidget(self.widget)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem2)
         self.textBrowser_repositorio = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser_repositorio.setGeometry(QtCore.QRect(20, 380, 300, 30))
-        self.textBrowser_repositorio.setMinimumSize(QtCore.QSize(300, 30))
+        self.textBrowser_repositorio.setMinimumSize(QtCore.QSize(340, 30))
+        self.textBrowser_repositorio.setMaximumSize(QtCore.QSize(16777215, 30))
         self.textBrowser_repositorio.setStyleSheet("font-family: TamilSangamMN;\n"
 "border: 1px solid #d8d8d8;\n"
 "font-size: 13px;\n"
+"margin-left:10px;\n"
 "\n"
 "\n"
 "/*\n"
@@ -125,21 +161,7 @@ class Ui_Dialog(object):
 "*/\n"
 "")
         self.textBrowser_repositorio.setObjectName("textBrowser_repositorio")
-        self.textBrowser_nombreProgra = QtWidgets.QTextBrowser(Dialog)
-        self.textBrowser_nombreProgra.setGeometry(QtCore.QRect(10, 50, 141, 70))
-        self.textBrowser_nombreProgra.setMinimumSize(QtCore.QSize(140, 70))
-        self.textBrowser_nombreProgra.setStyleSheet("font-family: TamilSangamMN;\n"
-"border: 1px solid #d8d8d8;\n"
-"font-size: 13px;\n"
-"\n"
-"/*\n"
-"<p align=\"center\">\n"
-"<span style=\"font-size:13px; font-family:TamilSangamMN; style=\'text-align:center\">Desarrollador</span>\n"
-"<br>\n"
-"<span style=\"font-size:16px;font-family: TamilSangamMN;text-align:center;\"><b>Roni Hernández</b></span>\n"
-"</p>\n"
-"*/")
-        self.textBrowser_nombreProgra.setObjectName("textBrowser_nombreProgra")
+        self.verticalLayout_4.addWidget(self.textBrowser_repositorio)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -147,6 +169,11 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "RoniHernandez99/IoT_domotica"))
+        self.textBrowser_nombreProgra.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'TamilSangamMN\'; font-size:13px; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:13px;\">Desarrollador <br /></span><span style=\" font-size:16px; font-weight:600;\">Roni Hernández</span><span style=\" font-size:13px;\"> </span></p></body></html>"))
         self.bel_gmail.setText(_translate("Dialog", "Roni Hernandez"))
         self.bel_likedin.setText(_translate("Dialog", "Roni Hernandez"))
         self.bel_github.setText(_translate("Dialog", "Roni Hernandez"))
@@ -155,9 +182,4 @@ class Ui_Dialog(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'TamilSangamMN\'; font-size:13px; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:13px;\">Repositorio de todo el proyecto </span><a href=\"{repositorio_link}\"><span style=\" font-size:13px; font-weight:600; text-decoration: underline; color:#000000;\">IoT Domotica </span></a></p></body></html>"))
-        self.textBrowser_nombreProgra.setHtml(_translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'TamilSangamMN\'; font-size:13px; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:13px;\">Desarrollador <br /></span><span style=\" font-size:16px; font-weight:600;\">Roni Hernández</span><span style=\" font-size:13px;\"> </span></p></body></html>"))
 import IMAG_rc

@@ -77,7 +77,7 @@ class SeccionNotas(QMainWindow,HuellaAplicacion):
         self.statusBar() 
         toolbar = self.addToolBar('Edicion')
         self.addToolBar(QtCore.Qt.BottomToolBarArea,toolbar)
-        toolbar.setStyleSheet("QToolButton:checked {background-color:#94DCD3; border:none; } ")
+        toolbar.setStyleSheet(" *{background:#d8d8d8; border:none} QToolButton:checked {background-color:#94DCD3; border:none; } ")
         toolbar.setMovable(False)
         toolbar.setOrientation(QtCore.Qt.Horizontal)
 
@@ -95,6 +95,58 @@ class SeccionNotas(QMainWindow,HuellaAplicacion):
         toolbar.addWidget( self.get_separadorQAction() )
 
         self.spinBox_tam= QSpinBox()
+        self.spinBox_tam.setStyleSheet("""
+        QSpinBox {
+            padding-right: 15px; /* make room for the arrows */
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/frame.png) 4;
+            border-width: 3;
+        }
+        QSpinBox::up-button {
+            subcontrol-origin: border;
+            subcontrol-position: top right; /* position at the top right corner */
+            width: 16px; /* 16 + 2*1px border-width = 15px padding + 3px parent border */
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup.png) 1;
+            border-width: 1px;
+        }
+        QSpinBox::up-button:hover {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup_hover.png) 1;
+        }
+        QSpinBox::up-button:pressed {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup_pressed.png) 1;
+        }
+        QSpinBox::up-arrow {
+            image: url(:/PYQT5/IMAGENES/pyqt5/up_arrow.png);
+            width: 7px;
+            height: 7px;
+        }
+        QSpinBox::up-arrow:disabled, QSpinBox::up-arrow:off { /* off state when value is max */
+        image: url(:/PYQT5/IMAGENES/pyqt5/up_arrow_disabled.png);
+        }
+        QSpinBox::down-button {
+            subcontrol-origin: border;
+            subcontrol-position: bottom right; /* position at bottom right corner */
+            width: 16px;
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spindown.png) 1;
+            border-width: 1px;
+            border-top-width: 0;
+        }
+        QSpinBox::down-button:hover {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spindown_hover.png) 1;
+        }
+        QSpinBox::down-button:pressed {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spindown_pressed.png) 1;
+        }
+        QSpinBox::down-arrow {
+            image: url(:/PYQT5/IMAGENES/pyqt5/down_arrow.png);
+            width: 7px;
+            height: 7px;
+        }
+        QSpinBox::down-arrow:disabled,
+        QSpinBox::down-arrow:off { /* off state when value in min */
+        image: url(:/images/down_arrow_disabled.png);
+        }
+        """)
+
         toolbar.addWidget(self.spinBox_tam)
         self.spinBox_tam.setMinimumSize(60,30)
         self.spinBox_tam.setFont(QFont('Arial', 12))
@@ -125,9 +177,6 @@ class SeccionNotas(QMainWindow,HuellaAplicacion):
         self.setGeometry(300, 300, 350, 250)
         #self.setWindowTitle('Main window')
         self.show()
-
-
-
         
 
         # adding triggered action to the first action
@@ -153,7 +202,7 @@ class SeccionNotas(QMainWindow,HuellaAplicacion):
                                 margin-bottom:15px;
                             }
                             QScrollBar{
-                            background : rgb(170, 255, 255);
+                            background:#F7E5E5;
                             }
                             QScrollBar::handle{
                             background :#979797;
@@ -182,7 +231,7 @@ class SeccionNotas(QMainWindow,HuellaAplicacion):
         self.spinBox_tam.setValue(self.TAMANO_LETRA)
         self.spinBox_tam.setMinimum(10)
         self.spinBox_tam.setMaximum(25)
-        toolbar.setContentsMargins(0,5,0,0) #arriba,abajo,izquierda,derecha
+        toolbar.setContentsMargins(0,0,0,0) #arriba,abajo,izquierda,derecha
 
         self.cargarDeberes()
 

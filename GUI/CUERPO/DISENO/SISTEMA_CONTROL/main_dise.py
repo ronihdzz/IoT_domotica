@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\mainNew3_dise.ui'
+# Form implementation generated from reading ui file '.\main_dise.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -14,7 +14,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(900, 478)
+        Form.resize(940, 470)
+        Form.setMinimumSize(QtCore.QSize(940, 470))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         icon.addPixmap(QtGui.QPixmap(":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
@@ -38,10 +39,11 @@ class Ui_Form(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.widget = QtWidgets.QWidget(Form)
         self.widget.setEnabled(True)
-        self.widget.setMinimumSize(QtCore.QSize(320, 420))
+        self.widget.setMinimumSize(QtCore.QSize(350, 420))
         self.widget.setMaximumSize(QtCore.QSize(300, 16777215))
         self.widget.setObjectName("widget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout.setContentsMargins(-1, -1, 9, -1)
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_10.setObjectName("horizontalLayout_10")
@@ -65,18 +67,9 @@ class Ui_Form(object):
         font.setItalic(False)
         font.setWeight(50)
         self.bel_temp.setFont(font)
-        self.bel_temp.setStyleSheet("  width: 48px;\n"
-"  height: 17px;\n"
-" /* margin: 0 14px 10px 0;*/\n"
-"  font-family: LucidaGrande;\n"
-"  font-size: 14px;\n"
-"  font-weight: normal;\n"
-"  font-stretch: normal;\n"
-"  font-style: normal;\n"
-"  line-height: normal;\n"
-"  letter-spacing: normal;\n"
-"  color: #ffffff;\n"
-"")
+        self.bel_temp.setStyleSheet("font-family: LucidaGrande;\n"
+"font-size: 15px;\n"
+"color: #ffffff;")
         self.bel_temp.setAlignment(QtCore.Qt.AlignCenter)
         self.bel_temp.setObjectName("bel_temp")
         self.horizontalLayout_11.addWidget(self.bel_temp)
@@ -92,18 +85,9 @@ class Ui_Form(object):
         font.setItalic(False)
         font.setWeight(50)
         self.label_11.setFont(font)
-        self.label_11.setStyleSheet("  width: 48px;\n"
-"  height: 17px;\n"
-"  /*margin: 0 14px 10px 0;*/\n"
-"  font-family: LucidaGrande;\n"
-"  font-size: 14px;\n"
-"  font-weight: normal;\n"
-"  font-stretch: normal;\n"
-"  font-style: normal;\n"
-"  line-height: normal;\n"
-"  letter-spacing: normal;\n"
-"  color: #ffffff;\n"
-"")
+        self.label_11.setStyleSheet("font-family: LucidaGrande;\n"
+"font-size: 15px;\n"
+"color: #ffffff;")
         self.label_11.setAlignment(QtCore.Qt.AlignCenter)
         self.label_11.setObjectName("label_11")
         self.horizontalLayout_11.addWidget(self.label_11)
@@ -267,7 +251,7 @@ class Ui_Form(object):
         self.rb_controlManual.setObjectName("rb_controlManual")
         self.verticalLayout_5.addWidget(self.rb_controlManual, 0, QtCore.Qt.AlignHCenter)
         self.label_6 = QtWidgets.QLabel(self.widget)
-        self.label_6.setMinimumSize(QtCore.QSize(70, 20))
+        self.label_6.setMinimumSize(QtCore.QSize(100, 20))
         self.label_6.setMaximumSize(QtCore.QSize(70, 20))
         font = QtGui.QFont()
         font.setFamily("LucidaGrande")
@@ -276,18 +260,9 @@ class Ui_Form(object):
         font.setItalic(False)
         font.setWeight(50)
         self.label_6.setFont(font)
-        self.label_6.setStyleSheet("\n"
-"  width: 35px;\n"
-"  height: 12px;\n"
-"  /*margin: 3px 8px 0 0;*/\n"
-"  font-family: LucidaGrande;\n"
-"  font-size: 10px;\n"
-"  font-weight: normal;\n"
-"  font-stretch: normal;\n"
-"  font-style: normal;\n"
-"  line-height: normal;\n"
-"  letter-spacing: normal;\n"
-"  color: #ffffff;")
+        self.label_6.setStyleSheet("font-family: LucidaGrande;\n"
+"font-size: 15px;\n"
+"color: #ffffff;")
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setObjectName("label_6")
         self.verticalLayout_5.addWidget(self.label_6)
@@ -327,7 +302,7 @@ class Ui_Form(object):
         self.rb_controlAutomatico.setObjectName("rb_controlAutomatico")
         self.verticalLayout_6.addWidget(self.rb_controlAutomatico, 0, QtCore.Qt.AlignHCenter)
         self.label_10 = QtWidgets.QLabel(self.widget)
-        self.label_10.setMinimumSize(QtCore.QSize(70, 20))
+        self.label_10.setMinimumSize(QtCore.QSize(100, 20))
         self.label_10.setMaximumSize(QtCore.QSize(70, 20))
         font = QtGui.QFont()
         font.setFamily("LucidaGrande")
@@ -336,18 +311,9 @@ class Ui_Form(object):
         font.setItalic(False)
         font.setWeight(50)
         self.label_10.setFont(font)
-        self.label_10.setStyleSheet("\n"
-"  width: 35px;\n"
-"  height: 12px;\n"
-"  /*margin: 3px 8px 0 0;*/\n"
-"  font-family: LucidaGrande;\n"
-"  font-size: 10px;\n"
-"  font-weight: normal;\n"
-"  font-stretch: normal;\n"
-"  font-style: normal;\n"
-"  line-height: normal;\n"
-"  letter-spacing: normal;\n"
-"  color: #ffffff;")
+        self.label_10.setStyleSheet("font-family: LucidaGrande;\n"
+"font-size: 15px;\n"
+"color: #ffffff;")
         self.label_10.setAlignment(QtCore.Qt.AlignCenter)
         self.label_10.setObjectName("label_10")
         self.verticalLayout_6.addWidget(self.label_10)
@@ -355,7 +321,7 @@ class Ui_Form(object):
         self.verticalLayout.addLayout(self.horizontalLayout_14)
         self.horizontalLayout_3.addWidget(self.widget)
         self.widget_alarmasNotas = QtWidgets.QWidget(Form)
-        self.widget_alarmasNotas.setMinimumSize(QtCore.QSize(430, 410))
+        self.widget_alarmasNotas.setMinimumSize(QtCore.QSize(410, 410))
         self.widget_alarmasNotas.setStyleSheet("#widget_alarmasNotas{\n"
 "margin:0px;\n"
 "background-color:#d8d8d8;\n"
@@ -433,10 +399,11 @@ class Ui_Form(object):
         self.verticalLayout_2.addWidget(self.stack_notas)
         self.horizontalLayout_3.addWidget(self.widget_alarmasNotas)
         self.widget_2 = QtWidgets.QWidget(Form)
-        self.widget_2.setMinimumSize(QtCore.QSize(120, 0))
+        self.widget_2.setMinimumSize(QtCore.QSize(130, 0))
         self.widget_2.setMaximumSize(QtCore.QSize(200, 16777215))
         self.widget_2.setObjectName("widget_2")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.widget_2)
+        self.verticalLayout_4.setContentsMargins(0, -1, -1, -1)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.widget_3 = QtWidgets.QWidget(self.widget_2)
         self.widget_3.setMinimumSize(QtCore.QSize(100, 160))
@@ -594,7 +561,7 @@ class Ui_Form(object):
         self.horizontalLayout_15 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_15.setObjectName("horizontalLayout_15")
         self.btn_configVenti = QtWidgets.QPushButton(self.widget_5)
-        self.btn_configVenti.setMinimumSize(QtCore.QSize(52, 21))
+        self.btn_configVenti.setMinimumSize(QtCore.QSize(70, 21))
         self.btn_configVenti.setMaximumSize(QtCore.QSize(100, 40))
         self.btn_configVenti.setBaseSize(QtCore.QSize(52, 21))
         font = QtGui.QFont()
@@ -606,7 +573,7 @@ class Ui_Form(object):
 "    border: 1px solid #DAE7E7;\n"
 "    border-radius: 7px;\n"
 "  font-family: LucidaGrande;\n"
-"  font-size: 11px;\n"
+"  font-size: 15px;\n"
 "  color:black;\n"
 "\n"
 "\n"
@@ -618,7 +585,7 @@ class Ui_Form(object):
 "   border: 1px solid #B1BCBC;\n"
 "    border-radius: 7px;\n"
 "  font-family: LucidaGrande;\n"
-"  font-size: 11px;\n"
+"  font-size: 15px;\n"
 " color:black;\n"
 "\n"
 "}\n"
@@ -628,7 +595,7 @@ class Ui_Form(object):
 "    border: 1px solid #B8C0C0;\n"
 "    border-radius: 7px;\n"
 "  font-family: LucidaGrande;\n"
-"  font-size: 11px;\n"
+"  font-size: 15px;\n"
 "  color:black;\n"
 "\n"
 "}\n"

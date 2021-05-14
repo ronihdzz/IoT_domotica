@@ -48,7 +48,7 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
         self.textEdit_alarma.setReadOnly(True)
         self.hoSli_estado.valueChanged.connect(self.activarDesactivarAlarma)
         self.hoSli_estado.setValue(1)
-        self.textEdit_alarma.setStyleSheet("border:1px solid #C4C8C0;")
+        self.textEdit_alarma.setStyleSheet("border:1px solid #C4C8C0; border-radius:10%;")
     
     def cargarAlarma(self,alarma):
         '''
@@ -66,8 +66,8 @@ class ItemAlarmaVista(QtWidgets.QWidget,Ui_Form):
         print("HORA:",horaAlarma)
         
         
-        self.textEdit_alarma.setText("""<h1>{}  </h1>
-        <h3>{}: {}</h3>
+        self.textEdit_alarma.setText("""<h2>{}  </h2>
+        <h4>{}: {}</h4>
         """.format(alarma.horaAlarma,alarma.nombre,alarma.getDias() ) )
     
     def activarDesactivarAlarma(self):

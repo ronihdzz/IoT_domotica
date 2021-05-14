@@ -63,4 +63,36 @@
     <file>IMAGENES/SISTEMA_CONTROL/ventilador_on.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/yoMero.jpg</file>
   </qresource>
+  <qresource prefix="PYQT5">
+    <file>IMAGENES/pyqt5/checkbox_checked.png</file>
+    <file>IMAGENES/pyqt5/checkbox_checked_hover.png</file>
+    <file>IMAGENES/pyqt5/checkbox_checked_pressed.png</file>
+    <file>IMAGENES/pyqt5/checkbox_unchecked.png</file>
+    <file>IMAGENES/pyqt5/checkbox_unchecked_hover.png</file>
+    <file>IMAGENES/pyqt5/checkbox_unchecked_pressed.png</file>
+    <file>IMAGENES/pyqt5/down_arrow.png</file>
+    <file>IMAGENES/pyqt5/down_arrow_disabled.png</file>
+    <file>IMAGENES/pyqt5/frame.png</file>
+    <file>IMAGENES/pyqt5/pagefold.png</file>
+    <file>IMAGENES/pyqt5/pushbutton.png</file>
+    <file>IMAGENES/pyqt5/pushbutton_hover.png</file>
+    <file>IMAGENES/pyqt5/pushbutton_pressed.png</file>
+    <file>IMAGENES/pyqt5/radiobutton_checked.png</file>
+    <file>IMAGENES/pyqt5/radiobutton_checked_hover.png</file>
+    <file>IMAGENES/pyqt5/radiobutton_checked_pressed.png</file>
+    <file>IMAGENES/pyqt5/radiobutton_unchecked.png</file>
+    <file>IMAGENES/pyqt5/radiobutton_unchecked_hover.png</file>
+    <file>IMAGENES/pyqt5/radiobutton_unchecked_pressed.png</file>
+    <file>IMAGENES/pyqt5/sizegrip.png</file>
+    <file>IMAGENES/pyqt5/spindown.png</file>
+    <file>IMAGENES/pyqt5/spindown_hover.png</file>
+    <file>IMAGENES/pyqt5/spindown_off.png</file>
+    <file>IMAGENES/pyqt5/spindown_pressed.png</file>
+    <file>IMAGENES/pyqt5/spinup.png</file>
+    <file>IMAGENES/pyqt5/spinup_hover.png</file>
+    <file>IMAGENES/pyqt5/spinup_off.png</file>
+    <file>IMAGENES/pyqt5/spinup_pressed.png</file>
+    <file>IMAGENES/pyqt5/up_arrow.png</file>
+    <file>IMAGENES/pyqt5/up_arrow_disabled.png</file>
+  </qresource>
 </RCC>

@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
-    <height>478</height>
+    <width>940</width>
+    <height>470</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>940</width>
+    <height>470</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>RoniHernandez99/IoT_domotica</string>
@@ -50,7 +56,7 @@ padding:0px
      </property>
      <property name="minimumSize">
       <size>
-       <width>320</width>
+       <width>350</width>
        <height>420</height>
       </size>
      </property>
@@ -61,6 +67,9 @@ padding:0px
       </size>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="rightMargin">
+       <number>9</number>
+      </property>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_10">
         <item>
@@ -110,18 +119,9 @@ padding:0px
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">  width: 48px;
-  height: 17px;
- /* margin: 0 14px 10px 0;*/
-  font-family: LucidaGrande;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;
-</string>
+               <string notr="true">font-family: LucidaGrande;
+font-size: 15px;
+color: #ffffff;</string>
               </property>
               <property name="text">
                <string>39.00</string>
@@ -167,18 +167,9 @@ padding:0px
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">  width: 48px;
-  height: 17px;
-  /*margin: 0 14px 10px 0;*/
-  font-family: LucidaGrande;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;
-</string>
+               <string notr="true">font-family: LucidaGrande;
+font-size: 15px;
+color: #ffffff;</string>
               </property>
               <property name="text">
                <string>[°C]</string>
@@ -577,7 +568,7 @@ QRadioButton::indicator:unchecked {
            <widget class="QLabel" name="label_6">
             <property name="minimumSize">
              <size>
-              <width>70</width>
+              <width>100</width>
               <height>20</height>
              </size>
             </property>
@@ -597,18 +588,9 @@ QRadioButton::indicator:unchecked {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">
-  width: 35px;
-  height: 12px;
-  /*margin: 3px 8px 0 0;*/
-  font-family: LucidaGrande;
-  font-size: 10px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;</string>
+             <string notr="true">font-family: LucidaGrande;
+font-size: 15px;
+color: #ffffff;</string>
             </property>
             <property name="text">
              <string>Manual</string>
@@ -687,7 +669,7 @@ QRadioButton::indicator:unchecked {
            <widget class="QLabel" name="label_10">
             <property name="minimumSize">
              <size>
-              <width>70</width>
+              <width>100</width>
               <height>20</height>
              </size>
             </property>
@@ -707,18 +689,9 @@ QRadioButton::indicator:unchecked {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">
-  width: 35px;
-  height: 12px;
-  /*margin: 3px 8px 0 0;*/
-  font-family: LucidaGrande;
-  font-size: 10px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;</string>
+             <string notr="true">font-family: LucidaGrande;
+font-size: 15px;
+color: #ffffff;</string>
             </property>
             <property name="text">
              <string>Automatico</string>
@@ -739,7 +712,7 @@ QRadioButton::indicator:unchecked {
     <widget class="QWidget" name="widget_alarmasNotas" native="true">
      <property name="minimumSize">
       <size>
-       <width>430</width>
+       <width>410</width>
        <height>410</height>
       </size>
      </property>
@@ -901,7 +874,7 @@ margin: 0px;
     <widget class="QWidget" name="widget_2" native="true">
      <property name="minimumSize">
       <size>
-       <width>120</width>
+       <width>130</width>
        <height>0</height>
       </size>
      </property>
@@ -912,6 +885,9 @@ margin: 0px;
       </size>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_4">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
       <item>
        <widget class="QWidget" name="widget_3" native="true">
         <property name="minimumSize">
@@ -1233,7 +1209,7 @@ text:&quot;roni&quot;;
             <widget class="QPushButton" name="btn_configVenti">
              <property name="minimumSize">
               <size>
-               <width>52</width>
+               <width>70</width>
                <height>21</height>
               </size>
              </property>
@@ -1261,7 +1237,7 @@ text:&quot;roni&quot;;
 	border: 1px solid #DAE7E7;
     border-radius: 7px;
   font-family: LucidaGrande;
-  font-size: 11px;
+  font-size: 15px;
   color:black;
 
 
@@ -1273,7 +1249,7 @@ QPushButton {
    border: 1px solid #B1BCBC;
     border-radius: 7px;
   font-family: LucidaGrande;
-  font-size: 11px;
+  font-size: 15px;
  color:black;
 
 }
@@ -1283,7 +1259,7 @@ QPushButton:pressed {
 	border: 1px solid #B8C0C0;
     border-radius: 7px;
   font-family: LucidaGrande;
-  font-size: 11px;
+  font-size: 15px;
   color:black;
 
 }
