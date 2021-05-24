@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>354</width>
-    <height>215</height>
+    <width>371</width>
+    <height>264</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -117,6 +117,56 @@
         <font>
          <pointsize>14</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">      QDoubleSpinBox {
+            padding-right: 15px; /* make room for the arrows */
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/frame.png) 4;
+            border-width: 3;
+        }
+        QDoubleSpinBox::up-button {
+            subcontrol-origin: border;
+            subcontrol-position: top right; /* position at the top right corner */
+            width: 16px; /* 16 + 2*1px border-width = 15px padding + 3px parent border */
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup.png) 1;
+            border-width: 1px;
+        }
+        QDoubleSpinBox::up-button:hover {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup_hover.png) 1;
+        }
+        QDoubleSpinBox::up-button:pressed {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup_pressed.png) 1;
+        }
+        QDoubleSpinBox::up-arrow {
+            image: url(:/PYQT5/IMAGENES/pyqt5/up_arrow.png);
+            width: 7px;
+            height: 7px;
+        }
+        QDoubleSpinBox::up-arrow:disabled, QSpinBox::up-arrow:off { /* off state when value is max */
+        image: url(:/PYQT5/IMAGENES/pyqt5/up_arrow_disabled.png);
+        }
+        QDoubleSpinBox::down-button {
+            subcontrol-origin: border;
+            subcontrol-position: bottom right; /* position at bottom right corner */
+            width: 16px;
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spindown.png) 1;
+            border-width: 1px;
+            border-top-width: 0;
+        }
+        QDoubleSpinBox::down-button:hover {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5spindown_hover.png) 1;
+        }
+        QDoubleSpinBox::down-button:pressed {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spindown_pressed.png) 1;
+        }
+        QDoubleSpinBox::down-arrow {
+            image: url(:/PYQT5/IMAGENES/pyqt5/down_arrow.png);
+            width: 7px;
+            height: 7px;
+        }
+        QDoubleSpinBox::down-arrow:disabled,QSpinBox::down-arrow:off { /* off state when value in min */
+        image: url(:/images/down_arrow_disabled.png);
+        }</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>

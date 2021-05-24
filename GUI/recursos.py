@@ -10,11 +10,15 @@ class App_Principal():
     ICONO_APLICACION=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.png"
     NOMBRE_APLICACION="RoniHernandez99/IoT_domotica"
     IMAGEN_SPLASH_SCREEN=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_256px.png"
+
+
+    NOMBRE_ARCHIVO_LOG='depuracionPrograma.log'
     
     @classmethod
     def actualizarUbicaciones(cls,ubicacion):
         cls.ARCHIVO_ESTADOS_SENSORES=ubicacion+cls.ARCHIVO_ESTADOS_SENSORES
         cls.SONIDO_INCENDIO=ubicacion+cls.SONIDO_INCENDIO
+        cls.NOMBRE_ARCHIVO_LOG=ubicacion+cls.NOMBRE_ARCHIVO_LOG
 
 class App_Alarmas():
 
@@ -41,7 +45,7 @@ class App_Alarmas():
 
 
 
-class App_Notas():
+class App_Deberes():
     ARCHIVO_DEBERES="CUERPO/RECURSOS/DATOS/deberes.txt"
     SEPARADOR_DEBERES='^'
 

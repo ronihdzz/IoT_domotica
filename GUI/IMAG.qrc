@@ -23,6 +23,9 @@
     <file>IMAGENES/DEBERES/plus_on.png</file>
   </qresource>
   <qresource prefix="SISTEMA_CONTROL">
+    <file>IMAGENES/SISTEMA_CONTROL/foco0a_default.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco0b_default.png</file>
+    <file>IMAGENES/SISTEMA_CONTROL/foco0c_default.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/alertaFuego.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_256px.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.png</file>
@@ -40,7 +43,6 @@
     <file>IMAGENES/SISTEMA_CONTROL/foco5_amarillo.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/foco6_magenta.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/foco7_cian.png</file>
-    <file>IMAGENES/SISTEMA_CONTROL/foco8_default.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/info_off.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/info_on.png</file>
     <file>IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_512px.png</file>

@@ -113,15 +113,23 @@ padding:0px
                <font>
                 <family>LucidaGrande</family>
                 <pointsize>-1</pointsize>
-                <weight>50</weight>
+                <weight>75</weight>
                 <italic>false</italic>
-                <bold>false</bold>
+                <bold>true</bold>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">font-family: LucidaGrande;
-font-size: 15px;
-color: #ffffff;</string>
+               <string notr="true">  font-family: LucidaGrande;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  border: 1px solid  #193b58; 
+ background-color: #193b58;
+ font-weight: bold;</string>
               </property>
               <property name="text">
                <string>39.00</string>
@@ -161,15 +169,23 @@ color: #ffffff;</string>
                <font>
                 <family>LucidaGrande</family>
                 <pointsize>-1</pointsize>
-                <weight>50</weight>
+                <weight>75</weight>
                 <italic>false</italic>
-                <bold>false</bold>
+                <bold>true</bold>
                </font>
               </property>
               <property name="styleSheet">
-               <string notr="true">font-family: LucidaGrande;
-font-size: 15px;
-color: #ffffff;</string>
+               <string notr="true">  font-family: LucidaGrande;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  border: 1px solid  #193b58; 
+ background-color: #193b58;
+ font-weight: bold;</string>
               </property>
               <property name="text">
                <string>[°C]</string>
@@ -402,7 +418,7 @@ background-color: #193b58;
   color: #ffffff;
   border: 1px solid  #193b58; 
 background-color: #193b58;
-</string>
+ /*font-weight: bold;*/</string>
         </property>
         <property name="locale">
          <locale language="Spanish" country="Mexico"/>
@@ -588,9 +604,17 @@ QRadioButton::indicator:unchecked {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font-family: LucidaGrande;
-font-size: 15px;
-color: #ffffff;</string>
+             <string notr="true">  font-family: LucidaGrande;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  border: 1px solid  #193b58; 
+background-color: #193b58;
+ /*font-weight: bold;*/</string>
             </property>
             <property name="text">
              <string>Manual</string>
@@ -689,9 +713,16 @@ QRadioButton::indicator:unchecked {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font-family: LucidaGrande;
-font-size: 15px;
-color: #ffffff;</string>
+             <string notr="true">  font-family: LucidaGrande;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  border: 1px solid  #193b58; 
+background-color: #193b58;</string>
             </property>
             <property name="text">
              <string>Automatico</string>
@@ -725,7 +756,7 @@ padding: 50px 50px 50px 50px;
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <property name="spacing">
-       <number>25</number>
+       <number>0</number>
       </property>
       <property name="sizeConstraint">
        <enum>QLayout::SetMaximumSize</enum>
@@ -742,6 +773,33 @@ padding: 50px 50px 50px 50px;
       <property name="bottomMargin">
        <number>26</number>
       </property>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">  font-family: LucidaGrande;
+  font-size: 23px;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom:20px;
+  padding:0px;</string>
+        </property>
+        <property name="text">
+         <string>ALARMAS</string>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QStackedWidget" name="stack_alarmas">
         <property name="minimumSize">
@@ -780,9 +838,12 @@ margin: 0px;
 }
 
 
-/*QWidget{
+QWidget{
 background-color: rgb(255, 255, 255);
-}*/
+margin:0px;
+padding:0px;
+background-color: #d8d8d8;
+}
 
 *{
 background-color: #d8d8d8;
@@ -802,6 +863,33 @@ margin: 0px;
         </property>
         <property name="currentIndex">
          <number>-1</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">  font-family: LucidaGrande;
+  font-size: 23px;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom:20px;
+  padding:0px;</string>
+        </property>
+        <property name="text">
+         <string>DEBERES</string>
         </property>
        </widget>
       </item>
@@ -840,9 +928,13 @@ margin: 0px;
 }
 
 
-/*QWidget{
+QWidget{
 background-color: rgb(255, 255, 255);
-}*/
+margin:0px;
+padding:0px;
+background-color: #d8d8d8;
+}
+
 
 *{
 background-color: #d8d8d8;
@@ -992,7 +1084,7 @@ border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/rueda1_blanco.png);
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco8_default.png);</string>
+            <string notr="true">border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco0c_default.png);</string>
            </property>
            <property name="text">
             <string/>
@@ -1229,6 +1321,8 @@ text:&quot;roni&quot;;
               <font>
                <family>LucidaGrande</family>
                <pointsize>-1</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
               </font>
              </property>
              <property name="styleSheet">
@@ -1237,8 +1331,9 @@ text:&quot;roni&quot;;
 	border: 1px solid #DAE7E7;
     border-radius: 7px;
   font-family: LucidaGrande;
-  font-size: 15px;
+  font-size: 14px;
   color:black;
+  font-weight: bold;
 
 
 }
@@ -1249,8 +1344,10 @@ QPushButton {
    border: 1px solid #B1BCBC;
     border-radius: 7px;
   font-family: LucidaGrande;
-  font-size: 15px;
+  font-size: 14px;
  color:black;
+  font-weight: bold;
+
 
 }
 
@@ -1259,13 +1356,16 @@ QPushButton:pressed {
 	border: 1px solid #B8C0C0;
     border-radius: 7px;
   font-family: LucidaGrande;
-  font-size: 15px;
+  font-size: 14px;
   color:black;
+  font-weight: bold;
+
 
 }
 
 QPushButton:disabled {
     background-color: rgb(170, 170, 127)
+
 }</string>
              </property>
              <property name="text">

@@ -63,13 +63,21 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("LucidaGrande")
         font.setPointSize(-1)
-        font.setBold(False)
+        font.setBold(True)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(75)
         self.bel_temp.setFont(font)
-        self.bel_temp.setStyleSheet("font-family: LucidaGrande;\n"
-"font-size: 15px;\n"
-"color: #ffffff;")
+        self.bel_temp.setStyleSheet("  font-family: LucidaGrande;\n"
+"  font-size: 15px;\n"
+"  font-weight: normal;\n"
+"  font-stretch: normal;\n"
+"  font-style: normal;\n"
+"  line-height: normal;\n"
+"  letter-spacing: normal;\n"
+"  color: #ffffff;\n"
+"  border: 1px solid  #193b58; \n"
+" background-color: #193b58;\n"
+" font-weight: bold;")
         self.bel_temp.setAlignment(QtCore.Qt.AlignCenter)
         self.bel_temp.setObjectName("bel_temp")
         self.horizontalLayout_11.addWidget(self.bel_temp)
@@ -81,13 +89,21 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("LucidaGrande")
         font.setPointSize(-1)
-        font.setBold(False)
+        font.setBold(True)
         font.setItalic(False)
-        font.setWeight(50)
+        font.setWeight(75)
         self.label_11.setFont(font)
-        self.label_11.setStyleSheet("font-family: LucidaGrande;\n"
-"font-size: 15px;\n"
-"color: #ffffff;")
+        self.label_11.setStyleSheet("  font-family: LucidaGrande;\n"
+"  font-size: 15px;\n"
+"  font-weight: normal;\n"
+"  font-stretch: normal;\n"
+"  font-style: normal;\n"
+"  line-height: normal;\n"
+"  letter-spacing: normal;\n"
+"  color: #ffffff;\n"
+"  border: 1px solid  #193b58; \n"
+" background-color: #193b58;\n"
+" font-weight: bold;")
         self.label_11.setAlignment(QtCore.Qt.AlignCenter)
         self.label_11.setObjectName("label_11")
         self.horizontalLayout_11.addWidget(self.label_11)
@@ -176,7 +192,7 @@ class Ui_Form(object):
 "  color: #ffffff;\n"
 "  border: 1px solid  #193b58; \n"
 "background-color: #193b58;\n"
-"")
+" /*font-weight: bold;*/")
         self.dateEdit_fecha.setLocale(QtCore.QLocale(QtCore.QLocale.Spanish, QtCore.QLocale.Mexico))
         self.dateEdit_fecha.setAlignment(QtCore.Qt.AlignCenter)
         self.dateEdit_fecha.setReadOnly(True)
@@ -260,9 +276,17 @@ class Ui_Form(object):
         font.setItalic(False)
         font.setWeight(50)
         self.label_6.setFont(font)
-        self.label_6.setStyleSheet("font-family: LucidaGrande;\n"
-"font-size: 15px;\n"
-"color: #ffffff;")
+        self.label_6.setStyleSheet("  font-family: LucidaGrande;\n"
+"  font-size: 16px;\n"
+"  font-weight: normal;\n"
+"  font-stretch: normal;\n"
+"  font-style: normal;\n"
+"  line-height: normal;\n"
+"  letter-spacing: normal;\n"
+"  color: #ffffff;\n"
+"  border: 1px solid  #193b58; \n"
+"background-color: #193b58;\n"
+" /*font-weight: bold;*/")
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setObjectName("label_6")
         self.verticalLayout_5.addWidget(self.label_6)
@@ -311,9 +335,16 @@ class Ui_Form(object):
         font.setItalic(False)
         font.setWeight(50)
         self.label_10.setFont(font)
-        self.label_10.setStyleSheet("font-family: LucidaGrande;\n"
-"font-size: 15px;\n"
-"color: #ffffff;")
+        self.label_10.setStyleSheet("  font-family: LucidaGrande;\n"
+"  font-size: 16px;\n"
+"  font-weight: normal;\n"
+"  font-stretch: normal;\n"
+"  font-style: normal;\n"
+"  line-height: normal;\n"
+"  letter-spacing: normal;\n"
+"  color: #ffffff;\n"
+"  border: 1px solid  #193b58; \n"
+"background-color: #193b58;")
         self.label_10.setAlignment(QtCore.Qt.AlignCenter)
         self.label_10.setObjectName("label_10")
         self.verticalLayout_6.addWidget(self.label_10)
@@ -331,8 +362,19 @@ class Ui_Form(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget_alarmasNotas)
         self.verticalLayout_2.setSizeConstraint(QtWidgets.QLayout.SetMaximumSize)
         self.verticalLayout_2.setContentsMargins(26, 26, 26, 26)
-        self.verticalLayout_2.setSpacing(25)
+        self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.label_3 = QtWidgets.QLabel(self.widget_alarmasNotas)
+        self.label_3.setMinimumSize(QtCore.QSize(100, 40))
+        self.label_3.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.label_3.setStyleSheet("  font-family: LucidaGrande;\n"
+"  font-size: 23px;\n"
+"  color: #000000;\n"
+"  font-weight: bold;\n"
+"  margin-bottom:20px;\n"
+"  padding:0px;")
+        self.label_3.setObjectName("label_3")
+        self.verticalLayout_2.addWidget(self.label_3)
         self.stack_alarmas = QtWidgets.QStackedWidget(self.widget_alarmasNotas)
         self.stack_alarmas.setMinimumSize(QtCore.QSize(380, 160))
         self.stack_alarmas.setMaximumSize(QtCore.QSize(16777215, 16777215))
@@ -347,9 +389,12 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "\n"
-"/*QWidget{\n"
+"QWidget{\n"
 "background-color: rgb(255, 255, 255);\n"
-"}*/\n"
+"margin:0px;\n"
+"padding:0px;\n"
+"background-color: #d8d8d8;\n"
+"}\n"
 "\n"
 "*{\n"
 "background-color: #d8d8d8;\n"
@@ -364,6 +409,17 @@ class Ui_Form(object):
         self.stack_alarmas.setFrameShadow(QtWidgets.QFrame.Plain)
         self.stack_alarmas.setObjectName("stack_alarmas")
         self.verticalLayout_2.addWidget(self.stack_alarmas)
+        self.label_5 = QtWidgets.QLabel(self.widget_alarmasNotas)
+        self.label_5.setMinimumSize(QtCore.QSize(100, 40))
+        self.label_5.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.label_5.setStyleSheet("  font-family: LucidaGrande;\n"
+"  font-size: 23px;\n"
+"  color: #000000;\n"
+"  font-weight: bold;\n"
+"  margin-bottom:20px;\n"
+"  padding:0px;")
+        self.label_5.setObjectName("label_5")
+        self.verticalLayout_2.addWidget(self.label_5)
         self.stack_notas = QtWidgets.QStackedWidget(self.widget_alarmasNotas)
         self.stack_notas.setMinimumSize(QtCore.QSize(380, 160))
         self.stack_notas.setMaximumSize(QtCore.QSize(16777215, 16777215))
@@ -378,9 +434,13 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "\n"
-"/*QWidget{\n"
+"QWidget{\n"
 "background-color: rgb(255, 255, 255);\n"
-"}*/\n"
+"margin:0px;\n"
+"padding:0px;\n"
+"background-color: #d8d8d8;\n"
+"}\n"
+"\n"
 "\n"
 "*{\n"
 "background-color: #d8d8d8;\n"
@@ -444,7 +504,7 @@ class Ui_Form(object):
         self.bel_estadoFoco.setMaximumSize(QtCore.QSize(160, 150))
         self.bel_estadoFoco.setSizeIncrement(QtCore.QSize(0, 0))
         self.bel_estadoFoco.setBaseSize(QtCore.QSize(60, 50))
-        self.bel_estadoFoco.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco8_default.png);")
+        self.bel_estadoFoco.setStyleSheet("border-image: url(:/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/foco0c_default.png);")
         self.bel_estadoFoco.setText("")
         self.bel_estadoFoco.setObjectName("bel_estadoFoco")
         self.verticalLayout_3.addWidget(self.bel_estadoFoco)
@@ -567,14 +627,17 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setFamily("LucidaGrande")
         font.setPointSize(-1)
+        font.setBold(True)
+        font.setWeight(75)
         self.btn_configVenti.setFont(font)
         self.btn_configVenti.setStyleSheet("QPushButton:hover {\n"
 "    background-color: #DDE8E8; \n"
 "    border: 1px solid #DAE7E7;\n"
 "    border-radius: 7px;\n"
 "  font-family: LucidaGrande;\n"
-"  font-size: 15px;\n"
+"  font-size: 14px;\n"
 "  color:black;\n"
+"  font-weight: bold;\n"
 "\n"
 "\n"
 "}\n"
@@ -585,8 +648,10 @@ class Ui_Form(object):
 "   border: 1px solid #B1BCBC;\n"
 "    border-radius: 7px;\n"
 "  font-family: LucidaGrande;\n"
-"  font-size: 15px;\n"
+"  font-size: 14px;\n"
 " color:black;\n"
+"  font-weight: bold;\n"
+"\n"
 "\n"
 "}\n"
 "\n"
@@ -595,13 +660,16 @@ class Ui_Form(object):
 "    border: 1px solid #B8C0C0;\n"
 "    border-radius: 7px;\n"
 "  font-family: LucidaGrande;\n"
-"  font-size: 15px;\n"
+"  font-size: 14px;\n"
 "  color:black;\n"
+"  font-weight: bold;\n"
+"\n"
 "\n"
 "}\n"
 "\n"
 "QPushButton:disabled {\n"
 "    background-color: rgb(170, 170, 127)\n"
+"\n"
 "}")
         self.btn_configVenti.setObjectName("btn_configVenti")
         self.horizontalLayout_15.addWidget(self.btn_configVenti)
@@ -722,5 +790,7 @@ class Ui_Form(object):
         self.dateEdit_fecha.setDisplayFormat(_translate("Form", "dddd dd \'de\' MMMM "))
         self.label_6.setText(_translate("Form", "Manual"))
         self.label_10.setText(_translate("Form", "Automatico"))
+        self.label_3.setText(_translate("Form", "ALARMAS"))
+        self.label_5.setText(_translate("Form", "DEBERES"))
         self.btn_configVenti.setText(_translate("Form", "100 [°C]"))
 import IMAG_rc

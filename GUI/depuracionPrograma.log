@@ -1,0 +1,22 @@
+2021-05-24 11:23:38,907: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-05-24 11:23:38,908: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-05-24 11:23:38,909: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: .\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-05-24 11:23:38,915: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['1,12', 'roni', 'hernandez', 'ulises']
+2021-05-24 11:23:38,916: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=1  Tamano de letra obtenida=12
+2021-05-24 11:23:38,917: DEBUG [SeccionDeberes.py:541] Deberes obtenidos=['roni', 'hernandez', 'ulises']
+2021-05-24 11:23:38,918: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-05-24 11:23:38,927: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_roni'
+2021-05-24 11:23:38,928: DEBUG [itemDeber.py:121] Deber_0_roni, cambiando a posición de texto=1
+2021-05-24 11:23:38,929: DEBUG [itemDeber.py:140] Deber_0_roni, cambiando el tamaño de letra a tamaño=12
+2021-05-24 11:23:38,933: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-05-24 11:23:38,937: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_1_hernandez'
+2021-05-24 11:23:38,938: DEBUG [itemDeber.py:121] Deber_1_hernandez, cambiando a posición de texto=1
+2021-05-24 11:23:38,939: DEBUG [itemDeber.py:140] Deber_1_hernandez, cambiando el tamaño de letra a tamaño=12
+2021-05-24 11:23:38,945: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-05-24 11:23:38,949: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_2_ulises'
+2021-05-24 11:23:38,950: DEBUG [itemDeber.py:121] Deber_2_ulises, cambiando a posición de texto=1
+2021-05-24 11:23:38,951: DEBUG [itemDeber.py:140] Deber_2_ulises, cambiando el tamaño de letra a tamaño=12
+2021-05-24 11:23:43,454: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-05-24 11:23:43,455: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['1,12', 'roni', 'hernandez', 'ulises']
+2021-05-24 11:23:43,457: DEBUG [SeccionDeberes.py:592] Abriendo archivo: .\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-05-24 11:23:43,459: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo

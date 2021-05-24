@@ -33,7 +33,7 @@ class Dialog_configLed(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
     IMAGEN_RUEDA_GRANDE=""
     IMAGEN_FOCO_ON=""
     
-    IMAGEN_FOCO_OFF=RUTA+"foco8_default"
+    IMAGEN_FOCO_OFF=RUTA+"foco0c_default"
 
     #COLORES_RGB=( 
     #"(255,255,255)",#blanco

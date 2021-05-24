@@ -20,7 +20,7 @@ from CUERPO.LOGICA.SISTEMA_CONTROL.datosCreador import Dialog_datosCreador
 from CUERPO.LOGICA.SISTEMA_CONTROL.alertadorFuego import Dialog_alertadorFuego
 from CUERPO.LOGICA.ALARMA.administradorAlarmas import AdministradorAlarmas
 
-from CUERPO.LOGICA.DEBERES.SeccionNotas import SeccionNotas
+from CUERPO.LOGICA.DEBERES.SeccionDeberes import SeccionDeberes
 from CUERPO.LOGICA.SISTEMA_CONTROL.arduinoExtension import ArduinoExtension_hilo
 from CUERPO.LOGICA.SISTEMA_CONTROL.bluetoothSerial import BluetoothSerial_hilo
 from recursos import HuellaAplicacion,App_Principal
@@ -87,15 +87,15 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
 
         #Creando la aplicacion de  alarmas y notas
         self.seccionAlarmas=AdministradorAlarmas(noDiaEntreSemana,tiempo.hour(),tiempo.minute(),tiempo.second() ) 
-        self.seccionNotas=SeccionNotas() 
+        self.seccionDeberes=SeccionDeberes() 
         self.seccionAlarmas.reloj.senal_minutoCambio.connect(self.cambiarMinuteroRelojMostrador)
         self.seccionAlarmas.reloj.senal_diaCambio.connect( self.cambiarDiaDateEdit )
 
         #Agregando los widgets anteriores al 'tabWidget' 
-        #self.tabWidget.addTab(self.seccionNotas,"Notas")
+        #self.tabWidget.addTab(self.seccionDeberes,"Notas")
         #self.tabWidget.addTab(self.seccionAlarmas,"Alarmas")
         #self.layout_alarmas.setWidget(self.seccionAlarmas)
-        self.stack_notas.addWidget(self.seccionNotas)
+        self.stack_notas.addWidget(self.seccionDeberes)
         self.stack_alarmas.addWidget(self.seccionAlarmas)
 
         self.stack_alarmas.setSizePolicy(
@@ -387,7 +387,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
         btn_no.setText('No')
         ventanaDialogo.exec_()
         if ventanaDialogo.clickedButton()  ==  btn_yes:
-            self.seccionNotas.respaldarDeberes()
+            self.seccionDeberes.respaldarDeberes()
             self.respaldarEstadosSensores()
             event.accept()
         else:
@@ -421,7 +421,7 @@ if __name__ == "__main__":
     print("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo",ubicacionPrograma)
     #recursos.App_Alarmas.App_PrincipalApp_Notas actualizarUbicaciones
     recursos.App_Alarmas.actualizarUbicaciones(ubicacionPrograma)
-    recursos.App_Notas.actualizarUbicaciones(ubicacionPrograma)
+    recursos.App_Deberes.actualizarUbicaciones(ubicacionPrograma)
     recursos.App_Principal.actualizarUbicaciones(ubicacionPrograma)
 
 

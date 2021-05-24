@@ -15,12 +15,57 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.setWindowModality(QtCore.Qt.NonModal)
-        Dialog.resize(368, 406)
+        Dialog.resize(377, 426)
         Dialog.setMouseTracking(False)
         Dialog.setAcceptDrops(False)
         Dialog.setWindowTitle("")
         Dialog.setWindowOpacity(1.0)
         Dialog.setAutoFillBackground(False)
+        Dialog.setStyleSheet("/*QWidget{\n"
+"background-color: #d8d8d8;\n"
+"}*/\n"
+"\n"
+"\n"
+"QCheckBox {\n"
+"    spacing: 5px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator {\n"
+"    width: 15px;\n"
+"    height: 15px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_unchecked.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked:hover {\n"
+"    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_unchecked_hover.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked:pressed {\n"
+"    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_unchecked_pressed.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_checked.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked:hover {\n"
+"    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_checked_hover.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked:pressed {\n"
+"    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_checked_pressed.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:indeterminate:hover {\n"
+"    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_indeterminate_hover.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:indeterminate:pressed {\n"
+"   border-image: url(:/PYQT5/IMAGENES/pyqt5 checkbox_indeterminate_pressed.png);\n"
+"}")
         Dialog.setWindowFilePath("")
         Dialog.setInputMethodHints(QtCore.Qt.ImhNone)
         Dialog.setSizeGripEnabled(False)
@@ -42,6 +87,11 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.lineEdit_nombre.setFont(font)
+        self.lineEdit_nombre.setStyleSheet("QLineEdit {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"}")
         self.lineEdit_nombre.setObjectName("lineEdit_nombre")
         self.layoutHor_2.addWidget(self.lineEdit_nombre)
         self.bel_secAsunto = QtWidgets.QLabel(Dialog)
@@ -53,11 +103,62 @@ class Ui_Dialog(object):
         self.bel_secAsunto.setObjectName("bel_secAsunto")
         self.layoutHor_2.addWidget(self.bel_secAsunto)
         self.comBox_asunto = QtWidgets.QComboBox(Dialog)
-        self.comBox_asunto.setMinimumSize(QtCore.QSize(91, 31))
+        self.comBox_asunto.setMinimumSize(QtCore.QSize(114, 31))
         self.comBox_asunto.setMaximumSize(QtCore.QSize(100, 40))
         font = QtGui.QFont()
         font.setPointSize(11)
         self.comBox_asunto.setFont(font)
+        self.comBox_asunto.setStyleSheet("QComboBox {\n"
+"    border: 1px solid gray;\n"
+"    border-radius: 3px;\n"
+"    padding: 1px 18px 1px 3px;\n"
+"    min-width: 7em;\n"
+"}\n"
+"\n"
+"QComboBox:editable {\n"
+"    background: white;\n"
+"}\n"
+"\n"
+"QComboBox:!editable, QComboBox::drop-down:editable {\n"
+"     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,\n"
+"                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);\n"
+"}\n"
+"\n"
+"/* QComboBox gets the \"on\" state when the popup is open */\n"
+"QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,\n"
+"                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);\n"
+"}\n"
+"\n"
+"QComboBox:on { /* shift the text when the popup opens */\n"
+"    padding-top: 3px;\n"
+"    padding-left: 4px;\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 15px;\n"
+"\n"
+"    border-left-width: 1px;\n"
+"    border-left-color: darkgray;\n"
+"    border-left-style: solid; /* just a single line */\n"
+"    border-top-right-radius: 3px; /* same radius as the QComboBox */\n"
+"    border-bottom-right-radius: 3px;\n"
+"}\n"
+"\n"
+"QComboBox::down-arrow {\n"
+"/*/usr/share/icons/crystalsvg/16x16/actions/*/    \n"
+"  /* image: url(:/PYQT5/IMAGENES/pyqt5/downarrow.png);*/\n"
+" image: url(:/PYQT5/IMAGENES/pyqt5/down_arrow.png);\n"
+"}\n"
+"\n"
+"QComboBox::down-arrow:on { /* shift the arrow when popup is open */\n"
+"    top: 1px;\n"
+"    left: 1px;\n"
+"}")
         self.comBox_asunto.setObjectName("comBox_asunto")
         self.comBox_asunto.addItem("")
         self.comBox_asunto.addItem("")
@@ -221,8 +322,57 @@ class Ui_Dialog(object):
         self.timeEdit_hora.setMinimumSize(QtCore.QSize(110, 40))
         self.timeEdit_hora.setMaximumSize(QtCore.QSize(150, 50))
         font = QtGui.QFont()
-        font.setPointSize(11)
+        font.setPointSize(12)
         self.timeEdit_hora.setFont(font)
+        self.timeEdit_hora.setStyleSheet("      QTimeEdit {\n"
+"            padding-right: 15px; /* make room for the arrows */\n"
+"            border-image: url(:/PYQT5/IMAGENES/pyqt5/frame.png) 4;\n"
+"            border-width: 3;\n"
+"        }\n"
+"       QTimeEdit::up-button {\n"
+"            subcontrol-origin: border;\n"
+"            subcontrol-position: top right; /* position at the top right corner */\n"
+"            width: 16px; /* 16 + 2*1px border-width = 15px padding + 3px parent border */\n"
+"            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup.png) 1;\n"
+"            border-width: 1px;\n"
+"        }\n"
+"        QTimeEdit::up-button:hover {\n"
+"            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup_hover.png) 1;\n"
+"        }\n"
+"        QTimeEdit::up-button:pressed {\n"
+"            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup_pressed.png) 1;\n"
+"        }\n"
+"        QTimeEdit::up-arrow {\n"
+"            image: url(:/PYQT5/IMAGENES/pyqt5/up_arrow.png);\n"
+"            width: 7px;\n"
+"            height: 7px;\n"
+"        }\n"
+"        QTimeEdit::up-arrow:disabled, QSpinBox::up-arrow:off { /* off state when value is max */\n"
+"        image: url(:/PYQT5/IMAGENES/pyqt5/up_arrow_disabled.png);\n"
+"        }\n"
+"        QTimeEdit::down-button {\n"
+"            subcontrol-origin: border;\n"
+"            subcontrol-position: bottom right; /* position at bottom right corner */\n"
+"            width: 16px;\n"
+"            border-image: url(:/PYQT5/IMAGENES/pyqt5/spindown.png)1;\n"
+"            border-width: 1px;\n"
+"            border-top-width: 0;\n"
+"        }\n"
+"        QTimeEdit::down-button:hover {\n"
+"            border-image: url(:/PYQT5/IMAGENES/pyqt5spindown_hover.png)1;\n"
+"        }\n"
+"        QTimeEdit::down-button:pressed {\n"
+"            border-image: url(:/PYQT5/IMAGENES/pyqt5/spindown_pressed.png)1;\n"
+"        }\n"
+"        QTimeEdit::down-arrow {\n"
+"            image: url(:/PYQT5/IMAGENES/pyqt5/down_arrow.png);\n"
+"            width: 7px;\n"
+"            height: 7px;\n"
+"        }\n"
+"        QTimeEdit::down-arrow:disabled,QSpinBox::down-arrow:off { /* off state when value in min */\n"
+"        image: url(:/PYQT5/IMAGENES/pyqt5/down_arrow_disabled.png);\n"
+"        }")
+        self.timeEdit_hora.setAlignment(QtCore.Qt.AlignCenter)
         self.timeEdit_hora.setObjectName("timeEdit_hora")
         self.layoutHor_3.addWidget(self.timeEdit_hora)
         self.verticalLayout_8.addLayout(self.layoutHor_3)
@@ -326,9 +476,35 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.listWid_soniDef.setFont(font)
-        self.listWid_soniDef.setStyleSheet("QListWidget\n"
+        self.listWid_soniDef.setStyleSheet("QListWidget {\n"
+"    show-decoration-selected: 1; /* make the selection span the entire width of the view */\n"
+"}\n"
+"\n"
+"QListWidget::item:alternate {\n"
+"    background: #EEEEEE;\n"
+"}\n"
+"\n"
+"QListWidget::item:selected {\n"
+"    border: 1px solid #6a6ea9;\n"
+"}\n"
+"\n"
+"QListWidget::item:selected:!active {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #ABAFE5, stop: 1 #8588B2);\n"
+"}\n"
+"\n"
+"QListWidget::item:selected:active {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #6a6ea9, stop: 1 #888dd9);\n"
+"}\n"
+"\n"
+"QListWidget::item:hover {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #FAFBFE, stop: 1 #DCDEF1);\n"
+"}\n"
+"\n"
+"/*QListWidget\n"
 "{\n"
-"/*border : 1px solid black;*/\n"
 "background : rgb(219, 235, 235);\n"
 "}\n"
 "\n"
@@ -341,7 +517,7 @@ class Ui_Dialog(object):
 "{\n"
 "background-color: rgb(249, 196, 255);\n"
 "color: rgb(0, 0, 0);\n"
-"}")
+"}*/")
         self.listWid_soniDef.setObjectName("listWid_soniDef")
         self.verticalLayout_11.addWidget(self.listWid_soniDef)
         self.tabWid_sonidosAlarmas.addTab(self.pistasDefault, "")
@@ -377,9 +553,35 @@ class Ui_Dialog(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.listWid_soniMio.setFont(font)
-        self.listWid_soniMio.setStyleSheet("QListWidget\n"
+        self.listWid_soniMio.setStyleSheet("QListWidget {\n"
+"    show-decoration-selected: 1; /* make the selection span the entire width of the view */\n"
+"}\n"
+"\n"
+"QListWidget::item:alternate {\n"
+"    background: #EEEEEE;\n"
+"}\n"
+"\n"
+"QListWidget::item:selected {\n"
+"    border: 1px solid #6a6ea9;\n"
+"}\n"
+"\n"
+"QListWidget::item:selected:!active {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #ABAFE5, stop: 1 #8588B2);\n"
+"}\n"
+"\n"
+"QListWidget::item:selected:active {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #6a6ea9, stop: 1 #888dd9);\n"
+"}\n"
+"\n"
+"QListWidget::item:hover {\n"
+"    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                stop: 0 #FAFBFE, stop: 1 #DCDEF1);\n"
+"}\n"
+"\n"
+"/*QListWidget\n"
 "{\n"
-"/*border : 1px solid black;*/\n"
 "background : rgb(219, 235, 235);\n"
 "}\n"
 "\n"
@@ -392,7 +594,7 @@ class Ui_Dialog(object):
 "{\n"
 "background-color: rgb(249, 196, 255);\n"
 "color: rgb(0, 0, 0);\n"
-"}")
+"}*/")
         self.listWid_soniMio.setObjectName("listWid_soniMio")
         self.verticalLayout_10.addWidget(self.listWid_soniMio)
         self.tabWid_sonidosAlarmas.addTab(self.pistasMias, "")
@@ -405,7 +607,28 @@ class Ui_Dialog(object):
         self.horizontalLayout_2.addWidget(self.label)
         self.btn_finalizar = QtWidgets.QPushButton(Dialog)
         self.btn_finalizar.setMinimumSize(QtCore.QSize(110, 40))
-        self.btn_finalizar.setMaximumSize(QtCore.QSize(130, 55))
+        self.btn_finalizar.setMaximumSize(QtCore.QSize(150, 50))
+        self.btn_finalizar.setStyleSheet("QPushButton:hover {\n"
+"    background-color: #DDE8E8; \n"
+"    border: 1px solid #DAE7E7;\n"
+"    border-radius: 7px;\n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"    background-color: #DDE8E8; \n"
+"    border: 1px solid #B1BCBC;\n"
+"    border-radius: 7px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color:#B8C0C0;\n"
+"    border: 1px solid #B8C0C0;\n"
+"    border-radius: 7px;\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"    background-color: rgb(170, 170, 127)\n"
+"}")
         self.btn_finalizar.setObjectName("btn_finalizar")
         self.horizontalLayout_2.addWidget(self.btn_finalizar)
         self.label_2 = QtWidgets.QLabel(Dialog)
@@ -415,7 +638,7 @@ class Ui_Dialog(object):
         self.verticalLayout_8.addLayout(self.horizontalLayout_2)
 
         self.retranslateUi(Dialog)
-        self.tabWid_sonidosAlarmas.setCurrentIndex(1)
+        self.tabWid_sonidosAlarmas.setCurrentIndex(0)
         self.listWid_soniDef.setCurrentRow(-1)
         self.listWid_soniMio.setCurrentRow(-1)
         QtCore.QMetaObject.connectSlotsByName(Dialog)

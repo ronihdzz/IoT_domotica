@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>368</width>
-    <height>406</height>
+    <width>377</width>
+    <height>426</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -27,6 +27,53 @@
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*QWidget{
+background-color: #d8d8d8;
+}*/
+
+
+QCheckBox {
+    spacing: 5px;
+}
+
+QCheckBox::indicator {
+    width: 15px;
+    height: 15px;
+}
+
+QCheckBox::indicator:unchecked {
+    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_unchecked.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_unchecked_hover.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_unchecked_pressed.png);
+}
+
+QCheckBox::indicator:checked {
+    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_checked.png);
+}
+
+QCheckBox::indicator:checked:hover {
+    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_checked_hover.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_checked_pressed.png);
+}
+
+QCheckBox::indicator:indeterminate:hover {
+    border-image: url(:/PYQT5/IMAGENES/pyqt5/checkbox_indeterminate_hover.png);
+}
+
+QCheckBox::indicator:indeterminate:pressed {
+   border-image: url(:/PYQT5/IMAGENES/pyqt5 checkbox_indeterminate_pressed.png);
+}</string>
   </property>
   <property name="windowFilePath">
    <string/>
@@ -80,6 +127,13 @@
          <pointsize>12</pointsize>
         </font>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+}</string>
+       </property>
       </widget>
      </item>
      <item>
@@ -110,7 +164,7 @@
       <widget class="QComboBox" name="comBox_asunto">
        <property name="minimumSize">
         <size>
-         <width>91</width>
+         <width>114</width>
          <height>31</height>
         </size>
        </property>
@@ -124,6 +178,59 @@
         <font>
          <pointsize>11</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 7em;
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                 stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
+                                stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
+}
+
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+/*/usr/share/icons/crystalsvg/16x16/actions/*/    
+  /* image: url(:/PYQT5/IMAGENES/pyqt5/downarrow.png);*/
+ image: url(:/PYQT5/IMAGENES/pyqt5/down_arrow.png);
+}
+
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+    top: 1px;
+    left: 1px;
+}</string>
        </property>
        <item>
         <property name="text">
@@ -605,8 +712,61 @@
        </property>
        <property name="font">
         <font>
-         <pointsize>11</pointsize>
+         <pointsize>12</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">      QTimeEdit {
+            padding-right: 15px; /* make room for the arrows */
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/frame.png) 4;
+            border-width: 3;
+        }
+       QTimeEdit::up-button {
+            subcontrol-origin: border;
+            subcontrol-position: top right; /* position at the top right corner */
+            width: 16px; /* 16 + 2*1px border-width = 15px padding + 3px parent border */
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup.png) 1;
+            border-width: 1px;
+        }
+        QTimeEdit::up-button:hover {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup_hover.png) 1;
+        }
+        QTimeEdit::up-button:pressed {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spinup_pressed.png) 1;
+        }
+        QTimeEdit::up-arrow {
+            image: url(:/PYQT5/IMAGENES/pyqt5/up_arrow.png);
+            width: 7px;
+            height: 7px;
+        }
+        QTimeEdit::up-arrow:disabled, QSpinBox::up-arrow:off { /* off state when value is max */
+        image: url(:/PYQT5/IMAGENES/pyqt5/up_arrow_disabled.png);
+        }
+        QTimeEdit::down-button {
+            subcontrol-origin: border;
+            subcontrol-position: bottom right; /* position at bottom right corner */
+            width: 16px;
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spindown.png)1;
+            border-width: 1px;
+            border-top-width: 0;
+        }
+        QTimeEdit::down-button:hover {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5spindown_hover.png)1;
+        }
+        QTimeEdit::down-button:pressed {
+            border-image: url(:/PYQT5/IMAGENES/pyqt5/spindown_pressed.png)1;
+        }
+        QTimeEdit::down-arrow {
+            image: url(:/PYQT5/IMAGENES/pyqt5/down_arrow.png);
+            width: 7px;
+            height: 7px;
+        }
+        QTimeEdit::down-arrow:disabled,QSpinBox::down-arrow:off { /* off state when value in min */
+        image: url(:/PYQT5/IMAGENES/pyqt5/down_arrow_disabled.png);
+        }</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
@@ -741,7 +901,7 @@ QTabBar::tab:only-one {
 }</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="pistasDefault">
       <attribute name="title">
@@ -762,9 +922,35 @@ QTabBar::tab:only-one {
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QListWidget
+          <string notr="true">QListWidget {
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
+
+QListWidget::item:alternate {
+    background: #EEEEEE;
+}
+
+QListWidget::item:selected {
+    border: 1px solid #6a6ea9;
+}
+
+QListWidget::item:selected:!active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #ABAFE5, stop: 1 #8588B2);
+}
+
+QListWidget::item:selected:active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #6a6ea9, stop: 1 #888dd9);
+}
+
+QListWidget::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #FAFBFE, stop: 1 #DCDEF1);
+}
+
+/*QListWidget
 {
-/*border : 1px solid black;*/
 background : rgb(219, 235, 235);
 }
 
@@ -777,7 +963,7 @@ background-color: rgb(219, 235, 235);
 {
 background-color: rgb(249, 196, 255);
 color: rgb(0, 0, 0);
-}</string>
+}*/</string>
          </property>
          <property name="currentRow">
           <number>-1</number>
@@ -847,9 +1033,35 @@ border-image: url(:/ALARMA/IMAGENES/ALARMA/subir_off.png);
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">QListWidget
+          <string notr="true">QListWidget {
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
+
+QListWidget::item:alternate {
+    background: #EEEEEE;
+}
+
+QListWidget::item:selected {
+    border: 1px solid #6a6ea9;
+}
+
+QListWidget::item:selected:!active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #ABAFE5, stop: 1 #8588B2);
+}
+
+QListWidget::item:selected:active {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #6a6ea9, stop: 1 #888dd9);
+}
+
+QListWidget::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #FAFBFE, stop: 1 #DCDEF1);
+}
+
+/*QListWidget
 {
-/*border : 1px solid black;*/
 background : rgb(219, 235, 235);
 }
 
@@ -862,7 +1074,7 @@ background-color: rgb(219, 235, 235);
 {
 background-color: rgb(249, 196, 255);
 color: rgb(0, 0, 0);
-}</string>
+}*/</string>
          </property>
          <property name="currentRow">
           <number>-1</number>
@@ -892,9 +1104,32 @@ color: rgb(0, 0, 0);
        </property>
        <property name="maximumSize">
         <size>
-         <width>130</width>
-         <height>55</height>
+         <width>150</width>
+         <height>50</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton:hover {
+    background-color: #DDE8E8; 
+	border: 1px solid #DAE7E7;
+    border-radius: 7px;
+}
+
+QPushButton {
+    background-color: #DDE8E8; 
+	border: 1px solid #B1BCBC;
+    border-radius: 7px;
+}
+
+QPushButton:pressed {
+    background-color:#B8C0C0;
+	border: 1px solid #B8C0C0;
+    border-radius: 7px;
+}
+
+QPushButton:disabled {
+    background-color: rgb(170, 170, 127)
+}</string>
        </property>
        <property name="text">
         <string>GUARDAR</string>

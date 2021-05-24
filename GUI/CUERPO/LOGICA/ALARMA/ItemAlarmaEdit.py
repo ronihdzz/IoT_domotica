@@ -184,7 +184,7 @@ class ItemAlarmaEdit(QtWidgets.QDialog,Ui_Dialog,HuellaAplicacion):
         
         #buscamos en la list widget cual es la sonido de alarma elegido por el usuario
         #y lo seleccionamos
-        listaWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        #listaWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         try:
             items=listaWidget.findItems(nombreCancionAlarma,QtCore.Qt.MatchCaseSensitive)
             items[0].setSelected(True)
@@ -210,8 +210,8 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
             self.reproductor.tocar()
 
         #hacemos esto  para que no se sombree un item, almenos que sea con un click
-        self.listWid_soniDef.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
-        self.listWid_soniMio.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
+        #self.listWid_soniDef.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
+        #self.listWid_soniMio.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
 
         #volvemos a ligar la señal que desconectamos...
         self.tabWid_sonidosAlarmas.currentChanged.connect(self.cambioDeListaReproduccion)
@@ -242,9 +242,9 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
 
         #seleccionando el sonido defecto en la lista de reproduccion que 
         #dejara de mostrarse
-        listWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        #listWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         listWidget.setCurrentRow(0)
-        listWidget.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
+        #listWidget.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
 
 
     def sonidoAlarmaAgregado(self,nombreSonido):
@@ -276,9 +276,9 @@ escoger otra cancion como sonido de alarma""".format(nombreCancionAlarma)
         else:
             listWidget=self.listWid_soniMio
 
-        listWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        #listWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
         listWidget.setCurrentRow(indice)
-        listWidget.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
+        #listWidget.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
 
         if indice>0:
             nombreCancion=listWidget.item(indice).text()#obtenemos el texto de la cancion
@@ -386,9 +386,9 @@ a ser el sonido default.
                 cancionDefault=self.reproductor.carpetaMusicaDefault+App_Alarmas.NOMBRE_SONIDO_NULL)
 
                 #cuando eliminemos la cancion que se escogera  la defualt...
-                self.listWid_soniMio.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+                #self.listWid_soniMio.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
                 self.listWid_soniMio.setCurrentRow(0)
-                self.listWid_soniMio.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
+                #self.listWid_soniMio.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
 
 
                 self.reproductor.cargarCancion()
