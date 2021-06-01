@@ -389,6 +389,7 @@ class Main_IoT(QtWidgets.QWidget, Ui_Form,HuellaAplicacion):
         if ventanaDialogo.clickedButton()  ==  btn_yes:
             self.seccionDeberes.respaldarDeberes()
             self.respaldarEstadosSensores()
+            self.seccionAlarmas.respaldarEstadosAlarma()
             event.accept()
         else:
             event.ignore()  # No saldremos del evento
