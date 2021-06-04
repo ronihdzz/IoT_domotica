@@ -204,7 +204,7 @@ font-size: 13px;</string>
            <string>Roni Hernandez</string>
           </property>
           <property name="openExternalLinks">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
          </widget>
         </item>

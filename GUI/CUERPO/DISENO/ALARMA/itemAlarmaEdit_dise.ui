@@ -9,9 +9,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>377</width>
-    <height>426</height>
+    <width>380</width>
+    <height>425</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>380</width>
+    <height>425</height>
+   </size>
   </property>
   <property name="mouseTracking">
    <bool>false</bool>
@@ -118,7 +124,7 @@ QCheckBox::indicator:indeterminate:pressed {
       <widget class="QLineEdit" name="lineEdit_nombre">
        <property name="minimumSize">
         <size>
-         <width>70</width>
+         <width>110</width>
          <height>40</height>
         </size>
        </property>
@@ -165,12 +171,12 @@ QCheckBox::indicator:indeterminate:pressed {
        <property name="minimumSize">
         <size>
          <width>114</width>
-         <height>31</height>
+         <height>40</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>100</width>
+         <width>150</width>
          <height>40</height>
         </size>
        </property>
@@ -184,7 +190,7 @@ QCheckBox::indicator:indeterminate:pressed {
     border: 1px solid gray;
     border-radius: 3px;
     padding: 1px 18px 1px 3px;
-    min-width: 7em;
+    /*min-width: 7em;*/
 }
 
 QComboBox:editable {

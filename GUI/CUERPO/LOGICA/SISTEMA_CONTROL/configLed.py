@@ -16,6 +16,12 @@ from recursos import HuellaAplicacion
 
 
 class Dialog_configLed(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
+    '''
+    Permitira que el usuario pueda escoger entre 7 colores diferentes.
+    '''
+
+
+
     senal_colorElegido= pyqtSignal(int)
 
     RUTA=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/"
@@ -66,10 +72,53 @@ class Dialog_configLed(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
         self.idPorConfirmar=0
     
     def eligioColor(self,idColor):
+        '''
+        Actualizara el valor del atributo de instancia: 'self.idPorConfirmar'  por el valor
+        adquirido por el parametro 'idColor', posteriormente cambiara la imagen del foco
+        a la imagen del foco que este pintado con el color que se escogio.
+
+        Parámetros:
+            idColor -- dato de tipo entero  que representa el color que se escogio donde:
+                    0-blanco
+                    1-rojo
+                    2-verde
+                    3-azul
+                    4-amarillo
+                    5-magenta
+                    6-cian
+        '''
+
         self.idPorConfirmar=idColor
         self.bel_colorFoco.setStyleSheet(f"border-image:url({ self.RUTA+self.TUPLA_IMAGENES[idColor][0] });")
     
     def guardarColor(self,idColor):
+        '''
+        Actualizara los valores de los atributos de instancia: 'self.IMAGEN_FOCO_ON', 
+        'self.IMAGEN_RUEDA' y 'self.IMAGEN_RUEDA_GRANDE' por las imagenes respectivas
+        que representen el color del 'idColor' 
+
+        Ejemplo: Si el color que se escogio como definitivo es el color 'rojo', entonces
+        los atributos de instancia:
+            A) 'self.IMAGEN_FOCO_ON' cambiara por una imagen de un foco de color rojo
+            B) 'self.IMAGEN_RUEDA' cambiara por una imagen de rueda con un color rojo en el centro
+            C) 'self.IMAGEN_RUEDA_GRANDE' cambiara por una imagen de rueda grande con un color rojo 
+            en el centro
+        
+        Posteriormente se emitira la señal: 'self.senal_colorElegido' la cual mandara el 'id' 
+        del color escogido y finalmente este metodo mandara a cerrrar la ventana.
+
+        Parámetros:
+            idColor -- dato de tipo entero  que representa el color que se escogio donde:
+                    0-blanco
+                    1-rojo
+                    2-verde
+                    3-azul
+                    4-amarillo
+                    5-magenta
+                    6-cian      
+        '''
+
+
         #CONVENCIO DE COLORES USADAS EN ARDUINO...
         # 0-blanco
         # 1-rojo
@@ -86,13 +135,37 @@ class Dialog_configLed(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
         self.close()
 
     def cambiarImagen(self,idColor):
+        '''
+        Actualizara los valores de los atributos de instancia: 'self.IMAGEN_FOCO_ON', 
+        'self.IMAGEN_RUEDA' y 'self.IMAGEN_RUEDA_GRANDE' por las imagenes respectivas
+        que representen el color del 'idColor' 
+
+        Ejemplo: Si el color que se escogio como definitivo es el color 'rojo', entonces
+        los atributos de instancia:
+            A) 'self.IMAGEN_FOCO_ON' cambiara por una imagen de un foco de color rojo
+            B) 'self.IMAGEN_RUEDA' cambiara por una imagen de rueda con un color rojo en el centro
+            C) 'self.IMAGEN_RUEDA_GRANDE' cambiara por una imagen de rueda grande con un color rojo 
+            en el centro
+
+        Parámetros:
+            idColor -- dato de tipo entero  que representa el color que se escogio donde:
+                    0-blanco
+                    1-rojo
+                    2-verde
+                    3-azul
+                    4-amarillo
+                    5-magenta
+                    6-cian     
+        '''
+
         self.IMAGEN_FOCO_ON=self.RUTA+self.TUPLA_IMAGENES[idColor][0]
         self.IMAGEN_RUEDA=self.RUTA+self.TUPLA_IMAGENES[idColor][1]
         # las imagenes con zoom del foco se tienen un 'r' mas al inicio de su nombre
         self.IMAGEN_RUEDA_GRANDE=self.RUTA+"r"+self.TUPLA_IMAGENES[idColor][1] 
 
     def closeEvent(self,event):
-        #por si se sale de la pantalla solo moviendo los diferentes colores pero no eligiendo ninguno
+        
+        # por si se sale de la pantalla solo moviendo los diferentes colores pero no eligiendo ninguno
         self.eligioColor(self.idColorFoco)
     
     def getImagenFoco_on(self):

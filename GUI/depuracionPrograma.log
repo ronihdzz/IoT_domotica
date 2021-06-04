@@ -4783,3 +4783,1233 @@
 2021-06-01 09:11:12,351: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
 2021-06-01 09:11:12,353: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
 2021-06-01 09:11:12,354: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:31:34,691: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:31:34,712: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000027A2F7414E0>
+2021-06-01 11:31:34,713: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000027A2F77A6C0>
+2021-06-01 11:31:34,715: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:31:34,716: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:31:34,716: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:31:34,727: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:31:34,728: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000027A2F7414E0>
+2021-06-01 11:31:34,729: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000027A2F77A730>
+2021-06-01 11:31:34,731: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:31:34,731: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:31:34,732: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:31:34,764: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 11:31:34,765: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 11:31:34,766: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: .\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 11:31:34,768: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-01 11:32:00,207: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:32:00,209: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000027A2F7414E0>
+2021-06-01 11:32:00,210: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000027A2F77A810>
+2021-06-01 11:32:00,212: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:32:00,212: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:32:00,213: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:32:00,214: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:32:00,215: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000027A2F7414E0>
+2021-06-01 11:32:00,216: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000027A2F77A810>
+2021-06-01 11:32:00,217: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:32:00,218: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:32:00,219: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:32:59,518: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-01 11:32:59,520: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-01 11:32:59,522: DEBUG [SeccionDeberes.py:592] Abriendo archivo: .\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-01 11:32:59,527: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-01 11:32:59,530: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:32:59,532: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000027A2F7414E0>
+2021-06-01 11:32:59,535: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000027A2F77A7A0>
+2021-06-01 11:32:59,537: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:32:59,538: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:32:59,539: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:39:32,241: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:39:32,243: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001C8E9B834E0>
+2021-06-01 11:39:32,243: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001C8E9BB96C0>
+2021-06-01 11:39:32,245: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:39:32,246: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:39:32,247: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:39:32,256: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:39:32,257: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001C8E9B834E0>
+2021-06-01 11:39:32,258: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001C8E9BB9730>
+2021-06-01 11:39:32,260: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:39:32,261: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:39:32,262: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:39:32,290: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 11:39:32,292: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 11:39:32,293: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: .\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 11:39:32,295: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-01 11:39:35,086: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-01 11:39:35,090: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-01 11:39:35,094: DEBUG [SeccionDeberes.py:592] Abriendo archivo: .\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-01 11:39:35,098: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-01 11:39:35,104: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:39:35,107: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001C8E9B834E0>
+2021-06-01 11:39:35,109: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001C8E9BB9650>
+2021-06-01 11:39:35,111: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:39:35,113: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:39:35,114: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:40:59,899: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:40:59,900: ERROR [baseDatos_alarma.py:48] Error al conectar a la BD: unable to open database file
+2021-06-01 11:42:22,949: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:42:22,951: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001DB418324E0>
+2021-06-01 11:42:22,952: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001DB4186A5E0>
+2021-06-01 11:42:22,954: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:42:22,954: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:42:22,955: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:42:22,964: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:42:22,965: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001DB418324E0>
+2021-06-01 11:42:22,966: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001DB4186A650>
+2021-06-01 11:42:22,967: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:42:22,968: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:42:22,969: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:42:22,999: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 11:42:22,999: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 11:42:23,000: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 11:42:23,001: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-01 11:42:26,480: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-01 11:42:26,484: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-01 11:42:26,485: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-01 11:42:26,490: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-01 11:42:26,495: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:42:26,499: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001DB418324E0>
+2021-06-01 11:42:26,500: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001DB4186A500>
+2021-06-01 11:42:26,502: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:42:26,503: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:42:26,504: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:43:27,853: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:43:27,855: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000023BED7334E0>
+2021-06-01 11:43:27,855: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000023BED76B5E0>
+2021-06-01 11:43:27,857: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:43:27,858: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:43:27,859: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:43:27,868: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:43:27,869: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000023BED7334E0>
+2021-06-01 11:43:27,870: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000023BED76B650>
+2021-06-01 11:43:27,871: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:43:27,872: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:43:27,873: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:43:27,903: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 11:43:27,904: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 11:43:27,905: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 11:43:27,906: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-01 11:43:30,929: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-01 11:43:30,934: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-01 11:43:30,937: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-01 11:43:30,941: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-01 11:43:30,944: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:43:30,946: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000023BED7334E0>
+2021-06-01 11:43:30,947: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000023BED76B570>
+2021-06-01 11:43:30,948: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:43:30,949: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:43:30,950: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:45:10,596: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:45:10,599: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001BF028934E0>
+2021-06-01 11:45:10,599: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001BF028CB5E0>
+2021-06-01 11:45:10,601: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:45:10,602: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:45:10,603: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:45:10,611: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:45:10,612: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001BF028934E0>
+2021-06-01 11:45:10,613: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001BF028CB650>
+2021-06-01 11:45:10,614: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:45:10,615: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:45:10,616: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 11:45:10,647: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 11:45:10,648: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 11:45:10,648: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 11:45:10,650: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-01 11:45:13,317: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-01 11:45:13,321: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-01 11:45:13,330: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-01 11:45:13,334: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-01 11:45:13,337: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 11:45:13,338: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001BF028934E0>
+2021-06-01 11:45:13,339: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001BF028CB500>
+2021-06-01 11:45:13,341: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 11:45:13,342: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 11:45:13,344: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:32:09,683: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:32:09,754: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001DD98B134E0>
+2021-06-01 13:32:09,754: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001DD98B56C70>
+2021-06-01 13:32:09,763: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:32:09,764: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:32:09,765: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:32:09,787: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:32:09,788: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001DD98B134E0>
+2021-06-01 13:32:09,789: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001DD98B56CE0>
+2021-06-01 13:32:09,792: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:32:09,793: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:32:09,794: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:32:09,870: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 13:32:09,871: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 13:32:09,872: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 13:32:09,873: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-01 13:32:23,722: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-01 13:32:23,724: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-01 13:32:23,728: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-01 13:32:23,730: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-01 13:32:23,735: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:32:23,736: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001DD98B134E0>
+2021-06-01 13:32:23,737: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001DD98B56B90>
+2021-06-01 13:32:23,770: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:32:23,771: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:32:23,772: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:32:54,631: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:32:54,633: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001FB10E344E0>
+2021-06-01 13:32:54,633: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001FB10E6D5E0>
+2021-06-01 13:32:54,635: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:32:54,636: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:32:54,637: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:32:54,646: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:32:54,648: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001FB10E344E0>
+2021-06-01 13:32:54,648: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001FB10E6D650>
+2021-06-01 13:32:54,650: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:32:54,651: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:32:54,652: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:32:54,678: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 13:32:54,678: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 13:32:54,678: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 13:32:54,681: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-01 13:34:07,619: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:34:07,620: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000025A7D2045D0>
+2021-06-01 13:34:07,620: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000025A7D23D5E0>
+2021-06-01 13:34:07,622: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:34:07,623: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:34:07,624: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:34:07,634: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:34:07,635: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000025A7D2045D0>
+2021-06-01 13:34:07,636: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000025A7D23D650>
+2021-06-01 13:34:07,638: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:34:07,638: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:34:07,639: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:34:07,662: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 13:34:07,663: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 13:34:07,664: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 13:34:07,667: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-01 13:35:38,695: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:35:38,696: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001E0A5B245D0>
+2021-06-01 13:35:38,697: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001E0A5B5C5E0>
+2021-06-01 13:35:38,699: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:35:38,700: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:35:38,701: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:35:38,710: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:35:38,712: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001E0A5B245D0>
+2021-06-01 13:35:38,713: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001E0A5B5C650>
+2021-06-01 13:35:38,714: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:35:38,715: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:35:38,716: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:35:38,743: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 13:35:38,743: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 13:35:38,744: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 13:35:38,746: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-01 13:38:37,325: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-01 13:38:37,329: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-01 13:38:37,332: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-01 13:38:37,340: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-01 13:38:37,343: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:38:37,345: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001E0A5B245D0>
+2021-06-01 13:38:37,345: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001E0A5B5C6C0>
+2021-06-01 13:38:37,347: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:38:37,348: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:38:37,349: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:38:44,378: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:38:44,379: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000018BDBA745D0>
+2021-06-01 13:38:44,380: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000018BDBAAD5E0>
+2021-06-01 13:38:44,382: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:38:44,383: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:38:44,384: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:38:44,391: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:38:44,392: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000018BDBA745D0>
+2021-06-01 13:38:44,393: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000018BDBAAD650>
+2021-06-01 13:38:44,394: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:38:44,395: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:38:44,396: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:38:44,421: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 13:38:44,421: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 13:38:44,423: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 13:38:44,425: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-01 13:39:10,191: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:39:10,192: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000018BDBA745D0>
+2021-06-01 13:39:10,193: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000018BDBAAD730>
+2021-06-01 13:39:10,195: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:39:10,196: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:39:10,197: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:39:10,230: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:39:10,232: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000018BDBA745D0>
+2021-06-01 13:39:10,233: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000018BDBAAD730>
+2021-06-01 13:39:10,235: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:39:10,235: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:39:10,236: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:39:20,715: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:39:20,717: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000018BDBA745D0>
+2021-06-01 13:39:20,719: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000018BDBAAD730>
+2021-06-01 13:39:20,727: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:39:20,850: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:39:20,851: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:39:36,821: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:39:36,854: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000018BDBA745D0>
+2021-06-01 13:39:36,855: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000018BDBAAD500>
+2021-06-01 13:39:36,857: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:39:36,857: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:39:36,858: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:40:00,076: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-01 13:40:00,085: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-01 13:40:00,086: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posici髇 de texto=0
+2021-06-01 13:40:00,088: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=12
+2021-06-01 13:40:00,777: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-01 13:40:00,783: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_1_'
+2021-06-01 13:40:00,785: DEBUG [itemDeber.py:121] Deber_1_, cambiando a posici髇 de texto=0
+2021-06-01 13:40:00,786: DEBUG [itemDeber.py:140] Deber_1_, cambiando el tama駉 de letra a tama駉=12
+2021-06-01 13:40:04,972: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-01 13:40:05,006: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12', '', '']
+2021-06-01 13:40:05,006: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-01 13:40:05,008: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-01 13:40:05,010: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:40:05,012: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000018BDBA745D0>
+2021-06-01 13:40:05,013: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000018BDBAAD7A0>
+2021-06-01 13:40:05,014: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:40:05,017: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:40:05,018: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:41:55,733: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:41:55,734: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000023B879534E0>
+2021-06-01 13:41:55,735: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000023B879AC570>
+2021-06-01 13:41:55,737: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:41:55,738: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:41:55,739: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:41:55,748: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:41:55,750: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000023B879534E0>
+2021-06-01 13:41:55,751: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000023B879AC5E0>
+2021-06-01 13:41:55,752: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:41:55,753: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:41:55,754: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-01 13:41:55,786: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-01 13:41:55,787: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-01 13:41:55,788: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-01 13:41:55,800: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12', '', '']
+2021-06-01 13:41:55,800: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=12
+2021-06-01 13:41:55,801: DEBUG [SeccionDeberes.py:541] Deberes obtenidos=['', '']
+2021-06-01 13:41:55,802: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-01 13:41:55,808: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-01 13:41:55,809: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posici髇 de texto=0
+2021-06-01 13:41:55,810: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=12
+2021-06-01 13:41:55,812: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-01 13:41:55,814: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_1_'
+2021-06-01 13:41:55,815: DEBUG [itemDeber.py:121] Deber_1_, cambiando a posici髇 de texto=0
+2021-06-01 13:41:55,816: DEBUG [itemDeber.py:140] Deber_1_, cambiando el tama駉 de letra a tama駉=12
+2021-06-01 13:42:31,047: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-01 13:42:31,050: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12', '', '']
+2021-06-01 13:42:31,052: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-01 13:42:31,059: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-01 13:42:31,062: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-01 13:42:31,065: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000023B879534E0>
+2021-06-01 13:42:31,066: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000023B879AC500>
+2021-06-01 13:42:31,068: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-01 13:42:31,069: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-01 13:42:31,070: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-02 09:51:59,328: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-02 09:51:59,405: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x00000296F4FB44E0>
+2021-06-02 09:51:59,406: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x00000296F500D570>
+2021-06-02 09:51:59,416: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-02 09:51:59,417: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-02 09:51:59,418: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-02 09:51:59,433: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-02 09:51:59,435: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x00000296F4FB44E0>
+2021-06-02 09:51:59,436: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x00000296F500D5E0>
+2021-06-02 09:51:59,441: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-02 09:51:59,442: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-02 09:51:59,443: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-02 09:51:59,534: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-02 09:51:59,534: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-02 09:51:59,535: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-02 09:51:59,548: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12', '', '']
+2021-06-02 09:51:59,549: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=12
+2021-06-02 09:51:59,550: DEBUG [SeccionDeberes.py:541] Deberes obtenidos=['', '']
+2021-06-02 09:51:59,550: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-02 09:51:59,555: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-02 09:51:59,556: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posici髇 de texto=0
+2021-06-02 09:51:59,557: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=12
+2021-06-02 09:51:59,559: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-02 09:51:59,563: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_1_'
+2021-06-02 09:51:59,563: DEBUG [itemDeber.py:121] Deber_1_, cambiando a posici髇 de texto=0
+2021-06-02 09:51:59,564: DEBUG [itemDeber.py:140] Deber_1_, cambiando el tama駉 de letra a tama駉=12
+2021-06-02 09:52:44,396: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-02 09:52:44,398: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x00000135BD1C34E0>
+2021-06-02 09:52:44,398: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x00000135BD21D570>
+2021-06-02 09:52:44,400: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-02 09:52:44,402: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-02 09:52:44,402: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-02 09:52:44,412: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-02 09:52:44,413: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x00000135BD1C34E0>
+2021-06-02 09:52:44,414: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x00000135BD21D5E0>
+2021-06-02 09:52:44,416: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-02 09:52:44,417: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-02 09:52:44,418: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-02 09:52:44,445: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-02 09:52:44,445: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-02 09:52:44,446: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-02 09:52:44,448: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12', '', '']
+2021-06-02 09:52:44,449: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=12
+2021-06-02 09:52:44,449: DEBUG [SeccionDeberes.py:541] Deberes obtenidos=['', '']
+2021-06-02 09:52:44,450: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-02 09:52:44,460: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-02 09:52:44,461: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posici髇 de texto=0
+2021-06-02 09:52:44,462: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=12
+2021-06-02 09:52:44,463: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-02 09:52:44,466: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_1_'
+2021-06-02 09:52:44,466: DEBUG [itemDeber.py:121] Deber_1_, cambiando a posici髇 de texto=0
+2021-06-02 09:52:44,468: DEBUG [itemDeber.py:140] Deber_1_, cambiando el tama駉 de letra a tama駉=12
+2021-06-02 09:52:52,774: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=0, recibida
+2021-06-02 09:52:52,776: DEBUG [SeccionDeberes.py:457] Posici髇 del itemDeber obtenida=0 
+2021-06-02 09:52:54,647: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=1, recibida
+2021-06-02 09:52:54,651: DEBUG [SeccionDeberes.py:457] Posici髇 del itemDeber obtenida=0 
+2021-06-02 09:52:58,664: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-02 09:52:58,666: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x00000135BD1C34E0>
+2021-06-02 09:52:58,666: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x00000135BD21D6C0>
+2021-06-02 09:52:58,668: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-02 09:52:58,669: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-02 09:52:58,670: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-02 09:52:58,696: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-02 09:52:58,697: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x00000135BD1C34E0>
+2021-06-02 09:52:58,698: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x00000135BD21D6C0>
+2021-06-02 09:52:58,699: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-02 09:52:58,700: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-02 09:52:58,701: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-02 09:53:29,140: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-02 09:53:29,145: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-02 09:53:29,146: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-02 09:53:29,151: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-02 09:53:29,155: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-02 09:53:29,162: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x00000135BD1C34E0>
+2021-06-02 09:53:29,164: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x00000135BD21D500>
+2021-06-02 09:53:29,180: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-02 09:53:29,185: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-02 09:53:29,187: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:19:26,070: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:19:26,140: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000029206A905D0>
+2021-06-03 10:19:26,140: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000029206AB6C00>
+2021-06-03 10:19:26,150: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:19:26,151: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:19:26,152: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:19:26,176: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:19:26,177: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000029206A905D0>
+2021-06-03 10:19:26,178: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000029206AB6B90>
+2021-06-03 10:19:26,180: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:19:26,181: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:19:26,182: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:19:26,294: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 10:19:26,295: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 10:19:26,296: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 10:19:26,297: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 10:22:20,097: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:22:20,098: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001932A0435D0>
+2021-06-03 10:22:20,099: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001932A07A5E0>
+2021-06-03 10:22:20,101: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:22:20,102: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:22:20,103: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:22:20,114: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:22:20,116: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001932A0435D0>
+2021-06-03 10:22:20,116: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001932A07A650>
+2021-06-03 10:22:20,118: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:22:20,120: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:22:20,122: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:22:20,154: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 10:22:20,155: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 10:22:20,156: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 10:22:20,158: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 10:30:51,596: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:30:51,598: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001633453E6C0>
+2021-06-03 10:30:51,599: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000016334566C70>
+2021-06-03 10:30:51,601: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:30:51,601: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:30:51,604: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:30:51,616: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:30:51,618: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001633453E6C0>
+2021-06-03 10:30:51,619: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000016334566CE0>
+2021-06-03 10:30:51,621: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:30:51,621: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:30:51,622: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:30:51,655: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 10:30:51,656: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 10:30:51,656: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 10:30:51,658: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 10:31:13,190: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 10:31:13,208: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 10:31:13,209: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 10:31:13,211: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 10:32:54,286: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:32:54,290: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D2D87AE6C0>
+2021-06-03 10:32:54,291: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D2D87D6C70>
+2021-06-03 10:32:54,293: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:32:54,294: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:32:54,295: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:32:54,303: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:32:54,304: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D2D87AE6C0>
+2021-06-03 10:32:54,306: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D2D87D6CE0>
+2021-06-03 10:32:54,308: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:32:54,308: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:32:54,309: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:32:54,343: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 10:32:54,344: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 10:32:54,344: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 10:32:54,346: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 10:32:56,999: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 10:32:57,000: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 10:32:57,004: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 10:32:57,008: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 10:34:37,296: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:34:37,298: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000019FB6E1E6C0>
+2021-06-03 10:34:37,299: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000019FB6E46C70>
+2021-06-03 10:34:37,300: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:34:37,301: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:34:37,302: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:34:37,315: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:34:37,317: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000019FB6E1E6C0>
+2021-06-03 10:34:37,317: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000019FB6E46CE0>
+2021-06-03 10:34:37,319: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:34:37,320: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:34:37,321: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:34:37,351: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 10:34:37,352: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 10:34:37,352: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 10:34:37,354: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 10:34:48,260: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 10:34:48,274: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 10:34:48,278: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 10:34:48,280: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 10:35:17,053: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:35:17,056: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 10:35:17,056: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE570>
+2021-06-03 10:35:17,058: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:35:17,059: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:35:17,060: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:35:17,075: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:35:17,076: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 10:35:17,077: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE5E0>
+2021-06-03 10:35:17,078: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:35:17,079: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:35:17,080: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:35:17,120: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 10:35:17,121: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 10:35:17,122: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 10:35:17,125: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 10:43:20,594: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:43:20,597: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 10:43:20,598: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE500>
+2021-06-03 10:43:20,601: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:43:20,603: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:43:20,604: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 10:57:44,914: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 10:57:44,918: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 10:57:44,919: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE490>
+2021-06-03 10:57:44,923: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 10:57:44,924: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 10:57:44,926: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 11:06:44,934: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 11:06:44,936: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 11:06:44,936: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE3B0>
+2021-06-03 11:06:44,938: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 11:06:44,939: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 11:06:44,939: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 11:12:09,994: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 11:12:09,997: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 11:12:09,999: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE6C0>
+2021-06-03 11:12:10,002: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 11:12:10,004: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 11:12:10,006: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 11:21:09,994: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 11:21:09,997: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 11:21:09,999: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE500>
+2021-06-03 11:21:10,002: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 11:21:10,004: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 11:21:10,005: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 11:26:34,004: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 11:26:34,007: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 11:26:34,009: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE3B0>
+2021-06-03 11:26:34,012: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 11:26:34,013: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 11:26:34,016: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 11:40:58,044: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 11:40:58,047: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 11:40:58,049: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE490>
+2021-06-03 11:40:58,052: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 11:40:58,053: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 11:40:58,055: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 11:49:58,074: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 11:49:58,077: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 11:49:58,079: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE6C0>
+2021-06-03 11:49:58,082: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 11:49:58,084: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 11:49:58,086: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 11:55:22,104: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 11:55:22,108: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 11:55:22,109: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE500>
+2021-06-03 11:55:22,112: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 11:55:22,114: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 11:55:22,116: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 12:09:46,114: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 12:09:46,118: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 12:09:46,119: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE3B0>
+2021-06-03 12:09:46,123: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 12:09:46,124: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 12:09:46,126: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 12:24:10,134: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 12:24:10,138: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 12:24:10,139: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE490>
+2021-06-03 12:24:10,143: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 12:24:10,144: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 12:24:10,146: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 12:38:34,164: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 12:38:34,168: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 12:38:34,169: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE500>
+2021-06-03 12:38:34,173: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 12:38:34,174: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 12:38:34,176: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 12:47:34,164: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 12:47:34,168: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 12:47:34,169: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE3B0>
+2021-06-03 12:47:34,172: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 12:47:34,174: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 12:47:34,175: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 12:52:58,174: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 12:52:58,177: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 12:52:58,179: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE6C0>
+2021-06-03 12:52:58,182: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 12:52:58,183: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 12:52:58,185: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:01:58,174: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:01:58,178: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:01:58,179: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE490>
+2021-06-03 13:01:58,183: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:01:58,184: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:01:58,186: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:07:22,184: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:07:22,187: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:07:22,188: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE3B0>
+2021-06-03 13:07:22,191: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:07:22,193: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:07:22,194: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:12:39,759: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:12:39,763: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:12:39,764: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE490>
+2021-06-03 13:12:39,768: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:12:39,769: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:12:39,771: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:12:39,824: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:12:39,826: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:12:39,828: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE490>
+2021-06-03 13:12:39,831: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:12:39,832: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:12:39,834: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:13:02,093: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:13:02,095: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:13:02,097: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE490>
+2021-06-03 13:13:02,115: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:13:02,206: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:13:02,208: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:13:29,060: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:13:29,083: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:13:29,084: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE730>
+2021-06-03 13:13:29,086: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:13:29,087: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:13:29,088: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:13:29,089: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:13:29,091: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:13:29,092: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE730>
+2021-06-03 13:13:29,094: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:13:29,095: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:13:29,096: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:13:34,700: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:13:34,702: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:13:34,704: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE730>
+2021-06-03 13:13:34,713: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:13:34,856: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:13:34,858: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:13:35,613: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:13:35,634: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:13:35,636: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE500>
+2021-06-03 13:13:35,639: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:13:35,640: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:13:35,642: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:13:59,211: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:13:59,214: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:13:59,215: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE500>
+2021-06-03 13:13:59,218: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:13:59,220: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:13:59,221: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:13:59,223: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:13:59,226: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:13:59,228: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE500>
+2021-06-03 13:13:59,231: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:13:59,232: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:13:59,234: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:14:06,999: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:14:07,001: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:14:07,002: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE490>
+2021-06-03 13:14:07,007: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:14:07,152: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:14:07,154: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:14:14,643: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:14:14,675: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:14:14,677: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE6C0>
+2021-06-03 13:14:14,679: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:14:14,680: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:14:14,681: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:15:49,607: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 13:15:49,611: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 13:15:49,613: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 13:15:49,617: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 13:15:49,622: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:15:49,625: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001D5E14626C0>
+2021-06-03 13:15:49,627: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001D5E14BE730>
+2021-06-03 13:15:49,630: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:15:49,632: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:15:49,633: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:24:15,957: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:24:15,959: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001EA5C76E6C0>
+2021-06-03 13:24:15,960: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001EA5C796C70>
+2021-06-03 13:24:15,962: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:24:15,963: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:24:15,964: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:24:15,977: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:24:15,978: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001EA5C76E6C0>
+2021-06-03 13:24:15,980: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001EA5C796CE0>
+2021-06-03 13:24:15,984: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:24:15,985: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:24:15,986: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:24:16,023: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 13:24:16,024: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 13:24:16,025: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 13:24:16,026: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 13:24:34,672: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 13:24:34,674: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 13:24:34,678: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 13:24:34,683: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 13:24:34,687: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:24:34,689: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001EA5C76E6C0>
+2021-06-03 13:24:34,690: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001EA5C796B90>
+2021-06-03 13:24:34,692: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:24:34,694: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:24:34,701: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:25:33,496: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:25:33,497: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001DF0DC0E6C0>
+2021-06-03 13:25:33,498: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001DF0DC37C70>
+2021-06-03 13:25:33,500: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:25:33,501: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:25:33,502: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:25:33,512: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:25:33,513: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001DF0DC0E6C0>
+2021-06-03 13:25:33,514: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001DF0DC37CE0>
+2021-06-03 13:25:33,516: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:25:33,516: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:25:33,517: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:25:33,542: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 13:25:33,543: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 13:25:33,543: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 13:25:33,545: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 13:25:44,706: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 13:25:44,708: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 13:25:44,710: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 13:25:44,713: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 13:25:44,718: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:25:44,722: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001DF0DC0E6C0>
+2021-06-03 13:25:44,724: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001DF0DC37B90>
+2021-06-03 13:25:44,729: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:25:44,733: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:25:44,734: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:26:17,469: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:26:17,472: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x00000209F8AE26C0>
+2021-06-03 13:26:17,473: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x00000209F8B3E570>
+2021-06-03 13:26:17,475: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:26:17,476: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:26:17,476: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:26:17,488: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:26:17,490: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x00000209F8AE26C0>
+2021-06-03 13:26:17,491: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x00000209F8B3E5E0>
+2021-06-03 13:26:17,493: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:26:17,494: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:26:17,495: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:26:17,526: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 13:26:17,526: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 13:26:17,527: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 13:26:17,528: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 13:26:27,262: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 13:26:27,264: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 13:26:27,266: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 13:26:27,269: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 13:26:27,274: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:26:27,278: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x00000209F8AE26C0>
+2021-06-03 13:26:27,280: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x00000209F8B3E490>
+2021-06-03 13:26:27,286: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:26:27,287: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:26:27,288: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:27:13,177: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:27:13,180: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001B06AC3E5D0>
+2021-06-03 13:27:13,181: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001B06AC66CE0>
+2021-06-03 13:27:13,184: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:27:13,185: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:27:13,186: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:27:13,203: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:27:13,205: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001B06AC3E5D0>
+2021-06-03 13:27:13,206: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001B06AC66D50>
+2021-06-03 13:27:13,208: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:27:13,213: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:27:13,213: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:27:13,239: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 13:27:13,239: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 13:27:13,240: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 13:27:13,243: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 13:29:13,024: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 13:29:13,025: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 13:29:13,027: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 13:29:13,029: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 13:29:13,032: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:29:13,034: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001B06AC3E5D0>
+2021-06-03 13:29:13,036: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001B06AC66C00>
+2021-06-03 13:29:13,039: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:29:13,040: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:29:13,042: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:29:21,520: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:29:21,523: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000025F34EEE5D0>
+2021-06-03 13:29:21,524: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000025F34F16CE0>
+2021-06-03 13:29:21,527: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:29:21,528: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:29:21,529: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:29:21,539: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:29:21,541: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000025F34EEE5D0>
+2021-06-03 13:29:21,542: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000025F34F16D50>
+2021-06-03 13:29:21,544: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:29:21,545: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:29:21,546: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:29:21,587: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 13:29:21,588: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 13:29:21,589: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 13:29:21,591: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 13:30:12,261: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 13:30:12,263: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 13:30:12,266: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 13:30:12,269: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 13:30:12,274: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:30:12,279: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000025F34EEE5D0>
+2021-06-03 13:30:12,280: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000025F34F16C00>
+2021-06-03 13:30:12,285: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:30:12,288: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:30:12,289: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:31:07,652: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:31:07,656: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001F4FC76E5D0>
+2021-06-03 13:31:07,657: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001F4FC794D50>
+2021-06-03 13:31:07,661: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:31:07,662: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:31:07,664: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:31:07,687: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:31:07,690: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001F4FC76E5D0>
+2021-06-03 13:31:07,692: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001F4FC794DC0>
+2021-06-03 13:31:07,697: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:31:07,698: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:31:07,700: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:31:07,742: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 13:31:07,743: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 13:31:07,746: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 13:31:07,748: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 13:34:59,852: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:34:59,855: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001CEDCBDE5D0>
+2021-06-03 13:34:59,856: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001CEDCC04D50>
+2021-06-03 13:34:59,861: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:34:59,862: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:34:59,865: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:34:59,889: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:34:59,892: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001CEDCBDE5D0>
+2021-06-03 13:34:59,894: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001CEDCC04DC0>
+2021-06-03 13:34:59,898: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:34:59,900: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:34:59,902: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:34:59,944: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 13:34:59,944: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 13:34:59,945: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 13:34:59,947: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 13:40:19,329: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 13:40:19,349: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 13:40:19,350: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 13:40:19,352: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 13:40:19,354: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:40:19,358: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001CEDCBDE5D0>
+2021-06-03 13:40:19,358: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001CEDCC04C70>
+2021-06-03 13:40:19,363: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:40:19,363: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:40:19,365: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:41:48,425: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:41:48,428: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000017B549EE5D0>
+2021-06-03 13:41:48,430: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000017B54A14D50>
+2021-06-03 13:41:48,434: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:41:48,436: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:41:48,438: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:41:48,462: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:41:48,466: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000017B549EE5D0>
+2021-06-03 13:41:48,468: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000017B54A14DC0>
+2021-06-03 13:41:48,473: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:41:48,475: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:41:48,477: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:41:48,546: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 13:41:48,548: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 13:41:48,549: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 13:41:48,553: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-03 13:42:06,704: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:42:06,705: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000017B549EE5D0>
+2021-06-03 13:42:06,706: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000017B54A14C70>
+2021-06-03 13:42:06,728: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:42:06,848: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:42:06,849: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:42:07,615: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:42:07,651: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000017B549EE5D0>
+2021-06-03 13:42:07,652: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000017B54A14EA0>
+2021-06-03 13:42:07,654: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:42:07,655: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:42:07,656: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 13:43:32,467: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 13:43:32,476: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-03 13:43:32,479: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posici髇 de texto=0
+2021-06-03 13:43:32,507: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=12
+2021-06-03 13:46:52,539: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 13:46:52,545: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12', '']
+2021-06-03 13:46:52,547: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 13:46:52,551: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 13:46:52,557: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 13:46:52,560: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x0000017B549EE5D0>
+2021-06-03 13:46:52,561: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x0000017B54A14E30>
+2021-06-03 13:46:52,563: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 13:46:52,564: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 13:46:52,565: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 14:19:18,555: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 14:19:18,557: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000002734E7284E0>
+2021-06-03 14:19:18,557: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000002734E748C70>
+2021-06-03 14:19:18,559: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 14:19:18,559: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 14:19:18,560: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 14:19:18,561: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 14:19:18,563: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000002734E7284E0>
+2021-06-03 14:19:18,564: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000002734E748CE0>
+2021-06-03 14:19:18,565: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 14:19:18,566: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 14:19:18,568: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 14:19:18,593: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 14:19:18,594: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 14:19:18,594: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 14:19:18,609: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12', '']
+2021-06-03 14:19:18,609: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=12
+2021-06-03 14:19:18,610: DEBUG [SeccionDeberes.py:541] Deberes obtenidos=['']
+2021-06-03 14:19:18,610: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 14:19:18,614: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-03 14:19:18,616: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posici髇 de texto=0
+2021-06-03 14:19:18,618: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=12
+2021-06-03 14:20:21,960: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 14:20:21,978: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12', '']
+2021-06-03 14:20:21,980: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 14:20:21,982: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 14:20:21,986: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 14:20:21,989: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000002734E7284E0>
+2021-06-03 14:20:21,991: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000002734E748C00>
+2021-06-03 14:20:21,993: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 14:20:21,994: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 14:20:21,995: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 14:21:18,344: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 14:21:18,348: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001B85CCB94E0>
+2021-06-03 14:21:18,349: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001B85CCD7CE0>
+2021-06-03 14:21:18,353: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 14:21:18,355: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 14:21:18,357: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 14:21:18,359: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 14:21:18,362: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001B85CCB94E0>
+2021-06-03 14:21:18,363: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001B85CCD7D50>
+2021-06-03 14:21:18,368: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 14:21:18,371: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 14:21:18,373: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 14:21:18,442: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 14:21:18,444: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 14:21:18,445: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 14:21:18,455: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12', '']
+2021-06-03 14:21:18,456: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=12
+2021-06-03 14:21:18,458: DEBUG [SeccionDeberes.py:541] Deberes obtenidos=['']
+2021-06-03 14:21:18,460: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 14:21:18,468: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-03 14:21:18,469: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posici髇 de texto=0
+2021-06-03 14:21:18,471: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=12
+2021-06-03 14:24:40,028: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 14:24:40,062: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12', '']
+2021-06-03 14:24:40,064: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 14:24:40,066: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 14:24:40,068: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 14:24:40,085: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001B85CCB94E0>
+2021-06-03 14:24:40,086: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001B85CCD7C70>
+2021-06-03 14:24:40,146: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 14:24:40,148: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 14:24:40,148: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 14:32:43,851: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 14:32:43,853: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001A170FC85D0>
+2021-06-03 14:32:43,853: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001A170FFD650>
+2021-06-03 14:32:43,856: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 14:32:43,856: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 14:32:43,857: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 14:32:43,858: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 14:32:43,860: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001A170FC85D0>
+2021-06-03 14:32:43,860: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001A170FFD6C0>
+2021-06-03 14:32:43,863: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 14:32:43,863: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 14:32:43,864: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 14:32:43,891: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 14:32:43,891: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 14:32:43,892: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 14:32:43,895: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12', '']
+2021-06-03 14:32:43,896: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=12
+2021-06-03 14:32:43,897: DEBUG [SeccionDeberes.py:541] Deberes obtenidos=['']
+2021-06-03 14:32:43,897: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 14:32:43,901: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-03 14:32:43,902: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posici髇 de texto=0
+2021-06-03 14:32:43,903: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=12
+2021-06-03 18:35:11,676: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:35:11,679: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001A7871F94E0>
+2021-06-03 18:35:11,679: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001A787217CE0>
+2021-06-03 18:35:11,681: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:35:11,682: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:35:11,683: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 18:35:11,684: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:35:11,686: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001A7871F94E0>
+2021-06-03 18:35:11,686: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001A787217D50>
+2021-06-03 18:35:11,688: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:35:11,689: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:35:11,690: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 18:35:11,720: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 18:35:11,721: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 18:35:11,722: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 18:35:11,724: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12', '']
+2021-06-03 18:35:11,724: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=12
+2021-06-03 18:35:11,725: DEBUG [SeccionDeberes.py:541] Deberes obtenidos=['']
+2021-06-03 18:35:11,726: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 18:35:11,730: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-03 18:35:11,731: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posici髇 de texto=0
+2021-06-03 18:35:11,731: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=12
+2021-06-03 18:35:20,223: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:35:20,225: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001A7871F94E0>
+2021-06-03 18:35:20,227: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001A787217E30>
+2021-06-03 18:35:20,230: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:35:20,232: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:35:20,234: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 18:35:28,217: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:35:28,220: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001A7871F94E0>
+2021-06-03 18:35:28,222: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001A787217E30>
+2021-06-03 18:35:28,225: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:35:28,226: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:35:28,228: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 18:38:21,208: DEBUG [SeccionDeberes.py:579] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 18:38:21,222: DEBUG [SeccionDeberes.py:591] Lista de datos a respaldar generada: ['0,12', '']
+2021-06-03 18:38:21,224: DEBUG [SeccionDeberes.py:592] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 18:38:21,226: DEBUG [SeccionDeberes.py:595] Datos guardados con exito en el archivo
+2021-06-03 18:38:21,229: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:38:21,231: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001A7871F94E0>
+2021-06-03 18:38:21,232: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001A787217C00>
+2021-06-03 18:38:21,234: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:38:21,235: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:38:21,236: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 18:45:14,564: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:45:14,566: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001AE916663F0>
+2021-06-03 18:45:14,566: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001AE91672CE0>
+2021-06-03 18:45:14,568: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:45:14,568: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:45:14,569: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 18:45:14,570: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:45:14,571: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001AE916663F0>
+2021-06-03 18:45:14,572: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001AE91672D50>
+2021-06-03 18:45:14,575: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:45:14,576: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:45:14,578: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 18:45:14,612: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 18:45:14,614: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 18:45:14,616: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 18:45:14,629: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12', '']
+2021-06-03 18:45:14,630: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=12
+2021-06-03 18:45:14,631: DEBUG [SeccionDeberes.py:542] Deberes obtenidos=['']
+2021-06-03 18:45:14,632: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 18:45:14,639: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-03 18:45:14,641: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posici髇 de texto=0
+2021-06-03 18:45:14,643: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=12
+2021-06-03 18:45:20,129: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tama駉 de letra del texto de deberes a tama駉=25, recibida
+2021-06-03 18:45:20,130: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=25
+2021-06-03 18:45:20,437: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tama駉 de letra del texto de deberes a tama駉=25, recibida
+2021-06-03 18:45:20,438: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tama駉 de letra a tama駉=25
+2021-06-03 18:45:30,338: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 18:45:30,340: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,25', 'HOAL']
+2021-06-03 18:45:30,341: DEBUG [SeccionDeberes.py:593] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 18:45:30,344: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-03 18:45:30,347: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:45:30,350: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000001AE916663F0>
+2021-06-03 18:45:30,351: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000001AE91672C00>
+2021-06-03 18:45:30,353: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:45:30,354: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:45:30,355: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 18:45:35,022: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:45:35,024: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000002C5111BD3F0>
+2021-06-03 18:45:35,025: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000002C5111ED5E0>
+2021-06-03 18:45:35,027: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:45:35,028: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:45:35,029: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 18:45:35,029: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:45:35,031: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000002C5111BD3F0>
+2021-06-03 18:45:35,032: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000002C5111ED650>
+2021-06-03 18:45:35,033: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:45:35,034: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:45:35,035: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 18:45:35,067: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 18:45:35,067: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 18:45:35,068: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 18:45:35,083: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,25', 'HOAL']
+2021-06-03 18:45:35,084: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=25
+2021-06-03 18:45:35,085: DEBUG [SeccionDeberes.py:542] Deberes obtenidos=['HOAL']
+2021-06-03 18:45:35,086: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 18:45:35,092: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_HOAL'
+2021-06-03 18:45:35,093: DEBUG [itemDeber.py:121] Deber_0_HOAL, cambiando a posici髇 de texto=0
+2021-06-03 18:45:35,094: DEBUG [itemDeber.py:140] Deber_0_HOAL, cambiando el tama駉 de letra a tama駉=25
+2021-06-03 18:45:42,806: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 18:45:42,808: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,25', 'HOAL']
+2021-06-03 18:45:42,809: DEBUG [SeccionDeberes.py:593] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 18:45:42,812: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-03 18:45:42,814: DEBUG [baseDatos_alarma.py:142] Inicio de with m閠odo __enter__
+2021-06-03 18:45:42,816: DEBUG [baseDatos_alarma.py:44] Conexi髇 exitosa: <sqlite3.Connection object at 0x000002C5111BD3F0>
+2021-06-03 18:45:42,816: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 閤ito: <sqlite3.Cursor object at 0x000002C5111ED570>
+2021-06-03 18:45:42,818: DEBUG [baseDatos_alarma.py:162] Se ejecuta m閠odo __exit__()
+2021-06-03 18:45:42,819: DEBUG [baseDatos_alarma.py:172] Commit de la transacci髇
+2021-06-03 18:45:42,819: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi髇 y cursor
+2021-06-03 19:01:16,871: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:01:16,872: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:01:16,872: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dda0>
+2021-06-03 19:01:16,873: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:01:16,873: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:01:16,873: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:01:16,874: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:01:16,874: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:01:16,879: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dda0>
+2021-06-03 19:01:16,880: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:01:16,880: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:01:16,880: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:01:16,934: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 19:01:16,935: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 19:01:16,936: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 19:01:16,936: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,25', 'HOAL']
+2021-06-03 19:01:16,937: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=25
+2021-06-03 19:01:16,938: DEBUG [SeccionDeberes.py:542] Deberes obtenidos=['HOAL']
+2021-06-03 19:01:16,938: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 19:01:16,945: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_HOAL'
+2021-06-03 19:01:16,945: DEBUG [itemDeber.py:121] Deber_0_HOAL, cambiando a posici贸n de texto=0
+2021-06-03 19:01:16,945: DEBUG [itemDeber.py:140] Deber_0_HOAL, cambiando el tama帽o de letra a tama帽o=25
+2021-06-03 19:02:03,866: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:03,869: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:03,870: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dce0>
+2021-06-03 19:02:03,872: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:03,873: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:03,873: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:27,449: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:27,450: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:27,450: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dce0>
+2021-06-03 19:02:27,452: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:27,474: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:27,475: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:29,044: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:29,045: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:29,045: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dce0>
+2021-06-03 19:02:29,046: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:29,047: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:29,047: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:34,649: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:34,651: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:34,652: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dda0>
+2021-06-03 19:02:34,655: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:34,674: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:34,675: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:36,317: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:36,319: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:36,320: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dda0>
+2021-06-03 19:02:36,321: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:36,322: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:36,322: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:36,324: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:36,325: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:36,325: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dda0>
+2021-06-03 19:02:36,327: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:36,328: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:36,328: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:39,385: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:39,387: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:39,388: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dda0>
+2021-06-03 19:02:39,390: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:39,403: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:39,404: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:41,338: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:41,339: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:41,339: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06de20>
+2021-06-03 19:02:41,340: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:41,340: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:41,340: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:41,341: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:41,341: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:41,342: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06de20>
+2021-06-03 19:02:41,342: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:41,342: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:41,343: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:49,996: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:49,998: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:49,998: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dce0>
+2021-06-03 19:02:50,000: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:50,061: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:50,062: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:52,042: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:52,043: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:52,043: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dea0>
+2021-06-03 19:02:52,044: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:52,045: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:52,045: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:02:52,046: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:02:52,046: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:02:52,047: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dea0>
+2021-06-03 19:02:52,047: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:02:52,048: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:02:52,048: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:04:13,028: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:04:13,030: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:04:13,031: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06dce0>
+2021-06-03 19:04:13,033: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:04:13,065: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:04:13,067: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:04:22,445: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:04:22,447: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf248ea0>
+2021-06-03 19:04:22,447: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaf06de20>
+2021-06-03 19:04:22,449: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:04:22,450: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:04:22,450: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:11:43,179: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:11:43,180: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf172f20>
+2021-06-03 19:11:43,181: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaefbede0>
+2021-06-03 19:11:43,182: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:11:43,182: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:11:43,183: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:11:43,183: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:11:43,184: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf172f20>
+2021-06-03 19:11:43,185: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaefbede0>
+2021-06-03 19:11:43,186: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:11:43,186: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:11:43,187: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor
+2021-06-03 19:11:43,250: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 19:11:43,250: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 19:11:43,250: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 19:11:43,251: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,25', 'HOAL']
+2021-06-03 19:11:43,251: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=25
+2021-06-03 19:11:43,252: DEBUG [SeccionDeberes.py:542] Deberes obtenidos=['HOAL']
+2021-06-03 19:11:43,252: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 19:11:43,260: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_HOAL'
+2021-06-03 19:11:43,260: DEBUG [itemDeber.py:121] Deber_0_HOAL, cambiando a posici贸n de texto=0
+2021-06-03 19:11:43,260: DEBUG [itemDeber.py:140] Deber_0_HOAL, cambiando el tama帽o de letra a tama帽o=25
+2021-06-03 19:11:52,174: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 19:11:52,175: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,25', 'HOAL']
+2021-06-03 19:11:52,176: DEBUG [SeccionDeberes.py:593] Abriendo archivo: CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 19:11:52,177: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-03 19:11:52,179: DEBUG [baseDatos_alarma.py:142] Inicio de with m茅todo __enter__
+2021-06-03 19:11:52,181: DEBUG [baseDatos_alarma.py:44] Conexi贸n exitosa: <sqlite3.Connection object at 0xaf172f20>
+2021-06-03 19:11:52,182: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con 茅xito: <sqlite3.Cursor object at 0xaefbed20>
+2021-06-03 19:11:52,183: DEBUG [baseDatos_alarma.py:162] Se ejecuta m茅todo __exit__()
+2021-06-03 19:11:52,184: DEBUG [baseDatos_alarma.py:172] Commit de la transacci贸n
+2021-06-03 19:11:52,187: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexi贸n y cursor

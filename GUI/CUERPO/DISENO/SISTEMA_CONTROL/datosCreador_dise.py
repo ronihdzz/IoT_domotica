@@ -89,7 +89,7 @@ class Ui_Dialog(object):
         self.bel_gmail.setMaximumSize(QtCore.QSize(16777215, 30))
         self.bel_gmail.setStyleSheet("font-family: TamilSangamMN;\n"
 "font-size: 13px;")
-        self.bel_gmail.setOpenExternalLinks(False)
+        self.bel_gmail.setOpenExternalLinks(True)
         self.bel_gmail.setObjectName("bel_gmail")
         self.horizontalLayout_2.addWidget(self.bel_gmail)
         self.verticalLayout.addLayout(self.horizontalLayout_2)

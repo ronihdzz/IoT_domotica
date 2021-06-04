@@ -1,4 +1,6 @@
 
+
+
 class App_Principal():
 
     ARCHIVO_ESTADOS_SENSORES="CUERPO/RECURSOS/DATOS/estadosSensores.txt"
@@ -19,6 +21,30 @@ class App_Principal():
         cls.ARCHIVO_ESTADOS_SENSORES=ubicacion+cls.ARCHIVO_ESTADOS_SENSORES
         cls.SONIDO_INCENDIO=ubicacion+cls.SONIDO_INCENDIO
         cls.NOMBRE_ARCHIVO_LOG=ubicacion+cls.NOMBRE_ARCHIVO_LOG
+
+
+class App_datosCreador():
+
+    NOMBRE_PROGRAMADOR="Roni Hernández"
+
+
+    LIKEDIN_NOMBRE="Roni Hernández"
+    LIKEDIN_LINK="https://www.linkedin.com/in/roni-hern%C3%A1ndez-613a62173/"
+    
+    GITHUB_NOMBRE="RoniHernandez99"
+    GITHUB_LINK="https://github.com/RoniHernandez99"
+    
+    REPOSITORIO_PROYECTO_NOMBRE="IoT_domotica"
+    REPOSITORIO_PROYECTO_LINK="https://github.com/RoniHernandez99"
+
+    FOTO_PROGRAMADOR=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/yoMero2.jpg"
+
+
+    # Datos del mensaje que se mandaria al programador 
+    GMAILS=["ronaldo.runing.r@gmail.com","ronaldo.runing_@hotmail.com"]
+    GMAIL_SUBJECT=f"Comentarios acerca de: {REPOSITORIO_PROYECTO_NOMBRE}"
+    GMAIL_CUERPO=f"Hola {NOMBRE_PROGRAMADOR} espero tengas un buen dia, el motivo del mensaje es:"
+
 
 class App_Alarmas():
 
@@ -57,6 +83,7 @@ class App_Deberes():
 from PyQt5.QtCore import pyqtSignal
 from PyQt5 import QtCore
 from PyQt5.QtGui import QIcon
+
 
 #class HuellaAplicacion(QtCore.QObject):
 class HuellaAplicacion(QtCore.QObject):

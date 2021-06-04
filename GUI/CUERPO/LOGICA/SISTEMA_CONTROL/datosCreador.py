@@ -12,9 +12,16 @@ from  CUERPO.DISENO.SISTEMA_CONTROL.datosCreador_dise import Ui_Dialog
 ###############################################################
 #  MIS LIBRERIAS...
 ##############################################################
-from recursos import HuellaAplicacion
+from recursos import HuellaAplicacion,App_datosCreador
+
 
 class Dialog_datosCreador(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
+    '''
+    La finalidad de esta clase es proporcionar los contactos del programador
+    asi como los accesos directos a sus redes sociales.
+    '''
+
+
     def __init__(self):
         Ui_Dialog.__init__(self)
         QtWidgets.QDialog.__init__(self)
@@ -23,30 +30,33 @@ class Dialog_datosCreador(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
         self.setWindowModality(Qt.ApplicationModal)
         HuellaAplicacion.__init__(self)
 
-        nombre="Roni Hernández"
-        gmail="ronaldo.runing.r@gmail.com"
-        likedin=" Roni Hernández "
-        github="RoniHernandez99"
-        repositorio="IoT_domotica"
-        fotoProgramador=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/yoMero2.jpg"
+        nombre=App_datosCreador.NOMBRE_PROGRAMADOR
 
+        likedin=App_datosCreador.LIKEDIN_NOMBRE
+        likedin_link=App_datosCreador.LIKEDIN_LINK
 
-        likedin_link="https://www.linkedin.com/in/roni-hern%C3%A1ndez-613a62173/"
-        github_link="https://github.com/RoniHernandez99"
-        repositorio_link="https://github.com/RoniHernandez99"
+        github=App_datosCreador.GITHUB_NOMBRE
+        github_link=App_datosCreador.GITHUB_LINK
 
+        repositorio=App_datosCreador.REPOSITORIO_PROYECTO_NOMBRE
+        repositorio_link=App_datosCreador.REPOSITORIO_PROYECTO_LINK
 
+        fotoProgramador=App_datosCreador.FOTO_PROGRAMADOR
+
+        gmails=App_datosCreador.GMAILS
+        subject=App_datosCreador.GMAIL_SUBJECT
+        body=App_datosCreador.GMAIL_CUERPO
+        
+
+        gmail_html=f'<span style=" font-size:13px;font-family:TamilSangamMN;"><a href="mailto:{",".join(gmails)}?subject={subject}&body={body}" style="color:black;text-decoration:none;">{gmails[0]}</a></span>'
         likedin_html=f'<span style=" font-size:13px;font-family:TamilSangamMN;"><a href="{likedin_link}" style="color:black;text-decoration:none;">{likedin}</a></span>'
         github_html=f'<span style=" font-size:13px;font-family:TamilSangamMN;"><a href="{github_link}" style="color:black;text-decoration:none;">{github}</a></span>'
 
         self.textBrowser_repositorio.setOpenLinks(True)
         self.textBrowser_repositorio.setOpenExternalLinks(True)
 
-
-        self.bel_gmail.setTextInteractionFlags(Qt.TextSelectableByMouse)
-
-        #self.textBrowser_nombreProgra.setOpenLinks(True)
-        #self.textBrowser_nombreProgra.setOpenExternalLinks(True)
+        # hace que el texto pueda ser seleccionado
+        #self.bel_gmail.setTextInteractionFlags(Qt.TextSelectableByMouse)
 
         self.textBrowser_repositorio.setHtml(f"""
             <span style=" font-size:13px;font-family: TamilSangamMN;">Repositorio de todo el proyecto</span></p>
@@ -59,15 +69,19 @@ class Dialog_datosCreador(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
         <span style="font-size:16px;font-family: TamilSangamMN;text-align:center;"><b>{nombre}</b></span>
         </p>""")
 
+
         self.bel_fotoProgramador.setStyleSheet(f"""
                     border-image: url({fotoProgramador});
                     border-radius:87%;""")
         
 
+        self.bel_likedin.setOpenExternalLinks(True)
+        self.bel_github.setOpenExternalLinks(True)
+        self.bel_gmail.setOpenExternalLinks(True)
 
         self.bel_likedin.setText(likedin_html)
         self.bel_github.setText(github_html)
-        self.bel_gmail.setText(gmail)
+        self.bel_gmail.setText(gmail_html)
 
 
 if __name__ == "__main__":

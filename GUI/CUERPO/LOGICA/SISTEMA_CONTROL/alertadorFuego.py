@@ -15,8 +15,10 @@ from  CUERPO.DISENO.SISTEMA_CONTROL.alertadorFuego_dise import Ui_Dialog
 from recursos import App_Principal,HuellaAplicacion
 
 class Dialog_alertadorFuego(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
-    
-    #senal_colorElegido= pyqtSignal(int)
+    '''
+    Servira para alertar de la presencia de fuego.
+    '''
+
 
     def __init__(self):
         Ui_Dialog.__init__(self)
@@ -27,6 +29,19 @@ class Dialog_alertadorFuego(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
         HuellaAplicacion.__init__(self)
 
     def activarDesactivar_alarmaFuego(self,activarAlarma):
+        '''
+        Ejecutara el sonido de alerta de fuego si el parametro 'activarAlarma' toma
+        el valor de 'True' en caso contrario 'Apagara' dicho sonido
+
+        Parámetros:
+            activarAlarma -- dato de tipo 'bool' que indicara si se desea prender o apagar
+            la alarma de fuego
+                Si activarAlarma es igual a 'True' significara que se desea activar la alarma
+                de incendios y por lo tanto ejecutar el sonido
+                Si activarAlarma es igual a 'False' significara que se desea desactivar la alarma
+                de incendios y por lo tanto dejar de ejecutar el sonido
+        '''
+
         if activarAlarma:
             mixer.init()
             mixer.music.load(App_Principal.SONIDO_INCENDIO)

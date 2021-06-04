@@ -16,6 +16,11 @@ from  CUERPO.DISENO.SISTEMA_CONTROL.configVenti_dise import Ui_Dialog
 from recursos import App_Principal,HuellaAplicacion
 
 class Dialog_configVenti(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
+    '''
+    Permitira que el usuario establezca el valor de la temperatura a la cual quiere 
+    que se prende o apague el ventilador.
+    '''
+
     NOMBRE_APLICACION=App_Principal.NOMBRE_APLICACION
     ICONO_APLICACION=App_Principal.ICONO_APLICACION
     senal_cambioTempPrendeVenti= pyqtSignal(float)
@@ -35,6 +40,14 @@ class Dialog_configVenti(QtWidgets.QDialog, Ui_Dialog,HuellaAplicacion):
         self.btn_guardarSalir.clicked.connect(self.guardarSalir)
 
     def guardarSalir(self):
+        '''
+        Actualizara el atributo de instancia 'self.temp_prendeVentilador' por el 
+        value del 'self.dSb_tempActVenti' y posteriormente emitira una señal
+        con la finalidad de avisar que fue cambia la temperatura a la cual prende
+        el ventilador.
+        '''
+
+
         self.temp_prendeVentilador=self.dSB_tempActVenti.value()
         self.senal_cambioTempPrendeVenti.emit(self.temp_prendeVentilador)
         self.close()

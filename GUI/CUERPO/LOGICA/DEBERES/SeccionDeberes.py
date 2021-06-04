@@ -529,7 +529,8 @@ class SeccionDeberes(QMainWindow,HuellaAplicacion):
                 self.ESTADO_ALINEO,self.TAMANO_LETRA=[ int(x) for x in listaDatos_deberes[0].split(",")  ]
                 
                 logger.debug("Alineacion obtenida={}  Tamano de letra obtenida={}".format(self.ESTADO_ALINEO,self.TAMANO_LETRA))
-    
+
+                self.spinBox_tam.setValue(self.TAMANO_LETRA)
                 # Seleccionando la 'QAction' que corresponde al tipo de alineación cargada
                 if self.ESTADO_ALINEO==0: 
                     self.alineacion_izquierda.trigger()
