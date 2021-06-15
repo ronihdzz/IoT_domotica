@@ -6013,3 +6013,1649 @@
 2021-06-03 19:11:52,183: DEBUG [baseDatos_alarma.py:162] Se ejecuta mÃ©todo __exit__()
 2021-06-03 19:11:52,184: DEBUG [baseDatos_alarma.py:172] Commit de la transacciÃ³n
 2021-06-03 19:11:52,187: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexiÃ³n y cursor
+2021-06-03 21:45:33,909: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 21:45:33,919: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024E22F993F0>
+2021-06-03 21:45:33,920: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024E22F84F80>
+2021-06-03 21:45:33,921: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 21:45:33,921: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 21:45:33,922: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 21:45:33,922: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 21:45:33,923: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024E22F993F0>
+2021-06-03 21:45:33,923: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024E22F84CE0>
+2021-06-03 21:45:33,925: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 21:45:33,928: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 21:45:33,929: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 21:45:33,952: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 21:45:33,952: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 21:45:33,953: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 21:45:33,954: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,25', 'HOAL']
+2021-06-03 21:45:33,955: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=25
+2021-06-03 21:45:33,956: DEBUG [SeccionDeberes.py:542] Deberes obtenidos=['HOAL']
+2021-06-03 21:45:33,956: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 21:45:33,960: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_HOAL'
+2021-06-03 21:45:33,961: DEBUG [itemDeber.py:121] Deber_0_HOAL, cambiando a posición de texto=0
+2021-06-03 21:45:33,962: DEBUG [itemDeber.py:140] Deber_0_HOAL, cambiando el tamaño de letra a tamaño=25
+2021-06-03 21:45:51,273: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=0, recibida
+2021-06-03 21:45:51,273: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-03 21:46:55,916: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 21:46:55,936: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024E22F993F0>
+2021-06-03 21:46:55,937: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024E22EF2E30>
+2021-06-03 21:46:55,943: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 21:46:55,945: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 21:46:55,947: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 21:48:19,846: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 21:48:19,848: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000020B3AE1C3F0>
+2021-06-03 21:48:19,849: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000020B3AE4A570>
+2021-06-03 21:48:19,852: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 21:48:19,853: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 21:48:19,853: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 21:48:19,853: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 21:48:19,854: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000020B3AE1C3F0>
+2021-06-03 21:48:19,855: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000020B3AE4A5E0>
+2021-06-03 21:48:19,856: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 21:48:19,856: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 21:48:19,856: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 21:48:19,881: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 21:48:19,884: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 21:48:19,885: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 21:48:19,888: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,25', 'HOAL']
+2021-06-03 21:48:19,888: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=0  Tamano de letra obtenida=25
+2021-06-03 21:48:19,889: DEBUG [SeccionDeberes.py:542] Deberes obtenidos=['HOAL']
+2021-06-03 21:48:19,890: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-03 21:48:19,895: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_HOAL'
+2021-06-03 21:48:19,896: DEBUG [itemDeber.py:121] Deber_0_HOAL, cambiando a posición de texto=0
+2021-06-03 21:48:19,897: DEBUG [itemDeber.py:140] Deber_0_HOAL, cambiando el tamaño de letra a tamaño=25
+2021-06-03 21:48:27,979: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=0, recibida
+2021-06-03 21:48:27,990: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-03 21:48:32,831: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-03 21:48:35,529: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 21:48:35,545: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 21:48:35,548: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 21:48:35,551: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-03 21:48:35,555: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 21:48:35,557: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000020B3AE1C3F0>
+2021-06-03 21:48:35,558: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000020B3A0BFD50>
+2021-06-03 21:48:35,560: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 21:48:35,562: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 21:48:35,562: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 21:49:04,584: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 21:49:04,597: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,25']
+2021-06-03 21:49:04,598: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 21:49:04,600: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-03 21:49:04,603: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 21:49:04,604: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024E22F993F0>
+2021-06-03 21:49:04,604: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024E217C79D0>
+2021-06-03 21:49:04,606: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 21:49:04,606: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 21:49:04,607: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 21:49:12,675: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 21:49:12,677: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001CA611AC3F0>
+2021-06-03 21:49:12,677: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001CA611DA570>
+2021-06-03 21:49:12,678: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 21:49:12,679: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 21:49:12,679: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 21:49:12,680: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 21:49:12,680: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001CA611AC3F0>
+2021-06-03 21:49:12,681: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001CA611DA5E0>
+2021-06-03 21:49:12,682: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 21:49:12,684: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 21:49:12,685: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 21:49:12,723: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-03 21:49:12,725: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-03 21:49:12,725: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-03 21:49:12,727: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,25']
+2021-06-03 21:50:31,921: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 21:50:31,930: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001CA611AC3F0>
+2021-06-03 21:50:31,935: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001CA6043FD50>
+2021-06-03 21:50:31,941: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 21:50:31,953: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 21:50:31,960: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 22:04:57,952: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 22:04:57,955: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001CA611AC3F0>
+2021-06-03 22:04:57,956: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001CA611DA490>
+2021-06-03 22:04:57,959: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 22:04:57,960: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 22:04:57,961: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 22:19:22,001: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 22:19:22,004: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001CA611AC3F0>
+2021-06-03 22:19:22,005: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001CA6043FDC0>
+2021-06-03 22:19:22,008: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 22:19:22,009: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 22:19:22,010: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 22:33:46,022: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 22:33:46,025: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001CA611AC3F0>
+2021-06-03 22:33:46,026: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001CA6043FD50>
+2021-06-03 22:33:46,029: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 22:33:46,030: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 22:33:46,031: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 22:56:33,341: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 22:56:33,345: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001CA611AC3F0>
+2021-06-03 22:56:33,346: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001CA611DA490>
+2021-06-03 22:56:33,349: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 22:56:33,350: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 22:56:33,351: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-03 23:07:13,483: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-03 23:07:13,488: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-03 23:07:13,501: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-03 23:07:13,510: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-03 23:07:13,513: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-03 23:07:13,515: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001CA611AC3F0>
+2021-06-03 23:07:13,515: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001CA6043FDC0>
+2021-06-03 23:07:13,554: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-03 23:07:13,556: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-03 23:07:13,558: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 06:30:02,679: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 06:30:02,766: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000163135FC3F0>
+2021-06-05 06:30:02,767: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001631362A570>
+2021-06-05 06:30:02,778: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 06:30:02,779: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 06:30:02,779: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 06:30:02,780: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 06:30:02,781: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000163135FC3F0>
+2021-06-05 06:30:02,782: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001631362A5E0>
+2021-06-05 06:30:02,783: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 06:30:02,784: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 06:30:02,784: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 06:30:02,849: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-05 06:30:02,849: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-05 06:30:02,851: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-05 06:30:02,852: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-05 06:40:34,327: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 06:40:34,328: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000163135FC3F0>
+2021-06-05 06:40:34,328: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001631362A490>
+2021-06-05 06:40:34,329: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 06:40:34,330: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 06:40:34,330: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 06:54:58,687: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 06:54:58,688: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000163135FC3F0>
+2021-06-05 06:54:58,689: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000163128AFD50>
+2021-06-05 06:54:58,690: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 06:54:58,690: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 06:54:58,691: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 07:09:22,907: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 07:09:22,910: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000163135FC3F0>
+2021-06-05 07:09:22,911: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000163128AFDC0>
+2021-06-05 07:09:22,913: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 07:09:22,914: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 07:09:22,916: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 07:23:46,997: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 07:23:47,000: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000163135FC3F0>
+2021-06-05 07:23:47,001: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001631362A490>
+2021-06-05 07:23:47,003: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 07:23:47,004: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 07:23:47,005: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 07:30:17,090: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-05 07:30:17,104: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-05 07:30:17,109: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-05 07:30:17,112: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-05 07:30:17,115: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 07:30:17,117: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000163135FC3F0>
+2021-06-05 07:30:17,118: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000163128AFDC0>
+2021-06-05 07:30:17,172: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 07:30:17,172: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 07:30:17,173: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 09:46:16,961: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 09:46:16,965: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001924089E3F0>
+2021-06-05 09:46:16,966: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000192408CD5E0>
+2021-06-05 09:46:16,970: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 09:46:16,971: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 09:46:16,973: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 09:46:16,975: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 09:46:16,978: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001924089E3F0>
+2021-06-05 09:46:16,980: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000192408CD650>
+2021-06-05 09:46:16,983: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 09:46:16,984: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 09:46:16,986: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 09:46:17,040: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-05 09:46:17,041: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-05 09:46:17,042: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-05 09:46:17,044: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-05 09:54:52,345: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 09:54:52,347: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001924089E3F0>
+2021-06-05 09:54:52,348: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000192408CD500>
+2021-06-05 09:54:52,350: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 09:54:52,351: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 09:54:52,352: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 10:09:18,335: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 10:09:18,339: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001924089E3F0>
+2021-06-05 10:09:18,340: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000192408CD6C0>
+2021-06-05 10:09:18,344: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 10:09:18,345: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 10:09:18,346: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 10:17:34,906: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 10:17:34,909: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001924089E3F0>
+2021-06-05 10:17:34,910: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000192408CD730>
+2021-06-05 10:17:34,912: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 10:17:34,913: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 10:17:34,914: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 10:18:01,382: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 10:18:01,384: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001924089E3F0>
+2021-06-05 10:18:01,385: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000192408CD730>
+2021-06-05 10:18:01,428: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 10:18:01,582: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 10:18:01,583: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 10:23:46,155: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 10:23:46,211: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001924089E3F0>
+2021-06-05 10:23:46,212: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000192408CD420>
+2021-06-05 10:23:46,214: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 10:23:46,215: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 10:23:46,216: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 10:38:11,625: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 10:38:11,627: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001924089E3F0>
+2021-06-05 10:38:11,629: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000192408CD500>
+2021-06-05 10:38:11,631: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 10:38:11,632: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 10:38:11,633: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 10:52:36,745: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 10:52:36,749: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001924089E3F0>
+2021-06-05 10:52:36,751: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000192408CD6C0>
+2021-06-05 10:52:36,754: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 10:52:36,756: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 10:52:36,758: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 11:17:51,099: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 11:17:51,109: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001B8047EC3F0>
+2021-06-05 11:17:51,110: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001B80481A570>
+2021-06-05 11:17:51,147: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 11:17:51,148: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 11:17:51,149: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 11:17:51,164: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 11:17:51,166: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001B8047EC3F0>
+2021-06-05 11:17:51,167: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001B80481A5E0>
+2021-06-05 11:17:51,169: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 11:17:51,170: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 11:17:51,170: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 11:17:51,204: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-05 11:17:51,205: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-05 11:17:51,205: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-05 11:17:51,206: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-05 11:18:12,266: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 11:18:12,267: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001B8047EC3F0>
+2021-06-05 11:18:12,267: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001B80481A6C0>
+2021-06-05 11:18:12,268: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 11:18:12,269: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 11:18:12,269: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 11:18:12,299: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 11:18:12,300: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001B8047EC3F0>
+2021-06-05 11:18:12,301: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001B80481A6C0>
+2021-06-05 11:18:12,304: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 11:18:12,304: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 11:18:12,306: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 11:18:50,021: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-05 11:18:50,022: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001B8047EC3F0>
+2021-06-05 11:18:50,022: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001B80481A490>
+2021-06-05 11:18:50,047: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-05 11:18:50,164: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-05 11:18:50,166: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-05 11:18:51,966: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-05 11:18:51,973: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-05 11:18:51,973: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posición de texto=0
+2021-06-05 11:18:51,976: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tamaño de letra a tamaño=12
+2021-06-05 11:18:55,428: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=0, recibida
+2021-06-05 11:18:55,465: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-07 19:33:16,279: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:33:16,401: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:33:16,402: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AC76D5E0>
+2021-06-07 19:33:16,427: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:33:16,427: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:33:16,429: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 19:33:16,430: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:33:16,433: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:33:16,434: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AC76D650>
+2021-06-07 19:33:16,439: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:33:16,439: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:33:16,442: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 19:33:16,598: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-07 19:33:16,599: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-07 19:33:16,603: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-07 19:33:16,608: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-07 19:34:46,957: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:34:46,959: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:34:46,961: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AC76D730>
+2021-06-07 19:34:46,964: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:34:46,965: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:34:46,968: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 19:35:00,652: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:35:00,654: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:35:00,657: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AC76D730>
+2021-06-07 19:35:00,674: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:35:00,822: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:35:00,823: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 19:35:09,709: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:35:09,734: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:35:09,735: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AC76D7A0>
+2021-06-07 19:35:09,738: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:35:09,741: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:35:09,744: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 19:35:27,578: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:35:27,580: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:35:27,582: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AC76D7A0>
+2021-06-07 19:35:27,596: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:35:27,703: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:35:27,704: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 19:37:15,337: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:37:15,348: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:37:15,349: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AB9EFDC0>
+2021-06-07 19:37:15,354: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:37:15,457: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:37:15,458: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 19:37:15,702: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:37:15,771: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:37:15,772: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AB9EFDC0>
+2021-06-07 19:37:15,781: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:37:15,782: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:37:15,786: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 19:37:16,392: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:37:16,393: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:37:16,395: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AB9EFE30>
+2021-06-07 19:37:16,398: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:37:16,399: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:37:16,401: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 19:37:35,957: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:37:35,967: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:37:35,971: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AC76D500>
+2021-06-07 19:37:35,975: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:37:36,083: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:37:36,084: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 19:37:51,381: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-07 19:37:51,399: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-07 19:37:51,403: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-07 19:37:51,408: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-07 19:37:51,412: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 19:37:51,581: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000154AC7354E0>
+2021-06-07 19:37:51,582: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000154AB9EFE30>
+2021-06-07 19:37:51,597: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 19:37:51,598: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 19:37:51,599: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:11:14,597: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:11:14,598: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000221F48CC3F0>
+2021-06-07 20:11:14,599: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000221F48FA570>
+2021-06-07 20:11:14,600: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:11:14,600: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:11:14,600: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:11:14,601: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:11:14,602: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000221F48CC3F0>
+2021-06-07 20:11:14,602: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000221F48FA5E0>
+2021-06-07 20:11:14,603: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:11:14,604: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:11:14,604: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:11:14,627: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-07 20:11:14,627: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-07 20:11:14,627: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-07 20:11:14,629: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-07 20:11:29,474: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-07 20:11:29,476: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-07 20:11:29,492: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-07 20:11:29,500: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-07 20:11:29,503: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:11:29,504: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000221F48CC3F0>
+2021-06-07 20:11:29,505: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000221F48FA490>
+2021-06-07 20:11:29,507: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:11:29,508: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:11:29,515: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:12:37,517: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:12:37,518: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000022917C5C3F0>
+2021-06-07 20:12:37,519: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000022917C8A570>
+2021-06-07 20:12:37,519: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:12:37,520: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:12:37,520: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:12:37,521: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:12:37,521: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000022917C5C3F0>
+2021-06-07 20:12:37,522: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000022917C8A5E0>
+2021-06-07 20:12:37,523: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:12:37,523: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:12:37,524: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:12:37,548: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-07 20:12:37,549: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-07 20:12:37,550: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-07 20:12:37,552: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-07 20:12:40,919: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-07 20:12:40,920: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-07 20:12:40,923: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-07 20:12:40,926: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-07 20:12:40,929: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:12:40,931: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000022917C5C3F0>
+2021-06-07 20:12:40,931: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000022917C8A490>
+2021-06-07 20:12:40,935: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:12:40,936: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:12:40,937: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:12:46,731: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:12:46,733: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000026FF32754E0>
+2021-06-07 20:12:46,733: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000026FF32AD5E0>
+2021-06-07 20:12:46,734: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:12:46,735: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:12:46,735: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:12:46,735: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:12:46,736: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000026FF32754E0>
+2021-06-07 20:12:46,737: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000026FF32AD650>
+2021-06-07 20:12:46,739: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:12:46,739: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:12:46,740: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:12:46,766: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-07 20:12:46,767: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-07 20:12:46,768: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-07 20:12:46,770: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-07 20:13:14,841: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-07 20:13:14,859: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-07 20:13:14,862: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-07 20:13:14,864: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-07 20:13:14,866: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:13:14,867: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000026FF32754E0>
+2021-06-07 20:13:14,868: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000026FF32AD500>
+2021-06-07 20:13:14,869: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:13:14,870: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:13:14,871: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:16:57,886: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:16:57,888: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001EC413554E0>
+2021-06-07 20:16:57,889: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001EC4138D5E0>
+2021-06-07 20:16:57,890: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:16:57,890: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:16:57,891: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:16:57,891: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:16:57,892: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001EC413554E0>
+2021-06-07 20:16:57,892: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001EC4138D650>
+2021-06-07 20:16:57,894: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:16:57,894: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:16:57,895: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:16:57,918: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-07 20:16:57,919: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-07 20:16:57,921: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-07 20:16:57,923: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-07 20:19:27,720: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:19:27,723: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001EC413554E0>
+2021-06-07 20:19:27,726: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001EC4138D500>
+2021-06-07 20:19:27,731: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:19:27,734: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:19:27,735: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:27:06,899: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:27:06,902: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001EC413554E0>
+2021-06-07 20:27:06,905: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001EC4138D730>
+2021-06-07 20:27:06,910: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:27:06,911: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:27:06,913: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:27:29,402: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:27:29,405: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001EC413554E0>
+2021-06-07 20:27:29,408: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001EC4138D730>
+2021-06-07 20:27:29,415: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:27:29,547: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:27:29,548: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-07 20:27:44,517: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-07 20:27:44,528: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-07 20:27:44,532: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-07 20:27:44,536: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-07 20:27:44,538: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-07 20:27:44,563: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001EC413554E0>
+2021-06-07 20:27:44,564: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001EC4138D5E0>
+2021-06-07 20:27:44,571: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-07 20:27:44,572: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-07 20:27:44,573: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-09 16:34:58,248: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-09 16:34:58,348: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024B71F2E3F0>
+2021-06-09 16:34:58,349: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024B71F5B570>
+2021-06-09 16:34:58,350: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-09 16:34:58,351: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-09 16:34:58,351: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-09 16:34:58,361: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-09 16:34:58,362: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024B71F2E3F0>
+2021-06-09 16:34:58,363: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024B71F5B5E0>
+2021-06-09 16:34:58,365: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-09 16:34:58,366: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-09 16:34:58,366: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-09 16:34:58,398: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-09 16:34:58,399: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-09 16:34:58,400: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-09 16:34:58,401: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-09 16:35:09,443: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-09 16:35:09,445: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024B71F2E3F0>
+2021-06-09 16:35:09,445: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024B71F5B6C0>
+2021-06-09 16:35:09,447: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-09 16:35:09,447: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-09 16:35:09,448: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-09 16:35:09,449: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-09 16:35:09,450: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024B71F2E3F0>
+2021-06-09 16:35:09,451: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024B71F5B6C0>
+2021-06-09 16:35:09,452: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-09 16:35:09,452: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-09 16:35:09,453: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-09 16:35:22,805: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-09 16:35:22,812: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024B71F2E3F0>
+2021-06-09 16:35:22,812: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024B70FB0D50>
+2021-06-09 16:35:22,816: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-09 16:35:22,936: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-09 16:35:22,937: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-09 16:39:29,686: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-09 16:39:29,709: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024B71F2E3F0>
+2021-06-09 16:39:29,709: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024B71F5B490>
+2021-06-09 16:39:29,711: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-09 16:39:29,712: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-09 16:39:29,712: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-09 16:40:29,093: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 16:40:29,098: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-09 16:40:29,098: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posición de texto=0
+2021-06-09 16:40:29,099: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 16:40:36,803: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 16:40:36,808: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_1_'
+2021-06-09 16:40:36,809: DEBUG [itemDeber.py:121] Deber_1_, cambiando a posición de texto=0
+2021-06-09 16:40:36,810: DEBUG [itemDeber.py:140] Deber_1_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 16:40:46,599: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 16:40:46,601: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_2_'
+2021-06-09 16:40:46,602: DEBUG [itemDeber.py:121] Deber_2_, cambiando a posición de texto=0
+2021-06-09 16:40:46,602: DEBUG [itemDeber.py:140] Deber_2_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 16:41:54,868: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=0, recibida
+2021-06-09 16:41:54,898: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 16:41:56,536: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=1, recibida
+2021-06-09 16:41:56,559: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 16:41:58,287: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=2, recibida
+2021-06-09 16:41:58,291: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 16:42:04,053: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-09 16:42:04,056: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-09 16:42:04,063: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-09 16:42:04,065: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-09 16:42:04,069: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-09 16:42:04,073: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x0000024B71F2E3F0>
+2021-06-09 16:42:04,074: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x0000024B70FB0DC0>
+2021-06-09 16:42:04,117: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-09 16:42:04,118: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-09 16:42:04,119: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-09 16:43:22,809: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-09 16:43:22,810: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000168BB2CB3F0>
+2021-06-09 16:43:22,811: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000168BB2E8C70>
+2021-06-09 16:43:22,813: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-09 16:43:22,815: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-09 16:43:22,816: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-09 16:43:22,817: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-09 16:43:22,818: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000168BB2CB3F0>
+2021-06-09 16:43:22,822: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000168BB2E8CE0>
+2021-06-09 16:43:22,839: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-09 16:43:22,843: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-09 16:43:22,849: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-09 16:43:22,884: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-09 16:43:22,885: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-09 16:43:22,888: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-09 16:43:22,890: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-09 16:44:27,011: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 16:44:27,014: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-09 16:44:27,015: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posición de texto=0
+2021-06-09 16:44:27,015: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 16:44:33,883: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 16:44:33,885: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_1_'
+2021-06-09 16:44:33,886: DEBUG [itemDeber.py:121] Deber_1_, cambiando a posición de texto=0
+2021-06-09 16:44:33,886: DEBUG [itemDeber.py:140] Deber_1_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 16:45:02,147: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=0, recibida
+2021-06-09 16:45:02,149: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 16:45:03,988: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=1, recibida
+2021-06-09 16:45:03,990: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 17:22:14,748: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:22:14,749: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_2_'
+2021-06-09 17:22:14,750: DEBUG [itemDeber.py:121] Deber_2_, cambiando a posición de texto=0
+2021-06-09 17:22:14,750: DEBUG [itemDeber.py:140] Deber_2_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:22:20,293: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:22:20,295: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_3_'
+2021-06-09 17:22:20,295: DEBUG [itemDeber.py:121] Deber_3_, cambiando a posición de texto=0
+2021-06-09 17:22:20,295: DEBUG [itemDeber.py:140] Deber_3_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:22:24,895: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:22:24,897: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_4_'
+2021-06-09 17:22:24,897: DEBUG [itemDeber.py:121] Deber_4_, cambiando a posición de texto=0
+2021-06-09 17:22:24,898: DEBUG [itemDeber.py:140] Deber_4_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:23:45,827: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=3, recibida
+2021-06-09 17:23:45,833: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=1 
+2021-06-09 17:23:47,492: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=2, recibida
+2021-06-09 17:23:47,496: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 17:23:48,892: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=4, recibida
+2021-06-09 17:23:48,897: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 17:23:54,835: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:23:54,840: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_5_'
+2021-06-09 17:23:54,841: DEBUG [itemDeber.py:121] Deber_5_, cambiando a posición de texto=0
+2021-06-09 17:23:54,842: DEBUG [itemDeber.py:140] Deber_5_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:24:24,112: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=5, recibida
+2021-06-09 17:24:24,113: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 17:24:27,994: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:24:27,999: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_6_'
+2021-06-09 17:24:27,999: DEBUG [itemDeber.py:121] Deber_6_, cambiando a posición de texto=0
+2021-06-09 17:24:28,000: DEBUG [itemDeber.py:140] Deber_6_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:24:34,336: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:24:34,338: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_7_'
+2021-06-09 17:24:34,339: DEBUG [itemDeber.py:121] Deber_7_, cambiando a posición de texto=0
+2021-06-09 17:24:34,339: DEBUG [itemDeber.py:140] Deber_7_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:24:38,730: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:24:38,732: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_8_'
+2021-06-09 17:24:38,733: DEBUG [itemDeber.py:121] Deber_8_, cambiando a posición de texto=0
+2021-06-09 17:24:38,733: DEBUG [itemDeber.py:140] Deber_8_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:30:05,947: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=6, recibida
+2021-06-09 17:30:05,983: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 17:30:07,853: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=7, recibida
+2021-06-09 17:30:07,856: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 17:30:09,998: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=8, recibida
+2021-06-09 17:30:10,001: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 17:31:18,623: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:31:18,625: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_9_'
+2021-06-09 17:31:18,626: DEBUG [itemDeber.py:121] Deber_9_, cambiando a posición de texto=0
+2021-06-09 17:31:18,628: DEBUG [itemDeber.py:140] Deber_9_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:31:26,694: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:31:26,695: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_10_'
+2021-06-09 17:31:26,696: DEBUG [itemDeber.py:121] Deber_10_, cambiando a posición de texto=0
+2021-06-09 17:31:26,697: DEBUG [itemDeber.py:140] Deber_10_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:31:32,890: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:31:32,896: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_11_'
+2021-06-09 17:31:32,897: DEBUG [itemDeber.py:121] Deber_11_, cambiando a posición de texto=0
+2021-06-09 17:31:32,898: DEBUG [itemDeber.py:140] Deber_11_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:45:03,051: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=13, recibida
+2021-06-09 17:45:03,054: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=13
+2021-06-09 17:45:03,082: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=13
+2021-06-09 17:45:03,085: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=13
+2021-06-09 17:45:03,462: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=14, recibida
+2021-06-09 17:45:03,463: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:45:03,471: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:45:03,473: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:45:03,652: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=15, recibida
+2021-06-09 17:45:03,653: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:45:03,662: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:45:03,663: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:45:03,886: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=16, recibida
+2021-06-09 17:45:03,887: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:45:03,904: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:45:03,906: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:45:04,154: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=17, recibida
+2021-06-09 17:45:04,155: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:45:04,171: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:45:04,173: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:45:04,371: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=18, recibida
+2021-06-09 17:45:04,371: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=18
+2021-06-09 17:45:04,379: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=18
+2021-06-09 17:45:04,380: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=18
+2021-06-09 17:45:04,562: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=19, recibida
+2021-06-09 17:45:04,564: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=19
+2021-06-09 17:45:04,578: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=19
+2021-06-09 17:45:04,580: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=19
+2021-06-09 17:45:06,550: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=25, recibida
+2021-06-09 17:45:06,551: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=25
+2021-06-09 17:45:06,600: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=25
+2021-06-09 17:45:06,601: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=25
+2021-06-09 17:45:07,512: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=25, recibida
+2021-06-09 17:45:07,512: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=25
+2021-06-09 17:45:07,513: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=25
+2021-06-09 17:45:07,514: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=25
+2021-06-09 17:45:12,969: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=24, recibida
+2021-06-09 17:45:12,970: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=24
+2021-06-09 17:45:12,986: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=24
+2021-06-09 17:45:12,988: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=24
+2021-06-09 17:45:13,156: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=23, recibida
+2021-06-09 17:45:13,157: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=23
+2021-06-09 17:45:13,172: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=23
+2021-06-09 17:45:13,174: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=23
+2021-06-09 17:45:13,302: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=22, recibida
+2021-06-09 17:45:13,303: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=22
+2021-06-09 17:45:13,318: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=22
+2021-06-09 17:45:13,319: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=22
+2021-06-09 17:45:13,473: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=21, recibida
+2021-06-09 17:45:13,474: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=21
+2021-06-09 17:45:13,493: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=21
+2021-06-09 17:45:13,494: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=21
+2021-06-09 17:45:13,632: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=20, recibida
+2021-06-09 17:45:13,633: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:45:13,639: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:45:13,639: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:45:13,795: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=19, recibida
+2021-06-09 17:45:13,796: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=19
+2021-06-09 17:45:13,798: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=19
+2021-06-09 17:45:13,800: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=19
+2021-06-09 17:45:13,964: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=18, recibida
+2021-06-09 17:45:13,965: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=18
+2021-06-09 17:45:13,966: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=18
+2021-06-09 17:45:13,967: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=18
+2021-06-09 17:45:14,133: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=17, recibida
+2021-06-09 17:45:14,134: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:45:14,135: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:45:14,136: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:45:14,303: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=16, recibida
+2021-06-09 17:45:14,304: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:45:14,306: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:45:14,308: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:45:14,472: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=15, recibida
+2021-06-09 17:45:14,473: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:45:14,475: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:45:14,476: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:45:14,633: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=14, recibida
+2021-06-09 17:45:14,633: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:45:14,635: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:45:14,636: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:45:16,725: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=10, recibida
+2021-06-09 17:45:16,726: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=10
+2021-06-09 17:45:16,735: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=10
+2021-06-09 17:45:16,736: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=10
+2021-06-09 17:45:17,160: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=10, recibida
+2021-06-09 17:45:17,160: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=10
+2021-06-09 17:45:17,161: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=10
+2021-06-09 17:45:17,162: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=10
+2021-06-09 17:45:23,366: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=15, recibida
+2021-06-09 17:45:23,367: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:45:23,369: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:45:23,370: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:45:25,142: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=20, recibida
+2021-06-09 17:45:25,143: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:45:25,145: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:45:25,147: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:45:25,630: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=20, recibida
+2021-06-09 17:45:25,631: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:45:25,632: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:45:25,632: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:50:31,963: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-09 17:50:31,964: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:50:31,966: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:50:31,967: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:50:32,211: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-09 17:50:32,212: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:50:32,212: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:50:32,213: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:50:34,093: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-09 17:50:34,097: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_12_'
+2021-06-09 17:50:34,098: DEBUG [itemDeber.py:121] Deber_12_, cambiando a posición de texto=0
+2021-06-09 17:50:34,099: DEBUG [itemDeber.py:140] Deber_12_, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:50:37,373: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=12, recibida
+2021-06-09 17:50:37,374: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=3 
+2021-06-09 17:50:43,499: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=13, recibida
+2021-06-09 17:50:43,520: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=13
+2021-06-09 17:50:43,532: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=13
+2021-06-09 17:50:43,533: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=13
+2021-06-09 17:50:43,676: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=14, recibida
+2021-06-09 17:50:43,676: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:50:43,680: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:50:43,681: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:50:44,015: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=15, recibida
+2021-06-09 17:50:44,017: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:50:44,025: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:50:44,026: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:50:44,190: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=16, recibida
+2021-06-09 17:50:44,191: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:50:44,196: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:50:44,197: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:50:44,355: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=17, recibida
+2021-06-09 17:50:44,357: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:50:44,365: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:50:44,366: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:50:44,494: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=18, recibida
+2021-06-09 17:50:44,495: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=18
+2021-06-09 17:50:44,503: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=18
+2021-06-09 17:50:44,505: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=18
+2021-06-09 17:50:45,847: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=17, recibida
+2021-06-09 17:50:45,848: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:50:45,849: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:50:45,850: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=17
+2021-06-09 17:50:46,220: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=16, recibida
+2021-06-09 17:50:46,222: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:50:46,225: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:50:46,227: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=16
+2021-06-09 17:50:46,380: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=15, recibida
+2021-06-09 17:50:46,380: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:50:46,381: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:50:46,382: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=15
+2021-06-09 17:50:46,549: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=14, recibida
+2021-06-09 17:50:46,550: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:50:46,551: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:50:46,551: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=14
+2021-06-09 17:50:46,720: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=13, recibida
+2021-06-09 17:50:46,720: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=13
+2021-06-09 17:50:46,722: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=13
+2021-06-09 17:50:46,724: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=13
+2021-06-09 17:50:46,910: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-09 17:50:46,910: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:50:46,912: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:50:46,913: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=12
+2021-06-09 17:50:47,228: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=11, recibida
+2021-06-09 17:50:47,229: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=11
+2021-06-09 17:50:47,242: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=11
+2021-06-09 17:50:47,243: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=11
+2021-06-09 17:50:53,338: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=20, recibida
+2021-06-09 17:50:53,338: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:50:53,341: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:50:53,342: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:50:54,079: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=20, recibida
+2021-06-09 17:50:54,079: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:50:54,081: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=20
+2021-06-09 17:50:54,082: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=20
+2021-06-09 18:21:47,904: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-09 18:21:47,906: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:21:47,912: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:21:47,915: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:21:48,214: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-09 18:21:48,214: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:21:48,216: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:21:48,218: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:22:42,457: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=13, recibida
+2021-06-09 18:22:42,458: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=13
+2021-06-09 18:22:42,468: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=13
+2021-06-09 18:22:42,470: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=13
+2021-06-09 18:22:42,981: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=14, recibida
+2021-06-09 18:22:42,982: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=14
+2021-06-09 18:22:42,991: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=14
+2021-06-09 18:22:42,992: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=14
+2021-06-09 18:22:43,456: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=15, recibida
+2021-06-09 18:22:43,457: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=15
+2021-06-09 18:22:43,466: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=15
+2021-06-09 18:22:43,468: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=15
+2021-06-09 18:22:43,969: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=16, recibida
+2021-06-09 18:22:43,977: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=16
+2021-06-09 18:22:43,987: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=16
+2021-06-09 18:22:44,001: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=16
+2021-06-09 18:22:44,510: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=17, recibida
+2021-06-09 18:22:44,511: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=17
+2021-06-09 18:22:44,518: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=17
+2021-06-09 18:22:44,519: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=17
+2021-06-09 18:22:45,009: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=18, recibida
+2021-06-09 18:22:45,010: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=18
+2021-06-09 18:22:45,018: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=18
+2021-06-09 18:22:45,020: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=18
+2021-06-09 18:22:46,738: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=17, recibida
+2021-06-09 18:22:46,739: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=17
+2021-06-09 18:22:46,740: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=17
+2021-06-09 18:22:46,741: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=17
+2021-06-09 18:22:47,216: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=16, recibida
+2021-06-09 18:22:47,217: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=16
+2021-06-09 18:22:47,220: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=16
+2021-06-09 18:22:47,221: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=16
+2021-06-09 18:22:47,595: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=15, recibida
+2021-06-09 18:22:47,596: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=15
+2021-06-09 18:22:47,598: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=15
+2021-06-09 18:22:47,599: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=15
+2021-06-09 18:22:47,954: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=14, recibida
+2021-06-09 18:22:47,955: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=14
+2021-06-09 18:22:47,957: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=14
+2021-06-09 18:22:47,959: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=14
+2021-06-09 18:22:48,320: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=13, recibida
+2021-06-09 18:22:48,321: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=13
+2021-06-09 18:22:48,322: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=13
+2021-06-09 18:22:48,324: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=13
+2021-06-09 18:22:48,734: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-09 18:22:48,735: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:22:48,737: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:22:48,738: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:22:49,311: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=11, recibida
+2021-06-09 18:22:49,312: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=11
+2021-06-09 18:22:49,316: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=11
+2021-06-09 18:22:49,317: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=11
+2021-06-09 18:22:49,746: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=10, recibida
+2021-06-09 18:22:49,746: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=10
+2021-06-09 18:22:49,751: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=10
+2021-06-09 18:22:49,752: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=10
+2021-06-09 18:28:39,020: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-09 18:28:39,022: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:28:39,024: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:28:39,025: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:28:39,296: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-09 18:28:39,297: DEBUG [itemDeber.py:140] Deber_9_correr en la mañana, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:28:39,298: DEBUG [itemDeber.py:140] Deber_10_hacer tarea, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:28:39,298: DEBUG [itemDeber.py:140] Deber_11_estudiar en la noche, cambiando el tamaño de letra a tamaño=12
+2021-06-09 18:30:16,586: DEBUG [SeccionDeberes.py:341] Solicitud de  cambio de posición del texto de  deberes a posicion=1, recibida
+2021-06-09 18:30:16,589: DEBUG [itemDeber.py:121] Deber_9_correr en la mañana, cambiando a posición de texto=1
+2021-06-09 18:30:16,591: DEBUG [itemDeber.py:121] Deber_10_hacer tarea, cambiando a posición de texto=1
+2021-06-09 18:30:16,593: DEBUG [itemDeber.py:121] Deber_11_estudiar en la noche, cambiando a posición de texto=1
+2021-06-09 18:30:18,007: DEBUG [SeccionDeberes.py:341] Solicitud de  cambio de posición del texto de  deberes a posicion=2, recibida
+2021-06-09 18:30:18,007: DEBUG [itemDeber.py:121] Deber_9_correr en la mañana, cambiando a posición de texto=2
+2021-06-09 18:30:18,008: DEBUG [itemDeber.py:121] Deber_10_hacer tarea, cambiando a posición de texto=2
+2021-06-09 18:30:18,010: DEBUG [itemDeber.py:121] Deber_11_estudiar en la noche, cambiando a posición de texto=2
+2021-06-09 18:30:19,412: DEBUG [SeccionDeberes.py:341] Solicitud de  cambio de posición del texto de  deberes a posicion=0, recibida
+2021-06-09 18:30:19,413: DEBUG [itemDeber.py:121] Deber_9_correr en la mañana, cambiando a posición de texto=0
+2021-06-09 18:30:19,414: DEBUG [itemDeber.py:121] Deber_10_hacer tarea, cambiando a posición de texto=0
+2021-06-09 18:30:19,415: DEBUG [itemDeber.py:121] Deber_11_estudiar en la noche, cambiando a posición de texto=0
+2021-06-09 18:30:20,790: DEBUG [SeccionDeberes.py:341] Solicitud de  cambio de posición del texto de  deberes a posicion=1, recibida
+2021-06-09 18:30:20,790: DEBUG [itemDeber.py:121] Deber_9_correr en la mañana, cambiando a posición de texto=1
+2021-06-09 18:30:20,791: DEBUG [itemDeber.py:121] Deber_10_hacer tarea, cambiando a posición de texto=1
+2021-06-09 18:30:20,791: DEBUG [itemDeber.py:121] Deber_11_estudiar en la noche, cambiando a posición de texto=1
+2021-06-09 18:43:15,091: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=9, recibida
+2021-06-09 18:43:15,100: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 18:43:21,613: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=10, recibida
+2021-06-09 18:43:21,625: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-09 18:48:16,963: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-09 18:48:16,969: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['1,12', 'estudiar en la noche']
+2021-06-09 18:48:16,973: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-09 18:48:16,980: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-09 18:48:16,984: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-09 18:48:16,987: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000168BB2CB3F0>
+2021-06-09 18:48:16,988: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000168BB2E8B90>
+2021-06-09 18:48:16,989: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-09 18:48:16,989: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-09 18:48:16,990: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 10:42:17,884: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 10:42:17,961: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 10:42:17,961: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B570>
+2021-06-10 10:42:17,972: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 10:42:17,973: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 10:42:17,973: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 10:42:17,974: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 10:42:17,975: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 10:42:17,976: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B5E0>
+2021-06-10 10:42:17,978: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 10:42:17,979: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 10:42:17,980: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 10:42:18,062: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-10 10:42:18,063: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-10 10:42:18,065: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-10 10:42:18,081: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['1,12', 'estudiar en la noche']
+2021-06-10 10:42:18,081: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=1  Tamano de letra obtenida=12
+2021-06-10 10:42:18,082: DEBUG [SeccionDeberes.py:542] Deberes obtenidos=['estudiar en la noche']
+2021-06-10 10:42:18,083: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-10 10:42:18,089: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_estudiar en la noche'
+2021-06-10 10:42:18,090: DEBUG [itemDeber.py:121] Deber_0_estudiar en la noche, cambiando a posición de texto=1
+2021-06-10 10:42:18,090: DEBUG [itemDeber.py:140] Deber_0_estudiar en la noche, cambiando el tamaño de letra a tamaño=12
+2021-06-10 10:44:31,716: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 10:44:31,718: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 10:44:31,719: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B6C0>
+2021-06-10 10:44:31,721: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 10:44:31,722: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 10:44:31,723: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 10:51:54,252: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=0, recibida
+2021-06-10 10:51:54,286: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-10 10:52:44,636: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 10:52:44,637: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 10:52:44,638: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B6C0>
+2021-06-10 10:52:44,639: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 10:52:44,656: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 10:52:44,658: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 10:53:32,439: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 10:53:32,440: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 10:53:32,441: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B6C0>
+2021-06-10 10:53:32,442: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 10:53:32,443: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 10:53:32,443: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:42:22,046: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:42:22,047: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:42:22,048: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B6C0>
+2021-06-10 11:42:22,048: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:42:22,049: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:42:22,049: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:42:37,967: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:42:37,969: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:42:37,972: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B6C0>
+2021-06-10 11:42:37,975: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:42:37,976: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:42:37,977: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:42:44,050: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:42:44,052: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:42:44,053: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B6C0>
+2021-06-10 11:42:44,056: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:42:44,058: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:42:44,060: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:43:08,906: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:43:08,907: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:43:08,908: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B6C0>
+2021-06-10 11:43:08,942: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:43:09,049: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:43:09,050: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:46:26,237: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:46:26,261: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:46:26,262: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E184520D50>
+2021-06-10 11:46:26,308: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:46:26,399: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:46:26,400: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:46:27,074: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:46:27,099: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:46:27,100: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B730>
+2021-06-10 11:46:27,102: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:46:27,103: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:46:27,104: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:46:30,522: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:46:30,523: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:46:30,525: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E184520D50>
+2021-06-10 11:46:30,527: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:46:30,528: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:46:30,529: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:46:31,552: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:46:31,556: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:46:31,556: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E184520D50>
+2021-06-10 11:46:31,557: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:46:31,558: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:46:31,558: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:46:51,247: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:46:51,248: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:46:51,250: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B730>
+2021-06-10 11:46:51,252: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:46:51,252: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:46:51,253: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:47:16,093: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:47:16,094: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:47:16,094: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B730>
+2021-06-10 11:47:16,095: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:47:16,095: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:47:16,096: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:48:00,590: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:48:00,591: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:48:00,592: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B730>
+2021-06-10 11:48:00,596: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:48:00,596: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:48:00,597: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:48:45,556: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:48:45,557: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:48:45,557: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B730>
+2021-06-10 11:48:45,558: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:48:45,558: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:48:45,559: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 11:49:09,917: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 11:49:09,918: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 11:49:09,919: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B730>
+2021-06-10 11:49:09,922: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 11:49:10,192: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 11:49:10,193: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 12:01:19,709: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 12:01:19,740: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 12:01:19,741: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B6C0>
+2021-06-10 12:01:19,744: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 12:01:19,746: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 12:01:19,747: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 12:01:37,488: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 12:01:37,491: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 12:01:37,492: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B6C0>
+2021-06-10 12:01:37,500: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 12:01:37,656: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 12:01:37,657: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 12:01:55,354: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 12:01:55,368: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 12:01:55,368: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B730>
+2021-06-10 12:01:55,369: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 12:01:55,370: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 12:01:55,370: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 12:02:27,561: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 12:02:27,564: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 12:02:27,565: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E18528B730>
+2021-06-10 12:02:27,573: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 12:02:27,712: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 12:02:27,714: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 12:02:33,193: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-10 12:02:33,207: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['1,12']
+2021-06-10 12:02:33,210: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-10 12:02:33,212: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-10 12:02:33,216: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 12:02:33,234: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001E18525E3F0>
+2021-06-10 12:02:33,235: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001E184520D50>
+2021-06-10 12:02:33,236: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 12:02:33,236: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 12:02:33,237: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 12:03:18,348: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 12:03:18,349: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000259ED46E3F0>
+2021-06-10 12:03:18,350: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000259ED49B570>
+2021-06-10 12:03:18,389: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 12:03:18,389: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 12:03:18,389: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 12:03:18,405: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 12:03:18,406: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000259ED46E3F0>
+2021-06-10 12:03:18,407: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000259ED49B5E0>
+2021-06-10 12:03:18,408: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 12:03:18,408: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 12:03:18,408: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 12:03:18,431: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-10 12:03:18,431: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-10 12:03:18,432: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-10 12:03:18,432: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['1,12']
+2021-06-10 12:26:54,313: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 12:26:54,324: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000259ED46E3F0>
+2021-06-10 12:26:54,324: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000259ED49B6C0>
+2021-06-10 12:26:54,325: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 12:26:54,326: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 12:26:54,327: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 12:26:54,327: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 12:26:54,328: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000259ED46E3F0>
+2021-06-10 12:26:54,328: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000259ED49B6C0>
+2021-06-10 12:26:54,329: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 12:26:54,330: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 12:26:54,330: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 12:26:59,188: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-10 12:26:59,192: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-10 12:26:59,200: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-10 12:26:59,203: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-10 12:26:59,205: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 12:26:59,206: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000259ED46E3F0>
+2021-06-10 12:26:59,207: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000259ED49B490>
+2021-06-10 12:26:59,208: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 12:26:59,209: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 12:26:59,209: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 19:14:06,420: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 19:14:06,498: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203C00FE3F0>
+2021-06-10 19:14:06,498: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203C012B570>
+2021-06-10 19:14:06,517: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 19:14:06,518: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 19:14:06,518: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 19:14:06,546: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 19:14:06,547: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203C00FE3F0>
+2021-06-10 19:14:06,547: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203C012B5E0>
+2021-06-10 19:14:06,550: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 19:14:06,550: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 19:14:06,550: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 19:14:06,633: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-10 19:14:06,634: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-10 19:14:06,634: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-10 19:14:06,635: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-10 19:15:03,506: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 19:15:03,507: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203C00FE3F0>
+2021-06-10 19:15:03,508: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203C012B6C0>
+2021-06-10 19:15:03,509: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 19:15:03,509: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 19:15:03,510: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 19:15:03,536: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 19:15:03,537: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203C00FE3F0>
+2021-06-10 19:15:03,537: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203C012B6C0>
+2021-06-10 19:15:03,538: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 19:15:03,538: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 19:15:03,539: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 19:16:06,694: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 19:16:06,695: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203C00FE3F0>
+2021-06-10 19:16:06,695: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203C012B6C0>
+2021-06-10 19:16:06,715: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 19:16:06,943: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 19:16:06,944: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 19:16:20,070: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 19:16:20,080: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203C00FE3F0>
+2021-06-10 19:16:20,080: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203C012B730>
+2021-06-10 19:16:20,081: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 19:16:20,082: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 19:16:20,083: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-10 19:16:27,099: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-10 19:16:27,105: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_'
+2021-06-10 19:16:27,106: DEBUG [itemDeber.py:121] Deber_0_, cambiando a posición de texto=0
+2021-06-10 19:16:27,106: DEBUG [itemDeber.py:140] Deber_0_, cambiando el tamaño de letra a tamaño=12
+2021-06-10 19:16:49,969: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=0, recibida
+2021-06-10 19:16:49,970: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-10 19:16:57,998: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-10 19:16:58,001: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_1_'
+2021-06-10 19:16:58,001: DEBUG [itemDeber.py:121] Deber_1_, cambiando a posición de texto=0
+2021-06-10 19:16:58,002: DEBUG [itemDeber.py:140] Deber_1_, cambiando el tamaño de letra a tamaño=12
+2021-06-10 19:17:11,901: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-10 19:17:11,903: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_2_'
+2021-06-10 19:17:11,904: DEBUG [itemDeber.py:121] Deber_2_, cambiando a posición de texto=0
+2021-06-10 19:17:11,904: DEBUG [itemDeber.py:140] Deber_2_, cambiando el tamaño de letra a tamaño=12
+2021-06-10 19:17:27,135: DEBUG [SeccionDeberes.py:341] Solicitud de  cambio de posición del texto de  deberes a posicion=1, recibida
+2021-06-10 19:17:27,136: DEBUG [itemDeber.py:121] Deber_1_Tender mi ropa, cambiando a posición de texto=1
+2021-06-10 19:17:27,137: DEBUG [itemDeber.py:121] Deber_2_IR a la tienda, cambiando a posición de texto=1
+2021-06-10 19:17:35,409: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=13, recibida
+2021-06-10 19:17:35,421: DEBUG [itemDeber.py:140] Deber_1_Tender mi ropa, cambiando el tamaño de letra a tamaño=13
+2021-06-10 19:17:35,431: DEBUG [itemDeber.py:140] Deber_2_IR a la tienda, cambiando el tamaño de letra a tamaño=13
+2021-06-10 19:17:35,641: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=14, recibida
+2021-06-10 19:17:35,642: DEBUG [itemDeber.py:140] Deber_1_Tender mi ropa, cambiando el tamaño de letra a tamaño=14
+2021-06-10 19:17:35,648: DEBUG [itemDeber.py:140] Deber_2_IR a la tienda, cambiando el tamaño de letra a tamaño=14
+2021-06-10 19:17:36,842: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=15, recibida
+2021-06-10 19:17:36,843: DEBUG [itemDeber.py:140] Deber_1_Tender mi ropa, cambiando el tamaño de letra a tamaño=15
+2021-06-10 19:17:36,853: DEBUG [itemDeber.py:140] Deber_2_IR a la tienda, cambiando el tamaño de letra a tamaño=15
+2021-06-10 19:23:38,746: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-10 19:23:38,754: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['1,15', 'Tender mi ropa', 'IR a la tienda']
+2021-06-10 19:23:38,754: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-10 19:23:38,757: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-10 19:23:38,760: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-10 19:23:38,762: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203C00FE3F0>
+2021-06-10 19:23:38,765: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203C012B490>
+2021-06-10 19:23:38,767: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-10 19:23:38,770: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-10 19:23:38,776: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:27:02,836: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:27:02,939: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:27:02,940: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B570>
+2021-06-14 20:27:02,948: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:27:02,949: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:27:02,949: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:27:02,997: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:27:02,998: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:27:02,998: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B5E0>
+2021-06-14 20:27:03,000: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:27:03,000: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:27:03,002: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:27:03,094: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-14 20:27:03,095: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-14 20:27:03,095: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-14 20:27:03,154: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['1,15', 'Tender mi ropa', 'IR a la tienda']
+2021-06-14 20:27:03,155: DEBUG [SeccionDeberes.py:531] Alineacion obtenida=1  Tamano de letra obtenida=15
+2021-06-14 20:27:03,157: DEBUG [SeccionDeberes.py:542] Deberes obtenidos=['Tender mi ropa', 'IR a la tienda']
+2021-06-14 20:27:03,158: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-14 20:27:03,168: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_0_Tender mi ropa'
+2021-06-14 20:27:03,169: DEBUG [itemDeber.py:121] Deber_0_Tender mi ropa, cambiando a posición de texto=1
+2021-06-14 20:27:03,170: DEBUG [itemDeber.py:140] Deber_0_Tender mi ropa, cambiando el tamaño de letra a tamaño=15
+2021-06-14 20:27:03,189: DEBUG [SeccionDeberes.py:381] Solicitud de agregar a un nuevo itemDeber, recibida
+2021-06-14 20:27:03,193: DEBUG [itemDeber.py:92] Creando una instancia de las clase: ItemDeber, nombre asignado= 'Deber_1_IR a la tienda'
+2021-06-14 20:27:03,194: DEBUG [itemDeber.py:121] Deber_1_IR a la tienda, cambiando a posición de texto=1
+2021-06-14 20:27:03,195: DEBUG [itemDeber.py:140] Deber_1_IR a la tienda, cambiando el tamaño de letra a tamaño=15
+2021-06-14 20:34:32,433: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=0, recibida
+2021-06-14 20:34:32,477: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-14 20:34:34,656: DEBUG [SeccionDeberes.py:446] Solicitud de eliminar el itemDeber con id=1, recibida
+2021-06-14 20:34:34,663: DEBUG [SeccionDeberes.py:457] Posición del itemDeber obtenida=0 
+2021-06-14 20:36:03,051: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:36:03,053: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:36:03,054: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:36:03,057: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:36:03,058: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:36:03,059: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:36:03,163: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:36:03,165: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:36:03,166: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:36:03,183: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:36:03,185: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:36:03,186: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:36:13,506: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:36:13,508: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:36:13,510: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:36:13,548: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:36:13,698: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:36:13,699: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:36:45,100: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:36:45,115: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:36:45,115: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:36:45,117: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:36:45,118: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:36:45,118: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:36:45,119: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:36:45,120: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:36:45,120: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:36:45,121: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:36:45,122: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:36:45,123: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:36:51,131: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:36:51,133: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:36:51,134: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:36:51,142: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:36:51,279: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:36:51,280: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:37:01,033: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-14 20:37:01,451: DEBUG [SeccionDeberes.py:360] Solicitud de cambio de tamaño de letra del texto de deberes a tamaño=12, recibida
+2021-06-14 20:37:03,821: DEBUG [SeccionDeberes.py:341] Solicitud de  cambio de posición del texto de  deberes a posicion=0, recibida
+2021-06-14 20:37:17,966: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:37:17,978: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:37:17,978: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:37:17,979: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:37:17,980: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:37:17,980: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:37:17,981: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:37:17,982: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:37:17,982: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:37:17,984: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:37:17,984: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:37:17,985: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:37:27,208: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:37:27,209: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:37:27,209: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:37:27,243: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:37:27,356: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:37:27,357: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:37:46,031: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:37:46,045: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:37:46,046: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:37:46,047: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:37:46,048: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:37:46,049: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:37:46,049: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:37:46,050: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:37:46,051: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:37:46,052: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:37:46,053: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:37:46,053: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:37:53,934: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:37:53,937: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:37:53,938: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:37:53,945: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:37:54,091: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:37:54,092: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:38:18,738: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:38:18,757: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:38:18,758: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:38:18,759: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:38:18,759: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:38:18,760: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:38:18,760: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:38:18,761: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:38:18,761: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:38:18,763: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:38:18,763: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:38:18,764: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:38:28,084: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:38:28,085: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:38:28,085: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:38:28,089: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:38:28,219: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:38:28,220: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:41:23,211: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:41:23,225: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:41:23,226: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:41:23,227: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:41:23,227: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:41:23,228: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:41:23,228: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:41:23,229: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:41:23,230: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:41:23,231: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:41:23,232: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:41:23,232: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:41:31,557: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:41:31,559: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:41:31,560: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:41:31,567: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:41:31,693: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:41:31,695: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:41:44,039: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:41:44,054: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:41:44,054: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:41:44,056: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:41:44,057: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:41:44,057: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:41:44,058: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:41:44,060: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:41:44,060: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:41:44,062: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:41:44,062: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:41:44,063: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:41:55,494: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:41:55,497: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:41:55,497: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:41:55,523: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:41:55,636: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:41:55,637: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:42:16,055: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:42:16,070: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:42:16,070: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:42:16,072: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:42:16,072: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:42:16,074: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:42:16,075: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:42:16,076: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:42:16,077: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:42:16,078: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:42:16,079: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:42:16,080: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:42:22,899: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:42:22,901: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:42:22,902: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:42:22,935: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:42:23,038: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:42:23,040: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:42:41,835: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:42:41,848: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:42:41,848: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:42:41,848: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:42:41,849: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:42:41,849: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:42:41,850: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:42:41,851: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:42:41,851: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:42:41,852: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:42:41,853: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:42:41,854: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:42:53,816: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:42:53,818: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:42:53,819: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:42:53,857: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:42:53,970: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:42:53,971: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:43:11,017: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:43:11,109: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:43:11,110: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:43:11,113: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:43:11,114: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:43:11,116: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:43:11,117: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:43:11,119: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:43:11,120: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:43:11,122: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:43:11,123: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:43:11,125: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:43:16,267: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:43:16,269: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:43:16,270: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:43:16,279: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:43:16,406: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:43:16,407: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:43:35,327: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:43:35,341: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:43:35,342: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:43:35,343: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:43:35,343: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:43:35,344: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:43:35,344: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:43:35,346: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:43:35,346: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:43:35,347: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:43:35,347: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:43:35,348: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:43:46,160: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:43:46,160: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:43:46,161: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:43:46,179: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:43:46,293: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:43:46,294: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:47:22,372: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:47:22,386: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:47:22,386: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:47:22,388: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:47:22,389: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:47:22,390: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:47:22,391: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:47:22,392: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:47:22,392: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:47:22,394: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:47:22,394: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:47:22,394: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:47:27,637: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:47:27,639: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:47:27,639: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B730>
+2021-06-14 20:47:27,660: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:47:27,719: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:47:27,719: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:47:38,843: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:47:38,860: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:47:38,861: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:47:38,862: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:47:38,863: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:47:38,863: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:47:38,865: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:47:38,867: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:47:38,868: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:47:38,869: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:47:38,869: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:47:38,870: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:47:48,113: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:47:48,115: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:47:48,116: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621FA1B6C0>
+2021-06-14 20:47:48,137: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:47:48,251: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:47:48,252: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 20:55:47,412: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-14 20:55:47,413: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-14 20:55:47,421: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-14 20:55:47,422: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-14 20:55:47,426: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 20:55:47,459: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x000001621F9EE3F0>
+2021-06-14 20:55:47,460: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x000001621EC80D50>
+2021-06-14 20:55:47,462: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 20:55:47,463: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 20:55:47,464: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:14:04,755: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:14:04,756: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:14:04,756: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B570>
+2021-06-14 21:14:04,758: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:14:04,758: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:14:04,758: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:14:04,778: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:14:04,780: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:14:04,780: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B5E0>
+2021-06-14 21:14:04,781: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:14:04,782: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:14:04,782: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:14:04,804: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2021-06-14 21:14:04,804: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2021-06-14 21:14:04,805: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2021-06-14 21:14:04,806: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2021-06-14 21:14:36,702: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:14:36,704: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:14:36,705: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 21:14:36,707: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:14:36,708: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:14:36,710: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:14:36,711: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:14:36,713: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:14:36,714: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 21:14:36,716: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:14:36,717: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:14:36,719: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:14:44,113: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:14:44,115: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:14:44,116: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 21:14:44,124: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:14:44,223: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:14:44,226: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:15:10,200: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:15:10,215: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:15:10,216: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B730>
+2021-06-14 21:15:10,217: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:15:10,218: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:15:10,219: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:15:10,219: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:15:10,221: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:15:10,222: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B730>
+2021-06-14 21:15:10,223: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:15:10,224: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:15:10,225: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:15:19,202: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:15:19,204: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:15:19,204: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B730>
+2021-06-14 21:15:19,208: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:15:19,330: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:15:19,331: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:17:09,655: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:17:09,689: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:17:09,689: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B490>
+2021-06-14 21:17:09,724: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:17:09,831: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:17:09,831: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:34:30,760: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:34:30,835: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:34:30,836: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 21:34:30,845: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:34:30,846: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:34:30,848: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:35:12,717: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:35:12,720: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:35:12,725: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 21:35:12,761: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:35:12,856: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:35:12,857: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:36:01,552: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:36:01,572: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:36:01,573: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B490>
+2021-06-14 21:36:01,577: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:36:01,578: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:36:01,579: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:40:04,925: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:40:04,927: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:40:04,927: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B490>
+2021-06-14 21:40:04,929: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:40:04,930: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:40:04,931: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:40:04,933: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:40:04,934: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:40:04,935: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B490>
+2021-06-14 21:40:04,936: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:40:04,937: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:40:04,938: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:40:10,465: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:40:10,467: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:40:10,468: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B490>
+2021-06-14 21:40:10,479: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:40:10,604: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:40:10,604: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:40:18,507: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:40:18,530: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:40:18,530: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203ED090D50>
+2021-06-14 21:40:18,534: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:40:18,669: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:40:18,670: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:40:22,320: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:40:22,346: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:40:22,347: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203ED090D50>
+2021-06-14 21:40:22,351: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:40:22,505: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:40:22,507: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:41:01,672: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:41:01,685: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:41:01,686: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203ED090D50>
+2021-06-14 21:41:01,687: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:41:01,688: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:41:01,690: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:42:34,130: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:42:34,132: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:42:34,134: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 21:42:34,136: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:42:34,137: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:42:34,138: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:42:34,139: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:42:34,140: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:42:34,141: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 21:42:34,143: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:42:34,143: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:42:34,145: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:42:38,224: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:42:38,226: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:42:38,228: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 21:42:38,235: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:42:38,361: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:42:38,364: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:43:01,726: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:43:01,761: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:43:01,762: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203ED090D50>
+2021-06-14 21:43:01,766: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:43:01,766: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:43:01,769: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:44:00,515: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:44:00,516: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:44:00,517: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B490>
+2021-06-14 21:44:00,518: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:44:00,518: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:44:00,519: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:44:00,519: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:44:00,520: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:44:00,521: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B490>
+2021-06-14 21:44:00,522: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:44:00,523: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:44:00,523: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:44:05,380: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:44:05,382: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:44:05,383: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B490>
+2021-06-14 21:44:05,528: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:44:05,628: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:44:05,629: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 21:45:01,858: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 21:45:01,878: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 21:45:01,879: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203ED090D50>
+2021-06-14 21:45:01,880: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 21:45:01,881: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 21:45:01,881: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 22:00:07,488: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 22:00:07,492: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 22:00:07,493: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 22:00:07,496: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 22:00:07,497: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 22:00:07,499: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 22:00:47,020: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 22:00:47,022: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 22:00:47,023: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 22:00:47,025: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 22:00:47,027: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 22:00:47,028: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 22:00:52,862: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 22:00:52,864: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 22:00:52,865: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203ED090D50>
+2021-06-14 22:00:52,866: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 22:00:52,867: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 22:00:52,868: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 22:00:54,211: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 22:00:54,212: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 22:00:54,213: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203ED090D50>
+2021-06-14 22:00:54,215: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 22:00:54,215: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 22:00:54,216: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 22:01:04,613: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 22:01:04,614: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 22:01:04,615: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203EDE1B6C0>
+2021-06-14 22:01:04,617: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 22:01:04,617: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 22:01:04,618: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2021-06-14 22:18:27,967: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2021-06-14 22:18:27,968: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2021-06-14 22:18:27,969: DEBUG [SeccionDeberes.py:593] Abriendo archivo: C:\Users\ronal\Desktop\proyectos\IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2021-06-14 22:18:27,976: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2021-06-14 22:18:27,980: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2021-06-14 22:18:27,982: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000203EDDEE3F0>
+2021-06-14 22:18:27,982: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000203ED090D50>
+2021-06-14 22:18:27,984: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2021-06-14 22:18:27,984: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2021-06-14 22:18:27,985: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor

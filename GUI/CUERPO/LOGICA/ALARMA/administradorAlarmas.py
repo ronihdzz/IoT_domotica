@@ -326,7 +326,7 @@ class AdministradorAlarmas(QMainWindow,HuellaAplicacion):
 
 
         # El 'Qtimer' debe sonar cada segundo
-        self.contador.start(10)
+        self.contador.start(1000)
 
     def filtrarAlarmasSonaran(self,listaIds):
         '''

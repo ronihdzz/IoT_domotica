@@ -15,8 +15,8 @@ const String CHAR_SEGURIDAD="_";
 const String SEP_ENTRE_DATOS=",";
 
 //Pines...
-#define PIN_MICROFONO 2
-#define PIN_SENSOR_FLAMA 3
+#define PIN_MICROFONO 3
+#define PIN_SENSOR_FLAMA 2
 #define PIN_SENSOR_TEMPERATURA A7
 
 void setup() {
