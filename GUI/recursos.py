@@ -6,8 +6,8 @@ class App_Principal():
     ARCHIVO_ESTADOS_SENSORES="CUERPO/RECURSOS/DATOS/estadosSensores.txt"
     SONIDO_INCENDIO="CUERPO/RECURSOS/SONIDOS_SISTEMA/fuego_detectado.wav"
 
-    ARDUINO_NANO_EXTENSION="COM7"
-    BLUETOOTH_HC05="COM5"
+    ARDUINO_NANO_EXTENSION="COM3"
+    BLUETOOTH_HC05="COM4"
 
     ICONO_APLICACION=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/RoniHernandez99_IoT_domotica_128px.png"
     NOMBRE_APLICACION="RoniHernandez99/IoT_domotica"
@@ -29,19 +29,19 @@ class App_datosCreador():
 
 
     LIKEDIN_NOMBRE="Roni Hernández"
-    LIKEDIN_LINK="https://www.linkedin.com/in/roni-hern%C3%A1ndez-613a62173/"
+    LIKEDIN_LINK="https://www.linkedin.com/in/ronihernandez99/"
     
     GITHUB_NOMBRE="RoniHernandez99"
     GITHUB_LINK="https://github.com/RoniHernandez99"
     
     REPOSITORIO_PROYECTO_NOMBRE="IoT_domotica"
-    REPOSITORIO_PROYECTO_LINK="https://github.com/RoniHernandez99"
+    REPOSITORIO_PROYECTO_LINK="https://github.com/RoniHernandez99/IoT_domotica"
 
     FOTO_PROGRAMADOR=":/SISTEMA_CONTROL/IMAGENES/SISTEMA_CONTROL/yoMero2.jpg"
 
 
     # Datos del mensaje que se mandaria al programador 
-    GMAILS=["ronaldo.runing.r@gmail.com","ronaldo.runing_@hotmail.com"]
+    GMAILS=["roni.hernandez.1999@gmail.com"]
     GMAIL_SUBJECT=f"Comentarios acerca de: {REPOSITORIO_PROYECTO_NOMBRE}"
     GMAIL_CUERPO=f"Hola {NOMBRE_PROGRAMADOR} espero tengas un buen dia, el motivo del mensaje es:"
 

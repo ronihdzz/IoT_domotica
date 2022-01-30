@@ -143,20 +143,24 @@ class ArduinoExtension_hilo(QThread):
         
         '''
 
-        nuevaTemp_float=float(nuevaTemp_str)
-        if abs( nuevaTemp_float - self.tempActual ) > 0.3:
-            self.tempActual=nuevaTemp_float
-            self.senal_actTemp.emit(nuevaTemp_str)
+        try:
 
-        if self.tempActual>=self.tempPrenderaVenti:
-            if not(self.ventilador_on):
-                self.senal_prenderVentilador.emit(True)
-                self.ventilador_on=True
-        else:
-            if self.ventilador_on:
-                self.senal_prenderVentilador.emit(False)
-                self.ventilador_on=False
-                
+            nuevaTemp_float=float(nuevaTemp_str)
+            if abs( nuevaTemp_float - self.tempActual ) > 0.3:
+                self.tempActual=nuevaTemp_float
+                self.senal_actTemp.emit(nuevaTemp_str)
+
+            if self.tempActual>=self.tempPrenderaVenti:
+                if not(self.ventilador_on):
+                    self.senal_prenderVentilador.emit(True)
+                    self.ventilador_on=True
+            else:
+                if self.ventilador_on:
+                    self.senal_prenderVentilador.emit(False)
+                    self.ventilador_on=False
+        except Exception as e:
+            print("Error al procesar dato de temperatura: ",e)
+                    
             
     
     def procesarFoco(self):

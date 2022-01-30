@@ -29,15 +29,18 @@ Formatos:
 
 logger = logging
 
-print(App_Principal.NOMBRE_ARCHIVO_LOG)
 
-# CARACTERISTICAS DEL REPORTE: 
-logger.basicConfig( level=logging.DEBUG, # remplazar por 'DEBUG' para un reporte mas amplio
-                    format='%(asctime)s: %(levelname)s [%(filename)s:%(lineno)s] %(message)s',
-                    handlers=[
-                                logging.FileHandler(App_Principal.NOMBRE_ARCHIVO_LOG),  # indicando el nombre del archivo donde se escribiran los mensajes
-                                logging.StreamHandler()   # esta función ocacione que los mensajes se muestren en consola
-                            ])
+def actualizarUbicacionLogger():
+    print("Ubicacion del archivo log: ",App_Principal.NOMBRE_ARCHIVO_LOG)
+    global logger 
+
+    # CARACTERISTICAS DEL REPORTE: 
+    logger.basicConfig( level=logging.ERROR, # remplazar por 'DEBUG' para un reporte mas amplio
+                        format='%(asctime)s: %(levelname)s [%(filename)s:%(lineno)s] %(message)s',
+                        handlers=[
+                                    logging.FileHandler(App_Principal.NOMBRE_ARCHIVO_LOG),  # indicando el nombre del archivo donde se escribiran los mensajes
+                                    logging.StreamHandler()   # esta función ocacione que los mensajes se muestren en consola
+                                ])
 
 
 

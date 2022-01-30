@@ -498,6 +498,12 @@ if __name__ == "__main__":
     import sys, time,os
     import recursos
 
+    from logger import actualizarUbicacionLogger
+    
+
+
+
+
     #print("Nombre completo del programa que se esta ejecutando: ",sys.argv)
     direccionTotal=sys.argv[0]
 
@@ -516,6 +522,8 @@ if __name__ == "__main__":
     recursos.App_Alarmas.actualizarUbicaciones(ruta_direccionTotal)
     recursos.App_Deberes.actualizarUbicaciones(ruta_direccionTotal)
     recursos.App_Principal.actualizarUbicaciones(ruta_direccionTotal)
+
+    actualizarUbicacionLogger()
 
 
 
