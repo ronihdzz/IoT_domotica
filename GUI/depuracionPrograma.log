@@ -1,0 +1,76 @@
+2022-01-30 12:44:53,662: DEBUG [baseDatos_alarma.py:142] Inicio de with mï¿½todo __enter__
+2022-01-30 12:44:53,664: DEBUG [baseDatos_alarma.py:44] Conexiï¿½n exitosa: <sqlite3.Connection object at 0x00000238110063F0>
+2022-01-30 12:44:53,664: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con ï¿½xito: <sqlite3.Cursor object at 0x0000023812474110>
+2022-01-30 12:44:53,666: DEBUG [baseDatos_alarma.py:162] Se ejecuta mï¿½todo __exit__()
+2022-01-30 12:44:53,667: DEBUG [baseDatos_alarma.py:172] Commit de la transacciï¿½n
+2022-01-30 12:44:53,668: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexiï¿½n y cursor
+2022-01-30 12:44:53,670: DEBUG [baseDatos_alarma.py:142] Inicio de with mï¿½todo __enter__
+2022-01-30 12:44:53,673: DEBUG [baseDatos_alarma.py:44] Conexiï¿½n exitosa: <sqlite3.Connection object at 0x00000238110063F0>
+2022-01-30 12:44:53,675: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con ï¿½xito: <sqlite3.Cursor object at 0x0000023812474180>
+2022-01-30 12:44:53,679: DEBUG [baseDatos_alarma.py:162] Se ejecuta mï¿½todo __exit__()
+2022-01-30 12:44:53,680: DEBUG [baseDatos_alarma.py:172] Commit de la transacciï¿½n
+2022-01-30 12:44:53,682: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexiï¿½n y cursor
+2022-01-30 12:44:53,719: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2022-01-30 12:44:53,720: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2022-01-30 12:44:53,720: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2022-01-30 12:44:53,722: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2022-01-30 12:44:55,888: DEBUG [baseDatos_alarma.py:142] Inicio de with mï¿½todo __enter__
+2022-01-30 12:44:55,891: DEBUG [baseDatos_alarma.py:44] Conexiï¿½n exitosa: <sqlite3.Connection object at 0x00000238110063F0>
+2022-01-30 12:44:55,893: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con ï¿½xito: <sqlite3.Cursor object at 0x00000238124742D0>
+2022-01-30 12:44:55,897: DEBUG [baseDatos_alarma.py:162] Se ejecuta mï¿½todo __exit__()
+2022-01-30 12:44:55,898: DEBUG [baseDatos_alarma.py:172] Commit de la transacciï¿½n
+2022-01-30 12:44:55,900: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexiï¿½n y cursor
+2022-01-30 12:45:01,902: DEBUG [baseDatos_alarma.py:142] Inicio de with mï¿½todo __enter__
+2022-01-30 12:45:01,904: DEBUG [baseDatos_alarma.py:44] Conexiï¿½n exitosa: <sqlite3.Connection object at 0x00000238110063F0>
+2022-01-30 12:45:01,908: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con ï¿½xito: <sqlite3.Cursor object at 0x00000238124742D0>
+2022-01-30 12:45:01,915: DEBUG [baseDatos_alarma.py:162] Se ejecuta mï¿½todo __exit__()
+2022-01-30 12:45:02,082: DEBUG [baseDatos_alarma.py:172] Commit de la transacciï¿½n
+2022-01-30 12:45:02,084: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexiï¿½n y cursor
+2022-01-30 12:45:06,870: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2022-01-30 12:45:06,882: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2022-01-30 12:45:06,882: DEBUG [SeccionDeberes.py:593] Abriendo archivo: IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2022-01-30 12:45:06,885: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2022-01-30 12:45:06,888: DEBUG [baseDatos_alarma.py:142] Inicio de with mï¿½todo __enter__
+2022-01-30 12:45:06,938: DEBUG [baseDatos_alarma.py:44] Conexiï¿½n exitosa: <sqlite3.Connection object at 0x00000238110063F0>
+2022-01-30 12:45:06,941: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con ï¿½xito: <sqlite3.Cursor object at 0x0000023812474030>
+2022-01-30 12:45:06,943: DEBUG [baseDatos_alarma.py:162] Se ejecuta mï¿½todo __exit__()
+2022-01-30 12:45:06,943: DEBUG [baseDatos_alarma.py:172] Commit de la transacciï¿½n
+2022-01-30 12:45:06,944: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexiï¿½n y cursor
+2022-01-30 12:46:02,942: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2022-01-30 12:46:02,944: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000238D8EAB3F0>
+2022-01-30 12:46:02,945: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000238DB83B110>
+2022-01-30 12:46:02,947: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2022-01-30 12:46:02,947: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2022-01-30 12:46:02,948: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2022-01-30 12:46:02,957: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2022-01-30 12:46:02,958: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000238D8EAB3F0>
+2022-01-30 12:46:02,959: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000238DB83B180>
+2022-01-30 12:46:02,961: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2022-01-30 12:46:02,961: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2022-01-30 12:46:02,962: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2022-01-30 12:46:02,988: DEBUG [SeccionDeberes.py:98] Sistema de deberes cargado
+2022-01-30 12:46:02,989: DEBUG [SeccionDeberes.py:501] Cargando deberes guardados
+2022-01-30 12:46:02,990: DEBUG [SeccionDeberes.py:505] Abriendo al archivo: IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para cargar los datos de los deberes guardados la ultima vez
+2022-01-30 12:46:02,991: DEBUG [SeccionDeberes.py:518] Lista de los datos de los deberes cargada: ['0,12']
+2022-01-30 12:46:17,440: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2022-01-30 12:46:17,443: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000238D8EAB3F0>
+2022-01-30 12:46:17,446: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000238DB83B2D0>
+2022-01-30 12:46:17,450: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2022-01-30 12:46:17,451: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2022-01-30 12:46:17,453: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2022-01-30 12:46:22,357: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2022-01-30 12:46:22,358: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000238D8EAB3F0>
+2022-01-30 12:46:22,359: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000238DB83B2D0>
+2022-01-30 12:46:22,393: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2022-01-30 12:46:22,534: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2022-01-30 12:46:22,536: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor
+2022-01-30 12:46:24,822: DEBUG [SeccionDeberes.py:580] Iniciando el proceso de  respaldar los datos de los deberes
+2022-01-30 12:46:24,830: DEBUG [SeccionDeberes.py:592] Lista de datos a respaldar generada: ['0,12']
+2022-01-30 12:46:24,833: DEBUG [SeccionDeberes.py:593] Abriendo archivo: IoT_domotica\GUI\CUERPO/RECURSOS/DATOS/deberes.txt para guardar los datos de la lista
+2022-01-30 12:46:24,836: DEBUG [SeccionDeberes.py:596] Datos guardados con exito en el archivo
+2022-01-30 12:46:24,839: DEBUG [baseDatos_alarma.py:142] Inicio de with método __enter__
+2022-01-30 12:46:24,905: DEBUG [baseDatos_alarma.py:44] Conexión exitosa: <sqlite3.Connection object at 0x00000238D8EAB3F0>
+2022-01-30 12:46:24,906: DEBUG [baseDatos_alarma.py:68] Se abrio el cursor con éxito: <sqlite3.Cursor object at 0x00000238D8EAAF80>
+2022-01-30 12:46:24,908: DEBUG [baseDatos_alarma.py:162] Se ejecuta método __exit__()
+2022-01-30 12:46:24,909: DEBUG [baseDatos_alarma.py:172] Commit de la transacción
+2022-01-30 12:46:24,910: DEBUG [baseDatos_alarma.py:98] Se han cerrado los objetos de conexión y cursor

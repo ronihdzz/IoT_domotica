@@ -5,6 +5,16 @@
 #### Autor: David Roni Hernández Beltrán
 <hr>
 
+Explicación del proyecto en español:
+
+[![Alt text](https://img.youtube.com/vi/UfCgMUs2OLo/0.jpg)](https://www.youtube.com/watch?v=UfCgMUs2OLo)
+
+
+Explicación del proyecto en ingles:
+
+[![Alt text](https://img.youtube.com/vi/xrW_T7PZulM/0.jpg)](https://www.youtube.com/watch?v=xrW_T7PZulM)
+
+
 
 ### **Menu**
 
@@ -15,6 +25,8 @@
 
 
 * [2) Funcionamiento](#2-funcionamiento)
+
+    * [2.0) Explicacion detallada](PlaneacionSistemaDomotica.pdf)
     * [2.1) Explicacion breve](#21-explicacion-breve)
     * [2.2) Explicacion del sofware del proyecto](#22-explicacion-del-sofware-del-proyecto)
         * [2.2.1) Sistema de deberes](#221-sistema-de-deberes)
@@ -105,23 +117,20 @@ A continuación se enlistan los prerrequisitos para poder ejecutar el proyecto:
 
 <!--style="margin-left:auto;margin-right:auto;width:100%;"-->
 <div style="text-align: center;">
-<img  src="recursos_readme/OTRO/img4_moduloBluethoH05
-.jpg" style="width:40%;"  />
+<img  src="recursos_readme/OTRO/img4_moduloBluethoH05.jpg" style="width:40%;"  />
 </div>
 
 * 4-. Un cable USB a mini USB( para conectar el adaptador convertidor USB Serial FTDI TTL FT232R a un puerto usb de la rasberry o un puerto usb de la  computadora)
 <!--style="margin-left:auto;margin-right:auto;width:100%;"-->
 <div style="text-align: center;">
-<img  src="recursos_readme/OTRO/img5_cableUSBaMINI_USB
-.jpg" style="width:40%;"  />
+<img  src="recursos_readme/OTRO/img5_cableUSBaMINI_USB.jpg" style="width:40%;"  />
 </div>
 
 * 5-. Un led RGB de preferencia el **sensor led RGB módulo KY-016**
 
 <!--style="margin-left:auto;margin-right:auto;width:100%;"-->
 <div style="text-align: center;">
-<img  src="recursos_readme/OTRO/img6_moduloKY016
-.jpg" style="width:40%;"  />
+<img  src="recursos_readme/OTRO/img6_moduloKY016.jpg" style="width:40%;"  />
 </div>
 
 
@@ -129,8 +138,7 @@ A continuación se enlistan los prerrequisitos para poder ejecutar el proyecto:
 
 <!--style="margin-left:auto;margin-right:auto;width:100%;"-->
 <div style="text-align: center;">
-<img  src="recursos_readme/OTRO/img7_sensorTemp_ky013
-.jpg" style="width:40%;"  />
+<img  src="recursos_readme/OTRO/img7_sensorTemp_ky013.jpg" style="width:40%;"  />
 </div>
 
 
@@ -139,8 +147,7 @@ A continuación se enlistan los prerrequisitos para poder ejecutar el proyecto:
 
 <!--style="margin-left:auto;margin-right:auto;width:100%;"-->
 <div style="text-align: center;">
-<img  src="recursos_readme/OTRO/img8_sensorFlama_ky026
-.jpg" style="width:40%;"  />
+<img  src="recursos_readme/OTRO/img8_sensorFlama_ky026.jpg" style="width:40%;"  />
 </div>
 
 
@@ -149,8 +156,7 @@ A continuación se enlistan los prerrequisitos para poder ejecutar el proyecto:
 
 <!--style="margin-left:auto;margin-right:auto;width:100%;"-->
 <div style="text-align: center;">
-<img  src="recursos_readme/OTRO/img9_ky037
-.jpg" style="width:40%;"  />
+<img  src="recursos_readme/OTRO/img9_ky037.jpg" style="width:40%;"  />
 </div>
 
 * 9-. Un módulo relevador 5V KY-019
@@ -309,6 +315,11 @@ Mi proyecto consiste en un pequeño sistema de domótica el cual es administrado
 *  Avisar al usuario cuando se detecte un  incendio
 *  Permitir la programación de alarmas.
 *  Ofrecer un sistema de administración de deberes.
+
+
+Para ver una explicación mas detallada de todo lo que puede hacer este proyecto, puedes leer el siguiente pdf:
+[Sistema de domotica de Roni Hernandez explicado detalladamente](PlaneacionSistemaDomotica.pdf)
+
 
 ### **2.2) Explicacion del sofware del proyecto** 
 <div class="myWrapper" markdown="1" align="center">
@@ -820,8 +831,7 @@ A continuación, se adjuntará un video de como reacciona el sistema ante la det
 
 
 <div style="text-align: center;">
-<img  src="recursos_readme/SISTEMA_CONTROL/sistemaAntiIncendios
-.gif" style="width:100%;"  />
+<img  src="recursos_readme/SISTEMA_CONTROL/sistemaAntiIncendios.gif" style="width:100%;"  />
 </div>
 
 
@@ -1263,8 +1273,7 @@ Y con eso todo al dar clic sobre dicho archivo deberia abrir el programa.
 
  <!--style="margin-left:auto;margin-right:auto;width:100%;"-->
   <div style="text-align: center;">
-  <img  src="recursos_readme/ENSAMBLE/img7_desktop
-.gif" style="width:100%;"  />
+  <img  src="recursos_readme/ENSAMBLE/img7_desktop.gif" style="width:100%;"  />
   </div>
 
 
